@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\NBDSolution\NBDWebApp\bin\NBDWebApp.dll.config
+C:\Users\Administrator\Desktop\NBDSolution\NBDWebApp\bin\NBDWebApp.dll
+C:\Users\Administrator\Desktop\NBDSolution\NBDWebApp\bin\NBDWebApp.pdb
+C:\Users\Administrator\Desktop\NBDSolution\NBDWebApp\obj\Debug\NBDWebApp.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\NBDSolution\NBDWebApp\obj\Debug\NBDWebApp.dll
+C:\Users\Administrator\Desktop\NBDSolution\NBDWebApp\obj\Debug\NBDWebApp.pdb
