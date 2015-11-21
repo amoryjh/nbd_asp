@@ -38,6 +38,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="dotless.Core, Version=1.5.1.0, Culture=neutral, PublicKeyToken=96b446c9e63eae34, processorArchitecture=MSIL">
+      <HintPath>..\packages\dotless.1.5.1\lib\dotless.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -57,6 +61,94 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="assets\css\style.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\bootstrap\wells.less" />
+    <Content Include="assets\bootstrap\variables.less" />
+    <Content Include="assets\bootstrap\utilities.less" />
+    <Content Include="assets\bootstrap\type.less" />
+    <Content Include="assets\bootstrap\tooltip.less" />
+    <Content Include="assets\bootstrap\thumbnails.less" />
+    <Content Include="assets\bootstrap\theme.less" />
+    <Content Include="assets\bootstrap\tables.less" />
+    <Content Include="assets\bootstrap\scaffolding.less" />
+    <Content Include="assets\bootstrap\responsive-utilities.less" />
+    <Content Include="assets\bootstrap\responsive-embed.less" />
+    <Content Include="assets\bootstrap\progress-bars.less" />
+    <Content Include="assets\bootstrap\print.less" />
+    <Content Include="assets\bootstrap\popovers.less" />
+    <Content Include="assets\bootstrap\panels.less" />
+    <Content Include="assets\bootstrap\pagination.less" />
+    <Content Include="assets\bootstrap\pager.less" />
+    <Content Include="assets\bootstrap\normalize.less" />
+    <Content Include="assets\bootstrap\navs.less" />
+    <Content Include="assets\bootstrap\navbar.less" />
+    <Content Include="assets\bootstrap\modals.less" />
+    <Content Include="assets\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="assets\bootstrap\mixins\text-overflow.less" />
+    <Content Include="assets\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="assets\bootstrap\mixins\table-row.less" />
+    <Content Include="assets\bootstrap\mixins\tab-focus.less" />
+    <Content Include="assets\bootstrap\mixins\size.less" />
+    <Content Include="assets\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="assets\bootstrap\mixins\resize.less" />
+    <Content Include="assets\bootstrap\mixins\reset-text.less" />
+    <Content Include="assets\bootstrap\mixins\reset-filter.less" />
+    <Content Include="assets\bootstrap\mixins\progress-bar.less" />
+    <Content Include="assets\bootstrap\mixins\panels.less" />
+    <Content Include="assets\bootstrap\mixins\pagination.less" />
+    <Content Include="assets\bootstrap\mixins\opacity.less" />
+    <Content Include="assets\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="assets\bootstrap\mixins\nav-divider.less" />
+    <Content Include="assets\bootstrap\mixins\list-group.less" />
+    <Content Include="assets\bootstrap\mixins\labels.less" />
+    <Content Include="assets\bootstrap\mixins\image.less" />
+    <Content Include="assets\bootstrap\mixins\hide-text.less" />
+    <Content Include="assets\bootstrap\mixins\grid-framework.less" />
+    <Content Include="assets\bootstrap\mixins\grid.less" />
+    <Content Include="assets\bootstrap\mixins\gradients.less" />
+    <Content Include="assets\bootstrap\mixins\forms.less" />
+    <Content Include="assets\bootstrap\mixins\clearfix.less" />
+    <Content Include="assets\bootstrap\mixins\center-block.less" />
+    <Content Include="assets\bootstrap\mixins\buttons.less" />
+    <Content Include="assets\bootstrap\mixins\border-radius.less" />
+    <Content Include="assets\bootstrap\mixins\background-variant.less" />
+    <Content Include="assets\bootstrap\mixins\alerts.less" />
+    <Content Include="assets\bootstrap\mixins.less" />
+    <Content Include="assets\bootstrap\media.less" />
+    <Content Include="assets\bootstrap\list-group.less" />
+    <Content Include="assets\bootstrap\labels.less" />
+    <Content Include="assets\bootstrap\jumbotron.less" />
+    <Content Include="assets\bootstrap\input-groups.less" />
+    <Content Include="assets\bootstrap\grid.less" />
+    <Content Include="assets\bootstrap\glyphicons.less" />
+    <Content Include="assets\bootstrap\forms.less" />
+    <Content Include="assets\bootstrap\dropdowns.less" />
+    <Content Include="assets\bootstrap\component-animations.less" />
+    <Content Include="assets\bootstrap\code.less" />
+    <Content Include="assets\bootstrap\close.less" />
+    <Content Include="assets\bootstrap\carousel.less" />
+    <Content Include="assets\bootstrap\buttons.less" />
+    <Content Include="assets\bootstrap\button-groups.less" />
+    <Content Include="assets\bootstrap\breadcrumbs.less" />
+    <Content Include="assets\bootstrap\bootstrap.less" />
+    <Content Include="assets\bootstrap\badges.less" />
+    <Content Include="assets\bootstrap\alerts.less" />
+    <None Include="assets\js\jquery-1.9.0.intellisense.js" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\jquery-1.9.0.js" />
+    <Content Include="assets\js\jquery-1.9.0.min.js" />
+    <Content Include="assets\js\jquery-1.9.0.min.map" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -69,7 +161,6 @@
     <Content Include="ClientEntry.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="MainPage.aspx" />
-    <Content Include="Style\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -101,7 +192,9 @@
     <Compile Include="MainPage.aspx.designer.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -128,6 +221,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>
+</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
