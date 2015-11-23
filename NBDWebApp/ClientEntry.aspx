@@ -1,15 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ClientEntry.aspx.cs" Inherits="NBDWebApp.ClientEntry" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
+﻿<%@ Page Title="Bid Process" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="ClientEntry.aspx.cs" Inherits="NBDWebApp.ClientEntry" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
     <div>
-    
         <asp:Label ID="lblClient" runat="server" Text="Client Name"></asp:Label>
         <br />
         <asp:TextBox ID="txtClient" runat="server"></asp:TextBox>
@@ -39,8 +33,6 @@
         <br />
         <br />
         <asp:Button ID="btnInsert" runat="server" Text="Insert Client" />
-    
     </div>
     </form>
-</body>
-</html>
+</asp:Content>

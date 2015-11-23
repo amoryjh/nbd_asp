@@ -11,9 +11,7 @@ namespace NBDWebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
-
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtEmpNum.Text == "1234" && txtPassword.Text == "password")
