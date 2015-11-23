@@ -15,6 +15,10 @@ h1{font-size:2.1em;}
 h2{font-size:1.7em}
 h3{font-size:1.3em;}
 h4{font-size:1em;}
+a{ 
+    text-decoration: none; color: inherit;
+    &:hover,&:active,&:focus{text-decoration:none;color:inherit;}
+}
 .row{margin:1em 0;}
 /*///////////////////////////////////////////////////////
 --------------------Universal Classes--------------------  
@@ -94,8 +98,13 @@ nav{
     top: 0.7em;
     text-align: right;
     list-style-type: none;
-    li{padding: 0 2em;display: inline-block;
-      a{ text-decoration: none; color: #fff;font-weight: 400;}
+    h1.nav-logo{float:left;}
+    a{ 
+        text-decoration: none; color: #fff;font-weight: 400;
+        &:hover{text-decoration:none;color:@brand-pri;}
+    }
+    li{
+      padding: 0 2em;display: inline-block;
       p.action-btn{position: absolute;right: 0;top: 0;height: 2.53em;z-index: 10;box-shadow: none;}
     }
   }
@@ -110,13 +119,18 @@ ul.menu-hide-pos{top: 4.15em;z-index: 99;}
 -----------------------Login Page------------------------
 ///////////////////////////////////////////////////////*/
 .login{
+   background-size: cover;
    background: url('/assets/img/login.jpg') center center no-repeat !important;
-  .login-wrapper{
+   nav{ul{li{display:none}}}
+   .login-wrapper{
     top: 6em;
+    color:#fff; 
+    input{color:#353535}
     position: relative; margin: 0 auto; max-width: 30em; width: 90%;
-    padding: 3em; background: rgba(240,240,240,0.5);
-    input{width: 100%;}
-    input,.btn{display: block; margin-bottom: 1em;}
+    padding: 3em; background-color: rgba(34, 49, 63,0.4);
+    input,#lblStatus{width: 100%;display:block;}
+    input,.btn{margin-bottom: 1em;}
+    .btn{width:10em;padding:1em 0em;color:#fff;}
   }
 }
 /*///////////////////////////////////////////////////////

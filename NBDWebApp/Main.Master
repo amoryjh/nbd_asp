@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body runat="server" id="BodyTag">
+    <nav>
+        <ul>
+            <h1 class="nav-logo"><a href="#">NBD</a></h1>
+            <li><a href="">Home</a></li>
+            <li><a href="">Project</a></li>
+            <li><a href="">Profile</a></li>
+        </ul>
+    </nav>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
     </asp:ContentPlaceHolder>
 </body>

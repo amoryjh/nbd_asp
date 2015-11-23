@@ -1,2 +1,11 @@
-﻿@brand-pri:#16a085;
+﻿@brand-pri:#EF4836;
 @brand-sec:lighten(@brand-pri,10%);
+
+.btn{
+    background:darken(@brand-pri,10%); color:#fff;
+    padding:0.5em;
+    &:hover{
+        color: darken(#fff,5%);
+        background:@brand-pri;
+    }
+}

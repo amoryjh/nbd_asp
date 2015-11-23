@@ -4935,6 +4935,15 @@ button.close {
     display: none !important;
   }
 }
+.btn {
+  background: #e02612;
+  color: #fff;
+  padding: 0.5em;
+}
+.btn:hover {
+  color: #f2f2f2;
+  background: #ef4836;
+}
 /*///////////////////////////////////////////////////////
 -----------------------Base Styles-----------------------
 ///////////////////////////////////////////////////////*/
@@ -4966,6 +4975,16 @@ h3 {
 }
 h4 {
   font-size: 1em;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: inherit;
 }
 .row {
   margin: 1em 0;
@@ -5060,14 +5079,21 @@ nav ul {
   text-align: right;
   list-style-type: none;
 }
-nav ul li {
-  padding: 0 2em;
-  display: inline-block;
+nav ul h1.nav-logo {
+  float: left;
 }
-nav ul li a {
+nav ul a {
   text-decoration: none;
   color: #fff;
   font-weight: 400;
+}
+nav ul a:hover {
+  text-decoration: none;
+  color: #ef4836;
+}
+nav ul li {
+  padding: 0 2em;
+  display: inline-block;
 }
 nav ul li p.action-btn {
   position: absolute;
@@ -5096,24 +5122,38 @@ ul.menu-hide-pos {
 -----------------------Login Page------------------------
 ///////////////////////////////////////////////////////*/
 .login {
+  background-size: cover;
   background: url('/assets/img/login.jpg') center center no-repeat !important;
+}
+.login nav ul li {
+  display: none;
 }
 .login .login-wrapper {
   top: 6em;
+  color: #fff;
   position: relative;
   margin: 0 auto;
   max-width: 30em;
   width: 90%;
   padding: 3em;
-  background: rgba(240, 240, 240, 0.5);
+  background-color: rgba(34, 49, 63, 0.4);
 }
 .login .login-wrapper input {
+  color: #353535;
+}
+.login .login-wrapper input,
+.login .login-wrapper #lblStatus {
   width: 100%;
+  display: block;
 }
 .login .login-wrapper input,
 .login .login-wrapper .btn {
-  display: block;
   margin-bottom: 1em;
+}
+.login .login-wrapper .btn {
+  width: 10em;
+  padding: 1em 0em;
+  color: #fff;
 }
 /*///////////////////////////////////////////////////////
 ------------------------Home Page-----------------------

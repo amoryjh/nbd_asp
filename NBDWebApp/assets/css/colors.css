@@ -1,1 +1,10 @@
-﻿/*# sourceMappingURL=colors.css.map */
+﻿.btn {
+  background: #e02612;
+  color: #fff;
+  padding: 0.5em;
+}
+.btn:hover {
+  color: #f2f2f2;
+  background: #ef4836;
+}
+/*# sourceMappingURL=colors.css.map */
