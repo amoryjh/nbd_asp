@@ -13,10 +13,5 @@ namespace NBDWebApp
         {
 
         }
-
-        protected void btnAdd_Click(object sender, EventArgs e)
-        {
-            Server.Transfer("ClientEntry.aspx");
-        }
     }
 }
