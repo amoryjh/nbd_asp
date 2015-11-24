@@ -11,7 +11,8 @@ namespace NBDWebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            HtmlGenericControl body = (HtmlGenericControl)Master.FindControl("BodyTag");
+            body.Attributes.Add("class", "client-entry");
         }
     }
 }
