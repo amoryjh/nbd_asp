@@ -2,11 +2,30 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Ayyy</title>
+    
+    <title></title>
+    <!-------------------------------------------------------------
+    ///////////////////////////Styles/////////////////////////////
+    -------------------------------------------------------------->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/main.min.css"/>
+    
+    <!-------------------------------------------------------------
+    //////////////////////////Scripts/////////////////////////////
+    -------------------------------------------------------------->
+    <script src="assets/js/jquery-1.9.0.min.js"></script>
+    <script src="assets/js/jquery-1.9.0.intellisense.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-------------------------------------------------------------
+    ///////Page Specific Scripts||Styles||Headings||Meta Tags//////
+    -------------------------------------------------------------->
+    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link rel="stylesheet" href="assets/css/main.css" />
+
 </head>
+
 <body runat="server" id="BodyTag">
     <nav>
         <ul>
@@ -16,7 +35,9 @@
             <li><a href="">Profile</a></li>
         </ul>
     </nav>
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-    </asp:ContentPlaceHolder>
+    <div class="main-wrapper">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
 </body>
 </html>

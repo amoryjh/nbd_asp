@@ -3,8 +3,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form id="form1" runat="server">
-    <div class="client-wrapper">
-      
+        <div class="client-wrapper">
+        <div class="form-group">
+            <h1>Enter new client</h1>
+        </div>
         <div class="form-group">
           <asp:Label for="txtClient" ID="lblClient" runat="server" Text="Client Name"></asp:Label>
           <asp:TextBox ID="txtClient" runat="server" class="form-control" placeholder="Client Name"></asp:TextBox>
@@ -26,8 +28,9 @@
         <div class="form-group">
           <asp:Label ID="lblPhone" for="txtPhone" runat="server" Text="Phone"></asp:Label>
           <asp:TextBox ID="txtPhone" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
-          <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtPhone" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Please Enter Phone Number</asp:RequiredFieldValidator>
-          <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtPhone" ErrorMessage="Please Enter PhoneNumber ex(&quot;000-000-0000&quot;)" ForeColor="#FF3300" ValueToCompare="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"></asp:CompareValidator>
+          <!-- <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtPhone" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Please Enter Phone Number</asp:RequiredFieldValidator>
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtPhone" ErrorMessage="Please Enter PhoneNumber ex(&quot;000-000-0000&quot;)" ForeColor="#FF3300" ValueToCompare="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"></asp:CompareValidator>
+          -->
         </div>
         
         <div class="form-group">

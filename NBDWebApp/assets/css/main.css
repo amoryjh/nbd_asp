@@ -4949,7 +4949,7 @@ button.close {
 ///////////////////////////////////////////////////////*/
 body {
   font-family: 'lato';
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   color: #353535;
   background: #fffdfe;
@@ -5160,5 +5160,14 @@ ul.menu-hide-pos {
 ///////////////////////////////////////////////////////*/
 .home-updates {
   padding: 0 2.4em;
+}
+/*///////////////////////////////////////////////////////
+----------------------Client Login-----------------------
+///////////////////////////////////////////////////////*/
+.client-wrapper {
+  width: 90%;
+  max-width: 30em;
+  margin: 0 auto;
+  padding: 3em;
 }
 /*# sourceMappingURL=main.css.map */
