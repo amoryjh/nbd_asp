@@ -1,6 +1,10 @@
 ﻿@brand-pri:#EF4836;
 @brand-sec:lighten(@brand-pri,10%);
 
+@brand-tri:rgba(34, 49, 63,1);;
+
+@black: #353535; 
+
 .btn{
     background:darken(@brand-pri,10%); color:#fff;
     padding:0.5em;
@@ -8,4 +12,14 @@
         color: darken(#fff,5%);
         background:@brand-pri;
     }
+}
+
+//login gradient
+.gradient (@origin: left, @start: #ffffff, @stop: #000000) {
+	background-color: @start;
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);
+	background-image: -moz-linear-gradient(@origin, @start, @stop);
+	background-image: -o-linear-gradient(@origin, @start, @stop);
+	background-image: -ms-linear-gradient(@origin, @start, @stop);
+	background-image: linear-gradient(@origin, @start, @stop);
 }

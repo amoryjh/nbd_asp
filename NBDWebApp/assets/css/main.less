@@ -7,8 +7,8 @@ body {
     font-family:'lato';
     font-weight:400;
     font-size:16px;
-    color:#353535;
-    background:#fffdfe;
+    color:@black;
+    background:#efefef;
 }
 h1,h2,h3,h4,h5,p,ul{margin:0;margin-bottom:0.5em;}
 h1{font-size:2.1em;}
@@ -19,7 +19,9 @@ a{
     text-decoration: none; color: inherit;
     &:hover,&:active,&:focus{text-decoration:none;color:inherit;}
 }
-.row{margin:1em 0;}
+.row{ margin:1em 0; }
+.btn{padding: 1em; color:#fff;}
+input{margin-bottom: 0.75em;}
 /*///////////////////////////////////////////////////////
 --------------------Universal Classes--------------------  
 ///////////////////////////////////////////////////////*/
@@ -86,7 +88,7 @@ span.highlight-change{font-weight: 700;}
 ///////////////////////////////////////////////////////*/
 nav{
   position: fixed; z-index: 999;
-  background-color: rgba(34, 49, 63,1);
+  background-color: @brand-tri;
   color: #fff;
   height: 4.1em;
   padding: 0.6em 0;
@@ -119,18 +121,19 @@ ul.menu-hide-pos{top: 4.15em;z-index: 99;}
 -----------------------Login Page------------------------
 ///////////////////////////////////////////////////////*/
 .login{
-   background-size: cover;
-   background: url('/assets/img/login.jpg') center center no-repeat !important;
    nav{ul{li{display:none}}}
+   background-size: cover;
+   //background: url('/assets/img/login.jpg') center center no-repeat !important;
+   background:#efefef;
+   /* Implementation */
+   .gradient( left, darken(#663333,7%), lighten(#DB0A5B,10%) );
    .login-wrapper{
     top: 6em;
-    color:#fff; 
-    input{color:#353535}
-    position: relative; margin: 0 auto; max-width: 30em; width: 90%;
-    padding: 3em; background-color: rgba(34, 49, 63,0.4);
-    input,#lblStatus{width: 100%;display:block;}
-    input,.btn{margin-bottom: 1em;}
-    .btn{width:10em;padding:1em 0em;color:#fff;}
+    box-shadow: 0 2px 18px @black;
+    position: relative; margin: 0 auto; max-width: 22em; width: 90%;
+    padding: 2.5em 2.5em 1em 2.5em; background-color: #fefefe;
+    input,#lblStatus{width: 100% !important;display:block;}
+    .btn{margin:1.5em 0;}
   }
 }
 /*///////////////////////////////////////////////////////
@@ -142,6 +145,7 @@ ul.menu-hide-pos{top: 4.15em;z-index: 99;}
 ----------------------Client Login-----------------------
 ///////////////////////////////////////////////////////*/
 .client-wrapper{
-    width:90%; max-width:30em; margin:0 auto;
-    padding:3em;
+    width:90%; max-width:30em; margin:0 auto; margin-top:4em; margin-bottom:4em;
+    padding:3em; background:#fff; box-shadow: 0 2px 18px lighten(@black,40%);
+    .btn{margin:1.5em;}
 }
