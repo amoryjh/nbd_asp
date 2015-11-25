@@ -5160,6 +5160,12 @@ ul.menu-hide-pos {
 .login .login-wrapper .btn {
   margin: 1.5em 0;
 }
+.login .login-wrapper .form-group p a {
+  color: #4f7192;
+}
+.login .login-wrapper .form-group p a:hover {
+  color: #3d5871;
+}
 /*///////////////////////////////////////////////////////
 ------------------------Home Page-----------------------
 ///////////////////////////////////////////////////////*/
