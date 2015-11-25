@@ -4996,6 +4996,9 @@ a:focus {
 input {
   margin-bottom: 0.75em;
 }
+.form-group {
+  padding: 0 10px;
+}
 /*///////////////////////////////////////////////////////
 --------------------Universal Classes--------------------  
 ///////////////////////////////////////////////////////*/
@@ -5177,7 +5180,7 @@ ul.menu-hide-pos {
 ///////////////////////////////////////////////////////*/
 .client-wrapper {
   width: 90%;
-  max-width: 30em;
+  max-width: 45em;
   margin: 0 auto;
   margin-top: 4em;
   margin-bottom: 4em;
@@ -5185,7 +5188,7 @@ ul.menu-hide-pos {
   background: #fff;
   box-shadow: 0 2px 18px #9b9b9b;
 }
-.client-wrapper .btn {
-  margin: 1.5em;
+.client-wrapper .form-group select {
+  padding: 0;
 }
 /*# sourceMappingURL=main.css.map */

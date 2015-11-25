@@ -22,6 +22,7 @@ a{
 .row{ margin:1em 0; }
 .btn{padding: 1em; color:#fff;}
 input{margin-bottom: 0.75em;}
+.form-group{padding:0 10px;}
 /*///////////////////////////////////////////////////////
 --------------------Universal Classes--------------------  
 ///////////////////////////////////////////////////////*/
@@ -151,7 +152,9 @@ ul.menu-hide-pos{top: 4.15em;z-index: 99;}
 ----------------------Client Login-----------------------
 ///////////////////////////////////////////////////////*/
 .client-wrapper{
-    width:90%; max-width:30em; margin:0 auto; margin-top:4em; margin-bottom:4em;
+    width:90%; max-width:45em; margin:0 auto; margin-top:4em; margin-bottom:4em;
     padding:3em; background:#fff; box-shadow: 0 2px 18px lighten(@black,40%);
-    .btn{margin:1.5em;}
+    .form-group{
+        select{padding:0;}
+    }    
 }
