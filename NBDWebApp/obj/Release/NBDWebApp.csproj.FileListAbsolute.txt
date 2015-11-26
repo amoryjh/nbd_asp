@@ -17,3 +17,13 @@ H:\nbd_asp\NBDWebApp\bin\Less.dll
 H:\nbd_asp\NBDWebApp\bin\dotless.Core.pdb
 H:\nbd_asp\NBDWebApp\bin\Less.pdb
 H:\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.pdb
+C:\Users\Administrator\Desktop\nbd_asp\NBDWebApp\bin\NBDWebApp.dll.config
+C:\Users\Administrator\Desktop\nbd_asp\NBDWebApp\bin\NBDWebApp.dll
+C:\Users\Administrator\Desktop\nbd_asp\NBDWebApp\bin\NBDWebApp.pdb
+C:\Users\Administrator\Desktop\nbd_asp\NBDWebApp\bin\dotless.Core.dll
+C:\Users\Administrator\Desktop\nbd_asp\NBDWebApp\bin\Less.dll
+C:\Users\Administrator\Desktop\nbd_asp\NBDWebApp\bin\dotless.Core.pdb
+C:\Users\Administrator\Desktop\nbd_asp\NBDWebApp\bin\Less.pdb
+C:\Users\Administrator\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.dll
+C:\Users\Administrator\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.pdb
