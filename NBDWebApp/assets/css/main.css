@@ -5113,21 +5113,15 @@ nav ul li p.action-btn {
   z-index: 10;
   box-shadow: none;
 }
-ul.menu-hide {
-  background: rgba(34, 49, 63, 0.9);
-  padding: 1em;
-  top: -8em;
-  transition: all 0.5s ease-in-out;
+/* 
+    ---------------------OLD MENU
+ul.menu-hide{
+  background: rgba(34, 49, 63,0.9);padding: 1em;top:-8em;transition:all 0.5s ease-in-out;
   vertical-align: middle;
+  li{display: inline-block; padding: 0 2em;}
 }
-ul.menu-hide li {
-  display: inline-block;
-  padding: 0 2em;
-}
-ul.menu-hide-pos {
-  top: 4.15em;
-  z-index: 99;
-}
+ul.menu-hide-pos{top: 4.15em;z-index: 99;}
+*/
 /*///////////////////////////////////////////////////////
 -----------------------Login Page------------------------
 ///////////////////////////////////////////////////////*/
@@ -5152,7 +5146,7 @@ ul.menu-hide-pos {
   margin: 0 auto;
   max-width: 22em;
   width: 90%;
-  padding: 2.5em 2.5em 1em 2.5em;
+  padding: 2.5em 1.75em 1em 1.75em;
   background-color: #fefefe;
 }
 .login .login-wrapper input,
