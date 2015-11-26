@@ -28,7 +28,7 @@
 
         <div class="form-group">
             <p><a href="#">Create New Account</a></p>
-            <p><a href="#">Forgot Password?</a> Hello.... Its me. *ADELE VOICE*</p>
+            <p><a href="#">Forgot Password?</a></p>
         </div>
 
     </div>
