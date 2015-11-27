@@ -5024,17 +5024,18 @@ input {
 }
 .section-title {
   border-bottom: 1px solid #aaa;
+  font-weight: 700;
   margin: 1em 0;
   padding-bottom: 0.5em;
 }
 .user-info {
   background: #eee;
   background-color: #304659;
-  background-image: -webkit-linear-gradient(right, #304659, #44627e);
-  background-image: -moz-linear-gradient(right, #304659, #44627e);
-  background-image: -o-linear-gradient(right, #304659, #44627e);
-  background-image: -ms-linear-gradient(right, #304659, #44627e);
-  background-image: linear-gradient(right, #304659, #44627e);
+  background-image: -webkit-linear-gradient(right, #304659, #567c9f);
+  background-image: -moz-linear-gradient(right, #304659, #567c9f);
+  background-image: -o-linear-gradient(right, #304659, #567c9f);
+  background-image: -ms-linear-gradient(right, #304659, #567c9f);
+  background-image: linear-gradient(right, #304659, #567c9f);
   position: fixed;
   color: #fff;
   height: 100vh;
@@ -5048,11 +5049,12 @@ input {
 .user-info .usr-options .btn-primary {
   width: 100%;
   margin: 0.65em 0;
-  border: none;
   background: #5cb85c;
+  border: none;
 }
 .user-info .usr-options .btn-primary:hover {
   background: #449d44;
+  border: none;
 }
 @media (min-width: 992px) {
   .user-info {
@@ -5061,6 +5063,7 @@ input {
 }
 .project-title {
   margin: 0.5em 0 0 0;
+  font-weight: 600;
 }
 .project-update-date {
   margin: 0.5em 0 1em 0;
@@ -5129,7 +5132,6 @@ nav {
   z-index: 999;
   background-color: #22313f;
   color: #fff;
-  height: 4.1em;
   padding: 0.6em 0;
   width: 100%;
 }
@@ -5140,12 +5142,22 @@ nav ul {
 nav ul {
   vertical-align: middle;
   position: relative;
-  top: 0.7em;
   text-align: right;
   list-style-type: none;
+  margin-right: 1em;
 }
 nav ul h1.nav-logo {
   float: left;
+  position: relative;
+  top: 0.1em;
+  display: block;
+  width: 100%;
+}
+@media (min-width: 520px) {
+  nav ul h1.nav-logo {
+    display: inline-block;
+    width: auto;
+  }
 }
 nav ul a {
   text-decoration: none;
@@ -5157,7 +5169,7 @@ nav ul a:hover {
   color: #ef4836;
 }
 nav ul li {
-  padding: 0 2em;
+  padding: 0 1em;
   display: inline-block;
 }
 nav ul li p.action-btn {
@@ -5167,6 +5179,13 @@ nav ul li p.action-btn {
   height: 2.53em;
   z-index: 10;
   box-shadow: none;
+}
+nav .btn-group .dropdown-menu {
+  left: auto;
+  right: 0 !important;
+}
+nav .btn-group .dropdown-menu .divider {
+  width: 100%;
 }
 /* 
     ---------------------OLD MENU

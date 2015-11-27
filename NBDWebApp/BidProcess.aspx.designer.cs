@@ -229,6 +229,51 @@ namespace NBDWebApp {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
+        /// txtBidDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBidDate;
+        
+        /// <summary>
+        /// txtBidEstBeginDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBidEstBeginDate;
+        
+        /// <summary>
+        /// txtBidEstComDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBidEstComDate;
+        
+        /// <summary>
+        /// txtProjSite control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtProjSite;
+        
+        /// <summary>
+        /// txtBidEstCost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBidEstCost;
+        
+        /// <summary>
         /// TextBox13 control.
         /// </summary>
         /// <remarks>

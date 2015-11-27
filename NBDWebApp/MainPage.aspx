@@ -7,18 +7,18 @@
     <img src="assets/img/usrImage.png" alt="">
     <h1>User Name</h1>
 
-    <div class="usr-options">
-        <asp:Button CssClass="btn btn-primary" runat="server" Text="My Projects" />
-        <asp:Button CssClass="btn btn-primary" runat="server" Text="My Messages" />
-        <asp:Button CssClass="btn btn-primary" runat="server" Text="Add a Report" />
-        <asp:Button CssClass="btn btn-primary" runat="server" Text="My Profile" />
+    <div class="usr-options">       
+        <a class="btn btn-primary">My Projects</a>
+        <a class="btn btn-primary">My Messages</a>
+        <a class="btn btn-primary" href="BidProcess.aspx">Add a Report</a>
+        <a class="btn btn-primary">My Profile</a>
     </div>
     
 </div>
 <div class="home-updates col-md-9 col-md-offset-3 clearfix">
     <h1 class="section-title">Most Recent Changes</h1>
     <div class="project-instance clearfix">
-        <h2 class="project-title">Carlisle Hotel Renovations</h2>
+        <h2 class="project-title"><a href="#">Carlisle Hotel Renovations</a></h2>
         <p class="project-update-date">Updated on: 12/01/2015</p>
         <div class="col-md-12"> 
             <p><span class="highlight-change">Stan, Connie, and Sue</span> made changes to <span class="highlight-change"> Carlisle Hotel Renovations</span></p>
@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="project-instance clearfix">
-        <h2 class="project-title">Montebello Park Landscaping</h2>
+        <h2 class="project-title"><a href="#">Montebello Park Landscaping</a></h2>
         <p class="project-update-date">Updated on: 12/03/2015</p>
         <div class="col-md-12"> 
             <p><span class="highlight-change">Stan, Connie, and Sue</span> made changes to <span class="highlight-change"> Carlisle Hotel Renovations</span></p>

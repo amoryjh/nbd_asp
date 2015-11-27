@@ -33,12 +33,12 @@ input{margin-bottom: 0.75em;}
   padding-top: 4em;
 }
 .section-title{
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaa; font-weight:700;
   margin: 1em 0; padding-bottom: 0.5em;
 }
 .user-info{
   background: #eee;
-  .gradient( right, lighten(@brand-tri,8%), lighten(@brand-tri,19%) );
+  .gradient( right, lighten(@brand-tri,8%), lighten(@brand-tri,29%) );
   position: fixed;
   color:#fff;
   height: 100vh;
@@ -50,15 +50,15 @@ input{margin-bottom: 0.75em;}
   .usr-options{
     .btn-primary{
         width:100%; margin:0.65em 0; 
-        border:none; background:#5cb85c;
-        &:hover{background:darken(@green,10%);}
+        background:@green; border:none;
+        &:hover{background:darken(@green,10%);border:none;}
     }
   }
   display:none;
   @media(min-width:992px){display:block;}
 }
 .project-title{
-  margin: 0.5em 0 0 0;
+  margin: 0.5em 0 0 0; font-weight:600;
 }
 .project-update-date{
   margin: 0.5em 0 1em 0; font-style: italic;
@@ -114,26 +114,41 @@ nav{
   position: fixed; z-index: 999;
   background-color: @brand-tri;
   color: #fff;
-  height: 4.1em;
   padding: 0.6em 0;
   width: 100%;
   h1,ul{margin:0;}
   ul{
     vertical-align: middle;
     position: relative;
-    top: 0.7em;
     text-align: right;
     list-style-type: none;
-    h1.nav-logo{float:left;}
+    margin-right:1em;
+    h1.nav-logo{
+        float:left;
+        position:relative;
+        top:0.1em;
+        display:block;
+        width:100%;
+        @media(min-width:520px){
+            display:inline-block; width:auto;
+        }
+    }
     a{ 
         text-decoration: none; color: #fff;font-weight: 400;
         &:hover{text-decoration:none;color:@brand-pri;}
     }
     li{
-      padding: 0 2em;display: inline-block;
+      padding: 0 1em;display: inline-block;
       p.action-btn{position: absolute;right: 0;top: 0;height: 2.53em;z-index: 10;box-shadow: none;}
     }
   }
+  .btn-group{
+    .dropdown-menu{
+         left:auto; right:0 !important;  
+        .divider{width:100%}
+    }
+  }
+  //.dropdown-menu{ left:auto; right:0 !important; }
 }
 /* 
     ---------------------OLD MENU
