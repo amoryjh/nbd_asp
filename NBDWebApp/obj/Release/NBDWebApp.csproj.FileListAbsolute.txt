@@ -36,4 +36,3 @@ C:\Users\Brandon\Desktop\nbd_asp\NBDWebApp\bin\Less.pdb
 C:\Users\Brandon\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.csprojResolveAssemblyReference.cache
 C:\Users\Brandon\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.dll
 C:\Users\Brandon\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.pdb
-C:\Users\Amory\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.csprojResolveAssemblyReference.cache

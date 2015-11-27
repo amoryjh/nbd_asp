@@ -5077,6 +5077,12 @@ span.highlight-change {
 .project-instance .well {
   padding-left: 0.1em;
 }
+.project-instance .well a {
+  color: #337ab7;
+}
+.project-instance .well a:hover {
+  color: #285f8f;
+}
 @media (min-width: 520px) {
   .project-instance {
     padding: 2.2em 2.6em;

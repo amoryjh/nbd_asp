@@ -67,7 +67,13 @@ span.highlight-change{font-weight: 700;}
 .project-instance{
   margin:2em 0;
   padding:1.2em;
-  .well{padding-left:0.1em}
+  .well{
+      padding-left:0.1em;
+      a{
+          color:@blue;
+          &:hover{color:darken(@blue,10%)}
+      }
+  }
   @media(min-width:520px){
       padding: 2.2em 2.6em;
       .well{padding:19px;}
