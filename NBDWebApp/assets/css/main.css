@@ -5009,8 +5009,6 @@ a:focus {
 .btn {
   padding: 1em;
   color: #fff;
-  font-weight: 700;
-  font-size: 1em;
 }
 input {
   margin-bottom: 0.75em;
@@ -5242,6 +5240,8 @@ ul.menu-hide-pos{top: 4.15em;z-index: 99;}
 }
 .login .login-wrapper .btn {
   margin: 1.5em 0;
+  font-weight: 700;
+  font-size: 1em;
 }
 .login .login-wrapper .form-group p a {
   color: #4f7192;
