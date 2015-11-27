@@ -186,12 +186,10 @@
       <DependentUpon>colors.css</DependentUpon>
     </Content>
     <Content Include="assets\css\menu.less" />
-    <None Include="assets\js\jquery-1.9.0.intellisense.js" />
     <Content Include="assets\js\bootstrap.js" />
     <Content Include="assets\js\bootstrap.min.js" />
-    <Content Include="assets\js\jquery-1.9.0.js" />
-    <Content Include="assets\js\jquery-1.9.0.min.js" />
-    <Content Include="assets\js\jquery-1.9.0.min.map" />
+    <Content Include="assets\js\jquery-2.1.4.js" />
+    <Content Include="assets\js\jquery-2.1.4.min.js" />
     <Content Include="MainPage.aspx" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>

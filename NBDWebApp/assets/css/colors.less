@@ -2,13 +2,20 @@
 @brand-sec:lighten(@brand-pri,10%);
 @brand-tri:rgba(34, 49, 63,1);
 @black: #353535; 
+@blue:#337ab7;
 
 .btn{
-    background:darken(@brand-pri,10%); color:#fff;
+    background:@brand-pri; color:#fff;
     padding:0.5em;
     &:hover{
         color: darken(#fff,5%);
-        background:@brand-pri;
+        background:darken(@brand-pri,10%);
+    }
+}
+.btn-primary{
+    background:@blue;border-color:inherit;
+    &:hover{
+        background:darken(@blue,10%);
     }
 }
 

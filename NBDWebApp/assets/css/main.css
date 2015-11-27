@@ -4936,13 +4936,20 @@ button.close {
   }
 }
 .btn {
-  background: #e02612;
+  background: #ef4836;
   color: #fff;
   padding: 0.5em;
 }
 .btn:hover {
   color: #f2f2f2;
-  background: #ef4836;
+  background: #e02612;
+}
+.btn-primary {
+  background: #337ab7;
+  border-color: inherit;
+}
+.btn-primary:hover {
+  background: #285f8f;
 }
 /*///////////////////////////////////////////////////////
 -----------------------Base Styles-----------------------
@@ -5140,10 +5147,10 @@ ul.menu-hide-pos{top: 4.15em;z-index: 99;}
   display: none;
 }
 .login .login-wrapper {
-  top: 6em;
-  box-shadow: 0 2px 18px #353535;
-  position: relative;
   margin: 0 auto;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  box-shadow: 0 2px 18px #353535;
   max-width: 22em;
   width: 90%;
   padding: 2.5em 1.75em 1em 1.75em;
