@@ -65,6 +65,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DailyReports.aspx.cs">
+      <DependentUpon>DailyReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DailyReports.aspx.designer.cs">
+      <DependentUpon>DailyReports.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -190,6 +197,7 @@
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\jquery-2.1.4.js" />
     <Content Include="assets\js\jquery-2.1.4.min.js" />
+    <Content Include="DailyReports.aspx" />
     <Content Include="MainPage.aspx" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
