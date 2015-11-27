@@ -7,12 +7,12 @@
     ///////////////////////////Styles/////////////////////////////
     -------------------------------------------------------------->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,600,700,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <link rel="stylesheet" href="/assets/css/main.min.css" />
     <!-------------------------------------------------------------
     //////////////////////////Scripts/////////////////////////////
     -------------------------------------------------------------->
-    <script src="assets/js/jquery-2.1.4.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery-2.1.4.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
     <!-------------------------------------------------------------
     ///////Page Specific Scripts||Styles||Headings||Meta Tags//////
     -------------------------------------------------------------->
@@ -60,12 +60,12 @@
     </nav>
     <div class="main-wrapper">
         <div class="col-md-3 user-info text-center">
-            <img src="assets/img/usrImage.png" alt="">
+            <img src="/assets/img/usrImage.png" alt="">
             <h1>User Name</h1>
 
             <div class="usr-options">       
-                <a class="btn btn-primary" href="MainPage.aspx">Projects</a>
-                <a class="btn btn-primary" href="DailyReports.aspx">Add Daily Report</a>
+                <a class="btn btn-primary" href="~.MainPage.aspx">Projects</a>
+                <a class="btn btn-primary" href="~/DailyReports.aspx">Add Daily Report</a>
                 <a class="btn btn-primary">Log Out</a>
             </div>
     

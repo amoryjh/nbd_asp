@@ -1,8 +1,8 @@
-﻿<%@ Page Title="Bid Process" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="BidProcess.aspx.cs" Inherits="NBDWebApp.BidProcess" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="carlisle-hotel-renovations.aspx.cs" Inherits="NBDWebApp.Projects.carlisle_hotel_renovations" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <form id="form1" runat="server">
+<form id="form1" runat="server">
     <div class="form-group">
         <h1 class="section-title">Carlisle Hotel Renovations</h1>
         <h2 class="section-title">Add New Report</h2>
@@ -14,7 +14,6 @@
             <option value="prouctionreport">Production Report</option>
         </select>
     </div>
-
     <div class="report-group">
     <div class="col-md-12">
         <h1 class="project-title">New Design Bid</h1>
@@ -295,17 +294,5 @@
         </div>
     </div>
     </div>
-
-    </form>
-    <script>
-        $('.report-group').hide();
-        $('#ddlProjectType').on('change', function () {
-            if (this.value == "designbid") {
-                $('.report-group').show();
-            }
-            else {
-                $('.report-group').hide();
-            }
-        });
-    </script>
+</form>
 </asp:Content>

@@ -6,7 +6,7 @@
     <h1 class="section-title">Projects</h1>
     <h2 class="section-title">Most Recent Changes</h2>
     <div class="project-instance clearfix">
-        <h2 class="project-title"><a href="BidProcess.aspx">Carlisle Hotel Renovations</a></h2>
+        <h2 class="project-title"><a href="Projects/carlisle-hotel-renovations.aspx">Carlisle Hotel Renovations</a></h2>
         <p class="project-update-date">Updated on: 12/01/2015</p>
         <div class="col-md-12"> 
             <h4>Project Modules:</h4>  
