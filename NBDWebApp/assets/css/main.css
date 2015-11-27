@@ -5009,6 +5009,8 @@ a:focus {
 .btn {
   padding: 1em;
   color: #fff;
+  font-weight: 700;
+  font-size: 1em;
 }
 input {
   margin-bottom: 0.75em;
