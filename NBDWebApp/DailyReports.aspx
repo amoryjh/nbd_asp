@@ -2,53 +2,44 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <form id="form1" runat="server">
+     <form id="form1" runat="server">
         <div class="client-wrapper clearfix">
             <div class="form-group col-md-12">
                 <h1>Enter Daily Work</h1>
+                <p><em>Designer Daily Work Report / Production Daily Work Report</em></p>
             </div>
             <div class="form-group col-md-6">
-              <label id="lblBusiness" for="txtClient">Business</label>
-              <asp:TextBox ID="txtBusiness" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
-            </div>
-
-            <div class="form-group col-md-6">
-              <label id="lblClient" for="txtClient">Primary Contact</label>
-              <asp:TextBox ID="txtClient" runat="server" class="form-control" placeholder="Contact Name"></asp:TextBox>
+              <label id="lblUserFName" for="txtUserFName">First Name</label>
+              <asp:TextBox ID="txtUserFName" runat="server" class="form-control" placeholder="First Name"></asp:TextBox>
             </div>
 
             <div class="form-group col-md-6">
-                <label id="lblCity" for="txtCity">City</label>
-                <asp:TextBox ID="txtCity" class="form-control" placeholder="City" runat="server"></asp:TextBox>
+              <label id="lblUserLName" for="txtUserLName">Last Name</label>
+              <asp:TextBox ID="txtUserLName" runat="server" class="form-control" placeholder="Last Name"></asp:TextBox>
             </div>
 
-            <div class="form-group col-md-4">
-                <label id="lblAddress" for="txtAddress">Address</label>
-                <asp:TextBox ID="txtAddress" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+            <div class="form-group col-md-6">
+                <label id="lblUserHours" for="txtUserHours">Hours</label>
+                <asp:TextBox ID="txtUserHours" class="form-control" placeholder="Hours" runat="server"></asp:TextBox>
             </div>
 
-            <div class="form-group col-md-2">
-                <label id="lblState" for="ddlState">State</label>
-                <asp:DropDownList  ID="ddlState" class="form-control" placeholder="State" runat="server">
-                    <asp:ListItem Selected="True">Ontario</asp:ListItem>
-                    <asp:ListItem>New York</asp:ListItem>
-                    <asp:ListItem>Ohio</asp:ListItem>
-                    <asp:ListItem>Texas</asp:ListItem>
+            <div class="form-group col-md-6">
+                <label id="lblUserProject" for="ddlProject">Project</label>
+                <asp:DropDownList  ID="ddlProject" class="form-control" placeholder="Project" runat="server">
+                    <asp:ListItem Selected="True">Project 1</asp:ListItem>
+                    <asp:ListItem>Project 2</asp:ListItem>
+                    <asp:ListItem>Project 3</asp:ListItem>
+                    <asp:ListItem>Project 4</asp:ListItem>
                 </asp:DropDownList>
             </div>      
             
-            <div class="form-group col-md-6">
-              <label id="lblPhone" for="txtPhone">Phone</label>
-              <asp:TextBox ID="txtPhone" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
-            </div>
-            
-            <div class="form-group col-md-6">
-            <label id="lblEmail" for="txtEmail">Email</label>
-            <asp:TextBox ID="txtEmail" class="form-control" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
+            <div class="form-group col-md-12">
+            <label id="lblUserTask" for="txtUserTask">Task:</label>
+            <asp:TextBox ID="txtUserTask" class="form-control" TextMode="multiline" Rows="3" placeholder="Task" runat="server"></asp:TextBox>
             </div>
             
             <div class="form-group col-md-12">
-            <asp:Button ID="btnInsert" CssClass="btn" runat="server" Text="Insert Client" />
+            <asp:Button ID="btnInsert" CssClass="btn" runat="server" Text="Insert Daily Report" />
             </div>
         </div>
     </form>
