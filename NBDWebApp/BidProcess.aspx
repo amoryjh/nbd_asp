@@ -10,7 +10,7 @@
         </div>
 
         <div class="form-group col-md-6">
-          <label id="lblBusiness" for="txtClient">Business</label>
+          <label id="lblBusiness" for="txtClient">Brandon Was Here</label>
           <asp:TextBox ID="txtBusiness" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
         </div>
 
