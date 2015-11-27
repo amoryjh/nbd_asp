@@ -36,6 +36,8 @@
                         <li><a href="#">New Project</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="ClientEntry.aspx">New Client</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="ClientEntry.aspx">Todays Report</a></li>
                     </ul>
                 </div>
             </li>

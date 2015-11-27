@@ -17,7 +17,8 @@
 </div>
 <div class="home-updates col-md-9 col-md-offset-3 clearfix">
     <div class="form-group">
-        <h1 class="section-title">Add New</h1>
+        <h1 class="section-title">Add New Report</h1>
+
         <label id="" for="ddlProv">Report</label>
         <select id="ddlProjectType" class="form-control">
             <option value="dailyreport">Daily Report</option>
