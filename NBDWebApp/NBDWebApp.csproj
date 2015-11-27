@@ -93,6 +93,13 @@
     <Compile Include="Projects\carlisle-hotel-renovations.aspx.designer.cs">
       <DependentUpon>carlisle-hotel-renovations.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Projects\NewProject.aspx.cs">
+      <DependentUpon>NewProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\NewProject.aspx.designer.cs">
+      <DependentUpon>NewProject.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="assets\css\bootstrap\bootstrap.css">
       <DependentUpon>bootstrap.less</DependentUpon>
@@ -223,6 +230,7 @@
     <Content Include="ClientEntry.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Projects\carlisle-hotel-renovations.aspx" />
+    <Content Include="Projects\NewProject.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
