@@ -25,8 +25,8 @@
     <nav>
         <ul>
             <h1 class="nav-logo"><a href="#">NBD</a></h1>
-            <li><a href="">Home</a></li>
-            <li><a href="">Project</a></li>
+            <li><a href="MainPage.aspx">Home</a></li>
+            <li><a href="BidProcess.aspx">Project</a></li>
             <li><a href="">Profile</a></li>
         </ul>
     </nav>

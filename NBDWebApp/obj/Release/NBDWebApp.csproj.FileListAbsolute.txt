@@ -7,7 +7,6 @@ C:\Users\Amory\Desktop\nbd_asp\NBDWebApp\bin\dotless.Core.pdb
 C:\Users\Amory\Desktop\nbd_asp\NBDWebApp\bin\Less.pdb
 C:\Users\Amory\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.dll
 C:\Users\Amory\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.pdb
-C:\Users\Amory\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.csprojResolveAssemblyReference.cache
 H:\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.dll
 H:\nbd_asp\NBDWebApp\bin\NBDWebApp.dll.config
 H:\nbd_asp\NBDWebApp\bin\NBDWebApp.dll
@@ -37,3 +36,4 @@ C:\Users\Brandon\Desktop\nbd_asp\NBDWebApp\bin\Less.pdb
 C:\Users\Brandon\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.csprojResolveAssemblyReference.cache
 C:\Users\Brandon\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.dll
 C:\Users\Brandon\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.pdb
+C:\Users\Amory\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.csprojResolveAssemblyReference.cache

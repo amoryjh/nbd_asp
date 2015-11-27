@@ -2,17 +2,20 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+<form id="form1" runat="server">
 <div class="col-md-3 user-info text-center">
-    <img src="assets/img/HomeBg.jpg" alt="">
+    <img src="assets/img/usrImage.png" alt="">
     <h1>User Name</h1>
-    <ul class="text-left">
-        <li><a href="">My Projects</a></li>
-        <li><a href="">Add/Edit a Report</a></li>
-        <li><a href="">Messages</a></li>
-        <li><a href="">Profile</a></li>
-    </ul>
+
+    <div class="usr-options">
+        <asp:Button CssClass="btn btn-primary" runat="server" Text="My Projects" />
+        <asp:Button CssClass="btn btn-primary" runat="server" Text="My Messages" />
+        <asp:Button CssClass="btn btn-primary" runat="server" Text="Add a Report" />
+        <asp:Button CssClass="btn btn-primary" runat="server" Text="My Profile" />
+    </div>
+    
 </div>
-<div class="home-updates col-md-9 col-md-offset-3">
+<div class="home-updates col-md-9 col-md-offset-3 clearfix">
     <h1 class="section-title">Most Recent Changes</h1>
     <div class="project-instance clearfix">
         <h2 class="project-title">Carlisle Hotel Renovations</h2>
@@ -46,5 +49,6 @@
             </div>
         </div>
     </div>
-</div>       
+</div>  
+</form>     
 </asp:Content>
