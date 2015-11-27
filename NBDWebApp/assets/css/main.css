@@ -5215,6 +5215,14 @@ ul.menu-hide-pos{top: 4.15em;z-index: 99;}
 .login nav ul li {
   display: none;
 }
+.login .user-info {
+  display: none;
+}
+.login .home-updates {
+  background: transparent;
+  margin: 0 auto;
+  width: 100%;
+}
 .login .login-wrapper {
   margin: 0 auto;
   margin-top: 4em;
