@@ -111,6 +111,7 @@
         </div>
 
         <div class="form-group col-md-6">
+<<<<<<< HEAD
           <label id="lblBusiness" for="txtClient">Business</label>
           <asp:TextBox ID="TextBox7" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
         </div>
@@ -152,6 +153,30 @@
         
         <div class="form-group col-md-12">
         <asp:Button ID="Button2" CssClass="btn" runat="server" Text="Insert Client" />
+=======
+          <label id="lblBidDate" for="txtBidDate">Bid Date</label>
+          <asp:TextBox ID="txtBidDate" runat="server" class="form-control" placeholder="Business Name" TextMode="Date"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label id="lblBidEstBeginDate" for="txtBidEstBeginDate">Estimated Begin Date</label>
+          <asp:TextBox ID="txtBidEstBeginDate" runat="server" class="form-control" placeholder="Contact Name" TextMode="Date"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label id="lblBidEstComDate" for="txtBidEstComDate">Estimated Completion Date</label>
+            <asp:TextBox ID="txtBidEstComDate" class="form-control" placeholder="City" runat="server" TextMode="Date"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label id="lblProjSite" for="txtProjSite">Project Site</label>
+            <asp:TextBox ID="txtProjSite" class="form-control" placeholder="Project Site" runat="server"></asp:TextBox>
+        </div>      
+        
+        <div class="form-group col-md-6">
+        <label id="lblBidEstCost" for="txtBidEstCost">Estimated Cost</label>
+        <asp:TextBox ID="txtBidEstCost" class="form-control" placeholder="Estimated Cost" runat="server" TextMode="Email"></asp:TextBox>
+>>>>>>> origin/master
         </div>
     </div>
     
