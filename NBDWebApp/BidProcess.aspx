@@ -112,27 +112,27 @@
 
         <div class="form-group col-md-6">
           <label id="lblBidDate" for="txtBidDate">Bid Date</label>
-          <asp:TextBox ID="txtBidDate" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+          <asp:TextBox ID="txtBidDate" runat="server" class="form-control" placeholder="Business Name" TextMode="Date"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
           <label id="lblBidEstBeginDate" for="txtBidEstBeginDate">Estimated Begin Date</label>
-          <asp:TextBox ID="txtBidEstBeginDate" runat="server" class="form-control" placeholder="Contact Name"></asp:TextBox>
+          <asp:TextBox ID="txtBidEstBeginDate" runat="server" class="form-control" placeholder="Contact Name" TextMode="Date"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
             <label id="lblBidEstComDate" for="txtBidEstComDate">Estimated Completion Date</label>
-            <asp:TextBox ID="txtBidEstComDate" class="form-control" placeholder="City" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtBidEstComDate" class="form-control" placeholder="City" runat="server" TextMode="Date"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
             <label id="lblProjSite" for="txtProjSite">Project Site</label>
-            <asp:TextBox ID="txtProjSite" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtProjSite" class="form-control" placeholder="Project Site" runat="server"></asp:TextBox>
         </div>      
         
         <div class="form-group col-md-6">
         <label id="lblBidEstCost" for="txtBidEstCost">Estimated Cost</label>
-        <asp:TextBox ID="txtBidEstCost" class="form-control" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
+        <asp:TextBox ID="txtBidEstCost" class="form-control" placeholder="Estimated Cost" runat="server" TextMode="Email"></asp:TextBox>
         </div>
        
     </div>
