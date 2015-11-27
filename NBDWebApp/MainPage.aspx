@@ -9,9 +9,9 @@
 
     <div class="usr-options">       
         <a class="btn btn-primary">My Projects</a>
-        <a class="btn btn-primary">My Messages</a>
         <a class="btn btn-primary" href="BidProcess.aspx">Add a Report</a>
         <a class="btn btn-primary">My Profile</a>
+        <a class="btn btn-primary">Log Out</a>
     </div>
     
 </div>

@@ -3,7 +3,33 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form id="form1" runat="server">
+    <div class="col-md-3 user-info text-center">
+    <img src="assets/img/usrImage.png" alt="">
+    <h1>User Name</h1>
 
+    <div class="usr-options">       
+        <a class="btn btn-primary">My Projects</a>
+        <a class="btn btn-primary" href="BidProcess.aspx">Add a Report</a>
+        <a class="btn btn-primary">My Profile</a>
+        <a class="btn btn-primary">Log Out</a>
+    </div>
+    
+</div>
+<div class="home-updates col-md-9 col-md-offset-3 clearfix">
+    <div class="form-group">
+        <h1 class="section-title">Add New</h1>
+        <label id="" for="ddlProv">Report</label>
+        <select id="ddlProjectType" class="form-control">
+            <option value="dailyreport">Daily Report</option>
+            <option value="designbid">Design Bid</option>
+            <option value="prouctionreport">Production Report</option>
+        </select>
+    </div>
+
+    <div class="report-group">
+    <div class="col-md-12">
+        <h1 class="project-title">New Design Bid</h1>
+    </div>
     <div class="bid-wrapper clearfix">
         <div class="form-group col-md-12">
             <h1>Enter Client Info</h1>
@@ -279,6 +305,18 @@
         <asp:Button ID="Button4" CssClass="btn" runat="server" Text="Insert Client" />
         </div>
     </div>
-
+    </div>
+    </div>
     </form>
+    <script>
+        $('.report-group').hide();
+        $('#ddlProjectType').on('change', function () {
+            if (this.value == "designbid") {
+                $('.report-group').show();
+            }
+            else {
+                $('.report-group').hide();
+            }
+        });
+    </script>
 </asp:Content>

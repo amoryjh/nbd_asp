@@ -5023,7 +5023,6 @@ input {
   padding-top: 4em;
 }
 .section-title {
-  border-bottom: 1px solid #aaa;
   font-weight: 700;
   margin: 1em 0;
   padding-bottom: 0.5em;
@@ -5268,10 +5267,14 @@ ul.menu-hide-pos{top: 4.15em;z-index: 99;}
 /*///////////////////////////////////////////////////////
 ----------------------Bid Process-----------------------
 ///////////////////////////////////////////////////////*/
+.design-bid {
+  background: #fff;
+}
+.design-bid .add-new .section-title {
+  margin-bottom: 0.25em;
+}
 .bid-wrapper {
-  width: 45%;
   float: left;
-  max-width: 45em;
   margin: 0 2.5%;
   margin-top: 2em;
   margin-bottom: 2em;
