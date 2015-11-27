@@ -64,9 +64,15 @@
             <h1>User Name</h1>
 
             <div class="usr-options">       
+<<<<<<< HEAD
                 <a class="btn btn-primary" href="~.MainPage.aspx">Projects</a>
                 <a class="btn btn-primary" href="~/DailyReports.aspx">Add Daily Report</a>
                 <a class="btn btn-primary">Log Out</a>
+=======
+                <a class="btn btn-primary" href="MainPage.aspx">Projects</a>
+                <a class="btn btn-primary" href="DailyReports.aspx">Add Daily Report</a>
+                <a class="btn btn-primary" href="Default.aspx">Log Out</a>
+>>>>>>> origin/master
             </div>
     
         </div>
