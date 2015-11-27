@@ -66,7 +66,7 @@
             <div class="usr-options">       
                 <a class="btn btn-primary" href="MainPage.aspx">Projects</a>
                 <a class="btn btn-primary" href="DailyReports.aspx">Add Daily Report</a>
-                <a class="btn btn-primary">Log Out</a>
+                <a class="btn btn-primary" href="Default.aspx">Log Out</a>
             </div>
     
         </div>
