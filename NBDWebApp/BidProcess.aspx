@@ -3,21 +3,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form id="form1" runat="server">
-    <div class="col-md-3 user-info text-center">
-    <img src="assets/img/usrImage.png" alt="">
-    <h1>User Name</h1>
-
-    <div class="usr-options">       
-        <a class="btn btn-primary">My Projects</a>
-        <a class="btn btn-primary" href="BidProcess.aspx">Add a Report</a>
-        <a class="btn btn-primary">My Profile</a>
-        <a class="btn btn-primary">Log Out</a>
-    </div>
-    
-</div>
-<div class="home-updates col-md-9 col-md-offset-3 clearfix">
     <div class="form-group">
-        <h1 class="section-title">Add New Report</h1>
+        <h1 class="section-title">Carlisle Hotel Renovations</h1>
+        <h2 class="section-title">Add New Report</h2>
 
         <label id="" for="ddlProv">Report</label>
         <select id="ddlProjectType" class="form-control">

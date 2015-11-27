@@ -7,7 +7,7 @@
         <div class="form-group col-md-12">
             <h1>Enter new client</h1>
         </div>
-
+        <!-- Hide the projects button and the add report button-->
         <div class="form-group col-md-6">
           <label id="lblBusiness" for="txtClient">Business</label>
           <asp:TextBox ID="txtBusiness" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>

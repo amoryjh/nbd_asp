@@ -4959,7 +4959,7 @@ body {
   font-weight: 400;
   font-size: 12px;
   color: #353535;
-  background: #efefef;
+  background: #fff;
 }
 @media (min-width: 768px) {
   body {
@@ -5026,6 +5026,9 @@ input {
   font-weight: 700;
   margin: 1em 0;
   padding-bottom: 0.5em;
+}
+h1.section-title {
+  border-bottom: 1px solid #353535;
 }
 .user-info {
   background: #eee;

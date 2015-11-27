@@ -36,8 +36,6 @@
                         <li><a href="#">New Project</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="ClientEntry.aspx">New Client</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="ClientEntry.aspx">Todays Report</a></li>
                     </ul>
                 </div>
             </li>
@@ -61,8 +59,20 @@
 
     </nav>
     <div class="main-wrapper">
+        <div class="col-md-3 user-info text-center">
+            <img src="assets/img/usrImage.png" alt="">
+            <h1>User Name</h1>
+
+            <div class="usr-options">       
+                <a class="btn btn-primary" href="MainPage.aspx">Projects</a>
+                <a class="btn btn-primary" href="BidProcess.aspx">Add Daily Report</a>
+                <a class="btn btn-primary">Log Out</a>
+            </div>
+    
+        </div>
+        <div class="home-updates col-md-9 col-md-offset-3 clearfix">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-        </asp:ContentPlaceHolder>
+        </asp:ContentPlaceHolder></div>
     </div>
 </body>
 </html>
