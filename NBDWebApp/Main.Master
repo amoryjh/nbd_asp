@@ -24,7 +24,7 @@
 <body runat="server" id="BodyTag">
     <nav>
         <ul>
-            <h1 class="nav-logo"><a href="MainPage.aspx">NBD</a></h1>
+            <h1 class="nav-logo"><a href="<%= Page.ResolveUrl("~/MainPage.aspx") %>">NBD</a></h1>
             <li>
                 <div class="btn-group">
                     <button type="button" class="btn btn-danger">Add New</button>
