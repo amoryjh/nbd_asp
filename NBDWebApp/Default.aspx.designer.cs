@@ -110,6 +110,7 @@ namespace NBDWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button createAccount;
+<<<<<<< HEAD
         
         /// <summary>
         /// LblMessage control.
@@ -119,5 +120,7 @@ namespace NBDWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LblMessage;
+=======
+>>>>>>> origin/master
     }
 }

@@ -7,7 +7,11 @@
         
         <div id="login-section">
             
+<<<<<<< HEAD
             <h1 class="text-center">re<a href="#">NBD Login</a></h1>  
+=======
+            <h1 class="text-center"><a href="#">NBD Login</a></h1>  
+>>>>>>> origin/master
         
             <div class="form-group">
                 <label id="lblEmpNum" for="txtEmpNum">Employee Number</label>
@@ -55,11 +59,17 @@
             </div>
 
             <div class="form-group">
+<<<<<<< HEAD
                 <asp:Button ID="createAccount" CssClass="btn" runat="server" Text="Create Account" OnClick="createAccount_Click" />
             </div>
             <div class="form-group">
                 <asp:Label ID="LblMessage" runat="server" ForeColor="Red"></asp:Label>
             </div>
+=======
+                <asp:Button ID="createAccount" CssClass="btn" runat="server" Text="Create Account" />
+            </div>
+
+>>>>>>> origin/master
             <div class="form-group">
                 <asp:Button CssClass="btn btn-primary display-login" runat="server" OnClick="btnLogin_Click" Text="Back to Login" />
             </div>

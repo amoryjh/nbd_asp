@@ -115,7 +115,10 @@
     <Compile Include="DailyReports.aspx.designer.cs">
       <DependentUpon>DailyReports.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="EntityExample.cs" />
+=======
+>>>>>>> origin/master
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -130,7 +133,10 @@
     <Compile Include="MainPage.aspx.designer.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="OwinStartup.cs" />
+=======
+>>>>>>> origin/master
     <Compile Include="Projects\carlisle-hotel-renovations.aspx.cs">
       <DependentUpon>carlisle-hotel-renovations.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
