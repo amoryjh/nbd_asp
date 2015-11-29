@@ -2,25 +2,20 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    
-    <title></title>
+
     <!-------------------------------------------------------------
     ///////////////////////////Styles/////////////////////////////
     -------------------------------------------------------------->
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/css/main.min.css"/>
-    
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,600,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/css/main.min.css" />
     <!-------------------------------------------------------------
     //////////////////////////Scripts/////////////////////////////
     -------------------------------------------------------------->
-    <script src="assets/js/jquery-1.9.0.min.js"></script>
-    <script src="assets/js/jquery-1.9.0.intellisense.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-
+    <script src="/assets/js/jquery-2.1.4.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
     <!-------------------------------------------------------------
     ///////Page Specific Scripts||Styles||Headings||Meta Tags//////
     -------------------------------------------------------------->
-    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
@@ -29,15 +24,55 @@
 <body runat="server" id="BodyTag">
     <nav>
         <ul>
-            <h1 class="nav-logo"><a href="#">NBD</a></h1>
-            <li><a href="">Home</a></li>
-            <li><a href="">Project</a></li>
-            <li><a href="">Profile</a></li>
+            <h1 class="nav-logo"><a href="<%= Page.ResolveUrl("~/MainPage.aspx") %>">NBD</a></h1>
+            <li>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger">Add New</button>
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">New Project</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="ClientEntry.aspx">New Client</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger">Options</button>
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Your Reports</a></li>
+                        <li><a href="#">All Files</a></li>
+                        <li><a href="#">Project Directory</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">What's New?</a></li>
+                    </ul>
+                </div>
+            </li>
         </ul>
+
     </nav>
     <div class="main-wrapper">
+        <div class="col-md-3 user-info text-center">
+            <img src="/assets/img/usrImage.png" alt="">
+            <h1>User Name</h1>
+
+            <div class="usr-options">       
+                <a class="btn btn-primary" href="<%= Page.ResolveUrl("~/MainPage.aspx") %>">Projects</a>
+                <a class="btn btn-primary" href="<%= Page.ResolveUrl("~/DailyReports.aspx") %>">Add Daily Report</a>
+                <a class="btn btn-primary">Log Out</a>
+            </div>
+    
+        </div>
+        <div class="home-updates col-md-9 col-md-offset-3 clearfix">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-        </asp:ContentPlaceHolder>
+        </asp:ContentPlaceHolder></div>
     </div>
 </body>
 </html>

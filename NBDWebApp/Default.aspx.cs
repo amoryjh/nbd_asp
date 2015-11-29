@@ -6,6 +6,14 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
+//Required namespaces for registering new users
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
+
+
+
+
 namespace NBDWebApp
 {
     public partial class Default : System.Web.UI.Page
@@ -17,10 +25,44 @@ namespace NBDWebApp
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtEmpNum.Text == "1234" && txtPassword.Text == "password")
-                Server.Transfer("MainPage.aspx");
+            //declare the collection of users
+            UserStore<IdentityUser> userStore = new UserStore<IdentityUser>();
+            //declare the user manager
+            UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+            //try to find the user
+            IdentityUser user = manager.Find(txtEmpNum.Text, txtPassword.Text);
+            if (user == null)
+                lblStatus.Text = "Username or Password is incorrect";
             else
-                lblStatus.Text = "Incorrect employee number or password";
+            {
+                
+                //authenticate user
+                var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+                authenticationManager.SignIn(userIdentity);
+                Response.Redirect("~/MainPage.aspx");
+            }
+
+        }
+
+        protected void createAccount_Click(object sender, EventArgs e)
+        {
+            UserStore<IdentityUser> userStore = new UserStore<IdentityUser>();
+            //declare the user manager
+            UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+
+            IdentityUser user = new IdentityUser(txtNewEmployee.Text);
+            //attempt to store the new user
+            IdentityResult idResult = manager.Create(user, txtNewPassWordConfirm.Text);
+
+            if (idResult.Succeeded)
+            {
+                LblMessage.Text = "User " + user.UserName + "was sucessfully created!";
+            }
+            else
+            {
+                LblMessage.Text = idResult.Errors.FirstOrDefault();
+            }
         }
     }
 }

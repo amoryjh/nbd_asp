@@ -4936,13 +4936,20 @@ button.close {
   }
 }
 .btn {
-  background: #e02612;
+  background: #ef4836;
   color: #fff;
   padding: 0.5em;
 }
 .btn:hover {
-  color: #f2f2f2;
-  background: #ef4836;
+  color: #f1f1f1;
+  background: #e02612;
+}
+.btn-primary {
+  background: #337ab7;
+  border-color: inherit;
+}
+.btn-primary:hover {
+  background: #285f8f;
 }
 /*///////////////////////////////////////////////////////
 -----------------------Base Styles-----------------------
@@ -4950,9 +4957,19 @@ button.close {
 body {
   font-family: 'lato';
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
   color: #353535;
-  background: #efefef;
+  background: #fff;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    font-size: 17px;
+  }
 }
 h1,
 h2,
@@ -5006,23 +5023,49 @@ input {
   padding-top: 4em;
 }
 .section-title {
-  border-bottom: 1px solid #aaa;
+  font-weight: 700;
   margin: 1em 0;
   padding-bottom: 0.5em;
 }
+h1.section-title {
+  border-bottom: 1px solid #353535;
+}
 .user-info {
   background: #eee;
+  background-color: #304659;
+  background-image: -webkit-linear-gradient(right, #304659, #567c9f);
+  background-image: -moz-linear-gradient(right, #304659, #567c9f);
+  background-image: -o-linear-gradient(right, #304659, #567c9f);
+  background-image: -ms-linear-gradient(right, #304659, #567c9f);
+  background-image: linear-gradient(right, #304659, #567c9f);
   position: fixed;
+  color: #fff;
   height: 100vh;
+  display: none;
 }
 .user-info img {
   max-width: 200px;
   height: 180px;
   margin: 1em 0;
-  border-radius: 70%;
+}
+.user-info .usr-options .btn-primary {
+  width: 100%;
+  margin: 0.65em 0;
+  background: #5cb85c;
+  border: none;
+}
+.user-info .usr-options .btn-primary:hover {
+  background: #449d44;
+  border: none;
+}
+@media (min-width: 992px) {
+  .user-info {
+    display: block;
+  }
 }
 .project-title {
   margin: 0.5em 0 0 0;
+  font-weight: 600;
 }
 .project-update-date {
   margin: 0.5em 0 1em 0;
@@ -5033,8 +5076,25 @@ span.highlight-change {
 }
 .project-instance {
   margin: 2em 0;
-  padding: 2.2em 2.6em;
+  padding: 1.2em;
   box-shadow: 0px 1px 20px #ededed;
+}
+.project-instance .well {
+  padding-left: 0.1em;
+}
+.project-instance .well a {
+  color: #337ab7;
+}
+.project-instance .well a:hover {
+  color: #285f8f;
+}
+@media (min-width: 520px) {
+  .project-instance {
+    padding: 2.2em 2.6em;
+  }
+  .project-instance .well {
+    padding: 19px;
+  }
 }
 .action-btn {
   background: #DB0A5B;
@@ -5074,7 +5134,6 @@ nav {
   z-index: 999;
   background-color: #22313f;
   color: #fff;
-  height: 4.1em;
   padding: 0.6em 0;
   width: 100%;
 }
@@ -5085,12 +5144,22 @@ nav ul {
 nav ul {
   vertical-align: middle;
   position: relative;
-  top: 0.7em;
   text-align: right;
   list-style-type: none;
+  margin-right: 1em;
 }
 nav ul h1.nav-logo {
   float: left;
+  position: relative;
+  top: 0.1em;
+  display: block;
+  width: 100%;
+}
+@media (min-width: 520px) {
+  nav ul h1.nav-logo {
+    display: inline-block;
+    width: auto;
+  }
 }
 nav ul a {
   text-decoration: none;
@@ -5102,7 +5171,7 @@ nav ul a:hover {
   color: #ef4836;
 }
 nav ul li {
-  padding: 0 2em;
+  padding: 0 1em;
   display: inline-block;
 }
 nav ul li p.action-btn {
@@ -5112,6 +5181,13 @@ nav ul li p.action-btn {
   height: 2.53em;
   z-index: 10;
   box-shadow: none;
+}
+nav .btn-group .dropdown-menu {
+  left: auto;
+  right: 0 !important;
+}
+nav .btn-group .dropdown-menu .divider {
+  width: 100%;
 }
 /* 
     ---------------------OLD MENU
@@ -5139,11 +5215,19 @@ ul.menu-hide-pos{top: 4.15em;z-index: 99;}
 .login nav ul li {
   display: none;
 }
-.login .login-wrapper {
-  top: 6em;
-  box-shadow: 0 2px 18px #353535;
-  position: relative;
+.login .user-info {
+  display: none;
+}
+.login .home-updates {
+  background: transparent;
   margin: 0 auto;
+  width: 100%;
+}
+.login .login-wrapper {
+  margin: 0 auto;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  box-shadow: 0 2px 18px #353535;
   max-width: 22em;
   width: 90%;
   padding: 2.5em 1.75em 1em 1.75em;
@@ -5156,6 +5240,8 @@ ul.menu-hide-pos{top: 4.15em;z-index: 99;}
 }
 .login .login-wrapper .btn {
   margin: 1.5em 0;
+  font-weight: 700;
+  font-size: 1em;
 }
 .login .login-wrapper .form-group p a {
   color: #4f7192;
@@ -5167,7 +5253,13 @@ ul.menu-hide-pos{top: 4.15em;z-index: 99;}
 ------------------------Home Page-----------------------
 ///////////////////////////////////////////////////////*/
 .home-updates {
-  padding: 0 2.4em;
+  padding: 0.2em;
+  background: #fff;
+}
+@media (min-width: 520px) {
+  .home-updates {
+    padding: 0 2.4em;
+  }
 }
 /*///////////////////////////////////////////////////////
 ----------------------Client Login-----------------------
@@ -5188,11 +5280,16 @@ ul.menu-hide-pos{top: 4.15em;z-index: 99;}
 /*///////////////////////////////////////////////////////
 ----------------------Bid Process-----------------------
 ///////////////////////////////////////////////////////*/
+.design-bid {
+  background: #fff;
+}
+.design-bid .add-new .section-title {
+  margin-bottom: 0.25em;
+}
 .bid-wrapper {
-  width: 45%;
   float: left;
-  max-width: 45em;
-  margin: 0 2.5%;
+  width: 100%;
+  margin: 0 auto;
   margin-top: 2em;
   margin-bottom: 2em;
   padding: 3em;
