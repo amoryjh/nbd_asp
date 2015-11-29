@@ -3,6 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form id="form1" runat="server">
+    <h1 class="section-title">
+    <asp:Label ID="LblUserName" runat="server" Text=""></asp:Label></h1>
     <h1 class="section-title">Projects</h1>
     <h2 class="section-title">Most Recent Changes</h2>
     <div class="project-instance clearfix">

@@ -99,6 +99,10 @@
     <Reference Include="System.Web.Http.Owin">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -115,10 +119,27 @@
     <Compile Include="DailyReports.aspx.designer.cs">
       <DependentUpon>DailyReports.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="EntityExample.cs" />
-=======
->>>>>>> origin/master
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.aspx.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee.aspx.designer.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -133,10 +154,7 @@
     <Compile Include="MainPage.aspx.designer.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="OwinStartup.cs" />
-=======
->>>>>>> origin/master
     <Compile Include="Projects\carlisle-hotel-renovations.aspx.cs">
       <DependentUpon>carlisle-hotel-renovations.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -153,9 +171,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="App_Data\Users.mdf" />
-    <Content Include="App_Data\Users_log.ldf">
-      <DependentUpon>Users.mdf</DependentUpon>
-    </Content>
+    <Content Include="App_Data\Users_log.ldf" />
     <Content Include="assets\css\bootstrap\bootstrap.css">
       <DependentUpon>bootstrap.less</DependentUpon>
     </Content>
@@ -267,26 +283,20 @@
     <Content Include="assets\js\jquery-2.1.4.js" />
     <Content Include="assets\js\jquery-2.1.4.min.js" />
     <Content Include="DailyReports.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Employee.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="MainPage.aspx" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Main.Master" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BidProcess.aspx" />
     <Content Include="ClientEntry.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="Projects\carlisle-hotel-renovations.aspx" />
     <Content Include="Projects\NewProject.aspx" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BidProcess.aspx.cs">
@@ -303,16 +313,19 @@
     <Compile Include="ClientEntry.aspx.designer.cs">
       <DependentUpon>ClientEntry.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+    <Content Include="Main.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -6,12 +6,10 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
-//Required namespaces for registering new users
+
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
-
-
 
 
 namespace NBDWebApp
@@ -22,6 +20,39 @@ namespace NBDWebApp
         {
             HtmlGenericControl body = (HtmlGenericControl)Master.FindControl("BodyTag");
             body.Attributes.Add("class", "login");
+
+            RoleStore<IdentityRole> roleStore = new RoleStore<IdentityRole>();
+            RoleManager<IdentityRole> roleMgr = new RoleManager<IdentityRole>(roleStore);
+
+            if (User.Identity.IsAuthenticated)
+            {
+                Response.Redirect("~/MainPage.aspx");
+            }
+            
+               
+            //creating roles//
+            if (!roleMgr.RoleExists("Admin"))
+            {
+                IdentityResult roleResult = roleMgr.Create(new IdentityRole("Admin"));
+            }
+            if (!roleMgr.RoleExists("Manager"))
+            {
+                IdentityResult roleResult = roleMgr.Create(new IdentityRole("Manager"));
+            }
+            if (!roleMgr.RoleExists("SalesAssoc"))
+            {
+                IdentityResult roleResult = roleMgr.Create(new IdentityRole("SalesAssoc"));
+            }
+            if (!roleMgr.RoleExists("Designer"))
+            {
+                IdentityResult roleResult = roleMgr.Create(new IdentityRole("Designer"));
+            }
+            if (!roleMgr.RoleExists("Laborers"))
+            {
+                IdentityResult roleResult = roleMgr.Create(new IdentityRole("Laborers"));
+            }
+          
+
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
@@ -35,33 +66,41 @@ namespace NBDWebApp
                 lblStatus.Text = "Username or Password is incorrect";
             else
             {
-                
+                if (txtEmpNum.Text == "Administrator")
+                {
+                    IdentityResult userResult = manager.AddToRole(user.Id, "Admin");
+                }
+                //add user to role
                 //authenticate user
                 var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
                 var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
                 authenticationManager.SignIn(userIdentity);
                 Response.Redirect("~/MainPage.aspx");
             }
-
         }
 
-        protected void createAccount_Click(object sender, EventArgs e)
+        protected void btnCreate_Click(object sender, EventArgs e)
         {
-            UserStore<IdentityUser> userStore = new UserStore<IdentityUser>();
-            //declare the user manager
-            UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
-
-            IdentityUser user = new IdentityUser(txtNewEmployee.Text);
-            //attempt to store the new user
-            IdentityResult idResult = manager.Create(user, txtNewPassWordConfirm.Text);
-
-            if (idResult.Succeeded)
             {
-                LblMessage.Text = "User " + user.UserName + "was sucessfully created!";
-            }
-            else
-            {
-                LblMessage.Text = idResult.Errors.FirstOrDefault();
+                //declare the collection of users
+                UserStore<IdentityUser> userStore = new UserStore<IdentityUser>();
+                //declare the user manager
+                UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+                //create a new user
+                IdentityUser user = new IdentityUser(txtNewEmployee.Text);
+                //attempt to store the new user
+                IdentityResult idResult = manager.Create(user, txtNewPassWordConfirm.Text);
+
+                if (idResult.Succeeded)
+                {
+                    IdentityResult userResult = manager.AddToRole(user.Id, DropDownList1.SelectedValue);
+                    var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                    var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+                    authenticationManager.SignIn(userIdentity);
+                    Response.Redirect("~/MainPage.aspx");
+                }
+                else
+                    LblError.Text = idResult.Errors.FirstOrDefault();
             }
         }
     }
