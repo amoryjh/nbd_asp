@@ -8,23 +8,36 @@
     -------------------------------------------->
     <div class="project-header form-group">
         <h1 class="section-title">Carlisle Hotel Renovations</h1>
-        <input type="checkbox" class="form-control">
-        <h2 class="section-title">Add New Report</h2>
-        <label id="" for="ddlProv">Report</label>
-        <select id="ddlProjectType" class="form-control">
-            <option value="dailyreport">Daily Report</option>
-            <option value="designbid">Design Bid</option>
-            <option value="prouctionreport">Production Report</option>
-        </select>
+        <h3 class="section-title">
+          Add New Report 
+          <input type="checkbox" class="checkbox">
+        </h3>
+        <!-------------------------------------------
+        ////////Report Selector Dropdown list////////
+        -------------------------------------------->
+        <section class="add-report">
+          <label id="" for="ddlProv">Report</label>
+          <select id="ddlProjectType" class="form-control">
+              <option value="dailyreport">Daily Report</option>
+              <option value="designbid">Design Bid</option>
+              <option value="prouctionreport">Production Report</option>
+          </select>
+        </section>
     </div>
     
-    
+  <!------------------------------------------- 
+  ////////////////Report Sections//////////////
+  -------------------------------------------->
+  
+    <!------------------------------------------- 
+    ////////////////Design Bid///////////////////
+    -------------------------------------------->
     
     <div class="report-group designbid">
-    <div class="col-md-12">
-        <h1 class="project-title">Design Bid</h1>
-    </div>
-    <div class="bid-wrapper clearfix">
+      <div class="col-md-12">
+          <h1 class="project-title">Design Bid</h1>
+      </div>
+      <div class="bid-wrapper clearfix">
         <div class="form-group col-md-12">
             <h1>Enter Client Info</h1>
         </div>
@@ -131,7 +144,6 @@
         </div>
 
         <div class="form-group col-md-6">
-<<<<<<< HEAD
           <label id="lblBusiness" for="txtClient">Business</label>
           <asp:TextBox ID="TextBox7" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
         </div>
@@ -172,8 +184,7 @@
         </div>
         
         <div class="form-group col-md-12">
-        <asp:Button ID="Button2" CssClass="btn" runat="server" Text="Insert Client" />
-=======
+          <asp:Button ID="Button2" CssClass="btn" runat="server" Text="Insert Client" />
           <label id="lblBidDate" for="txtBidDate">Bid Date</label>
           <asp:TextBox ID="txtBidDate" runat="server" class="form-control" placeholder="Business Name" TextMode="Date"></asp:TextBox>
         </div>
@@ -196,7 +207,6 @@
         <div class="form-group col-md-6">
         <label id="lblBidEstCost" for="txtBidEstCost">Estimated Cost</label>
         <asp:TextBox ID="txtBidEstCost" class="form-control" placeholder="Estimated Cost" runat="server" TextMode="Email"></asp:TextBox>
->>>>>>> origin/master
         </div>
     </div>
     
@@ -299,6 +309,9 @@
         <asp:Button ID="Button4" CssClass="btn" runat="server" Text="Insert Client" />
         </div>
     </div>
-    </div>
+
+    </div> <!-- 
+           ////////////// End Of Design Bid /////////////
+           -->
 </form>
 </asp:Content>
