@@ -61,7 +61,7 @@
     <div class="main-wrapper">
         <div class="col-md-3 user-info text-center">
             <img src="/assets/img/usrImage.png" alt="">
-            <h1>User Name</h1>
+            <h1 id="lblUserName">User Name</h1>
 
             <div class="usr-options">       
                 <a class="btn btn-primary" href="<%= Page.ResolveUrl("~/MainPage.aspx") %>">Projects</a>

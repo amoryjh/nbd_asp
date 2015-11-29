@@ -11,7 +11,7 @@ namespace NBDWebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (User.Identity.IsAuthenticated)
+            /*if (User.Identity.IsAuthenticated)
             {
                 if (User.IsInRole("Admin"))
                 {
@@ -23,6 +23,7 @@ namespace NBDWebApp
             {
                 Response.Redirect("~/Default.aspx");
             }
+             */
         }
     }
 }

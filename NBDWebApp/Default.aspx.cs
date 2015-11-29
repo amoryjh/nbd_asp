@@ -20,7 +20,7 @@ namespace NBDWebApp
         {
             HtmlGenericControl body = (HtmlGenericControl)Master.FindControl("BodyTag");
             body.Attributes.Add("class", "login");
-
+            /*
             RoleStore<IdentityRole> roleStore = new RoleStore<IdentityRole>();
             RoleManager<IdentityRole> roleMgr = new RoleManager<IdentityRole>(roleStore);
 
@@ -52,10 +52,11 @@ namespace NBDWebApp
                 IdentityResult roleResult = roleMgr.Create(new IdentityRole("Laborers"));
             }
           
-
+            */
         }
+        
         protected void btnLogin_Click(object sender, EventArgs e)
-        {
+        {/*
             //declare the collection of users
             UserStore<IdentityUser> userStore = new UserStore<IdentityUser>();
             //declare the user manager
@@ -77,11 +78,10 @@ namespace NBDWebApp
                 authenticationManager.SignIn(userIdentity);
                 Response.Redirect("~/MainPage.aspx");
             }
-        }
+        */}
 
         protected void btnCreate_Click(object sender, EventArgs e)
-        {
-            {
+        {/*
                 //declare the collection of users
                 UserStore<IdentityUser> userStore = new UserStore<IdentityUser>();
                 //declare the user manager
@@ -101,7 +101,7 @@ namespace NBDWebApp
                 }
                 else
                     LblError.Text = idResult.Errors.FirstOrDefault();
-            }
+        */
         }
     }
 }
