@@ -16,7 +16,7 @@
     </div>
     <div class="report-group">
     <div class="col-md-12">
-        <h1 class="project-title">New Design Bid</h1>
+        <h1 class="project-title">Design Bid</h1>
     </div>
     <div class="bid-wrapper clearfix">
         <div class="form-group col-md-12">
@@ -47,7 +47,7 @@
             <label id="lblClientProv" for="ddlProv">Province</label>
             <asp:DropDownList  ID="ddlProv" class="form-control" placeholder="State" runat="server">
                 <asp:ListItem Selected="True">ON</asp:ListItem>
-                <asp:ListItem>B.C</asp:ListItem>
+                <asp:ListItem>BC</asp:ListItem>
                 <asp:ListItem>AB</asp:ListItem>
                 <asp:ListItem>MB</asp:ListItem>
             </asp:DropDownList>
