@@ -3,10 +3,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 <form id="form1" runat="server">
-    <div class="form-group">
+    <!------------------------------------------- 
+    /////////////////Project Header//////////////
+    -------------------------------------------->
+    <div class="project-header form-group">
         <h1 class="section-title">Carlisle Hotel Renovations</h1>
+        <input type="checkbox" class="form-control">
         <h2 class="section-title">Add New Report</h2>
-
         <label id="" for="ddlProv">Report</label>
         <select id="ddlProjectType" class="form-control">
             <option value="dailyreport">Daily Report</option>
@@ -14,7 +17,10 @@
             <option value="prouctionreport">Production Report</option>
         </select>
     </div>
-    <div class="report-group">
+    
+    
+    
+    <div class="report-group designbid">
     <div class="col-md-12">
         <h1 class="project-title">Design Bid</h1>
     </div>
