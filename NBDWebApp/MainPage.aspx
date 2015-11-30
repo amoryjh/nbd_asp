@@ -3,17 +3,21 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form id="form1" runat="server">
-        
-    <hr />
+    
+    <h1 class="section-title">Recent Projects</h1>
+        <h3 >Filter By:</h3>
     <div class="well clearfix">
-        <h2>Add sub menu here</h2>
         <div class="form-group col-md-6">
+            <label>Client Name</label>
             <asp:DropDownList ID="ddlClientName" class="form-control" runat="server">
             </asp:DropDownList>
         </div>
+        <div class="form-group col-md-6">
+            <label>Completion Date</label>
+            <asp:DropDownList ID="ddlProject" class="form-control" runat="server">
+            </asp:DropDownList>
+        </div>
     </div>
-    
-    <h1 class="section-title">Recent Projects</h1>
     <div class="project-instance clearfix">
         <div class="project-instance-title">
             <h2 class="project-title"><a href="Projects/carlisle-hotel-renovations.aspx">Carlisle Hotel Renovations</a></h2>

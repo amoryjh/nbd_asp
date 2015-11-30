@@ -37,6 +37,17 @@ namespace NBDWebApp
                 ddlClientName.DataTextField = "FullName";
                 ddlClientName.DataValueField = "ID";
                 ddlClientName.DataBind();
+
+                ddlProject.DataSource = (from n in db.PROJECTs
+                                         select new
+                                         {
+                                             n.ID,
+                                             Date = n.projEstEnd
+                                         }
+                                          ).ToList();
+                ddlProject.DataTextField = "Date";
+                ddlProject.DataValueField = "ID";
+                ddlProject.DataBind();
             }
         }
     }
