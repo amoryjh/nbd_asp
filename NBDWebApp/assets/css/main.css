@@ -5016,6 +5016,10 @@ input {
 .form-group {
   padding: 0 10px;
 }
+#form1 {
+  max-width: 43em;
+  margin: 0 auto;
+}
 /*///////////////////////////////////////////////////////
 --------------------Universal Classes--------------------  
 ///////////////////////////////////////////////////////*/
@@ -5044,8 +5048,7 @@ h1.section-title {
   display: none;
 }
 .user-info img {
-  max-width: 200px;
-  height: 180px;
+  max-width: 100%;
   margin: 1em 0;
 }
 .user-info .usr-options .btn-primary {
