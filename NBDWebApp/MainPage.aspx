@@ -10,6 +10,37 @@
     <div class="project-instance clearfix">
         <h2 class="project-title"><a href="Projects/carlisle-hotel-renovations.aspx">Carlisle Hotel Renovations</a></h2>
         <p class="project-update-date">Updated on: 12/01/2015</p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">
+                    Project Timeline
+                </h1>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>
+                        <span class="details">
+                            Design Bid
+                        </span>
+                    </li>
+                    <li>
+                        <span class="details">
+                            Design Budget
+                        </span>
+                    </li>
+                    <li>
+                        <span class="details">
+                            Production Plan
+                        </span>
+                    </li>
+                    <li>
+                        <span class="details">
+                            Approved
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="col-md-12"> 
             <h4>Project Modules:</h4>  
             <div class="well updated-list">
