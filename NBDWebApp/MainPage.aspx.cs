@@ -24,6 +24,20 @@ namespace NBDWebApp
                 Response.Redirect("~/Default.aspx");
             }
              */
+            if (!Page.IsPostBack)
+            {
+                NBD_SBEntities db = new NBD_SBEntities();
+
+                ddlClientName.DataSource = (from n in db.CLIENTs
+                                          select new
+                                          {
+                                              n.ID,
+                                              FullName = n.cliName                                          }
+                                          ).ToList();
+                ddlClientName.DataTextField = "FullName";
+                ddlClientName.DataValueField = "ID";
+                ddlClientName.DataBind();
+            }
         }
     }
 }

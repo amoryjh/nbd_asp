@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NBD_SBModelStoreContainer" CdmEntityContainer="NBD_SBEntities">
+    <EntitySetMapping Name="CITies">
+      <EntityTypeMapping TypeName="NBD_SBModel.CITY">
+        <MappingFragment StoreEntitySet="CITY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="city1" ColumnName="city" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTs">
+      <EntityTypeMapping TypeName="NBD_SBModel.CLIENT">
+        <MappingFragment StoreEntitySet="CLIENT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="cliName" ColumnName="cliName" />
+          <ScalarProperty Name="cliAddress" ColumnName="cliAddress" />
+          <ScalarProperty Name="cityID" ColumnName="cityID" />
+          <ScalarProperty Name="cliProvince" ColumnName="cliProvince" />
+          <ScalarProperty Name="cliPCode" ColumnName="cliPCode" />
+          <ScalarProperty Name="cliPhone" ColumnName="cliPhone" />
+          <ScalarProperty Name="cliConFName" ColumnName="cliConFName" />
+          <ScalarProperty Name="cliConLName" ColumnName="cliConLName" />
+          <ScalarProperty Name="cliConPosition" ColumnName="cliConPosition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTORies">
+      <EntityTypeMapping TypeName="NBD_SBModel.INVENTORY">
+        <MappingFragment StoreEntitySet="INVENTORY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="materialID" ColumnName="materialID" />
+          <ScalarProperty Name="invAvgNet" ColumnName="invAvgNet" />
+          <ScalarProperty Name="invList" ColumnName="invList" />
+          <ScalarProperty Name="invSizeAmnt" ColumnName="invSizeAmnt" />
+          <ScalarProperty Name="invSizeUnit" ColumnName="invSizeUnit" />
+          <ScalarProperty Name="invQOH" ColumnName="invQOH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LABOUR_REQUIREMENT">
+      <EntityTypeMapping TypeName="NBD_SBModel.LABOUR_REQUIREMENT">
+        <MappingFragment StoreEntitySet="LABOUR_REQUIREMENT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="prodTeamID" ColumnName="prodTeamID" />
+          <ScalarProperty Name="taskID" ColumnName="taskID" />
+          <ScalarProperty Name="lreqEstDate" ColumnName="lreqEstDate" />
+          <ScalarProperty Name="lreqEstHours" ColumnName="lreqEstHours" />
+          <ScalarProperty Name="lreqActDate" ColumnName="lreqActDate" />
+          <ScalarProperty Name="lreqActHours" ColumnName="lreqActHours" />
+          <ScalarProperty Name="lreqComments" ColumnName="lreqComments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LABOUR_SUMMARY">
+      <EntityTypeMapping TypeName="NBD_SBModel.LABOUR_SUMMARY">
+        <MappingFragment StoreEntitySet="LABOUR_SUMMARY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="projectID" ColumnName="projectID" />
+          <ScalarProperty Name="workerTypeID" ColumnName="workerTypeID" />
+          <ScalarProperty Name="lsHours" ColumnName="lsHours" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MATERIALs">
+      <EntityTypeMapping TypeName="NBD_SBModel.MATERIAL">
+        <MappingFragment StoreEntitySet="MATERIAL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="matDesc" ColumnName="matDesc" />
+          <ScalarProperty Name="matType" ColumnName="matType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MATERIAL_REQ">
+      <EntityTypeMapping TypeName="NBD_SBModel.MATERIAL_REQ">
+        <MappingFragment StoreEntitySet="MATERIAL_REQ">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="inventoryID" ColumnName="inventoryID" />
+          <ScalarProperty Name="projectID" ColumnName="projectID" />
+          <ScalarProperty Name="mreqDeliver" ColumnName="mreqDeliver" />
+          <ScalarProperty Name="mreqInstall" ColumnName="mreqInstall" />
+          <ScalarProperty Name="mreqEstQty" ColumnName="mreqEstQty" />
+          <ScalarProperty Name="mreqActQty" ColumnName="mreqActQty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROD_TEAM">
+      <EntityTypeMapping TypeName="NBD_SBModel.PROD_TEAM">
+        <MappingFragment StoreEntitySet="PROD_TEAM">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="projectID" ColumnName="projectID" />
+          <ScalarProperty Name="workerID" ColumnName="workerID" />
+          <ScalarProperty Name="teamPhaseIn" ColumnName="teamPhaseIn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROD_TOOL">
+      <EntityTypeMapping TypeName="NBD_SBModel.PROD_TOOL">
+        <MappingFragment StoreEntitySet="PROD_TOOL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="projectID" ColumnName="projectID" />
+          <ScalarProperty Name="toolID" ColumnName="toolID" />
+          <ScalarProperty Name="ptQty" ColumnName="ptQty" />
+          <ScalarProperty Name="ptDeliverFrom" ColumnName="ptDeliverFrom" />
+          <ScalarProperty Name="ptDeliverTo" ColumnName="ptDeliverTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROJECTs">
+      <EntityTypeMapping TypeName="NBD_SBModel.PROJECT">
+        <MappingFragment StoreEntitySet="PROJECT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="projName" ColumnName="projName" />
+          <ScalarProperty Name="projSite" ColumnName="projSite" />
+          <ScalarProperty Name="projBidDate" ColumnName="projBidDate" />
+          <ScalarProperty Name="projEstStart" ColumnName="projEstStart" />
+          <ScalarProperty Name="projEstEnd" ColumnName="projEstEnd" />
+          <ScalarProperty Name="projActStart" ColumnName="projActStart" />
+          <ScalarProperty Name="projActEnd" ColumnName="projActEnd" />
+          <ScalarProperty Name="projEstCost" ColumnName="projEstCost" />
+          <ScalarProperty Name="projActCost" ColumnName="projActCost" />
+          <ScalarProperty Name="projBidCustAccept" ColumnName="projBidCustAccept" />
+          <ScalarProperty Name="projBidMgmtAccept" ColumnName="projBidMgmtAccept" />
+          <ScalarProperty Name="projCurrentPhase" ColumnName="projCurrentPhase" />
+          <ScalarProperty Name="projIsFlagged" ColumnName="projIsFlagged" />
+          <ScalarProperty Name="clientID" ColumnName="clientID" />
+          <ScalarProperty Name="designerID" ColumnName="designerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="NBD_SBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TASKs">
+      <EntityTypeMapping TypeName="NBD_SBModel.TASK">
+        <MappingFragment StoreEntitySet="TASK">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="taskDesc" ColumnName="taskDesc" />
+          <ScalarProperty Name="taskStdTimeAmnt" ColumnName="taskStdTimeAmnt" />
+          <ScalarProperty Name="taskStdTimeUnit" ColumnName="taskStdTimeUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TOOLs">
+      <EntityTypeMapping TypeName="NBD_SBModel.TOOL">
+        <MappingFragment StoreEntitySet="TOOL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="toolDesc" ColumnName="toolDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WORKERs">
+      <EntityTypeMapping TypeName="NBD_SBModel.WORKER">
+        <MappingFragment StoreEntitySet="WORKER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="wrkFName" ColumnName="wrkFName" />
+          <ScalarProperty Name="wrkLName" ColumnName="wrkLName" />
+          <ScalarProperty Name="wrkTypeID" ColumnName="wrkTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WORKER_TYPE">
+      <EntityTypeMapping TypeName="NBD_SBModel.WORKER_TYPE">
+        <MappingFragment StoreEntitySet="WORKER_TYPE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="wrkTypeDesc" ColumnName="wrkTypeDesc" />
+          <ScalarProperty Name="wrkTypePrice" ColumnName="wrkTypePrice" />
+          <ScalarProperty Name="wrkTypeCost" ColumnName="wrkTypeCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

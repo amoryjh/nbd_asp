@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NBD_SBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CITY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="city1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="CLIENTs" Relationship="Self.FK_CLIENT_CITY" FromRole="CITY" ToRole="CLIENT" />
+  </EntityType>
+  <EntityType Name="CLIENT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cliName" Type="String" MaxLength="80" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="cliAddress" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="cityID" Type="Int32" />
+    <Property Name="cliProvince" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cliPCode" Type="String" MaxLength="6" FixedLength="true" Unicode="true" />
+    <Property Name="cliPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="cliConFName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cliConLName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cliConPosition" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="CITY" Relationship="Self.FK_CLIENT_CITY" FromRole="CLIENT" ToRole="CITY" />
+    <NavigationProperty Name="PROJECTs" Relationship="Self.FK_PROJECT_CLIENT" FromRole="CLIENT" ToRole="PROJECT" />
+  </EntityType>
+  <EntityType Name="INVENTORY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="materialID" Type="Int32" Nullable="false" />
+    <Property Name="invAvgNet" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="invList" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="invSizeAmnt" Type="Int16" />
+    <Property Name="invSizeUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="invQOH" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="MATERIAL" Relationship="Self.FK_INVENTORY_MATERIAL" FromRole="INVENTORY" ToRole="MATERIAL" />
+    <NavigationProperty Name="MATERIAL_REQ" Relationship="Self.FK_MATERIAL_REQ_INVENTORY" FromRole="INVENTORY" ToRole="MATERIAL_REQ" />
+  </EntityType>
+  <EntityType Name="LABOUR_REQUIREMENT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="prodTeamID" Type="Int32" Nullable="false" />
+    <Property Name="taskID" Type="Int32" Nullable="false" />
+    <Property Name="lreqEstDate" Type="DateTime" Precision="0" />
+    <Property Name="lreqEstHours" Type="Int16" />
+    <Property Name="lreqActDate" Type="DateTime" Precision="0" />
+    <Property Name="lreqActHours" Type="Int16" />
+    <Property Name="lreqComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PROD_TEAM" Relationship="Self.FK_LABOUR_REQUIREMENT_PROD_TEAM" FromRole="LABOUR_REQUIREMENT" ToRole="PROD_TEAM" />
+    <NavigationProperty Name="TASK" Relationship="Self.FK_LABOUR_REQUIREMENT_TASK" FromRole="LABOUR_REQUIREMENT" ToRole="TASK" />
+  </EntityType>
+  <EntityType Name="LABOUR_SUMMARY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="projectID" Type="Int32" Nullable="false" />
+    <Property Name="workerTypeID" Type="Int32" Nullable="false" />
+    <Property Name="lsHours" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="PROJECT" Relationship="Self.FK_LABOUR_SUMMARY_PROJECT" FromRole="LABOUR_SUMMARY" ToRole="PROJECT" />
+    <NavigationProperty Name="WORKER_TYPE" Relationship="Self.FK_LABOUR_SUMMARY_WORKER_TYPE" FromRole="LABOUR_SUMMARY" ToRole="WORKER_TYPE" />
+  </EntityType>
+  <EntityType Name="MATERIAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="matDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="matType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="INVENTORies" Relationship="Self.FK_INVENTORY_MATERIAL" FromRole="MATERIAL" ToRole="INVENTORY" />
+  </EntityType>
+  <EntityType Name="MATERIAL_REQ">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="inventoryID" Type="Int32" Nullable="false" />
+    <Property Name="projectID" Type="Int32" Nullable="false" />
+    <Property Name="mreqDeliver" Type="DateTime" Precision="3" />
+    <Property Name="mreqInstall" Type="DateTime" Precision="3" />
+    <Property Name="mreqEstQty" Type="Int16" />
+    <Property Name="mreqActQty" Type="Int16" />
+    <NavigationProperty Name="INVENTORY" Relationship="Self.FK_MATERIAL_REQ_INVENTORY" FromRole="MATERIAL_REQ" ToRole="INVENTORY" />
+    <NavigationProperty Name="PROJECT" Relationship="Self.FK_MATERIAL_REQ_PROJECT" FromRole="MATERIAL_REQ" ToRole="PROJECT" />
+  </EntityType>
+  <EntityType Name="PROD_TEAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="projectID" Type="Int32" Nullable="false" />
+    <Property Name="workerID" Type="Int32" Nullable="false" />
+    <Property Name="teamPhaseIn" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="LABOUR_REQUIREMENT" Relationship="Self.FK_LABOUR_REQUIREMENT_PROD_TEAM" FromRole="PROD_TEAM" ToRole="LABOUR_REQUIREMENT" />
+    <NavigationProperty Name="PROJECT" Relationship="Self.FK_PROD_TEAM_PROJECT" FromRole="PROD_TEAM" ToRole="PROJECT" />
+    <NavigationProperty Name="WORKER" Relationship="Self.FK_PROD_TEAM_WORKER" FromRole="PROD_TEAM" ToRole="WORKER" />
+  </EntityType>
+  <EntityType Name="PROD_TOOL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="projectID" Type="Int32" Nullable="false" />
+    <Property Name="toolID" Type="Int32" Nullable="false" />
+    <Property Name="ptQty" Type="Byte" Nullable="false" />
+    <Property Name="ptDeliverFrom" Type="DateTime" Precision="0" />
+    <Property Name="ptDeliverTo" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="PROJECT" Relationship="Self.FK_PROD_TOOL_PROJECT" FromRole="PROD_TOOL" ToRole="PROJECT" />
+    <NavigationProperty Name="TOOL" Relationship="Self.FK_PROD_TOOL_TOOL" FromRole="PROD_TOOL" ToRole="TOOL" />
+  </EntityType>
+  <EntityType Name="PROJECT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="projName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="projSite" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="projBidDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="projEstStart" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="projEstEnd" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="projActStart" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="projActEnd" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="projEstCost" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="projActCost" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="projBidCustAccept" Type="Boolean" />
+    <Property Name="projBidMgmtAccept" Type="Boolean" />
+    <Property Name="projCurrentPhase" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="projIsFlagged" Type="Boolean" />
+    <Property Name="clientID" Type="Int32" Nullable="false" />
+    <Property Name="designerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="CLIENT" Relationship="Self.FK_PROJECT_CLIENT" FromRole="PROJECT" ToRole="CLIENT" />
+    <NavigationProperty Name="LABOUR_SUMMARY" Relationship="Self.FK_LABOUR_SUMMARY_PROJECT" FromRole="PROJECT" ToRole="LABOUR_SUMMARY" />
+    <NavigationProperty Name="MATERIAL_REQ" Relationship="Self.FK_MATERIAL_REQ_PROJECT" FromRole="PROJECT" ToRole="MATERIAL_REQ" />
+    <NavigationProperty Name="PROD_TEAM" Relationship="Self.FK_PROD_TEAM_PROJECT" FromRole="PROJECT" ToRole="PROD_TEAM" />
+    <NavigationProperty Name="PROD_TOOL" Relationship="Self.FK_PROD_TOOL_PROJECT" FromRole="PROJECT" ToRole="PROD_TOOL" />
+    <NavigationProperty Name="WORKER" Relationship="Self.FK_PROJECT_WORKER" FromRole="PROJECT" ToRole="WORKER" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TASK">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="taskDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="taskStdTimeAmnt" Type="Byte" />
+    <Property Name="taskStdTimeUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LABOUR_REQUIREMENT" Relationship="Self.FK_LABOUR_REQUIREMENT_TASK" FromRole="TASK" ToRole="LABOUR_REQUIREMENT" />
+  </EntityType>
+  <EntityType Name="TOOL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="toolDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="PROD_TOOL" Relationship="Self.FK_PROD_TOOL_TOOL" FromRole="TOOL" ToRole="PROD_TOOL" />
+  </EntityType>
+  <EntityType Name="WORKER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="wrkFName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="wrkLName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="wrkTypeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PROD_TEAM" Relationship="Self.FK_PROD_TEAM_WORKER" FromRole="WORKER" ToRole="PROD_TEAM" />
+    <NavigationProperty Name="PROJECTs" Relationship="Self.FK_PROJECT_WORKER" FromRole="WORKER" ToRole="PROJECT" />
+    <NavigationProperty Name="WORKER_TYPE" Relationship="Self.FK_WORKER_WORKER_TYPE" FromRole="WORKER" ToRole="WORKER_TYPE" />
+  </EntityType>
+  <EntityType Name="WORKER_TYPE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="wrkTypeDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="wrkTypePrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="wrkTypeCost" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="LABOUR_SUMMARY" Relationship="Self.FK_LABOUR_SUMMARY_WORKER_TYPE" FromRole="WORKER_TYPE" ToRole="LABOUR_SUMMARY" />
+    <NavigationProperty Name="WORKERs" Relationship="Self.FK_WORKER_WORKER_TYPE" FromRole="WORKER_TYPE" ToRole="WORKER" />
+  </EntityType>
+  <Association Name="FK_CLIENT_CITY">
+    <End Role="CITY" Type="Self.CITY" Multiplicity="0..1" />
+    <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CITY">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CLIENT">
+        <PropertyRef Name="cityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROJECT_CLIENT">
+    <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1" />
+    <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROJECT">
+        <PropertyRef Name="clientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTORY_MATERIAL">
+    <End Role="MATERIAL" Type="Self.MATERIAL" Multiplicity="1" />
+    <End Role="INVENTORY" Type="Self.INVENTORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MATERIAL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INVENTORY">
+        <PropertyRef Name="materialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MATERIAL_REQ_INVENTORY">
+    <End Role="INVENTORY" Type="Self.INVENTORY" Multiplicity="1" />
+    <End Role="MATERIAL_REQ" Type="Self.MATERIAL_REQ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTORY">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MATERIAL_REQ">
+        <PropertyRef Name="inventoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LABOUR_REQUIREMENT_PROD_TEAM">
+    <End Role="PROD_TEAM" Type="Self.PROD_TEAM" Multiplicity="1" />
+    <End Role="LABOUR_REQUIREMENT" Type="Self.LABOUR_REQUIREMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROD_TEAM">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LABOUR_REQUIREMENT">
+        <PropertyRef Name="prodTeamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LABOUR_REQUIREMENT_TASK">
+    <End Role="TASK" Type="Self.TASK" Multiplicity="1" />
+    <End Role="LABOUR_REQUIREMENT" Type="Self.LABOUR_REQUIREMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TASK">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LABOUR_REQUIREMENT">
+        <PropertyRef Name="taskID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LABOUR_SUMMARY_PROJECT">
+    <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="1" />
+    <End Role="LABOUR_SUMMARY" Type="Self.LABOUR_SUMMARY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROJECT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LABOUR_SUMMARY">
+        <PropertyRef Name="projectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LABOUR_SUMMARY_WORKER_TYPE">
+    <End Role="WORKER_TYPE" Type="Self.WORKER_TYPE" Multiplicity="1" />
+    <End Role="LABOUR_SUMMARY" Type="Self.LABOUR_SUMMARY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WORKER_TYPE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LABOUR_SUMMARY">
+        <PropertyRef Name="workerTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MATERIAL_REQ_PROJECT">
+    <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="1" />
+    <End Role="MATERIAL_REQ" Type="Self.MATERIAL_REQ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROJECT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MATERIAL_REQ">
+        <PropertyRef Name="projectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROD_TEAM_PROJECT">
+    <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="1" />
+    <End Role="PROD_TEAM" Type="Self.PROD_TEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROJECT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROD_TEAM">
+        <PropertyRef Name="projectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROD_TEAM_WORKER">
+    <End Role="WORKER" Type="Self.WORKER" Multiplicity="1" />
+    <End Role="PROD_TEAM" Type="Self.PROD_TEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WORKER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROD_TEAM">
+        <PropertyRef Name="workerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROD_TOOL_PROJECT">
+    <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="1" />
+    <End Role="PROD_TOOL" Type="Self.PROD_TOOL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROJECT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROD_TOOL">
+        <PropertyRef Name="projectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROD_TOOL_TOOL">
+    <End Role="TOOL" Type="Self.TOOL" Multiplicity="1" />
+    <End Role="PROD_TOOL" Type="Self.PROD_TOOL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TOOL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROD_TOOL">
+        <PropertyRef Name="toolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROJECT_WORKER">
+    <End Role="WORKER" Type="Self.WORKER" Multiplicity="1" />
+    <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WORKER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROJECT">
+        <PropertyRef Name="designerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WORKER_WORKER_TYPE">
+    <End Role="WORKER_TYPE" Type="Self.WORKER_TYPE" Multiplicity="1" />
+    <End Role="WORKER" Type="Self.WORKER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WORKER_TYPE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="WORKER">
+        <PropertyRef Name="wrkTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NBD_SBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CITies" EntityType="Self.CITY" />
+    <EntitySet Name="CLIENTs" EntityType="Self.CLIENT" />
+    <EntitySet Name="INVENTORies" EntityType="Self.INVENTORY" />
+    <EntitySet Name="LABOUR_REQUIREMENT" EntityType="Self.LABOUR_REQUIREMENT" />
+    <EntitySet Name="LABOUR_SUMMARY" EntityType="Self.LABOUR_SUMMARY" />
+    <EntitySet Name="MATERIALs" EntityType="Self.MATERIAL" />
+    <EntitySet Name="MATERIAL_REQ" EntityType="Self.MATERIAL_REQ" />
+    <EntitySet Name="PROD_TEAM" EntityType="Self.PROD_TEAM" />
+    <EntitySet Name="PROD_TOOL" EntityType="Self.PROD_TOOL" />
+    <EntitySet Name="PROJECTs" EntityType="Self.PROJECT" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TASKs" EntityType="Self.TASK" />
+    <EntitySet Name="TOOLs" EntityType="Self.TOOL" />
+    <EntitySet Name="WORKERs" EntityType="Self.WORKER" />
+    <EntitySet Name="WORKER_TYPE" EntityType="Self.WORKER_TYPE" />
+    <AssociationSet Name="FK_CLIENT_CITY" Association="Self.FK_CLIENT_CITY">
+      <End Role="CITY" EntitySet="CITies" />
+      <End Role="CLIENT" EntitySet="CLIENTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROJECT_CLIENT" Association="Self.FK_PROJECT_CLIENT">
+      <End Role="CLIENT" EntitySet="CLIENTs" />
+      <End Role="PROJECT" EntitySet="PROJECTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTORY_MATERIAL" Association="Self.FK_INVENTORY_MATERIAL">
+      <End Role="MATERIAL" EntitySet="MATERIALs" />
+      <End Role="INVENTORY" EntitySet="INVENTORies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MATERIAL_REQ_INVENTORY" Association="Self.FK_MATERIAL_REQ_INVENTORY">
+      <End Role="INVENTORY" EntitySet="INVENTORies" />
+      <End Role="MATERIAL_REQ" EntitySet="MATERIAL_REQ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LABOUR_REQUIREMENT_PROD_TEAM" Association="Self.FK_LABOUR_REQUIREMENT_PROD_TEAM">
+      <End Role="PROD_TEAM" EntitySet="PROD_TEAM" />
+      <End Role="LABOUR_REQUIREMENT" EntitySet="LABOUR_REQUIREMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LABOUR_REQUIREMENT_TASK" Association="Self.FK_LABOUR_REQUIREMENT_TASK">
+      <End Role="TASK" EntitySet="TASKs" />
+      <End Role="LABOUR_REQUIREMENT" EntitySet="LABOUR_REQUIREMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LABOUR_SUMMARY_PROJECT" Association="Self.FK_LABOUR_SUMMARY_PROJECT">
+      <End Role="PROJECT" EntitySet="PROJECTs" />
+      <End Role="LABOUR_SUMMARY" EntitySet="LABOUR_SUMMARY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LABOUR_SUMMARY_WORKER_TYPE" Association="Self.FK_LABOUR_SUMMARY_WORKER_TYPE">
+      <End Role="WORKER_TYPE" EntitySet="WORKER_TYPE" />
+      <End Role="LABOUR_SUMMARY" EntitySet="LABOUR_SUMMARY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MATERIAL_REQ_PROJECT" Association="Self.FK_MATERIAL_REQ_PROJECT">
+      <End Role="PROJECT" EntitySet="PROJECTs" />
+      <End Role="MATERIAL_REQ" EntitySet="MATERIAL_REQ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROD_TEAM_PROJECT" Association="Self.FK_PROD_TEAM_PROJECT">
+      <End Role="PROJECT" EntitySet="PROJECTs" />
+      <End Role="PROD_TEAM" EntitySet="PROD_TEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROD_TEAM_WORKER" Association="Self.FK_PROD_TEAM_WORKER">
+      <End Role="WORKER" EntitySet="WORKERs" />
+      <End Role="PROD_TEAM" EntitySet="PROD_TEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROD_TOOL_PROJECT" Association="Self.FK_PROD_TOOL_PROJECT">
+      <End Role="PROJECT" EntitySet="PROJECTs" />
+      <End Role="PROD_TOOL" EntitySet="PROD_TOOL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROD_TOOL_TOOL" Association="Self.FK_PROD_TOOL_TOOL">
+      <End Role="TOOL" EntitySet="TOOLs" />
+      <End Role="PROD_TOOL" EntitySet="PROD_TOOL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROJECT_WORKER" Association="Self.FK_PROJECT_WORKER">
+      <End Role="WORKER" EntitySet="WORKERs" />
+      <End Role="PROJECT" EntitySet="PROJECTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WORKER_WORKER_TYPE" Association="Self.FK_WORKER_WORKER_TYPE">
+      <End Role="WORKER_TYPE" EntitySet="WORKER_TYPE" />
+      <End Role="WORKER" EntitySet="WORKERs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

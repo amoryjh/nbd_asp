@@ -3,15 +3,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form id="form1" runat="server">
+        
     <hr />
     <div class="well clearfix">
         <h2>Add sub menu here</h2>
         <div class="form-group col-md-6">
-            <select id="ddlProjectType" class="form-control">
-            <option value="dailyreport">Daily Report</option>
-            <option value="designbid">Design Bid</option>
-            <option value="prouctionreport">Production Report</option>
-            </select>
+            <asp:DropDownList ID="ddlClientName" class="form-control" runat="server">
+            </asp:DropDownList>
         </div>
     </div>
     

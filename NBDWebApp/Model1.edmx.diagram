@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6f7d530f8ac84bbaa0a5022331bf98a5" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="NBD_SBModel.CITY" Width="1.5" PointX="3.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.CLIENT" Width="1.5" PointX="6" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.INVENTORY" Width="1.5" PointX="11.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.LABOUR_REQUIREMENT" Width="1.5" PointX="10.5" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.LABOUR_SUMMARY" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.MATERIAL" Width="1.5" PointX="9" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.MATERIAL_REQ" Width="1.5" PointX="13.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.PROD_TEAM" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.PROD_TOOL" Width="1.5" PointX="6.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.PROJECT" Width="1.5" PointX="22.375" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.TASK" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.TOOL" Width="1.5" PointX="3.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.WORKER" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBD_SBModel.WORKER_TYPE" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="NBD_SBModel.FK_CLIENT_CITY" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_PROJECT_CLIENT" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_INVENTORY_MATERIAL" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_MATERIAL_REQ_INVENTORY" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_LABOUR_REQUIREMENT_PROD_TEAM" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_LABOUR_REQUIREMENT_TASK" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_LABOUR_SUMMARY_PROJECT" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_LABOUR_SUMMARY_WORKER_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_MATERIAL_REQ_PROJECT" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_PROD_TEAM_PROJECT" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_PROD_TEAM_WORKER" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_PROD_TOOL_PROJECT" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_PROD_TOOL_TOOL" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_PROJECT_WORKER" ManuallyRouted="false" />
+        <AssociationConnector Association="NBD_SBModel.FK_WORKER_WORKER_TYPE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
