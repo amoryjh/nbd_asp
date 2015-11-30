@@ -97,6 +97,7 @@ nav .btn-group .dropdown-menu .divider {
   height: 100vh;
   width: 100vw;
   position: absolute;
+  font-size: 2.2em;
   top: 0;
   left: 0;
   z-index: 1;
@@ -110,17 +111,23 @@ nav .btn-group .dropdown-menu .divider {
   top: 45%;
   transform: translateY(-50%);
   text-align: left;
-  letter-spacing: 3px;
-}
-.menu-list ul.menu-first-child h1 {
-  letter-spacing: -2px;
+  width: 70%;
+  margin: 0 auto;
+  padding-left: 5%;
 }
 .menu-list ul.menu-first-child li {
   display: block;
   margin: 0.5em;
 }
 .menu-list ul.menu-first-child li a:hover {
-  text-decoration: line-through;
+  cursor: pointer;
+}
+.menu-list ul.sub-mobile {
+  padding: 0;
+  font-size: 0.8em;
+}
+.menu-list ul.sub-mobile li {
+  padding-left: 1.25em;
 }
 .nav {
   display: block;

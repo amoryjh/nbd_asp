@@ -24,3 +24,10 @@
         }
     }
 });
+$('document').ready(function () {
+    $('.sub-mobile').hide();
+    $('.sup-mobile').click(function () {
+        $('.sub-mobile').hide();
+        $(this).children('.sub-mobile').show();
+    })
+});
