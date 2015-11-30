@@ -1,5 +1,6 @@
 ﻿@import "bootstrap/bootstrap.less";
 @import "colors.less";
+@import "menu.less";
 /*///////////////////////////////////////////////////////
 -----------------------Base Styles-----------------------
 ///////////////////////////////////////////////////////*/
@@ -214,58 +215,6 @@ span.highlight-change{font-weight: 700;}
   right: 0; top: 0;
 }
 
-/*///////////////////////////////////////////////////////
-                        Nav Bar  
-///////////////////////////////////////////////////////*/
-nav{
-  position: fixed; z-index: 999;
-  background-color: @brand-tri;
-  color: #fff;
-  padding: 0.6em 0;
-  width: 100%;
-  h1,ul{margin:0;}
-  ul{
-    vertical-align: middle;
-    position: relative;
-    text-align: right;
-    list-style-type: none;
-    margin-right:1em;
-    h1.nav-logo{
-        float:left;
-        position:relative;
-        top:0.1em;
-        display:block;
-        width:100%;
-        @media(min-width:520px){
-            display:inline-block; width:auto;
-        }
-    }
-    a{ 
-        text-decoration: none; color: #fff;font-weight: 400;
-        &:hover{text-decoration:none;color:@brand-pri;}
-    }
-    li{
-      padding: 0 1em;display: inline-block;
-      p.action-btn{position: absolute;right: 0;top: 0;height: 2.53em;z-index: 10;box-shadow: none;}
-    }
-  }
-  .btn-group{
-    .dropdown-menu{
-         left:auto; right:0 !important;  
-        .divider{width:100%}
-    }
-  }
-  //.dropdown-menu{ left:auto; right:0 !important; }
-}
-/* 
-    ---------------------OLD MENU
-ul.menu-hide{
-  background: rgba(34, 49, 63,0.9);padding: 1em;top:-8em;transition:all 0.5s ease-in-out;
-  vertical-align: middle;
-  li{display: inline-block; padding: 0 2em;}
-}
-ul.menu-hide-pos{top: 4.15em;z-index: 99;}
-*/
 /*///////////////////////////////////////////////////////
 -----------------------Login Page------------------------
 ///////////////////////////////////////////////////////*/

@@ -170,6 +170,8 @@
       <DependentUpon>NewProject.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="App_Data\NBD_SB.mdf" />
+    <Content Include="App_Data\NBD_SB_log.ldf" />
     <Content Include="App_Data\Users.mdf" />
     <Content Include="App_Data\Users_log.ldf" />
     <Content Include="assets\css\bootstrap\bootstrap.css">
@@ -189,6 +191,12 @@
     </Content>
     <Content Include="assets\css\main.min.css">
       <DependentUpon>main.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\menu.css">
+      <DependentUpon>menu.less</DependentUpon>
+    </Content>
+    <Content Include="assets\css\menu.min.css">
+      <DependentUpon>menu.css</DependentUpon>
     </Content>
     <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
@@ -282,6 +290,7 @@
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\jquery-2.1.4.js" />
     <Content Include="assets\js\jquery-2.1.4.min.js" />
+    <Content Include="assets\js\main.js" />
     <Content Include="DailyReports.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Employee.aspx" />
@@ -319,6 +328,9 @@
   <ItemGroup>
     <Content Include="Web.config" />
     <Content Include="Main.Master" />
+    <Content Include="assets\css\menu.css.map">
+      <DependentUpon>menu.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,99 +1,160 @@
-﻿@import "colors.less";
+﻿.btn {
+  background: #ef4836;
+  color: #fff;
+  padding: 0.5em;
+}
+.btn:hover {
+  color: #f1f1f1;
+  background: #e02612;
+}
+.btn-primary {
+  background: #337ab7;
+  border-color: inherit;
+}
+.btn-primary:hover {
+  background: #285f8f;
+}
 /*///////////////////////////////////////////////////////
                         Nav Bar  
 ///////////////////////////////////////////////////////*/
-nav{
-  position: fixed; z-index: 99;
-  background-color: @brand-tri;
+nav {
+  position: fixed;
+  z-index: 99;
+  background-color: #22313f;
   color: #fff;
   padding: 0.6em 0;
-  width: 100%; 
-  height:5em; @media(min-width:992px){height:auto;}
-  h1,ul{margin:0;}
-  h1.nav-logo{
-    float:left; z-index:999;
-    position:relative;
-    top:0.1em;
-    display:block;
-    width:100%; font-size:2.8em;
-    padding-left:1em;
-    @media(min-width:992px){
-        display:inline-block; width:auto;
-        font-size:2.1em;
-    }
-  }
-  ul.desktop-menu{
-    display:none;
-    @media(min-width:992px){display:block;}
-    vertical-align: middle; z-index:10;
-    position: relative;
-    text-align: right;
-    list-style-type: none;
-    margin-right:1em;
-    a{ 
-        text-decoration: none;font-weight: 400;
-        &:hover{text-decoration:none;color:@brand-pri;}
-    }
-    li{
-      padding: 0 1em;display: inline-block;
-      p.action-btn{position: absolute;right: 0;top: 0;height: 2.53em;z-index: 10;box-shadow: none;}
-    }
-  }
-  .btn-group{
-    .dropdown-menu{
-         left:auto; right:0 !important;  
-        .divider{width:100%}
-    }
+  width: 100%;
+  height: 5em;
+}
+@media (min-width: 992px) {
+  nav {
+    height: auto;
   }
 }
-
-
-.menu-list{
-  height: 100vh; width: 100vw;
-  position: absolute; 
-  top: 0;left: 0; z-index: 1;
-  background-color: lighten(#e2e1e9,6%);
-  transition:all 0.6s ease-in-out;
+nav h1,
+nav ul {
+  margin: 0;
+}
+nav h1.nav-logo {
+  float: left;
+  z-index: 999;
+  position: relative;
+  top: 0.1em;
+  display: block;
+  width: 100%;
+  font-size: 2.8em;
+  padding-left: 1em;
+}
+@media (min-width: 992px) {
+  nav h1.nav-logo {
+    display: inline-block;
+    width: auto;
+    font-size: 2.1em;
+  }
+}
+nav ul.desktop-menu {
+  display: none;
+  vertical-align: middle;
+  z-index: 10;
+  position: relative;
+  text-align: right;
+  list-style-type: none;
+  margin-right: 1em;
+}
+@media (min-width: 992px) {
+  nav ul.desktop-menu {
+    display: block;
+  }
+}
+nav ul.desktop-menu a {
+  text-decoration: none;
+  font-weight: 400;
+}
+nav ul.desktop-menu a:hover {
+  text-decoration: none;
+  color: #ef4836;
+}
+nav ul.desktop-menu li {
+  padding: 0 1em;
+  display: inline-block;
+}
+nav ul.desktop-menu li p.action-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2.53em;
+  z-index: 10;
+  box-shadow: none;
+}
+nav .btn-group .dropdown-menu {
+  left: auto;
+  right: 0 !important;
+}
+nav .btn-group .dropdown-menu .divider {
+  width: 100%;
+}
+.menu-list {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #f3f3f6;
+  transition: all 0.6s ease-in-out;
   display: none;
   clear: both;
-  ul.menu-first-child{
-    position: relative; top: 45%; transform:translateY(-50%); 
-    text-align: left; letter-spacing: 3px;
-    h1{letter-spacing: -2px;}
-    li{
-      display: block; margin: 0.5em;a:hover{text-decoration: line-through;}
-    }
-  }
 }
-
-.nav{
-    display:block;
-    @media(min-width:992px){display:none;}
-    position:absolute; right:2em; top:1em;
+.menu-list ul.menu-first-child {
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
+  text-align: left;
+  letter-spacing: 3px;
+}
+.menu-list ul.menu-first-child h1 {
+  letter-spacing: -2px;
+}
+.menu-list ul.menu-first-child li {
+  display: block;
+  margin: 0.5em;
+}
+.menu-list ul.menu-first-child li a:hover {
+  text-decoration: line-through;
+}
+.nav {
+  display: block;
+  position: absolute;
+  right: 2em;
+  top: 1em;
+}
+@media (min-width: 992px) {
+  .nav {
+    display: none;
+  }
 }
 .burger-icon {
   position: absolute;
-  margin:2em;
-  float:none;
+  margin: 2em;
+  float: none;
   margin: 0 auto;
   cursor: pointer;
   clear: both;
   z-index: 999999;
 }
-
 .burger-container {
   position: relative;
   height: 28px;
   width: 36px;
 }
-
 .hamburglar {
   display: block;
   width: 2em;
   -webkit-touch-callout: none;
   user-select: none;
-  margin: 1em auto; margin-top: 0.75em;
-  z-index:9999;
+  margin: 1em auto;
+  margin-top: 0.75em;
+  z-index: 9999;
 }
 .burger-bun-top,
 .burger-bun-bot,
@@ -118,70 +179,65 @@ nav{
   -ms-transform: translateX(-50%) scaleY(0);
   width: 3px;
 }
-
 .burger-bun-top {
   top: 0;
 }
-
 .burger-bun-bot {
   top: 12px;
 }
-
 .burger-filling {
   top: 6px;
 }
-
 .hamburglar.is-open .burger-bun-top {
   -webkit-animation: bun-top-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
-          animation: bun-top-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
+  animation: bun-top-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -ms-transform-origin: 100% 100%;
   -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
 .hamburglar.is-open .burger-bun-bot {
   -webkit-animation: bun-bot-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
-          animation: bun-bot-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
+  animation: bun-bot-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -ms-transform-origin: 0% 0%;
   -webkit-transform-origin: 0% 0%;
   transform-origin: 0% 0%;
 }
 .hamburglar.is-open .burger-filling {
   -webkit-animation: filling-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.4s;
-          animation: filling-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.4s;
+  animation: filling-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.4s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -ms-transform-origin: 50% 50%;
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 }
 .hamburglar.is-open .line-up {
   -webkit-animation: line-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.55s;
-          animation: line-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.55s;
+  animation: line-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.55s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
-
 .hamburglar.is-closed .line-up {
   -webkit-animation: line-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
-          animation: line-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
+  animation: line-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .hamburglar.is-closed .burger-filling {
   -webkit-animation: filling-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
-          animation: filling-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
+  animation: filling-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .hamburglar.is-closed .burger-bun-bot {
   -webkit-animation: bun-bot-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.4s;
-          animation: bun-bot-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.4s;
+  animation: bun-bot-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.4s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -ms-transform-origin: 0% 0%;
   -webkit-transform-origin: 0% 0%;
   transform-origin: 0% 0%;
@@ -189,15 +245,14 @@ nav{
 }
 .hamburglar.is-closed .burger-bun-top {
   -webkit-animation: bun-top-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.4s;
-          animation: bun-top-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.4s;
+  animation: bun-top-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.4s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -ms-transform-origin: 100% 100%;
   -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
   opacity: 0;
 }
-
 @-webkit-keyframes bun-top-out {
   0% {
     left: 0px;
@@ -232,7 +287,6 @@ nav{
     opacity: 1;
   }
 }
-
 @keyframes bun-top-out {
   0% {
     left: 0px;
@@ -687,3 +741,4 @@ nav{
     opacity: 1;
   }
 }
+/*# sourceMappingURL=menu.css.map */

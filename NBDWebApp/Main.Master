@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <!-------------------------------------------------------------
     ///////////////////////////Styles/////////////////////////////
@@ -13,6 +16,7 @@
     -------------------------------------------------------------->
     <script src="/assets/js/jquery-2.1.4.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/main.js"></script>
     <!-------------------------------------------------------------
     ///////Page Specific Scripts||Styles||Headings||Meta Tags//////
     -------------------------------------------------------------->
@@ -23,8 +27,17 @@
 
 <body runat="server" id="BodyTag">
     <nav>
-        <ul>
-            <h1 class="nav-logo"><a href="<%= Page.ResolveUrl("~/MainPage.aspx") %>">NBD</a></h1>
+        <div class="nav">
+        <div id="hamburger" class="hamburglar">
+        <div class="burger-icon">
+        <div class="burger-container">
+        <span class="burger-bun-top"></span>
+        <span class="burger-filling"></span>
+        <span class="burger-bun-bot"></span>
+        <span class="line-up"></span>
+        </div></div></div></div>
+        <h1 class="nav-logo"><a href="<%= Page.ResolveUrl("~/MainPage.aspx") %>">NBD</a></h1>
+        <ul class="desktop-menu">
             <li>
                 <div class="btn-group">
                     <button type="button" class="btn btn-danger">Add New</button>
@@ -56,7 +69,6 @@
                 </div>
             </li>
         </ul>
-
     </nav>
     <div class="main-wrapper">
         <div class="col-md-2 user-info text-center">
@@ -74,5 +86,17 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
         </asp:ContentPlaceHolder></div>
     </div>
+    <div class="menu-list">
+        <ul class="menu-first-child">
+        <li><a href="" class="">Link</a></li>
+        <li><a href="" class="">Link</a></li>
+        <li>
+            Link
+            <ul>
+                <li>Sub-link</li>
+                <li>Sub-link 2</li>
+            </ul>
+        </li>
+    </ul></div>
 </body>
 </html>
