@@ -27,6 +27,24 @@ a{
 input{margin-bottom: 0.75em;}
 .form-group{padding:0 10px;}
 #form1{max-width:43em; margin:0 auto;}
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: @brand-pri;
+    .gradient( right, lighten(@brand-pri,8%), lighten(@brand-blue,29%) );
+    z-index: 99;
+}
+#status {
+    width: 350px;
+    height: 251px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -125px 0 0 -175px;
+}
 /*///////////////////////////////////////////////////////
 --------------------Universal Classes--------------------  
 ///////////////////////////////////////////////////////*/

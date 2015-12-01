@@ -5760,6 +5760,29 @@ input {
   max-width: 43em;
   margin: 0 auto;
 }
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #db0a5b;
+  background-color: #f5196e;
+  background-image: -webkit-linear-gradient(right, #f5196e, #6ad3ea);
+  background-image: -moz-linear-gradient(right, #f5196e, #6ad3ea);
+  background-image: -o-linear-gradient(right, #f5196e, #6ad3ea);
+  background-image: -ms-linear-gradient(right, #f5196e, #6ad3ea);
+  background-image: linear-gradient(right, #f5196e, #6ad3ea);
+  z-index: 99;
+}
+#status {
+  width: 350px;
+  height: 251px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -125px 0 0 -175px;
+}
 /*///////////////////////////////////////////////////////
 --------------------Universal Classes--------------------  
 ///////////////////////////////////////////////////////*/

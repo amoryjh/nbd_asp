@@ -22,10 +22,10 @@
     -------------------------------------------------------------->
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-
 </head>
 
 <body runat="server" id="BodyTag">
+    <div id="preloader"><div id="status">&nbsp;</div></div>
     <nav>
         <div class="nav">
         <div id="hamburger" class="hamburglar">
