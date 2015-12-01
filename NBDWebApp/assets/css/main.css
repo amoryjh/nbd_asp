@@ -4982,6 +4982,9 @@ nav h1.nav-logo {
   font-size: 2.8em;
   padding-left: 1em;
 }
+nav h1.nav-logo:hover {
+  color: #f52374;
+}
 @media (min-width: 992px) {
   nav h1.nav-logo {
     display: inline-block;
