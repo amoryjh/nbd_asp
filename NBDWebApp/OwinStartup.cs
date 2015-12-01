@@ -17,7 +17,7 @@ namespace NBDWebApp
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                CookieName = "MovieCookie",
+                CookieName = "NBDCookie",
                 LoginPath = new PathString("/LogIn"),
                 LogoutPath = new PathString("/LogIn"),
                 ExpireTimeSpan = System.TimeSpan.FromMinutes(5)

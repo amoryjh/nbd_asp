@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
 
 namespace NBDWebApp.Projects
 {
@@ -11,7 +12,8 @@ namespace NBDWebApp.Projects
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            HtmlGenericControl body = (HtmlGenericControl)Master.FindControl("BodyTag");
+            body.Attributes.Add("class", "project-instance");
         }
     }
 }

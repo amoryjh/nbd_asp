@@ -13,10 +13,10 @@ namespace NBDWebApp
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class NBD_SBEntities : DbContext
+    public partial class NBD_DatabaseEntities : DbContext
     {
-        public NBD_SBEntities()
-            : base("name=NBD_SBEntities")
+        public NBD_DatabaseEntities()
+            : base("name=NBD_DatabaseEntities")
         {
         }
     

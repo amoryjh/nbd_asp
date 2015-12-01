@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="NBD_SBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="NBD_DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CITY">
           <Key>
             <PropertyRef Name="ID" />
@@ -346,7 +346,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="NBD_SBModelStoreContainer">
+        <EntityContainer Name="NBD_DatabaseModelStoreContainer">
           <EntitySet Name="CITY" EntityType="Self.CITY" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CLIENT" EntityType="Self.CLIENT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="INVENTORY" EntityType="Self.INVENTORY" Schema="dbo" store:Type="Tables" />
@@ -427,7 +427,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="NBD_SBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="NBD_DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="CITY">
           <Key>
             <PropertyRef Name="ID" />
@@ -799,7 +799,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="NBD_SBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="NBD_DatabaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CITies" EntityType="Self.CITY" />
           <EntitySet Name="CLIENTs" EntityType="Self.CLIENT" />
           <EntitySet Name="INVENTORies" EntityType="Self.INVENTORY" />
@@ -881,9 +881,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="NBD_SBModelStoreContainer" CdmEntityContainer="NBD_SBEntities">
+        <EntityContainerMapping StorageEntityContainer="NBD_DatabaseModelStoreContainer" CdmEntityContainer="NBD_DatabaseEntities">
           <EntitySetMapping Name="CITies">
-            <EntityTypeMapping TypeName="NBD_SBModel.CITY">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.CITY">
               <MappingFragment StoreEntitySet="CITY">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="city1" ColumnName="city" />
@@ -891,7 +891,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CLIENTs">
-            <EntityTypeMapping TypeName="NBD_SBModel.CLIENT">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.CLIENT">
               <MappingFragment StoreEntitySet="CLIENT">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="cliName" ColumnName="cliName" />
@@ -907,7 +907,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="INVENTORies">
-            <EntityTypeMapping TypeName="NBD_SBModel.INVENTORY">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.INVENTORY">
               <MappingFragment StoreEntitySet="INVENTORY">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="materialID" ColumnName="materialID" />
@@ -920,7 +920,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LABOUR_REQUIREMENT">
-            <EntityTypeMapping TypeName="NBD_SBModel.LABOUR_REQUIREMENT">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.LABOUR_REQUIREMENT">
               <MappingFragment StoreEntitySet="LABOUR_REQUIREMENT">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="prodTeamID" ColumnName="prodTeamID" />
@@ -934,7 +934,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LABOUR_SUMMARY">
-            <EntityTypeMapping TypeName="NBD_SBModel.LABOUR_SUMMARY">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.LABOUR_SUMMARY">
               <MappingFragment StoreEntitySet="LABOUR_SUMMARY">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="projectID" ColumnName="projectID" />
@@ -944,7 +944,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MATERIALs">
-            <EntityTypeMapping TypeName="NBD_SBModel.MATERIAL">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.MATERIAL">
               <MappingFragment StoreEntitySet="MATERIAL">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="matDesc" ColumnName="matDesc" />
@@ -953,7 +953,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MATERIAL_REQ">
-            <EntityTypeMapping TypeName="NBD_SBModel.MATERIAL_REQ">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.MATERIAL_REQ">
               <MappingFragment StoreEntitySet="MATERIAL_REQ">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="inventoryID" ColumnName="inventoryID" />
@@ -966,7 +966,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PROD_TEAM">
-            <EntityTypeMapping TypeName="NBD_SBModel.PROD_TEAM">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.PROD_TEAM">
               <MappingFragment StoreEntitySet="PROD_TEAM">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="projectID" ColumnName="projectID" />
@@ -976,7 +976,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PROD_TOOL">
-            <EntityTypeMapping TypeName="NBD_SBModel.PROD_TOOL">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.PROD_TOOL">
               <MappingFragment StoreEntitySet="PROD_TOOL">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="projectID" ColumnName="projectID" />
@@ -988,7 +988,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PROJECTs">
-            <EntityTypeMapping TypeName="NBD_SBModel.PROJECT">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.PROJECT">
               <MappingFragment StoreEntitySet="PROJECT">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="projName" ColumnName="projName" />
@@ -1010,7 +1010,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="NBD_SBModel.sysdiagram">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -1021,7 +1021,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TASKs">
-            <EntityTypeMapping TypeName="NBD_SBModel.TASK">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.TASK">
               <MappingFragment StoreEntitySet="TASK">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="taskDesc" ColumnName="taskDesc" />
@@ -1031,7 +1031,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TOOLs">
-            <EntityTypeMapping TypeName="NBD_SBModel.TOOL">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.TOOL">
               <MappingFragment StoreEntitySet="TOOL">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="toolDesc" ColumnName="toolDesc" />
@@ -1039,7 +1039,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="WORKERs">
-            <EntityTypeMapping TypeName="NBD_SBModel.WORKER">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.WORKER">
               <MappingFragment StoreEntitySet="WORKER">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="wrkFName" ColumnName="wrkFName" />
@@ -1049,7 +1049,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="WORKER_TYPE">
-            <EntityTypeMapping TypeName="NBD_SBModel.WORKER_TYPE">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.WORKER_TYPE">
               <MappingFragment StoreEntitySet="WORKER_TYPE">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="wrkTypeDesc" ColumnName="wrkTypeDesc" />

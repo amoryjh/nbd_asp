@@ -4,29 +4,21 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Web.UI.HtmlControls;
 namespace NBDWebApp
 {
     public partial class MainPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*if (User.Identity.IsAuthenticated)
-            {
-                if (User.IsInRole("Admin"))
-                {
-                    
-                }
-                LblUserName.Text = "Welcome "+User.Identity.Name+".";
-            }
-            else
+            if (!User.Identity.IsAuthenticated)
             {
                 Response.Redirect("~/Default.aspx");
             }
-             */
+
             if (!Page.IsPostBack)
             {
-                NBD_SBEntities db = new NBD_SBEntities();
+                NBD_DatabaseEntities db = new NBD_DatabaseEntities();
 
                 ddlClientName.DataSource = (from n in db.CLIENTs
                                           select new

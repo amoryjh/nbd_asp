@@ -73,8 +73,7 @@
     <div class="main-wrapper">
         <div class="col-md-2 user-info text-center">
             <img src="/assets/img/usrImage.png" alt="">
-            <h2 id="lblUserName">User Name</h2>
-
+            <h2 runat="server" id="lblUserName"><%=HttpContext.Current.User.Identity.Name %></h2>
             <div class="usr-options">       
                 <a class="btn btn-primary" href="<%= Page.ResolveUrl("~/MainPage.aspx") %>">Projects</a>
                 <a class="btn btn-primary" href="<%= Page.ResolveUrl("~/DailyReports.aspx") %>">Add Daily Report</a>
@@ -92,8 +91,9 @@
             <li class="sup-mobile">
                 <a href="#" class="a">Add New</a>
                 <ul class="sub-mobile">
-                    <li><a href="<%= Page.ResolveUrl("~/Projects/NewProject.aspx") %>">New Project</a></li>
-                    <li><a href="<%= Page.ResolveUrl("~/ClientEntry.aspx") %>">New Client</a></li>
+                    <li><a href="<%= Page.ResolveUrl("~/Projects/NewProject.aspx") %>">Project</a></li>
+                    <li><a href="<%= Page.ResolveUrl("~/DailyReports.aspx") %>">Daily Report</a></li>
+                    <li><a href="<%= Page.ResolveUrl("~/ClientEntry.aspx") %>">Client</a></li>
                 </ul>
             </li>
             <li class="sup-mobile">

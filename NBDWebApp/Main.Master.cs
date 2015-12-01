@@ -10,6 +10,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 
+using System.Security.Principal;
+using System.ComponentModel;
 
 namespace NBDWebApp
 {
@@ -17,7 +19,12 @@ namespace NBDWebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            /*if (User.Identity.IsAuthenticated)
+            {
+                //if (User.IsInRole("Admin")){}
+                HtmlGenericControl usrName = (HtmlGenericControl)Master.FindControl("lblUserName");
+                usrName.InnerHtml = "Welcome, " + User.Identity.Name + ".";
+            }*/
         }
     }
 }

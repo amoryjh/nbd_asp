@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="NBD_SBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="NBD_DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="CITY">
     <Key>
       <PropertyRef Name="ID" />
@@ -371,7 +371,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="NBD_SBEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="NBD_DatabaseEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="CITies" EntityType="Self.CITY" />
     <EntitySet Name="CLIENTs" EntityType="Self.CLIENT" />
     <EntitySet Name="INVENTORies" EntityType="Self.INVENTORY" />

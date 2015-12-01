@@ -17,7 +17,7 @@ nav{
     display:block;
     width:100%; font-size:2.8em;
     padding-left:1em;
-    &:hover{color:lighten(@brand-pri,10%);}
+    a:hover{color:lighten(@brand-pri,10%);}
     @media(min-width:992px){
         display:inline-block; width:auto;
         font-size:2.1em;
@@ -57,6 +57,7 @@ nav{
   transition:all 0.6s ease-in-out;
   display: none;
   clear: both;
+  color:@brand-tri;
   @media(min-width:992px){display:none !important;}
   ul.menu-first-child{
     position: relative; top: 45%; transform:translateY(-50%); 
