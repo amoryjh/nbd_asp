@@ -18,7 +18,7 @@
             </asp:DropDownList>
         </div>
     </div>
-    <div class="project-instance clearfix">
+    <div class="project-instance box-border clearfix">
         <div class="project-instance-title">
             <h2 class="project-title"><a href="Projects/carlisle-hotel-renovations.aspx">Carlisle Hotel Renovations</a></h2>
             <p class="project-update-date">Updated on: 12/01/2015</p>
@@ -60,7 +60,7 @@
             </ul>
         </div>
     </div>
-    <div class="project-instance clearfix">
+    <div class="project-instance box-border clearfix">
         <div class="project-instance-title">
             <h2 class="project-title"><a href="Projects/carlisle-hotel-renovations.aspx">Montebello Landscaping</a></h2>
             <p class="project-update-date">Updated on: 12/01/2015</p>

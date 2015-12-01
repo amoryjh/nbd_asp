@@ -5033,7 +5033,7 @@ nav .btn-group .dropdown-menu .divider {
 .menu-list {
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   font-size: 2.2em;
   top: 0;
   left: 0;
@@ -5042,6 +5042,11 @@ nav .btn-group .dropdown-menu .divider {
   transition: all 0.6s ease-in-out;
   display: none;
   clear: both;
+}
+@media (min-width: 992px) {
+  .menu-list {
+    display: none !important;
+  }
 }
 .menu-list ul.menu-first-child {
   position: relative;
@@ -5768,6 +5773,10 @@ input {
 h1.section-title {
   border-bottom: 1px solid #353535;
 }
+.box-border {
+  box-shadow: 0 2px 18px #9b9b9b;
+  border: 1px solid #ccc;
+}
 .user-info {
   background: #eee;
   background-color: #304659;
@@ -5813,9 +5822,7 @@ span.highlight-change {
 }
 .project-instance {
   margin: 2em 0 4em 0;
-  border: 1px solid #ccc;
   padding-bottom: 2em;
-  box-shadow: 0px 4px 20px #ededed;
   /*/////////////////////////////
 ------------TimeLine-----------
 /////////////////////////////*/
@@ -6063,7 +6070,6 @@ span.highlight-change {
   margin-bottom: 4em;
   padding: 3em;
   background: #fff;
-  box-shadow: 0 2px 18px #9b9b9b;
 }
 .client-wrapper .form-group select {
   padding: 0;
@@ -6077,14 +6083,26 @@ span.highlight-change {
 .design-bid .add-new .section-title {
   margin-bottom: 0.25em;
 }
-.bid-wrapper {
+.report-group {
+  margin: 2em 0;
+}
+.report-title {
+  background: #633231;
+  color: #fff;
+  padding: 2em;
+}
+.report-title h1 {
+  margin: 0;
+}
+.report-wrapper {
   float: left;
   width: 100%;
   margin: 0 auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
   padding: 3em;
   background: #fff;
-  box-shadow: 0 2px 18px #9b9b9b;
+  border-bottom: 2px dotted #999;
+}
+.report-wrapper:last-child {
+  border-bottom: none;
 }
 /*# sourceMappingURL=main.css.map */
