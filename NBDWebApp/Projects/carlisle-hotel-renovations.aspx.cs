@@ -13,7 +13,7 @@ namespace NBDWebApp.Projects
         protected void Page_Load(object sender, EventArgs e)
         {
             HtmlGenericControl body = (HtmlGenericControl)Master.FindControl("BodyTag");
-            body.Attributes.Add("class", "project-instance");
+            body.Attributes.Add("class", "project-page");
         }
     }
 }

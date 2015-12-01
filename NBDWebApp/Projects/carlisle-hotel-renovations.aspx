@@ -8,9 +8,9 @@
     </div>
     <div class="report-group box-border add-report clearfix">
         <div class="report-title">
-            <h1 class="project-title">Add New Report</h1>
+            <h1 class="project-title">Add New Report?</h1>
         </div>
-         <div class="report-wrapper clearfix">
+        <div class="report-wrapper report-list-section clearfix">
         <label id="" for="ddlProv">Report</label>
         <select id="ddlProjectType" class="form-control">
             <option value="dailyreport">Daily Report</option>
@@ -253,6 +253,10 @@
         </div>
     </div>
     </div>
-
     </form>
+    <script>
+        $('.add-report h1').click(function () {
+            $('.report-list-section').slideToggle(300);
+        })
+    </script>
 </asp:Content>

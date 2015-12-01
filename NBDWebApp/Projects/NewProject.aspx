@@ -7,9 +7,14 @@
         <div class="form-group col-md-12">
             <h1>Create New Project</h1>
         </div>
-        <div class="form-group col-md-12">
+        <div class="form-group col-md-6">
           <label id="lblProjName" for="txtProjName">Project Name</label>
           <asp:TextBox ID="txtProjName" runat="server" class="form-control" placeholder="Project Name"></asp:TextBox>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Client</label>
+            <asp:DropDownList ID="ddlClientName" class="form-control" runat="server">
+            </asp:DropDownList>
         </div>
 
         <div class="form-group col-md-12">

@@ -11,7 +11,21 @@ namespace NBDWebApp.Projects
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                NBD_DatabaseEntities db = new NBD_DatabaseEntities();
 
+                ddlClientName.DataSource = (from n in db.CLIENTs
+                                            select new
+                                            {
+                                                n.ID,
+                                                FullName = n.cliName
+                                            }
+                                          ).ToList();
+                ddlClientName.DataTextField = "FullName";
+                ddlClientName.DataValueField = "ID";
+                ddlClientName.DataBind();
+            }
         }
     }
 }

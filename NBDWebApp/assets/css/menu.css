@@ -3,7 +3,10 @@
   color: #fff;
   padding: 0.5em;
 }
-.btn:hover {
+.btn:hover,
+.btn:active,
+.btn:focus,
+.btn:visited {
   color: #f1f1f1;
   background: #c30951;
 }
@@ -24,6 +27,7 @@ nav {
   color: #fff;
   padding: 0.6em 0;
   width: 100%;
+  max-width: 100vw;
   height: 5em;
 }
 @media (min-width: 992px) {
@@ -95,6 +99,15 @@ nav .btn-group .dropdown-menu {
 }
 nav .btn-group .dropdown-menu .divider {
   width: 100%;
+}
+nav .btn-group .dropdown-menu li {
+  display: block;
+}
+nav .btn-group .dropdown-menu li a {
+  text-align: center;
+}
+nav .btn-group .dropdown-menu li a:hover {
+  background: transparent;
 }
 .menu-list {
   height: 100vh;

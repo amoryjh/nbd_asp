@@ -3,7 +3,10 @@
   color: #fff;
   padding: 0.5em;
 }
-.btn:hover {
+.btn:hover,
+.btn:active,
+.btn:focus,
+.btn:visited {
   color: #f1f1f1;
   background: #c30951;
 }

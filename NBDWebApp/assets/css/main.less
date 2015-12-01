@@ -72,6 +72,7 @@ h1.section-title{
     border:1px solid #ccc;
 }
 .user-info{
+  #lblUserName{font-size:1.5em;}
   background: #eee;
   .gradient( right, lighten(@brand-tri,8%), lighten(@brand-tri,29%) );
   position: fixed;
@@ -314,8 +315,12 @@ span.highlight-change{font-weight: 700;}
 .add-report{
     .report-title{
         background:@brand-tri; padding:1.5em 2em;
+        &:hover{background:lighten(@brand-tri,5%)}
+        &:hover,h1:hover{cursor:pointer;}
+        h1:hover{color:lighten(#fff,10%);}
     }
     .report-wrapper{
         padding:1em 2em 2em;
     }
+    .report-list-section{display:none;}
 }
