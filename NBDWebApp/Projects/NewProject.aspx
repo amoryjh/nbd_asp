@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form id="form1" runat="server">
-    <div class="client-wrapper clearfix">
+    <div class="client-wrapper box-border clearfix">
         <div class="form-group col-md-12">
             <h1>Create New Project</h1>
         </div>
@@ -13,7 +13,7 @@
         </div>
 
         <div class="form-group col-md-12">
-        <asp:Button ID="btnInsert" CssClass="btn" runat="server" Text="Create New Project" />
+            <asp:Button ID="btnInsert" CssClass="btn" runat="server" Text="Create New Project" />
         </div>
 
     </div>

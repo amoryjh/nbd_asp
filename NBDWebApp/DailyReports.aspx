@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
      <form id="form1" runat="server">
-        <div class="client-wrapper clearfix">
+        <div class="client-wrapper box-border clearfix">
             <div class="form-group col-md-12">
                 <h1>Enter Daily Work</h1>
                 <p><em>Designer Daily Work Report / Production Daily Work Report</em></p>

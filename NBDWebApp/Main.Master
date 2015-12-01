@@ -46,9 +46,9 @@
                         <span class="sr-only">Toggle Dropdown</span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href="#">New Project</a></li>
+                        <li><a href="<%= Page.ResolveUrl("~/Projects/NewProject.aspx") %>">New Project</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="ClientEntry.aspx">New Client</a></li>
+                        <li><a href="<%= Page.ResolveUrl("~/ClientEntry.aspx") %>">New Client</a></li>
                     </ul>
                 </div>
             </li>
@@ -62,7 +62,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="#">Your Reports</a></li>
                         <li><a href="#">All Files</a></li>
-                        <li><a href="#">Project Directory</a></li>
+                        <li><a href="<%= Page.ResolveUrl("~/MainPage.aspx") %>">Project Directory</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">What's New?</a></li>
                     </ul>
@@ -88,23 +88,23 @@
     </div>
     <div class="menu-list">
         <ul class="menu-first-child">
-            <li><a href="" class="">Projects</a></li>
+            <li><a href="<%= Page.ResolveUrl("~/MainPage.aspx") %>"" class="">Projects</a></li>
             <li class="sup-mobile">
-                <a href="#" class="">Add New</a>
+                <a href="#" class="a">Add New</a>
                 <ul class="sub-mobile">
-                    <li><a href="#" class="">New Project</a></li>
-                    <li><a href="#" class="">New Client</a></li>
+                    <li><a href="<%= Page.ResolveUrl("~/Projects/NewProject.aspx") %>">New Project</a></li>
+                    <li><a href="<%= Page.ResolveUrl("~/ClientEntry.aspx") %>">New Client</a></li>
                 </ul>
             </li>
             <li class="sup-mobile">
-                <a href="#" class="">Options</a>
+                <a href="#" class="a">Options</a>
                 <ul class="sub-mobile">
                     <li><a href="#" class="">Your Reports</a></li>
                     <li><a href="#" class="">Your Files</a></li>
                     <li><a href="#" class="">Your Settings</a></li>
                 </ul>
             </li>
-            <li><a href="Logout.aspx" class="">Log Out</a></li>
+            <li><a href="<%= Page.ResolveUrl("~/Logout.aspx") %>" class="">Log Out</a></li>
         </ul>
     </div>
 </body>

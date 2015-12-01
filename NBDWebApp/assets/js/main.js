@@ -26,11 +26,9 @@
 });
 $('document').ready(function () {
     $('.sub-mobile').hide();
-    $('.sup-mobile').click(function () {
+    $('.sup-mobile .a').click(function () {
         $('.sub-mobile').slideUp(300, 'swing');
-        $('.sup-mobile').removeClass('k');
 
-        $(this).addClass('k');
-        $(this).children('.sub-mobile').slideToggle(500, 'swing');
+        $(this).siblings('.sub-mobile').slideToggle(500, 'swing');
     })
 });

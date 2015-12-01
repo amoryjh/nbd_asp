@@ -1,18 +1,18 @@
 ﻿.btn {
-  background: #ef4836;
+  background: #db0a5b;
   color: #fff;
   padding: 0.5em;
 }
 .btn:hover {
   color: #f1f1f1;
-  background: #e02612;
+  background: #c30951;
 }
 .btn-primary {
   background: #337ab7;
   border-color: inherit;
 }
 .btn-primary:hover {
-  background: #285f8f;
+  background: #2d6da3;
 }
 /*///////////////////////////////////////////////////////
                         Nav Bar  
@@ -72,7 +72,7 @@ nav ul.desktop-menu a {
 }
 nav ul.desktop-menu a:hover {
   text-decoration: none;
-  color: #ef4836;
+  color: #db0a5b;
 }
 nav ul.desktop-menu li {
   padding: 0 1em;
@@ -116,9 +116,9 @@ nav .btn-group .dropdown-menu .divider {
   top: 45%;
   transform: translateY(-50%);
   text-align: left;
-  width: 70%;
+  width: 11em;
   margin: 0 auto;
-  padding-left: 5%;
+  padding-left: 2em;
 }
 .menu-list ul.menu-first-child li {
   display: block;
@@ -126,6 +126,7 @@ nav .btn-group .dropdown-menu .divider {
 }
 .menu-list ul.menu-first-child li a:hover {
   cursor: pointer;
+  color: #DB0A5B;
 }
 .menu-list ul.sub-mobile {
   padding: 0;

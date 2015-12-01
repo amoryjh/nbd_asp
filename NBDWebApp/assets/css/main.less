@@ -58,8 +58,8 @@ h1.section-title{
   .usr-options{
     .btn-primary{
         width:100%; margin:0.65em 0; 
-        background:@green; border:none;
-        &:hover{background:darken(@green,10%);border:none;}
+        background:@brand-blue; border:none;
+        &:hover{background:darken(@brand-blue,10%);border:none;}
     }
   }
   display:none;
@@ -257,7 +257,7 @@ span.highlight-change{font-weight: 700;}
 ///////////////////////////////////////////////////////*/
 .client-wrapper{
     width:90%; max-width:45em; margin:0 auto; margin-top:4em; margin-bottom:4em;
-    padding:3em; background:#fff;
+    padding:3em 3em 1.5em; background:#fff;
     .form-group{
         select{padding:0;}
     }    
@@ -273,7 +273,7 @@ span.highlight-change{font-weight: 700;}
 .report-group{margin:2em 0}
 //Title of report
 .report-title{
-    background: @red;
+    background: @brand-pri;
     color: #fff;
     padding: 2em;
     h1{margin:0;}
@@ -284,4 +284,12 @@ span.highlight-change{font-weight: 700;}
     padding:3em; background:#fff; 
     border-bottom:2px dotted #999;
     &:last-child{border-bottom:none}
+}
+.add-report{
+    .report-title{
+        background:@brand-tri; padding:1.5em 2em;
+    }
+    .report-wrapper{
+        padding:1em 2em 2em;
+    }
 }

@@ -5,15 +5,21 @@
 <form id="form1" runat="server">
     <div class="form-group">
         <h1 class="section-title">Carlisle Hotel Renovations</h1>
-        <h2 class="section-title">Add New Report</h2>
-
+    </div>
+    <div class="report-group box-border add-report clearfix">
+        <div class="report-title">
+            <h1 class="project-title">Add New Report</h1>
+        </div>
+         <div class="report-wrapper clearfix">
         <label id="" for="ddlProv">Report</label>
         <select id="ddlProjectType" class="form-control">
             <option value="dailyreport">Daily Report</option>
             <option value="designbid">Design Bid</option>
             <option value="prouctionreport">Production Report</option>
         </select>
+             </div>
     </div>
+    
 
     <div class="report-group box-border clearfix">
     <div class="report-title">
@@ -249,15 +255,4 @@
     </div>
 
     </form>
-    <script>
-        $('.report-group').hide();
-        $('#ddlProjectType').on('change', function () {
-            if (this.value == "designbid") {
-                $('.report-group').show();
-            }
-            else {
-                $('.report-group').hide();
-            }
-        });
-    </script>
 </asp:Content>

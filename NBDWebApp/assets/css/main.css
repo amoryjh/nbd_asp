@@ -4936,20 +4936,20 @@ button.close {
   }
 }
 .btn {
-  background: #ef4836;
+  background: #db0a5b;
   color: #fff;
   padding: 0.5em;
 }
 .btn:hover {
   color: #f1f1f1;
-  background: #e02612;
+  background: #c30951;
 }
 .btn-primary {
   background: #337ab7;
   border-color: inherit;
 }
 .btn-primary:hover {
-  background: #285f8f;
+  background: #2d6da3;
 }
 /*///////////////////////////////////////////////////////
                         Nav Bar  
@@ -5009,7 +5009,7 @@ nav ul.desktop-menu a {
 }
 nav ul.desktop-menu a:hover {
   text-decoration: none;
-  color: #ef4836;
+  color: #db0a5b;
 }
 nav ul.desktop-menu li {
   padding: 0 1em;
@@ -5053,9 +5053,9 @@ nav .btn-group .dropdown-menu .divider {
   top: 45%;
   transform: translateY(-50%);
   text-align: left;
-  width: 70%;
+  width: 11em;
   margin: 0 auto;
-  padding-left: 5%;
+  padding-left: 2em;
 }
 .menu-list ul.menu-first-child li {
   display: block;
@@ -5063,6 +5063,7 @@ nav .btn-group .dropdown-menu .divider {
 }
 .menu-list ul.menu-first-child li a:hover {
   cursor: pointer;
+  color: #DB0A5B;
 }
 .menu-list ul.sub-mobile {
   padding: 0;
@@ -5797,11 +5798,11 @@ h1.section-title {
 .user-info .usr-options .btn-primary {
   width: 100%;
   margin: 0.65em 0;
-  background: #5cb85c;
+  background: #188ea8;
   border: none;
 }
 .user-info .usr-options .btn-primary:hover {
-  background: #449d44;
+  background: #12687b;
   border: none;
 }
 @media (min-width: 992px) {
@@ -6068,7 +6069,7 @@ span.highlight-change {
   margin: 0 auto;
   margin-top: 4em;
   margin-bottom: 4em;
-  padding: 3em;
+  padding: 3em 3em 1.5em;
   background: #fff;
 }
 .client-wrapper .form-group select {
@@ -6087,7 +6088,7 @@ span.highlight-change {
   margin: 2em 0;
 }
 .report-title {
-  background: #633231;
+  background: #db0a5b;
   color: #fff;
   padding: 2em;
 }
@@ -6104,5 +6105,12 @@ span.highlight-change {
 }
 .report-wrapper:last-child {
   border-bottom: none;
+}
+.add-report .report-title {
+  background: #22313f;
+  padding: 1.5em 2em;
+}
+.add-report .report-wrapper {
+  padding: 1em 2em 2em;
 }
 /*# sourceMappingURL=main.css.map */

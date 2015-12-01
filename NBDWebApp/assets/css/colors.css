@@ -1,17 +1,17 @@
 ﻿.btn {
-  background: #ef4836;
+  background: #db0a5b;
   color: #fff;
   padding: 0.5em;
 }
 .btn:hover {
   color: #f1f1f1;
-  background: #e02612;
+  background: #c30951;
 }
 .btn-primary {
   background: #337ab7;
   border-color: inherit;
 }
 .btn-primary:hover {
-  background: #285f8f;
+  background: #2d6da3;
 }
 /*# sourceMappingURL=colors.css.map */
