@@ -5926,7 +5926,6 @@ span.highlight-change {
   top: -63px;
   display: inline-block;
   float: left;
-  width: 139px;
   transform: rotate(-45deg);
   font-weight: 700;
   width: 120px;
@@ -5983,7 +5982,7 @@ span.highlight-change {
   }
 }
 .project-instance .timeline ul li:last-child::before {
-  border: 12px solid #DB0A5B;
+  border: 12px solid #db0a5b;
 }
 .project-instance .timeline ul li:nth-child(2) {
   margin-left: 30%;
@@ -6017,7 +6016,7 @@ span.highlight-change {
   border-top: 0;
 }
 .action-btn {
-  background: #DB0A5B;
+  background: #db0a5b;
   width: 100px;
   height: 100px;
   text-align: center !important;
@@ -6050,15 +6049,27 @@ span.highlight-change {
 -----------------------Login Page------------------------
 ///////////////////////////////////////////////////////*/
 .login {
-  background-size: cover;
-  background: #efefef;
-  /* Implementation */
   background-color: #4e2727;
   background-image: -webkit-linear-gradient(left, #4e2727, #f52374);
   background-image: -moz-linear-gradient(left, #4e2727, #f52374);
   background-image: -o-linear-gradient(left, #4e2727, #f52374);
   background-image: -ms-linear-gradient(left, #4e2727, #f52374);
   background-image: linear-gradient(left, #4e2727, #f52374);
+}
+.login #ValidationSummary {
+  color: #4f7192 !important;
+  background-color: #f3f3f6;
+  padding: 10px;
+  box-shadow: 0 1px 2px #ccc;
+  border: 1px solid #efefef;
+}
+.login #ValidationSummary ul {
+  margin: 0 auto;
+  padding-left: 25px;
+}
+.login #ValidationSummary ul li {
+  font-weight: 700;
+  padding: 2px;
 }
 .login nav .nav {
   display: none;
@@ -6081,8 +6092,19 @@ span.highlight-change {
   box-shadow: 0 2px 18px #353535;
   max-width: 22em;
   width: 90%;
-  padding: 2.5em 1.75em 1em 1.75em;
+  padding: 1.8em 1.75em 1em 1.75em;
   background-color: #fefefe;
+  font-size: 17px;
+}
+.login .login-wrapper h1 {
+  margin-bottom: 0.75em;
+  font-size: 2.2em;
+  font-weight: 400;
+  display: inline;
+}
+.login .login-wrapper img {
+  display: inline;
+  width: 1em;
 }
 .login .login-wrapper input,
 .login .login-wrapper #lblStatus {
@@ -6090,9 +6112,13 @@ span.highlight-change {
   display: block;
 }
 .login .login-wrapper .btn {
-  margin: 1.5em 0;
+  margin: 0.5em 0;
   font-weight: 700;
   font-size: 1em;
+}
+.login .login-wrapper button {
+  width: 100%;
+  margin: 0.5em 0;
 }
 .login .login-wrapper .form-group p a {
   color: #4f7192;

@@ -131,7 +131,7 @@ span.highlight-change{font-weight: 700;}
       background:@black;
       li{
         position: relative; top:-63px;
-        display: inline-block; float:left; width:139px;
+        display: inline-block; float:left;
         transform:rotate(-45deg);
         font-weight:700; width: 120px; margin:0 6em;
         &::before{ 
@@ -150,15 +150,15 @@ span.highlight-change{font-weight: 700;}
             width: 9px;
             height: 9px;
             border-width: 7px;
-            border-color: lighten(#DB0A5B,10%);
+            border-color: lighten(@brand-pri,10%);
           }
           &:first-child .details, &:last-child .details{
             top:31px; left:-80px;
           }
           &:last-child{
             &::before{
-              border:12px solid lighten(#DB0A5B,10%);
-              background:lighten(#DB0A5B,10%);
+              border:12px solid lighten(@brand-pri,10%);
+              background:lighten(@brand-pri,10%);
               //left: -30px;
             } 
           }
@@ -177,7 +177,7 @@ span.highlight-change{font-weight: 700;}
           margin-left:96%;
           @media(min-width:600px){margin-left:98%}
           &::before{
-            border:12px solid #DB0A5B;
+            border:12px solid @brand-pri;
           } 
         }
         &:nth-child(2){ 
@@ -216,7 +216,7 @@ span.highlight-change{font-weight: 700;}
   }
 }
 .action-btn{
-  background: #DB0A5B;
+  background: @brand-pri;
   width: 100px;
   height: 100px;
   text-align: center !important;
@@ -233,7 +233,7 @@ span.highlight-change{font-weight: 700;}
   &:hover{
     transition:all ease-in-out 0.4s;
     box-shadow: inset 0px 0px 5px #aaa; //0px 1px 5px #999;
-    background: lighten(#DB0A5B,5%);
+    background: lighten(@brand-pri,5%);
   }
 }
 .updated-list{ul{li{margin: 0.5em 0;}}}
@@ -247,28 +247,40 @@ span.highlight-change{font-weight: 700;}
 -----------------------Login Page------------------------
 ///////////////////////////////////////////////////////*/
 .login{
+    #ValidationSummary{
+        color: lighten(@brand-tri,25%) !important; background-color: lighten(#e2e1e9,6%);
+        padding:10px; box-shadow: 0 1px 2px #ccc;
+        border: 1px solid #efefef;
+        ul{
+            margin:0 auto; padding-left: 25px;
+            li{font-weight:700; padding:2px;}
+        }
+    }
    nav{.nav{display:none} ul{li{display:none}}}
    .user-info{display:none;}
    .home-updates{background:transparent;margin:0 auto; width:100%;}
-   background-size: cover;
-   //background: url('/assets/img/login.jpg') center center no-repeat !important;
-   background:#efefef;
-   /* Implementation */
-   .gradient( left, darken(#663333,7%), lighten(#DB0A5B,10%) );
+   .gradient( left, darken(#663333,7%), lighten(@brand-pri,10%) );
    .login-wrapper{
-    margin: 0 auto; margin-top: 4em; margin-bottom:4em;
-    box-shadow: 0 2px 18px @black;
-    max-width: 22em; width: 90%;
-    padding: 2.5em 1.75em 1em 1.75em; background-color: #fefefe;
-    input,#lblStatus{width: 100% !important;display:block;}
-    .btn{margin:1.5em 0;font-weight:700; font-size:1em;}
-    .form-group{
-        p a{
-            color:lighten(@brand-tri,25%);
-            &:hover{color:lighten(@brand-tri,15%);}
+        h1{
+            margin-bottom:0.75em;font-size:2.2em; font-weight:400;
+            display:inline;
+        }
+        img{display:inline;width:1em;}
+        margin: 0 auto; margin-top: 4em; margin-bottom:4em;
+        box-shadow: 0 2px 18px @black;
+        max-width: 22em; width: 90%;
+        padding: 1.8em 1.75em 1em 1.75em; background-color: #fefefe;
+        font-size:17px;
+        input,#lblStatus{width: 100% !important;display:block;}
+        .btn{margin:0.5em 0;font-weight:700; font-size:1em;}
+        button{width:100%;margin:0.5em 0;}
+        .form-group{
+            p a{
+                color:lighten(@brand-tri,25%);
+                &:hover{color:lighten(@brand-tri,15%);}
+            }
         }
     }
-  }
 }
 /*///////////////////////////////////////////////////////
 ------------------------Home Page-----------------------

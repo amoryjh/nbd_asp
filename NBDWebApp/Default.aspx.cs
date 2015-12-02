@@ -81,7 +81,10 @@ namespace NBDWebApp
             }
         }
 
-        protected void btnCreate_Click(object sender, EventArgs e)
+        //
+        // Not necessary - not adding users on home page. Probably use this code on an admin settings page to create new users.
+        //
+        /*protected void btnCreate_Click(object sender, EventArgs e)
         {
                 //declare the collection of users
                 UserStore<IdentityUser> userStore = new UserStore<IdentityUser>();
@@ -94,7 +97,8 @@ namespace NBDWebApp
 
                 if (idResult.Succeeded)
                 {
-                    IdentityResult userResult = manager.AddToRole(user.Id, DropDownList1.SelectedValue);
+                    //N
+                    //IdentityResult userResult = manager.AddToRole(user.Id, DropDownList1.SelectedValue);
                     var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
                     var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
                     authenticationManager.SignIn(userIdentity);
@@ -102,7 +106,7 @@ namespace NBDWebApp
                 }
                 else
                     LblError.Text = idResult.Errors.FirstOrDefault();
-        }
+        }*/
 
     }
 }

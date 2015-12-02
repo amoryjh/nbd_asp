@@ -7,8 +7,10 @@
         
         <div id="login-section">
             
-            <h1 class="text-center"><a href="#">NBD Login</a></h1>  
-        
+            <div class="form-group">
+                <h1 class="text-center">Welcome Back!</h1>
+                <img src="/assets/img/emoji.png" alt="" />  
+            </div>
             <div class="form-group">
                 <label id="lblEmpNum" for="txtEmpNum">Employee Number</label>
                 <asp:RequiredFieldValidator ID="rfvUserName" runat="server" ControlToValidate="txtEmpNum" ErrorMessage="Employee Username Required" ForeColor="Red">*</asp:RequiredFieldValidator>
@@ -22,65 +24,66 @@
             </div>
 
             <div class="form-group">
+                <asp:Label ID="lblStatus" runat="server" ForeColor="Red" EnableViewState="False"></asp:Label>
+                <asp:ValidationSummary ID="ValidationSummary" runat="server" EnableViewState="False" ForeColor="Red" ClientIDMode="Static" />
+                    <!--<p_designer:mapid="f8">
+                        <a href="#" class="display-register" id="CreateNewAccount" __designer:mapid="f9">Create New Account</a>
+                    </p>-->
+            </div>
+
+            <div class="form-group">
                 <asp:Button ID="btnLogin" CssClass="btn btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" />
             </div>
 
             <div class="form-group">
-                <asp:Label ID="lblStatus" runat="server" ForeColor="Red" EnableViewState="False"></asp:Label>
-                <asp:ValidationSummary ID="ValidationSummary" runat="server" EnableViewState="False" ForeColor="Red" />
-                    <p_designer:mapid="f8">
-                        <a href="#" class="display-register" id="CreateNewAccount" __designer:mapid="f9">Create New Account</a>
-                    </p>
-            </div>
-
-            <div class="form-group">
-                <p><a href="#">Forgot Password?</a></p>
-                <p>&nbsp;</p>
-            </div>
-
-        </div>
-
-        <div id="register-section">
-            <h1 class="text-center"><a href="#">Create Account</a></h1>  
-        
-            <div class="form-group">
-                <label id="lblNewEmployee" for="txtNewEmployee">Employee Number<label id="lblNewPassword0" for="txtPassword"></label></label>&nbsp;<asp:TextBox class="form-control" ID="txtNewEmployee" runat="server" MaxLength="20"></asp:TextBox>
-            </div>
-
-            <div class="form-group">
-                <label id="lblNewPassword" for="txtPassword">Password</label>&nbsp;<asp:TextBox class="form-control" ID="txtNewPassWord" runat="server" MaxLength="20" TextMode="Password"></asp:TextBox>
-            </div>
-
-            <div class="form-group">
-                <label id="lblNewPasswordConfirm" for="txtPassword">Confirm Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp; </label>
-            &nbsp;<asp:TextBox class="form-control" ID="txtNewPassWordConfirm" runat="server" MaxLength="20" TextMode="Password"></asp:TextBox>
-            </div>
-            <div class="form-group">
-    <asp:Label ID="LblSelectRole" runat="server" Text="Select A Role"></asp:Label>&nbsp;&nbsp;&nbsp; <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Id"></asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [AspNetRoles]"></asp:SqlDataSource>
-                <asp:Label ID="LblError" runat="server" ForeColor="Red"></asp:Label>
-            </div>
-            <div class="form-group">
-                <asp:Button ID="Button2" CssClass="btn" runat="server" OnClick="btnCreate_Click" Text="Create" />
-            </div>
-            <div class="form-group">
-                <asp:Button CssClass="btn btn-primary display-login" runat="server" OnClick="btnLogin_Click" Text="Back to Login" />
+                <p><a href="#" id="btnForgot">Forgot Password?</a></p>
+                <p><a href="#" id="btnNewAccount">Need an account?</a></p>
             </div>
         </div>
+
+        <div id="recover-section">
+            <div class="form-group text-center">
+                <h2>Forgot your password?</h2>
+                <p>No sweat - <b>enter your email </b> and we'll find it for you.</p>
+            </div>
+            <div class="form-group">
+                <label id="" for="txtRecoveryPassword">Email</label>
+                <asp:TextBox class="form-control" ID="txtRecoveryPassword" runat="server" MaxLength="20" TextMode="Email"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <asp:Button ID="btnRecover" CssClass="btn btnLogin" runat="server" Text="Help Me!" />
+                <button class="btn btnLogin btn-primary btnBack">Back</button>
+            </div>
+        </div>
+
+        <div id="newAccount-section">
+            <div class="form-group text-center">
+                <h2>Need an account?</h2>
+                <p>Talk to your manager or supervisor, they'll set up an account for you.</p>
+            </div>
+            <div class="form-group">
+                <button class="btn btnLogin btn-primary btnBack">Back</button>
+            </div>
+        </div>
+
     </div>
 </form>
     <script>
-        $('#register-section').hide();
+        $('#recover-section , #newAccount-section').hide();
 
-        $('.display-login').click(function () {
-            $('#register-section').hide();
+        $('.btnBack').click(function (e) {
+            e.preventDefault();
+            $(this).parent().parent().hide();
             $('#login-section').show();
         })
 
-        $('.display-register').click(function () {
+        $('#btnForgot').click(function () {
             $('#login-section').hide();
-            $('#register-section').show();
+            $('#recover-section').show();
+        })
+        $('#btnNewAccount').click(function () {
+            $('#login-section').hide();
+            $('#newAccount-section').show();
         })
     </script>
 
