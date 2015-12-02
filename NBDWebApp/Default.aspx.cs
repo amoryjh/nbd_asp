@@ -77,6 +77,7 @@ namespace NBDWebApp
                 var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
                 authenticationManager.SignIn(userIdentity);
                 Response.Redirect("~/MainPage.aspx");
+
             }
         }
 
@@ -102,5 +103,6 @@ namespace NBDWebApp
                 else
                     LblError.Text = idResult.Errors.FirstOrDefault();
         }
+
     }
 }

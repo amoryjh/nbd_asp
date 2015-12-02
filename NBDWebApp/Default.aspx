@@ -11,13 +11,13 @@
         
             <div class="form-group">
                 <label id="lblEmpNum" for="txtEmpNum">Employee Number</label>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmpNum" ErrorMessage="*" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="rfvUserName" runat="server" ControlToValidate="txtEmpNum" ErrorMessage="Employee Username Required" ForeColor="Red">*</asp:RequiredFieldValidator>
                 <asp:TextBox class="form-control" ID="txtEmpNum" runat="server" MaxLength="20"></asp:TextBox>
             </div>
 
             <div class="form-group">
                 <label id="lblPassword" for="txtPassword">Password</label>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPassword" ErrorMessage="*" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password Required" ForeColor="Red">*</asp:RequiredFieldValidator>
                 <asp:TextBox class="form-control" ID="txtPassword" runat="server" MaxLength="20" TextMode="Password"></asp:TextBox>
             </div>
 
@@ -26,7 +26,8 @@
             </div>
 
             <div class="form-group">
-                <asp:Label ID="lblStatus" runat="server" ForeColor="Red"></asp:Label>
+                <asp:Label ID="lblStatus" runat="server" ForeColor="Red" EnableViewState="False"></asp:Label>
+                <asp:ValidationSummary ID="ValidationSummary" runat="server" EnableViewState="False" ForeColor="Red" />
                     <p_designer:mapid="f8">
                         <a href="#" class="display-register" id="CreateNewAccount" __designer:mapid="f9">Create New Account</a>
                     </p>
