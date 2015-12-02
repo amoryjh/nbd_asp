@@ -6,18 +6,48 @@
     <div class="form-group">
         <h1 class="section-title">Carlisle Hotel Renovations</h1>
     </div>
+
+    <div class="timeline well clearfix">    
+        <h3>
+            Project Timeline
+        </h3>
+        <ul>
+            <li>
+                <span class="details">
+                    Design Bid
+                </span>
+            </li>
+            <li>
+                <span class="details">
+                    Design Budget
+                </span>
+            </li>
+            <li>
+                <span class="details">
+                    Production Plan
+                </span>
+            </li>
+            <li>
+                <span class="details">
+                    Approved
+                </span>
+            </li>
+        </ul>
+    </div>
+
+
     <div class="report-group box-border add-report clearfix">
         <div class="report-title">
             <h1 class="project-title">Add New Report?</h1>
         </div>
         <div class="report-wrapper report-list-section clearfix">
-        <label id="" for="ddlProv">Report</label>
-        <select id="ddlProjectType" class="form-control">
-            <option value="dailyreport">Daily Report</option>
-            <option value="designbid">Design Bid</option>
-            <option value="prouctionreport">Production Report</option>
-        </select>
-             </div>
+            <label id="" for="ddlProv">Report</label>
+            <select id="ddlProjectType" class="form-control">
+                <option value="dailyreport">Daily Report</option>
+                <option value="designbid">Design Bid</option>
+                <option value="prouctionreport">Production Report</option>
+            </select>
+        </div>
     </div>
     
 

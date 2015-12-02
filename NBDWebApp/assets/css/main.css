@@ -5876,9 +5876,6 @@ span.highlight-change {
 .project-instance {
   margin: 2em 0 4em 0;
   padding-bottom: 2em;
-  /*/////////////////////////////
-------------TimeLine-----------
-/////////////////////////////*/
 }
 .project-instance .well {
   padding-left: 0.1em;
@@ -5904,24 +5901,28 @@ span.highlight-change {
   padding: 1em 2em;
   width: 100%;
 }
-.project-instance .updated-list,
-.project-instance .timeline {
+.project-instance .updated-list {
   margin-top: 2em;
 }
-.project-instance .timeline {
+.timeline {
+  margin-top: 2em;
   padding: 2em 2em 2.5em 2em;
   background: transparent;
 }
-.project-instance .timeline ul {
+.timeline h3 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.timeline ul {
   width: 100%;
   position: relative;
   display: block;
   margin: 0 auto;
   height: 4px;
   padding: 0;
-  background: #353535;
+  background: #188ea8;
 }
-.project-instance .timeline ul li {
+.timeline ul li {
   position: relative;
   top: -63px;
   display: inline-block;
@@ -5931,7 +5932,7 @@ span.highlight-change {
   width: 120px;
   margin: 0 6em;
 }
-.project-instance .timeline ul li::before {
+.timeline ul li::before {
   content: "";
   position: absolute;
   top: 3px;
@@ -5939,13 +5940,13 @@ span.highlight-change {
   display: block;
   width: 9px;
   height: 9px;
-  border: 7px solid #22313f;
+  border: 7px solid #188ea8;
   border-radius: 50%;
 }
-.project-instance .timeline ul li:hover {
+.timeline ul li:hover {
   cursor: pointer;
 }
-.project-instance .timeline ul li:hover::before {
+.timeline ul li:hover::before {
   top: 1px;
   left: -29px;
   width: 9px;
@@ -5953,44 +5954,44 @@ span.highlight-change {
   border-width: 7px;
   border-color: #f52374;
 }
-.project-instance .timeline ul li:hover:first-child .details,
-.project-instance .timeline ul li:hover:last-child .details {
+.timeline ul li:hover:first-child .details,
+.timeline ul li:hover:last-child .details {
   top: 31px;
   left: -80px;
 }
-.project-instance .timeline ul li:hover:last-child::before {
+.timeline ul li:hover:last-child::before {
   border: 12px solid #f52374;
   background: #f52374;
 }
-.project-instance .timeline ul li:hover .details {
+.timeline ul li:hover .details {
   display: block;
   color: #444;
 }
-.project-instance .timeline ul li:first-child {
+.timeline ul li:first-child {
   left: -4px;
   position: relative;
   margin: 0;
 }
-.project-instance .timeline ul li:last-child {
+.timeline ul li:last-child {
   right: 0px;
   position: relative;
   margin-left: 96%;
 }
 @media (min-width: 600px) {
-  .project-instance .timeline ul li:last-child {
+  .timeline ul li:last-child {
     margin-left: 98%;
   }
 }
-.project-instance .timeline ul li:last-child::before {
+.timeline ul li:last-child::before {
   border: 12px solid #db0a5b;
 }
-.project-instance .timeline ul li:nth-child(2) {
+.timeline ul li:nth-child(2) {
   margin-left: 30%;
 }
-.project-instance .timeline ul li:nth-child(3) {
+.timeline ul li:nth-child(3) {
   margin-left: 65%;
 }
-.project-instance .timeline ul .details {
+.timeline ul .details {
   display: none;
   position: absolute;
   left: -85px;
@@ -6003,7 +6004,7 @@ span.highlight-change {
   font: 12px arial;
   background: #fff;
 }
-.project-instance .timeline ul .details::before {
+.timeline ul .details::before {
   content: "";
   position: absolute;
   left: 10px;
