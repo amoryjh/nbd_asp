@@ -31,15 +31,6 @@ namespace NBDWebApp {
         protected global::System.Web.UI.WebControls.TextBox txtBusiness;
         
         /// <summary>
-        /// txtClient control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClient;
-        
-        /// <summary>
         /// txtCity control.
         /// </summary>
         /// <remarks>
@@ -58,13 +49,22 @@ namespace NBDWebApp {
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
         
         /// <summary>
-        /// ddlState control.
+        /// ddlProv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlState;
+        protected global::System.Web.UI.WebControls.DropDownList ddlProv;
+        
+        /// <summary>
+        /// TtxtPCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TtxtPCode;
         
         /// <summary>
         /// txtPhone control.
@@ -76,13 +76,31 @@ namespace NBDWebApp {
         protected global::System.Web.UI.WebControls.TextBox txtPhone;
         
         /// <summary>
-        /// txtEmail control.
+        /// txtClientFName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtClientFName;
+        
+        /// <summary>
+        /// txtClientLName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtClientLName;
+        
+        /// <summary>
+        /// txtClientPos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtClientPos;
         
         /// <summary>
         /// btnInsert control.

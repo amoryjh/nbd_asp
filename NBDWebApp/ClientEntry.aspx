@@ -8,14 +8,9 @@
             <h1>Enter new client</h1>
         </div>
         <!-- Hide the projects button and the add report button-->
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-12">
           <label id="lblBusiness" for="txtClient">Business</label>
           <asp:TextBox ID="txtBusiness" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-6">
-          <label id="lblClient" for="txtClient">Primary Contact</label>
-          <asp:TextBox ID="txtClient" runat="server" class="form-control" placeholder="Contact Name"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
@@ -29,23 +24,42 @@
         </div>
 
         <div class="form-group col-md-2">
-            <label id="lblState" for="ddlState">State</label>
-            <asp:DropDownList  ID="ddlState" class="form-control" placeholder="State" runat="server">
+            <label id="lblProv" for="ddlProv">Province</label>
+            <asp:DropDownList  ID="ddlProv" class="form-control" placeholder="Prov" runat="server">
                 <asp:ListItem Selected="True">Ontario</asp:ListItem>
-                <asp:ListItem>New York</asp:ListItem>
-                <asp:ListItem>Ohio</asp:ListItem>
-                <asp:ListItem>Texas</asp:ListItem>
+                <asp:ListItem>Alberta</asp:ListItem>
+                <asp:ListItem>British Columbia</asp:ListItem>
+                <asp:ListItem>Manitoba</asp:ListItem>
             </asp:DropDownList>
         </div>      
         
-        <div class="form-group col-md-6">
+         <div class="form-group col-md-4">
+          <label id="lblPCode" for="txtPCode">Postal Code</label>
+          <asp:TextBox ID="TtxtPCode" class="form-control" placeholder="Postal Code" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-8">
           <label id="lblPhone" for="txtPhone">Phone</label>
           <asp:TextBox ID="txtPhone" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
         </div>
-        
-        <div class="form-group col-md-6">
-        <label id="lblEmail" for="txtEmail">Email</label>
-        <asp:TextBox ID="txtEmail" class="form-control" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
+
+         <div class="form-group col-md-12">
+            <h2>Primary Contact Information</h2>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label id="lblClientFName" for="txtClientFName">First Name</label>
+          <asp:TextBox ID="txtClientFName" runat="server" class="form-control" placeholder="First Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label id="lblClientLName" for="txtClientLName">Last Name</label>
+          <asp:TextBox ID="txtClientLName" runat="server" class="form-control" placeholder="Last Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label id="lblClientPos" for="txtClientPos">Position</label>
+          <asp:TextBox ID="txtClientPos" runat="server" class="form-control" placeholder="Position"></asp:TextBox>
         </div>
         
         <div class="form-group col-md-12">

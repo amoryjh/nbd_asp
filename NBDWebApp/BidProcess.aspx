@@ -21,57 +21,61 @@
     </div>
     <div class="report-wrapper clearfix">
         <div class="form-group col-md-12">
-            <h1>Enter Client Info</h1>
+            <h1>Enter new client</h1>
+        </div>
+        <!-- Hide the projects button and the add report button-->
+        <div class="form-group col-md-12">
+          <label id="lblBusiness" for="txtClient">Business</label>
+          <asp:TextBox ID="txtBusiness" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
-          <label id="lblClientBusinessName" for="txtClientBusinessName">Business</label>
-          <asp:TextBox ID="txtClientBusinessName" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-6">
-          <label id="lblClientPhone" for="txtClientPhone">Phone</label>
-          <asp:TextBox ID="txtClientPhone" runat="server" class="form-control" placeholder="Phone Number"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-6">
-            <label id="lblClientAdress" for="txtClientAddress">Address</label>
-            <asp:TextBox ID="txtClientAddress" class="form-control" placeholder="City" runat="server"></asp:TextBox>
+            <label id="lblCity" for="txtCity">City</label>
+            <asp:TextBox ID="txtCity" class="form-control" placeholder="City" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
-            <label id="lblClientCity" for="txtClientCity">City</label>
-            <asp:TextBox ID="txtClientCity" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+            <label id="lblAddress" for="txtAddress">Address</label>
+            <asp:TextBox ID="txtAddress" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
-            <label id="lblClientProv" for="ddlProv">Province</label>
-            <asp:DropDownList  ID="ddlProv" class="form-control" placeholder="State" runat="server">
-                <asp:ListItem Selected="True">ON</asp:ListItem>
-                <asp:ListItem>B.C</asp:ListItem>
-                <asp:ListItem>AB</asp:ListItem>
-                <asp:ListItem>MB</asp:ListItem>
+            <label id="lblProv" for="ddlProv">Province</label>
+            <asp:DropDownList  ID="ddlProv" class="form-control" placeholder="Prov" runat="server">
+                <asp:ListItem Selected="True">Ontario</asp:ListItem>
+                <asp:ListItem>Alberta</asp:ListItem>
+                <asp:ListItem>British Columbia</asp:ListItem>
+                <asp:ListItem>Manitoba</asp:ListItem>
             </asp:DropDownList>
         </div>      
         
-        <div class="form-group col-md-6">
-          <label id="lblClientPostal" for="txtClientPostal">Postal Code</label>
-          <asp:TextBox ID="txtClientPostal" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
-        </div>
-        
-        <div class="form-group col-md-6">
-        <label id="lblClientConFName" for="txtClientConFName">Client First Name</label>
-        <asp:TextBox ID="txtClientConFName" class="form-control" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
+         <div class="form-group col-md-4">
+          <label id="lblPCode" for="txtPCode">Postal Code</label>
+          <asp:TextBox ID="TtxtPCode" class="form-control" placeholder="Postal Code" runat="server"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-6">
-        <label id="lblClientConLName" for="txtClientConLName">Client Last Name</label>
-        <asp:TextBox ID="txtClientConLName" class="form-control" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
+        <div class="form-group col-md-8">
+          <label id="lblPhone" for="txtPhone">Phone</label>
+          <asp:TextBox ID="txtPhone" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-6">
-        <label id="lblClientConPos" for="txtClientConPos">Client Position</label>
-        <asp:TextBox ID="txtClientConPos" class="form-control" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
+         <div class="form-group col-md-12">
+            <h2>Primary Contact Information</h2>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label id="lblClientFName" for="txtClientFName">First Name</label>
+          <asp:TextBox ID="txtClientFName" runat="server" class="form-control" placeholder="First Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label id="lblClientLName" for="txtClientLName">Last Name</label>
+          <asp:TextBox ID="txtClientLName" runat="server" class="form-control" placeholder="Last Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label id="lblClientPos" for="txtClientPos">Position</label>
+          <asp:TextBox ID="txtClientPos" runat="server" class="form-control" placeholder="Position"></asp:TextBox>
         </div>
         
     </div>
