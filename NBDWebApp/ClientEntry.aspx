@@ -13,23 +13,32 @@
           <asp:TextBox ID="txtBusiness" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-6">
-            <label id="lblCity" for="txtCity">City</label>
-            <asp:TextBox ID="txtCity" class="form-control" placeholder="City" runat="server"></asp:TextBox>
-        </div>
+        <div class="form-group col-md-3">
+            <label id="lblCity" for="ddlCity">City</label>
+            <asp:DropDownList  ID="ddlCity" class="form-control" placeholder="City" runat="server"></asp:DropDownList>
+        </div>    
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
             <label id="lblAddress" for="txtAddress">Address</label>
             <asp:TextBox ID="txtAddress" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-3">
             <label id="lblProv" for="ddlProv">Province</label>
             <asp:DropDownList  ID="ddlProv" class="form-control" placeholder="Prov" runat="server">
                 <asp:ListItem Selected="True">Ontario</asp:ListItem>
-                <asp:ListItem>Alberta</asp:ListItem>
-                <asp:ListItem>British Columbia</asp:ListItem>
+                <asp:ListItem>Quebec</asp:ListItem>
+                <asp:ListItem>Nova Scotia</asp:ListItem>
+                <asp:ListItem>New Brunswick</asp:ListItem>
                 <asp:ListItem>Manitoba</asp:ListItem>
+                <asp:ListItem>British Columbia</asp:ListItem>
+                <asp:ListItem>Prince Edward Island</asp:ListItem>
+                <asp:ListItem>Saskatchewan</asp:ListItem>
+                <asp:ListItem>Alberta</asp:ListItem>
+                <asp:ListItem>Newfoundland and Labrador</asp:ListItem>
+                <asp:ListItem>Northwest Territories</asp:ListItem>
+                <asp:ListItem>Yukon</asp:ListItem>
+                <asp:ListItem>Nunavut</asp:ListItem>
             </asp:DropDownList>
         </div>      
         

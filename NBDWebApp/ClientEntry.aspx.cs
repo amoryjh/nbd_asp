@@ -14,6 +14,12 @@ namespace NBDWebApp
         {
             HtmlGenericControl body = (HtmlGenericControl)Master.FindControl("BodyTag");
             body.Attributes.Add("class", "client-entry");
+
+            if (IsPostBack) return;
+
+            NBD_DatabaseEntities db = new NBD_DatabaseEntities();
+            foreach (CITY c in db.CITies)
+                this.ddlCity.Items.Add(c.city1);
         }
     }
 }
