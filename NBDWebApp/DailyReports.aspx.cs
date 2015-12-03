@@ -11,7 +11,11 @@ namespace NBDWebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack) return;
 
+            NBD_DatabaseEntities db = new NBD_DatabaseEntities();
+            foreach (PROJECT c in db.PROJECTs)
+                this.ddlProject.Items.Add(c.projName);
         }
     }
 }

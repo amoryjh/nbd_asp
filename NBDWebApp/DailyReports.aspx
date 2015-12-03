@@ -25,12 +25,7 @@
 
             <div class="form-group col-md-6">
                 <label id="lblUserProject" for="ddlProject">Project</label>
-                <asp:DropDownList  ID="ddlProject" class="form-control" placeholder="Project" runat="server">
-                    <asp:ListItem Selected="True">Project 1</asp:ListItem>
-                    <asp:ListItem>Project 2</asp:ListItem>
-                    <asp:ListItem>Project 3</asp:ListItem>
-                    <asp:ListItem>Project 4</asp:ListItem>
-                </asp:DropDownList>
+                <asp:DropDownList  ID="ddlProject" class="form-control" placeholder="Project" runat="server"></asp:DropDownList>
             </div>      
             
             <div class="form-group col-md-12">
