@@ -274,7 +274,7 @@
         </div>
 
         <div class="form-group col-md-6">
-          <label id="lblClientBusinessName" for="txtClientBusinessName">Business</label>
+          <label id="lblClientBusinessName" for="txtClientBusinessName">Test</label>
           <asp:TextBox ID="TextBox5" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
         </div>
 
