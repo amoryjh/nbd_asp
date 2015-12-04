@@ -193,44 +193,35 @@
         </div>
 
         <div class="form-group col-md-6">
-          <label id="lblBusiness" for="txtClient">Business</label>
+          <label id="lblBusiness" for="txtClient">Description</label>
           <asp:TextBox ID="TextBox13" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-6">
-          <label id="lblClient" for="txtClient">Primary Contact</label>
+        <div class="form-group col-md-3">
+          <label id="lblClient" for="txtClient">Quantity</label>
           <asp:TextBox ID="TextBox14" runat="server" class="form-control" placeholder="Contact Name"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-6">
-            <label id="lblCity" for="txtCity">City</label>
+        <div class="form-group col-md-3">
+            <label id="lblCity" for="txtCity">Size</label>
             <asp:TextBox ID="TextBox15" class="form-control" placeholder="City" runat="server"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-4">
-            <label id="lblAddress" for="txtAddress">Address</label>
+        <div class="form-group col-md-3">
+            <label id="lblAddress" for="txtAddress">Unit Price</label>
             <asp:TextBox ID="TextBox16" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-2">
-            <label id="lblState" for="ddlState">State</label>
-            <asp:DropDownList  ID="DropDownList3" class="form-control" placeholder="State" runat="server">
-                <asp:ListItem Selected="True">Ontario</asp:ListItem>
-                <asp:ListItem>New York</asp:ListItem>
-                <asp:ListItem>Ohio</asp:ListItem>
-                <asp:ListItem>Texas</asp:ListItem>
-            </asp:DropDownList>
-        </div>      
-        
-        <div class="form-group col-md-6">
-          <label id="lblPhone" for="txtPhone">Phone</label>
-          <asp:TextBox ID="TextBox17" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
+        <div class="form-group col-md-3">
+            <label id="lblAddress" for="txtAddress">Extended Price</label>
+            <asp:TextBox ID="TextBox1" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-3">
+            <label id="lblBusiness" for="txtClient">Description</label>
+        <asp:Button ID="Button1" CssClass="btn" runat="server" Text="+" />
         </div>
         
-        <div class="form-group col-md-6">
-        <label id="lblEmail" for="txtEmail">Email</label>
-        <asp:TextBox ID="TextBox18" class="form-control" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
-        </div>
     </div>
 
     <div class="report-wrapper clearfix">
@@ -239,47 +230,35 @@
         </div>
 
         <div class="form-group col-md-6">
-          <label id="lblBusiness" for="txtClient">Business</label>
+          <label id="lblBusiness" for="txtClient">Description</label>
           <asp:TextBox ID="TextBox19" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-6">
-          <label id="lblClient" for="txtClient">Primary Contact</label>
-          <asp:TextBox ID="TextBox20" runat="server" class="form-control" placeholder="Contact Name"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-6">
-            <label id="lblCity" for="txtCity">City</label>
-            <asp:TextBox ID="TextBox21" class="form-control" placeholder="City" runat="server"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-4">
-            <label id="lblAddress" for="txtAddress">Address</label>
-            <asp:TextBox ID="TextBox22" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+        <div class="form-group col-md-2">
+          <label id="lblBusiness" for="txtClient">Hours</label>
+          <asp:TextBox ID="TextBox2" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
-            <label id="lblState" for="ddlState">State</label>
-            <asp:DropDownList  ID="DropDownList4" class="form-control" placeholder="State" runat="server">
-                <asp:ListItem Selected="True">Ontario</asp:ListItem>
-                <asp:ListItem>New York</asp:ListItem>
-                <asp:ListItem>Ohio</asp:ListItem>
-                <asp:ListItem>Texas</asp:ListItem>
-            </asp:DropDownList>
-        </div>      
-        
-        <div class="form-group col-md-6">
-          <label id="lblPhone" for="txtPhone">Phone</label>
-          <asp:TextBox ID="TextBox23" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
+          <label id="lblBusiness" for="txtClient">Unit Price</label>
+          <asp:TextBox ID="TextBox3" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
         </div>
-        
-        <div class="form-group col-md-6">
-        <label id="lblEmail" for="txtEmail">Email</label>
-        <asp:TextBox ID="TextBox24" class="form-control" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
+
+        <div class="form-group col-md-2">
+          <label id="lblBusiness" for="txtClient">Total</label>
+          <asp:TextBox ID="TextBox4" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
         </div>
         
         <div class="form-group col-md-12">
         <asp:Button ID="Button4" CssClass="btn" runat="server" Text="Insert Client" />
+        </div>
+    </div>
+    <div class="report-wrapper clearfix">
+        <div class="form-group col-md-12">
+            <h1>Submit Form</h1>
+        </div>
+        <div class="form-group col-md-12">
+        <asp:Button ID="Button2" CssClass="btn" runat="server" Text="Submit" />
         </div>
     </div>
     </div>
