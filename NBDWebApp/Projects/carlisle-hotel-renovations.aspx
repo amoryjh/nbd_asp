@@ -435,7 +435,7 @@
             <p>Bid Process
           </p>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-2">
             <label id="lblBusiness" for="txtClient">Hours
           </label>
             <asp:TextBox ID="TextBox28" runat="server" class="form-control" placeholder="Hrs"></asp:TextBox>
@@ -450,7 +450,8 @@
             <p>Production
           </p>
     </div>
-            <div class="form-group col-md-4">
+
+            <div class="form-group col-md-2">
             <label id="lblBusiness" for="txtClient">Hours
           </label>
             <asp:TextBox ID="TextBox11" runat="server" class="form-control" placeholder="Hrs"></asp:TextBox>
@@ -465,7 +466,7 @@
         <div class="form-group col-md-12">
             <h3>Total Production Costs</h3>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-2">
             <label id="lblBusiness" for="txtClient">Hours
           </label>
             <asp:TextBox ID="TextBox26" runat="server" class="form-control" placeholder="Hrs"></asp:TextBox>
@@ -480,7 +481,7 @@
             <div class="form-group col-md-12">
             <h3>Total Material Costs</h3>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-2">
             <label id="lblBusiness" for="txtClient">Hours
           </label>
             <asp:TextBox ID="TextBox38" runat="server" class="form-control" placeholder="Hrs"></asp:TextBox>
@@ -496,7 +497,7 @@
         <div class="form-group col-md-12">
             <h3>Total Hours & Costs</h3>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-2">
             <label id="lblBusiness" for="txtClient">Hours
           </label>
             <asp:TextBox ID="TextBox40" runat="server" class="form-control" placeholder="Hrs"></asp:TextBox>
@@ -507,7 +508,9 @@
           </label>
           <asp:TextBox ID="TextBox41" runat="server" class="form-control" placeholder="Total"></asp:TextBox>
         </div> 
- 
+        <div class="form-group col-md-12">
+            <h3></h3>
+        </div>
             <div class="form-group col-md-5">
           <asp:TextBox ID="TextBox42" runat="server" class="form-control" placeholder="% Of Bid"></asp:TextBox>
         </div> 
