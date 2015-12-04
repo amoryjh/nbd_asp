@@ -51,7 +51,7 @@
     </div>
     
 
-    <div class="report-group box-border clearfix">
+    <div id="project-designBid" class="report-group box-border clearfix">
     <div class="report-title">
         <h1 class="project-title">New Design Bid</h1>
     </div>
@@ -259,6 +259,219 @@
         </div>
         <div class="form-group col-md-12">
         <asp:Button ID="Button2" CssClass="btn" runat="server" Text="Submit" />
+        </div>
+    </div>
+    </div>
+
+    
+    <div id="project-productionPlan" class="report-group box-border clearfix">
+    <div class="report-title">
+        <h1 class="project-title">New Production Plan</h1>
+    </div>
+    <div class="report-wrapper clearfix">
+        <div class="form-group col-md-12">
+            <h1>Client Info</h1>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label id="lblClientBusinessName" for="txtClientBusinessName">Business</label>
+          <asp:TextBox ID="TextBox5" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label id="lblClientPhone" for="txtClientPhone">Phone</label>
+          <asp:TextBox ID="TextBox6" runat="server" class="form-control" placeholder="Phone Number"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label id="lblClientAdress" for="txtClientAddress">Address</label>
+            <asp:TextBox ID="TextBox7" class="form-control" placeholder="City" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label id="lblClientCity" for="txtClientCity">City</label>
+            <asp:TextBox ID="TextBox8" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label id="lblClientProv" for="ddlProv">Province</label>
+            <asp:DropDownList  ID="DropDownList1" class="form-control" placeholder="State" runat="server">
+                <asp:ListItem Selected="True">ON</asp:ListItem>
+                <asp:ListItem>B.C</asp:ListItem>
+                <asp:ListItem>AB</asp:ListItem>
+                <asp:ListItem>MB</asp:ListItem>
+            </asp:DropDownList>
+        </div>      
+        
+        <div class="form-group col-md-6">
+          <label id="lblClientPostal" for="txtClientPostal">Postal Code</label>
+          <asp:TextBox ID="TextBox9" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
+        </div>
+        
+        <div class="form-group col-md-6">
+        <label id="lblClientConFName" for="txtClientConFName">Client First Name</label>
+        <asp:TextBox ID="TextBox10" class="form-control" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-6">
+        <label id="lblClientConLName" for="txtClientConLName">Client Last Name</label>
+        <asp:TextBox ID="TextBox11" class="form-control" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-6">
+        <label id="lblClientConPos" for="txtClientConPos">Client Position</label>
+        <asp:TextBox ID="TextBox12" class="form-control" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
+        </div>
+        
+    </div>
+
+    <div class="report-wrapper clearfix">
+        <div class="form-group col-md-12">
+            <h1>NBD Staff</h1>
+        </div>
+        <div class="form-group col-md-12">
+            <h3>Sales Associate:</h3>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label id="lblSalesAssocFName" for="txtSalesAssocFName">First Name</label>
+          <asp:TextBox ID="TextBox17" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label id="lblSalesAssocLName" for="txtSalesAssocFName">Last Name</label>
+          &nbsp;<asp:TextBox ID="TextBox18" runat="server" class="form-control" placeholder="Contact Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label id="lblSalesAssocPhone" for="txtSalesAssocPhone">Phone</label>
+            <asp:TextBox ID="TextBox20" class="form-control" placeholder="City" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-12">
+            <h3>Designer:</h3>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label id="lblDesignerFName" for="txtDesignerFName">First Name</label>
+            &nbsp;<asp:TextBox ID="TextBox21" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label id="lblDesignerLName" for="txtDesignerLName">Last Name</label>
+            &nbsp;<asp:TextBox ID="TextBox22" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+        </div>
+        
+        <div class="form-group col-md-6">
+          <label id="lblDesignerPhone" for="txtDesignerPhone">Phone</label>
+          <asp:TextBox ID="TextBox23" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
+        </div>
+   
+    </div>
+
+    <div class="report-wrapper clearfix">
+        <div class="form-group col-md-12">
+            <h1>Project</h1>
+        </div>
+
+        <div class="form-group col-md-12">
+          <label id="lblBidDate" for="txtBidDate">Bid Date</label>
+          <asp:TextBox ID="TextBox24" runat="server" class="form-control" placeholder="Business Name" TextMode="Date"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label id="lblBidEstBeginDate" for="txtBidEstBeginDate">Estimated Begin Date</label>
+          <asp:TextBox ID="TextBox25" runat="server" class="form-control" placeholder="Contact Name" TextMode="Date"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label id="lblBidEstComDate" for="txtBidEstComDate">Estimated Completion Date</label>
+            <asp:TextBox ID="TextBox26" class="form-control" placeholder="City" runat="server" TextMode="Date"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label id="lblProjSite" for="txtProjSite">Project Site</label>
+            <asp:TextBox ID="TextBox27" class="form-control" placeholder="Project Site" runat="server"></asp:TextBox>
+        </div>      
+        
+        <div class="form-group col-md-6">
+        <label id="lblBidEstCost" for="txtBidEstCost">Estimated Cost</label>
+        <asp:TextBox ID="TextBox28" class="form-control" placeholder="Estimated Cost" runat="server" TextMode="Email"></asp:TextBox>
+        </div>
+    </div>
+    
+    <div class="report-wrapper clearfix">
+        <div class="form-group col-md-12">
+            <h1>Material Requirements</h1>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label id="lblBusiness" for="txtClient">Description</label>
+          <asp:TextBox ID="TextBox29" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label id="lblClient" for="txtClient">Quantity</label>
+          <asp:TextBox ID="TextBox30" runat="server" class="form-control" placeholder="Contact Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-3">
+            <label id="lblCity" for="txtCity">Size</label>
+            <asp:TextBox ID="TextBox31" class="form-control" placeholder="City" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-3">
+            <label id="lblAddress" for="txtAddress">Unit Price</label>
+            <asp:TextBox ID="TextBox32" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-3">
+            <label id="lblAddress" for="txtAddress">Extended Price</label>
+            <asp:TextBox ID="TextBox33" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-3">
+            <label id="lblBusiness" for="txtClient">Description</label>
+        <asp:Button ID="Button3" CssClass="btn" runat="server" Text="+" />
+        </div>
+        
+    </div>
+
+    <div class="report-wrapper clearfix">
+        <div class="form-group col-md-12">
+            <h1>Labour Requirements</h1>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label id="lblBusiness" for="txtClient">Description</label>
+          <asp:TextBox ID="TextBox34" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label id="lblBusiness" for="txtClient">Hours</label>
+          <asp:TextBox ID="TextBox35" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label id="lblBusiness" for="txtClient">Unit Price</label>
+          <asp:TextBox ID="TextBox36" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label id="lblBusiness" for="txtClient">Total</label>
+          <asp:TextBox ID="TextBox37" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+        </div>
+        
+        <div class="form-group col-md-12">
+        <asp:Button ID="Button5" CssClass="btn" runat="server" Text="Insert Client" />
+        </div>
+    </div>
+    <div class="report-wrapper clearfix">
+        <div class="form-group col-md-12">
+            <h1>Submit Form</h1>
+        </div>
+        <div class="form-group col-md-12">
+        <asp:Button ID="Button6" CssClass="btn" runat="server" Text="Submit" />
         </div>
     </div>
     </div>
