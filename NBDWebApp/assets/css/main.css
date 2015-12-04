@@ -5901,6 +5901,10 @@ span.highlight-change {
   padding: 1em 2em;
   width: 100%;
 }
+.project-instance .project-instance-title:hover {
+  background: #344b60;
+  cursor: pointer;
+}
 .project-instance .updated-list {
   margin-top: 2em;
 }
