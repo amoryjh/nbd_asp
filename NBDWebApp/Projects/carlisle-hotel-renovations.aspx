@@ -151,18 +151,18 @@
         </div>
 
         <div class="form-group col-md-6">
-          <label id="lblSalesAssocFNameDesign" for="txtSalesAssocFName">First Name</label>
-          <asp:TextBox ID="txtSalesAssocFName" runat="server" class="form-control" placeholder="First Name"></asp:TextBox>
+          <label id="lblSalesAssocFNameDesign" for="txtSalesAssocFNameDesign">First Name</label>
+          <asp:TextBox ID="txtSalesAssocFNameDesign" runat="server" class="form-control" placeholder="First Name"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
-            <label id="lblSalesAssocLNameDesign" for="txtSalesAssocFName">Last Name</label>
-          &nbsp;<asp:TextBox ID="txtSalesAssocLName" runat="server" class="form-control" placeholder="Last Name"></asp:TextBox>
+            <label id="lblSalesAssocLNameDesign" for="txtSalesAssocFNameDesign">Last Name</label>
+          &nbsp;<asp:TextBox ID="txtSalesAssocLNameDesign" runat="server" class="form-control" placeholder="Last Name"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
-            <label id="lblSalesAssocPhoneDesign" for="txtSalesAssocPhone">Phone</label>
-            <asp:TextBox ID="txtSalesAssocPhone" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
+            <label id="lblSalesAssocPhoneDesign" for="txtSalesAssocPhoneDesign">Phone</label>
+            <asp:TextBox ID="txtSalesAssocPhoneDesign" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-12">
@@ -170,18 +170,18 @@
         </div>
 
         <div class="form-group col-md-6">
-            <label id="lblDesignerFNameDesign" for="txtDesignerFName">First Name</label>
-            &nbsp;<asp:TextBox ID="txtDesignerFName" class="form-control" placeholder="First Name" runat="server"></asp:TextBox>
+            <label id="lblDesignerFNameDesign" for="txtDesignerFNameDesign">First Name</label>
+            &nbsp;<asp:TextBox ID="txtDesignerFNameDesign" class="form-control" placeholder="First Name" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
-            <label id="lblDesignerLNameDesign" for="txtDesignerLName">Last Name</label>
-            &nbsp;<asp:TextBox ID="txtDesignerLName" class="form-control" placeholder="Last Name" runat="server"></asp:TextBox>
+            <label id="lblDesignerLNameDesign" for="txtDesignerLNameDesign">Last Name</label>
+            &nbsp;<asp:TextBox ID="txtDesignerLNameDesign" class="form-control" placeholder="Last Name" runat="server"></asp:TextBox>
         </div>
         
         <div class="form-group col-md-6">
-          <label id="lblDesignerPhoneDesign" for="txtDesignerPhone">Phone</label>
-          <asp:TextBox ID="txtDesignerPhone" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
+          <label id="lblDesignerPhoneDesign" for="txtDesignerPhoneDesign">Phone</label>
+          <asp:TextBox ID="txtDesignerPhoneDesign" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
         </div>
    
     </div>
@@ -192,28 +192,28 @@
         </div>
 
         <div class="form-group col-md-12">
-          <label id="lblBidDateDesign" for="txtBidDate">Bid Date</label>
-          <asp:TextBox ID="txtBidDate" runat="server" class="form-control" placeholder="Business Name" TextMode="Date"></asp:TextBox>
+          <label id="lblBidDateDesign" for="txtBidDateDesign">Bid Date</label>
+          <asp:TextBox ID="txtBidDateDesign" runat="server" class="form-control" placeholder="Business Name" TextMode="Date"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
-          <label id="lblBidEstBeginDateDesign" for="txtBidEstBeginDate">Estimated Begin Date</label>
-          <asp:TextBox ID="txtBidEstBeginDate" runat="server" class="form-control" placeholder="Contact Name" TextMode="Date"></asp:TextBox>
+          <label id="lblBidEstBeginDateDesign" for="txtBidEstBeginDateDesign">Estimated Begin Date</label>
+          <asp:TextBox ID="txtBidEstBeginDateDesign" runat="server" class="form-control" placeholder="Contact Name" TextMode="Date"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
-            <label id="lblBidEstComDateDesign" for="txtBidEstComDate">Estimated Completion Date</label>
-            <asp:TextBox ID="txtBidEstComDate" class="form-control" placeholder="City" runat="server" TextMode="Date"></asp:TextBox>
+            <label id="lblBidEstComDateDesign" for="txtBidEstComDateDesign">Estimated Completion Date</label>
+            <asp:TextBox ID="txtBidEstComDateDesign" class="form-control" placeholder="City" runat="server" TextMode="Date"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
-            <label id="lblProjSiteDesign" for="txtProjSite">Project Site</label>
-            <asp:TextBox ID="txtProjSite" class="form-control" placeholder="Project Site" runat="server"></asp:TextBox>
+            <label id="lblProjSiteDesign" for="txtProjSiteDesign">Project Site</label>
+            <asp:TextBox ID="txtProjSiteDesign" class="form-control" placeholder="Project Site" runat="server"></asp:TextBox>
         </div>      
         
         <div class="form-group col-md-6">
-        <label id="lblBidEstCostDesign" for="txtBidEstCost">Estimated Cost</label>
-        <asp:TextBox ID="txtBidEstCost" class="form-control" placeholder="Estimated Cost" runat="server" TextMode="Email"></asp:TextBox>
+        <label id="lblBidEstCostDesign" for="txtBidEstCostDesign">Estimated Cost</label>
+        <asp:TextBox ID="txtBidEstCostDesign" class="form-control" placeholder="Estimated Cost" runat="server" TextMode="Email"></asp:TextBox>
         </div>
     </div>
     
@@ -223,32 +223,32 @@
         </div>
 
         <div class="form-group col-md-6">
-          <label id="lblMaterialDescDesign" for="txtMaterialDesc">Description</label>
-          <asp:TextBox ID="txtMaterialDesc" runat="server" class="form-control" placeholder="Description"></asp:TextBox>
+          <label id="lblMaterialDescDesign" for="txtMaterialDescDesign">Description</label>
+          <asp:TextBox ID="txtMaterialDescDesign" runat="server" class="form-control" placeholder="Description"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-3">
-          <label id="lblMaterialQuantityDesign" for="txtMaterialQuantity">Quantity</label>
-          <asp:TextBox ID="txtMaterialQuantity" runat="server" class="form-control" placeholder="Quantity"></asp:TextBox>
+          <label id="lblMaterialQuantityDesign" for="txtMaterialQuantityDesign">Quantity</label>
+          <asp:TextBox ID="txtMaterialQuantityDesign" runat="server" class="form-control" placeholder="Quantity"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-3">
-            <label id="lblMaterialSizeDesign" for="txtMaterialSize">Size</label>
-            <asp:TextBox ID="txtMaterialSize" class="form-control" placeholder="Size" runat="server"></asp:TextBox>
+            <label id="lblMaterialSizeDesign" for="txtMaterialSizeDesign">Size</label>
+            <asp:TextBox ID="txtMaterialSizeDesign" class="form-control" placeholder="Size" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-3">
-            <label id="lblMaterialUnitPriceDesign" for="txtMaterialUnitPrice">Unit Price</label>
-            <asp:TextBox ID="txtMaterialUnitPrice" class="form-control" placeholder="Unit Price" runat="server"></asp:TextBox>
+            <label id="lblMaterialUnitPriceDesign" for="txtMaterialUnitPriceDesign">Unit Price</label>
+            <asp:TextBox ID="txtMaterialUnitPriceDesign" class="form-control" placeholder="Unit Price" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-3">
-            <label id="lblMaterialTotalDesign" for="txtMaterialTotal">Total</label>
-            <asp:TextBox ID="txtMaterialTotal" class="form-control"  runat="server"></asp:TextBox>
+            <label id="lblMaterialTotalDesign" for="txtMaterialTotalDesign">Total</label>
+            <asp:TextBox ID="txtMaterialTotalDesign" class="form-control"  runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-3">
-        <asp:Button ID="btnMaterialAdd" CssClass="btn" runat="server" Text="+" />
+        <asp:Button ID="btnMaterialAddDesign" CssClass="btn" runat="server" Text="+" />
         </div>
         
     </div>
@@ -259,27 +259,27 @@
         </div>
 
         <div class="form-group col-md-6">
-          <label id="lblLabourDescDesign" for="txtLabourDesc">Description</label>
-          <asp:TextBox ID="txtLabourDesc" runat="server" class="form-control" placeholder="Description"></asp:TextBox>
+          <label id="lblLabourDescDesign" for="txtLabourDescDesign">Description</label>
+          <asp:TextBox ID="txtLabourDescDesign" runat="server" class="form-control" placeholder="Description"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
-          <label id="lblLabourHoursDesign" for="txtLabourHours">Hours</label>
-          <asp:TextBox ID="txtLabourHours" runat="server" class="form-control" placeholder="Hours"></asp:TextBox>
+          <label id="lblLabourHoursDesign" for="txtLabourHoursDesign">Hours</label>
+          <asp:TextBox ID="txtLabourHoursDesign" runat="server" class="form-control" placeholder="Hours"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
-          <label id="lblLabourUnitPriceDesign" for="txtLabourUnitPrice">Unit Price</label>
-          <asp:TextBox ID="txtLabourUnitPrice" runat="server" class="form-control" placeholder="Price"></asp:TextBox>
+          <label id="lblLabourUnitPriceDesign" for="txtLabourUnitPriceDesign">Unit Price</label>
+          <asp:TextBox ID="txtLabourUnitPriceDesign" runat="server" class="form-control" placeholder="Price"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
-          <label id="lblLabourTotalDesign" for="txtLabourTotal">Total</label>
-          <asp:TextBox ID="txtLabourTotal" runat="server" class="form-control" ></asp:TextBox>
+          <label id="lblLabourTotalDesign" for="txtLabourTotalDesign">Total</label>
+          <asp:TextBox ID="txtLabourTotalDesign" runat="server" class="form-control" ></asp:TextBox>
         </div>
         
         <div class="form-group col-md-12">
-        <asp:Button ID="btnLabourAdd" CssClass="btn" runat="server" Text="+" />
+        <asp:Button ID="btnLabourAddDesign" CssClass="btn" runat="server" Text="+" />
         </div>
     </div>
     <div class="report-wrapper clearfix">

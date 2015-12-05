@@ -202,202 +202,202 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.Button btnInsertClientDesign;
         
         /// <summary>
-        /// txtSalesAssocFName control.
+        /// txtSalesAssocFNameDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSalesAssocFName;
+        protected global::System.Web.UI.WebControls.TextBox txtSalesAssocFNameDesign;
         
         /// <summary>
-        /// txtSalesAssocLName control.
+        /// txtSalesAssocLNameDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSalesAssocLName;
+        protected global::System.Web.UI.WebControls.TextBox txtSalesAssocLNameDesign;
         
         /// <summary>
-        /// txtSalesAssocPhone control.
+        /// txtSalesAssocPhoneDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSalesAssocPhone;
+        protected global::System.Web.UI.WebControls.TextBox txtSalesAssocPhoneDesign;
         
         /// <summary>
-        /// txtDesignerFName control.
+        /// txtDesignerFNameDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDesignerFName;
+        protected global::System.Web.UI.WebControls.TextBox txtDesignerFNameDesign;
         
         /// <summary>
-        /// txtDesignerLName control.
+        /// txtDesignerLNameDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDesignerLName;
+        protected global::System.Web.UI.WebControls.TextBox txtDesignerLNameDesign;
         
         /// <summary>
-        /// txtDesignerPhone control.
+        /// txtDesignerPhoneDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDesignerPhone;
+        protected global::System.Web.UI.WebControls.TextBox txtDesignerPhoneDesign;
         
         /// <summary>
-        /// txtBidDate control.
+        /// txtBidDateDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBidDate;
+        protected global::System.Web.UI.WebControls.TextBox txtBidDateDesign;
         
         /// <summary>
-        /// txtBidEstBeginDate control.
+        /// txtBidEstBeginDateDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBidEstBeginDate;
+        protected global::System.Web.UI.WebControls.TextBox txtBidEstBeginDateDesign;
         
         /// <summary>
-        /// txtBidEstComDate control.
+        /// txtBidEstComDateDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBidEstComDate;
+        protected global::System.Web.UI.WebControls.TextBox txtBidEstComDateDesign;
         
         /// <summary>
-        /// txtProjSite control.
+        /// txtProjSiteDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProjSite;
+        protected global::System.Web.UI.WebControls.TextBox txtProjSiteDesign;
         
         /// <summary>
-        /// txtBidEstCost control.
+        /// txtBidEstCostDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBidEstCost;
+        protected global::System.Web.UI.WebControls.TextBox txtBidEstCostDesign;
         
         /// <summary>
-        /// txtMaterialDesc control.
+        /// txtMaterialDescDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaterialDesc;
+        protected global::System.Web.UI.WebControls.TextBox txtMaterialDescDesign;
         
         /// <summary>
-        /// txtMaterialQuantity control.
+        /// txtMaterialQuantityDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaterialQuantity;
+        protected global::System.Web.UI.WebControls.TextBox txtMaterialQuantityDesign;
         
         /// <summary>
-        /// txtMaterialSize control.
+        /// txtMaterialSizeDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaterialSize;
+        protected global::System.Web.UI.WebControls.TextBox txtMaterialSizeDesign;
         
         /// <summary>
-        /// txtMaterialUnitPrice control.
+        /// txtMaterialUnitPriceDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaterialUnitPrice;
+        protected global::System.Web.UI.WebControls.TextBox txtMaterialUnitPriceDesign;
         
         /// <summary>
-        /// txtMaterialTotal control.
+        /// txtMaterialTotalDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaterialTotal;
+        protected global::System.Web.UI.WebControls.TextBox txtMaterialTotalDesign;
         
         /// <summary>
-        /// btnMaterialAdd control.
+        /// btnMaterialAddDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMaterialAdd;
+        protected global::System.Web.UI.WebControls.Button btnMaterialAddDesign;
         
         /// <summary>
-        /// txtLabourDesc control.
+        /// txtLabourDescDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLabourDesc;
+        protected global::System.Web.UI.WebControls.TextBox txtLabourDescDesign;
         
         /// <summary>
-        /// txtLabourHours control.
+        /// txtLabourHoursDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLabourHours;
+        protected global::System.Web.UI.WebControls.TextBox txtLabourHoursDesign;
         
         /// <summary>
-        /// txtLabourUnitPrice control.
+        /// txtLabourUnitPriceDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLabourUnitPrice;
+        protected global::System.Web.UI.WebControls.TextBox txtLabourUnitPriceDesign;
         
         /// <summary>
-        /// txtLabourTotal control.
+        /// txtLabourTotalDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLabourTotal;
+        protected global::System.Web.UI.WebControls.TextBox txtLabourTotalDesign;
         
         /// <summary>
-        /// btnLabourAdd control.
+        /// btnLabourAddDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLabourAdd;
+        protected global::System.Web.UI.WebControls.Button btnLabourAddDesign;
         
         /// <summary>
         /// btnSubmitDesignBid control.
