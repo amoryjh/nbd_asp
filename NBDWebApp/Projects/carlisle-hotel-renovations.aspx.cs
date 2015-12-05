@@ -14,6 +14,22 @@ namespace NBDWebApp.Projects
         {
             HtmlGenericControl body = (HtmlGenericControl)Master.FindControl("BodyTag");
             body.Attributes.Add("class", "project-page");
+
+            if (IsPostBack) return;
+
+            NBD_DatabaseEntities db = new NBD_DatabaseEntities();
+
+            //Fill Existing Clients Drop Down
+            foreach (CLIENT c in db.CLIENTs)
+                this.ddlExistingClientDesign.Items.Add(c.cliName);
+
+            //Fill City Drop Down
+            foreach (CITY c in db.CITies)
+                this.ddlClientCityDesign.Items.Add(c.city1);
+
+            //Fill Production Worker Drop Down
+            foreach (WORKER c in db.WORKERs)
+                this.ddlProductionWorkerNameProduction.Items.Add(c.wrkFName);
         }
     }
 }
