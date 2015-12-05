@@ -57,57 +57,87 @@
     </div>
     <div class="report-wrapper clearfix">
         <div class="form-group col-md-12">
-            <h1>Enter Client Info</h1>
+            <h1>Client Info</h1>
         </div>
+        <!-- Hide the projects button and the add report button-->
+        <div class="form-group col-md-12">
+          <label id="lblClientBusinessDesign" for="txtClientBusinessDesign">Business</label>
+            <asp:RequiredFieldValidator ID="rfvBusiness" runat="server" ErrorMessage="Business Name Required" ControlToValidate="txtClientBusinessDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
+          <asp:TextBox ID="txtClientBusinessDesign" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-3">
+            <label id="lblClientCityDesign" for="ddlClientCityDesign">City</label>
+            <asp:DropDownList  ID="ddlClientCityDesign" class="form-control" placeholder="City" runat="server"></asp:DropDownList>
+        </div>    
 
         <div class="form-group col-md-6">
-          <label id="lblClientBusinessNameDesign" for="txtClientBusinessName">Business</label>
-          <asp:TextBox ID="txtClientBusinessName" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+            <label id="lblClientAddressDesign" for="txtClientAddressDesign">Address</label>
+              <asp:RequiredFieldValidator ID="rfvAddress" runat="server" ErrorMessage="Address Required" ControlToValidate="txtClientAddressDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
+            <asp:TextBox ID="txtClientAddressDesign" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-6">
-          <label id="lblClientPhoneDesign" for="txtClientPhone">Phone</label>
-          <asp:TextBox ID="txtClientPhone" runat="server" class="form-control" placeholder="Phone"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-6">
-            <label id="lblClientAdressDesign" for="txtClientAddress">Address</label>
-            <asp:TextBox ID="txtClientAddress" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-4">
-            <label id="lblClientCityDesign" for="txtClientCity">City</label>
-            <asp:TextBox ID="txtClientCity" class="form-control" placeholder="City" runat="server"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-2">
-            <label id="lblClientProvDesign" for="ddlProv">Province</label>
-            <asp:DropDownList  ID="ddlProv" class="form-control" placeholder="State" runat="server">
-                <asp:ListItem Selected="True">ON</asp:ListItem>
-                <asp:ListItem>B.C</asp:ListItem>
-                <asp:ListItem>AB</asp:ListItem>
-                <asp:ListItem>MB</asp:ListItem>
+        <div class="form-group col-md-3">
+            <label id="lblClientProvDesign" for="ddlClientProvDesign">Province</label>
+            <asp:DropDownList  ID="ddlClientProvDesign" class="form-control" placeholder="Prov" runat="server">
+                <asp:ListItem Selected="True">Ontario</asp:ListItem>
+                <asp:ListItem>Quebec</asp:ListItem>
+                <asp:ListItem>Nova Scotia</asp:ListItem>
+                <asp:ListItem>New Brunswick</asp:ListItem>
+                <asp:ListItem>Manitoba</asp:ListItem>
+                <asp:ListItem>British Columbia</asp:ListItem>
+                <asp:ListItem>Prince Edward Island</asp:ListItem>
+                <asp:ListItem>Saskatchewan</asp:ListItem>
+                <asp:ListItem>Alberta</asp:ListItem>
+                <asp:ListItem>Newfoundland and Labrador</asp:ListItem>
+                <asp:ListItem>Northwest Territories</asp:ListItem>
+                <asp:ListItem>Yukon</asp:ListItem>
+                <asp:ListItem>Nunavut</asp:ListItem>
             </asp:DropDownList>
         </div>      
         
-        <div class="form-group col-md-6">
-          <label id="lblClientPostalDesign" for="txtClientPostal">Postal Code</label>
-          <asp:TextBox ID="txtClientPostal" class="form-control" placeholder="Postal Code" runat="server"></asp:TextBox>
+         <div class="form-group col-md-4">
+          <label id="lblClientPCodeDesign" for="txtClientPCodeDesign">Postal Code</label>
+             <asp:RequiredFieldValidator ID="rfvPCode" runat="server" ErrorMessage="Postal Code Required" ControlToValidate="txtClientPCodeDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
+             <asp:RegularExpressionValidator ID="revPCode" runat="server" ErrorMessage="Postal Code Not Valid" ControlToValidate="txtClientPCodeDesign" Text="*" ValidationExpression="^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$" ForeColor="Red"></asp:RegularExpressionValidator>
+          <asp:TextBox ID="txtClientPCodeDesign" class="form-control" placeholder="Postal Code" runat="server"></asp:TextBox>
         </div>
-        
-        <div class="form-group col-md-6">
-        <label id="lblClientConFNameDesign" for="txtClientConFName">Client First Name</label>
-        <asp:TextBox ID="txtClientConFName" class="form-control" placeholder="Client First Name" runat="server"></asp:TextBox>
+
+        <div class="form-group col-md-8">
+          <label id="lblClientPhoneDesign" for="txtClientPhoneDesign">Phone</label>
+            <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ErrorMessage="Phone Number Required" ControlToValidate="txtClientPhoneDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="revPhone" runat="server" ErrorMessage="Phone Number Must Be 10 Digits" ControlToValidate="txtClientPhoneDesign" Text="*" ValidationExpression="^\d{10}$" ForeColor="Red"></asp:RegularExpressionValidator>
+          <asp:TextBox ID="txtClientPhoneDesign" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
+        </div>
+
+         <div class="form-group col-md-12">
+            <h2>Primary Contact Information</h2>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label id="lblClientFNameDesign" for="txtClientFNameDesign">First Name</label>
+            <asp:RequiredFieldValidator ID="rfvClientFName" runat="server" ErrorMessage="Primary Contact Frist Name Required" ControlToValidate="txtClientFNameDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
+          <asp:TextBox ID="txtClientFNameDesign" runat="server" class="form-control" placeholder="First Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label id="lblClientLNameDesign" for="txtClientLNameDesign">Last Name</label>
+            <asp:RequiredFieldValidator ID="rfvClientLName" runat="server" ErrorMessage="Primary Contact Last Name Required" ControlToValidate="txtClientLNameDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
+          <asp:TextBox ID="txtClientLNameDesign" runat="server" class="form-control" placeholder="Last Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label id="lblClientPosDesign" for="txtClientPosDesign">Position</label>
+            <asp:RequiredFieldValidator ID="rfvClientPos" runat="server" ErrorMessage="Primary Contact Position Required" ControlToValidate="txtClientPosDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
+          <asp:TextBox ID="txtClientPosDesign" runat="server" class="form-control" placeholder="Position"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-12">
+            <asp:ValidationSummary ID="ValidationSummaryClientDesign" runat="server" ForeColor="Red" />
         </div>
 
         <div class="form-group col-md-6">
-        <label id="lblClientConLNameDesign" for="txtClientConLName">Client Last Name</label>
-        <asp:TextBox ID="txtClientConLName" class="form-control" placeholder="Client Last Name" runat="server"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-6">
-        <label id="lblClientConPosDesign" for="txtClientConPos">Client Position</label>
-        <asp:TextBox ID="txtClientConPos" class="form-control" placeholder="Client Position" runat="server"></asp:TextBox>
+        <asp:Button ID="btnInsertClientDesign" CssClass="btn" runat="server" Text="Insert Client" />
         </div>
         
     </div>
@@ -273,8 +303,8 @@
         </div>
 
         <div class="form-group col-md-6">
-          <label id="lblClientBusinessName" for="txtClientBusinessName">Test</label>
-          <asp:TextBox ID="TextBox5" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+          <label id="lblProjSiteProduction" for="txtProjSiteProducton">Project</label>
+          <asp:TextBox ID="txtProjSiteProducton" runat="server" class="form-control" placeholder="Project"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">

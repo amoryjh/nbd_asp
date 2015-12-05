@@ -22,85 +22,184 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txtClientBusinessName control.
+        /// rfvBusiness control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClientBusinessName;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBusiness;
         
         /// <summary>
-        /// txtClientPhone control.
+        /// txtClientBusinessDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClientPhone;
+        protected global::System.Web.UI.WebControls.TextBox txtClientBusinessDesign;
         
         /// <summary>
-        /// txtClientAddress control.
+        /// ddlClientCityDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClientAddress;
+        protected global::System.Web.UI.WebControls.DropDownList ddlClientCityDesign;
         
         /// <summary>
-        /// txtClientCity control.
+        /// rfvAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClientCity;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAddress;
         
         /// <summary>
-        /// ddlProv control.
+        /// txtClientAddressDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlProv;
+        protected global::System.Web.UI.WebControls.TextBox txtClientAddressDesign;
         
         /// <summary>
-        /// txtClientPostal control.
+        /// ddlClientProvDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClientPostal;
+        protected global::System.Web.UI.WebControls.DropDownList ddlClientProvDesign;
         
         /// <summary>
-        /// txtClientConFName control.
+        /// rfvPCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClientConFName;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPCode;
         
         /// <summary>
-        /// txtClientConLName control.
+        /// revPCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClientConLName;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPCode;
         
         /// <summary>
-        /// txtClientConPos control.
+        /// txtClientPCodeDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClientConPos;
+        protected global::System.Web.UI.WebControls.TextBox txtClientPCodeDesign;
+        
+        /// <summary>
+        /// rfvPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhone;
+        
+        /// <summary>
+        /// revPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPhone;
+        
+        /// <summary>
+        /// txtClientPhoneDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtClientPhoneDesign;
+        
+        /// <summary>
+        /// rfvClientFName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvClientFName;
+        
+        /// <summary>
+        /// txtClientFNameDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtClientFNameDesign;
+        
+        /// <summary>
+        /// rfvClientLName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvClientLName;
+        
+        /// <summary>
+        /// txtClientLNameDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtClientLNameDesign;
+        
+        /// <summary>
+        /// rfvClientPos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvClientPos;
+        
+        /// <summary>
+        /// txtClientPosDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtClientPosDesign;
+        
+        /// <summary>
+        /// ValidationSummaryClientDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummaryClientDesign;
+        
+        /// <summary>
+        /// btnInsertClientDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnInsertClientDesign;
         
         /// <summary>
         /// txtSalesAssocFName control.
@@ -310,13 +409,13 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.Button btnSubmitDesignBid;
         
         /// <summary>
-        /// TextBox5 control.
+        /// txtProjSiteProducton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox txtProjSiteProducton;
         
         /// <summary>
         /// TextBox6 control.
