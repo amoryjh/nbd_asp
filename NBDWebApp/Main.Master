@@ -63,6 +63,7 @@
                         <li><a href="#">Your Reports</a></li>
                         <li><a href="#">All Files</a></li>
                         <li><a href="<%= Page.ResolveUrl("~/MainPage.aspx") %>">Project Directory</a></li>
+                        <li><a href="<%= Page.ResolveUrl("~/Clients.aspx") %>">Client Directory</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">What's New?</a></li>
                     </ul>
@@ -100,6 +101,7 @@
                 <a href="#" class="a">Options</a>
                 <ul class="sub-mobile">
                     <li><a href="#" class="">Your Reports</a></li>
+                  <li><a href="<%= Page.ResolveUrl("~/Clients.aspx") %>">Client Directory</a></li>
                     <li><a href="#" class="">Your Files</a></li>
                     <li><a href="#" class="">Your Settings</a></li>
                 </ul>

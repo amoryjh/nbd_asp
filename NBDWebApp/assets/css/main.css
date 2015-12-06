@@ -6179,4 +6179,21 @@ span.highlight-change {
 .add-report .report-list-section {
   display: none;
 }
+/*///////////////////////////////////////////////////////
+--------------------Client Directory---------------------
+///////////////////////////////////////////////////////*/
+.client-directory h1.section-title {
+  margin-bottom: 0.4em;
+}
+.client-directory p {
+  margin-bottom: 1em;
+}
+.client-directory p img {
+  width: 1em;
+}
+.client-directory .client-search-aside {
+  position: absolute;
+  left: 2.5%;
+  top: 12em;
+}
 /*# sourceMappingURL=main.css.map */
