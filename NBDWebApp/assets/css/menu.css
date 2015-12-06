@@ -57,7 +57,7 @@ nav h1.nav-logo a:hover {
     display: inline-block;
     width: auto;
     font-size: 2.1em;
-    top: 0;
+    top: 4px;
   }
 }
 nav ul.desktop-menu {

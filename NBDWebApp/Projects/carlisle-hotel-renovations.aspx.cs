@@ -12,6 +12,8 @@ namespace NBDWebApp.Projects
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+          if (!User.Identity.IsAuthenticated) { Response.Redirect("~/Default.aspx"); }
+
             HtmlGenericControl body = (HtmlGenericControl)Master.FindControl("BodyTag");
             body.Attributes.Add("class", "project-page");
 

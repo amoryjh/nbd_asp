@@ -7,40 +7,21 @@ using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 namespace NBDWebApp
 {
-    public partial class MainPage : System.Web.UI.Page
+  public partial class MainPage : System.Web.UI.Page
+  {
+    protected void Page_Load(object sender, EventArgs e)
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!User.Identity.IsAuthenticated)
-            {
-                Response.Redirect("~/Default.aspx");
-            }
+      if (!User.Identity.IsAuthenticated) { Response.Redirect("~/Default.aspx");}
+      if (!Page.IsPostBack)
+      {
+        NBD_DatabaseEntities db = new NBD_DatabaseEntities();
 
-            if (!Page.IsPostBack)
-            {
-                NBD_DatabaseEntities db = new NBD_DatabaseEntities();
-
-                ddlClientName.DataSource = (from n in db.CLIENTs
-                                          select new
-                                          {
-                                              n.ID,
-                                              FullName = n.cliName                                          }
-                                          ).ToList();
-                ddlClientName.DataTextField = "FullName";
-                ddlClientName.DataValueField = "ID";
-                ddlClientName.DataBind();
-
-                ddlProject.DataSource = (from n in db.PROJECTs
-                                         select new
-                                         {
-                                             n.ID,
-                                             Date = n.projEstEnd
-                                         }
-                                          ).ToList();
-                ddlProject.DataTextField = "Date";
-                ddlProject.DataValueField = "ID";
-                ddlProject.DataBind();
-            }
-        }
+        foreach (CLIENT  c in db.CLIENTs)
+          this.ddlClientName.Items.Add(c.cliName);
+              
+        foreach (PROJECT c in db.PROJECTs)
+          this.ddlProject.Items.Add(c.projEstEnd);         
+      }
     }
+  }
 }

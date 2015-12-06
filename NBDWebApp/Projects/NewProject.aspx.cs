@@ -11,6 +11,8 @@ namespace NBDWebApp.Projects
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!User.Identity.IsAuthenticated){Response.Redirect("~/Default.aspx");}
+            
             if (IsPostBack) return;
 
             NBD_DatabaseEntities db = new NBD_DatabaseEntities();
