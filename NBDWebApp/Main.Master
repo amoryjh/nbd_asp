@@ -81,7 +81,7 @@
             </div>
     
         </div>
-        <div class="home-updates col-md-10 col-md-offset-2 clearfix">
+        <div class="main-content col-md-10 col-md-offset-2 clearfix">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
         </asp:ContentPlaceHolder></div>
     </div>

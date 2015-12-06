@@ -3,7 +3,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form id="form1" runat="server">
-    <div class="client-wrapper box-border clearfix">
+    <!--<div class="client-wrapper box-border clearfix">-->
+        <div class="report-group box-border clearfix">
+        <div class="report-wrapper clearfix">
         <div class="form-group col-md-12">
             <h1>Enter new client</h1>
         </div>
@@ -57,8 +59,10 @@
             <asp:RegularExpressionValidator ID="revPhone" runat="server" ErrorMessage="Phone Number Must Be 10 Digits" ControlToValidate="txtPhone" Text="*" ValidationExpression="^\d{10}$" ForeColor="Red"></asp:RegularExpressionValidator>
           <asp:TextBox ID="txtPhone" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
         </div>
+      </div>
 
-         <div class="form-group col-md-12">
+      <div class="report-wrapper clearfix">
+        <div class="form-group col-md-12">
             <h2>Primary Contact Information</h2>
         </div>
 
@@ -87,7 +91,7 @@
         <div class="form-group col-md-6">
         <asp:Button ID="btnInsert" CssClass="btn" runat="server" Text="Insert Client" />
         </div>
-
+    </div>
     </div>
     </form>
 </asp:Content>

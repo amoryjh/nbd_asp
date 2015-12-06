@@ -5710,7 +5710,7 @@ nav .btn-group .dropdown-menu li a:hover {
   }
 }
 /*///////////////////////////////////////////////////////
------------------------Base HTML-----------------------
+-----------------------Base Styles-----------------------
 ///////////////////////////////////////////////////////*/
 body {
   font-family: 'lato';
@@ -5728,22 +5728,6 @@ body {
   body {
     font-size: 17px;
   }
-}
-/*Page Loader Animation*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #db0a5b;
-  background-color: #f5196e;
-  background-image: -webkit-linear-gradient(right, #f5196e, #6ad3ea);
-  background-image: -moz-linear-gradient(right, #f5196e, #6ad3ea);
-  background-image: -o-linear-gradient(right, #f5196e, #6ad3ea);
-  background-image: -ms-linear-gradient(right, #f5196e, #6ad3ea);
-  background-image: linear-gradient(right, #f5196e, #6ad3ea);
-  z-index: 99;
 }
 h1,
 h2,
@@ -5767,9 +5751,6 @@ h3 {
 h4 {
   font-size: 1em;
 }
-input {
-  margin-bottom: 0.75em;
-}
 a {
   text-decoration: none;
   color: inherit;
@@ -5780,9 +5761,6 @@ a:focus {
   text-decoration: none;
   color: inherit;
 }
-/*///////////////////////////////////////////////////////
------------------------Base Elements---------------------
-///////////////////////////////////////////////////////*/
 .row {
   margin: 1em 0;
 }
@@ -5790,34 +5768,66 @@ a:focus {
   padding: 1em;
   color: #fff;
 }
+input {
+  margin-bottom: 0.75em;
+}
 .form-group {
   padding: 0 10px;
-}
-/*--------------------------
-          Wrappers
---------------------------*/
-.main-wrapper {
-  padding-top: 4em;
-}
-/*--------------------------
-        Content Panel
---------------------------*/
-.main-content {
-  padding: 0.2em;
-  background: #fff;
-}
-@media (min-width: 520px) {
-  .main-content {
-    padding: 0 2.4em;
-  }
 }
 #form1 {
   max-width: 43em;
   margin: 0 auto;
 }
-/*--------------------------
-        User Panel
---------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #db0a5b;
+  background-color: #f5196e;
+  background-image: -webkit-linear-gradient(right, #f5196e, #6ad3ea);
+  background-image: -moz-linear-gradient(right, #f5196e, #6ad3ea);
+  background-image: -o-linear-gradient(right, #f5196e, #6ad3ea);
+  background-image: -ms-linear-gradient(right, #f5196e, #6ad3ea);
+  background-image: linear-gradient(right, #f5196e, #6ad3ea);
+  z-index: 99;
+}
+#status {
+  width: 350px;
+  height: 251px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -125px 0 0 -175px;
+}
+/*///////////////////////////////////////////////////////
+--------------------Universal Classes--------------------  
+///////////////////////////////////////////////////////*/
+.main-wrapper {
+  padding-top: 4em;
+}
+.section-title {
+  font-weight: 700;
+  margin: 1em 0;
+  padding-bottom: 0.5em;
+}
+h1.section-title {
+  border-bottom: none;
+  padding-bottom: 0;
+  font-size: 2.75em;
+  text-align: center;
+}
+@media (min-width: 560px) {
+  h1.section-title {
+    font-size: 3.2em;
+    text-align: left;
+  }
+}
+.box-border {
+  box-shadow: 0 2px 18px #9b9b9b;
+  border: 1px solid #ccc;
+}
 .user-info {
   background: #eee;
   background-color: #304659;
@@ -5853,39 +5863,6 @@ a:focus {
     display: block;
   }
 }
-/*///////////////////////////////////////////////////////
----------------------Reusable Classes--------------------
-///////////////////////////////////////////////////////*/
-/*--------------------------
-           Titles
---------------------------*/
-.section-title {
-  font-weight: 700;
-  margin: 1em 0;
-  padding-bottom: 0.5em;
-}
-h1.section-title {
-  border-bottom: none;
-  padding-bottom: 0;
-  font-size: 2.75em;
-  text-align: center;
-}
-@media (min-width: 560px) {
-  h1.section-title {
-    font-size: 3.2em;
-    text-align: left;
-  }
-}
-/*--------------------------
-       Borders & Stuff
---------------------------*/
-.box-border {
-  box-shadow: 0 2px 18px #9b9b9b;
-  border: 1px solid #ccc;
-}
-/*///////////////////////////////////////////////////////
--------------------Project Panel Styles------------------
-///////////////////////////////////////////////////////*/
 .project-title {
   margin: 0.5em 0 0 0;
   font-weight: 400;
@@ -5893,6 +5870,9 @@ h1.section-title {
 .project-update-date {
   margin: 0.5em 0 1em 0;
   font-style: italic;
+}
+span.highlight-change {
+  font-weight: 700;
 }
 .project-instance {
   margin: 2em 0 4em 0;
@@ -5925,12 +5905,6 @@ h1.section-title {
 .project-instance .updated-list {
   margin-top: 2em;
 }
-span.highlight-change {
-  font-weight: 700;
-}
-/*--------------------------
-         Timeline
---------------------------*/
 .timeline {
   margin-top: 2em;
   padding: 2em 2em 2.5em 2em;
@@ -6043,6 +6017,36 @@ span.highlight-change {
   border-bottom-color: #fff;
   border-top: 0;
 }
+.action-btn {
+  background: #db0a5b;
+  width: 100px;
+  height: 100px;
+  text-align: center !important;
+  padding-top: 25px;
+  font-size: 2em;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: -1px 5px 5px #858585;
+  text-align: right;
+  position: absolute;
+  right: 0.5em;
+  margin-top: -1.12em;
+  transition: all ease-in-out 0.3s;
+}
+.action-btn:hover {
+  transition: all ease-in-out 0.4s;
+  box-shadow: inset 0px 0px 5px #aaa;
+  background: #f30b65;
+}
+.updated-list ul li {
+  margin: 0.5em 0;
+}
+.click-options {
+  width: 140px;
+  position: relative;
+  right: 0;
+  top: 0;
+}
 /*///////////////////////////////////////////////////////
 -----------------------Login Page------------------------
 ///////////////////////////////////////////////////////*/
@@ -6078,7 +6082,7 @@ span.highlight-change {
 .login .user-info {
   display: none;
 }
-.login .main-content {
+.login .home-updates {
   background: transparent;
   margin: 0 auto;
   width: 100%;
@@ -6125,11 +6129,41 @@ span.highlight-change {
   color: #3d5871;
 }
 /*///////////////////////////////////////////////////////
------------------------Report Body-----------------------
+------------------------Home Page-----------------------
 ///////////////////////////////////////////////////////*/
-/*
-    ALL COMPONENTS REQUIRED FOR STYLING A REPORT
-*/
+.home-updates {
+  padding: 0.2em;
+  background: #fff;
+}
+@media (min-width: 520px) {
+  .home-updates {
+    padding: 0 2.4em;
+  }
+}
+/*///////////////////////////////////////////////////////
+----------------------Client Login-----------------------
+///////////////////////////////////////////////////////*/
+.client-wrapper {
+  width: 90%;
+  max-width: 45em;
+  margin: 0 auto;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  padding: 3em 3em 1.5em;
+  background: #fff;
+}
+.client-wrapper .form-group select {
+  padding: 0;
+}
+/*///////////////////////////////////////////////////////
+----------------------Bid Process-----------------------
+///////////////////////////////////////////////////////*/
+.design-bid {
+  background: #fff;
+}
+.design-bid .add-new .section-title {
+  margin-bottom: 0.25em;
+}
 .report-group {
   margin: 2em 0;
 }
@@ -6141,27 +6175,20 @@ span.highlight-change {
 .report-title h1 {
   margin: 0;
 }
-.client-wrapper,
 .report-wrapper {
+  float: left;
   width: 100%;
   margin: 0 auto;
   padding: 3em;
   background: #fff;
   border-bottom: 2px dotted #999;
 }
-.client-wrapper:last-child,
 .report-wrapper:last-child {
   border-bottom: none;
 }
-.client-wrapper .form-group select,
-.report-wrapper .form-group select {
-  padding: 0;
-}
-.client-wrapper {
-  margin: 2em 0;
-}
 .add-report .report-title {
   background: #22313f;
+  padding: 1.5em 2em;
 }
 .add-report .report-title:hover {
   background: #2b3e50;
@@ -6179,4 +6206,4 @@ span.highlight-change {
 .add-report .report-list-section {
   display: none;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main - Copy.css.map */

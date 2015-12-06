@@ -13,7 +13,7 @@ body {
     color:@black;
     background:#fff;
 }
-/*Page Loader gradients*/
+/*Page Loader Animation*/
 #preloader {
     position: fixed;
     top: 0;
@@ -34,35 +34,37 @@ a{
     text-decoration: none; color: inherit;
     &:hover,&:active,&:focus{text-decoration:none;color:inherit;}
 }
+
+
+
 /*///////////////////////////////////////////////////////
 -----------------------Base Elements---------------------
 ///////////////////////////////////////////////////////*/
 .row{margin:1em 0; }
 .btn{padding: 1em; color:#fff;}
-
 .form-group{padding:0 10px;}
-/*
-    Totally forgot what #status is for
-*/
-#status {
-    width: 350px;
-    height: 251px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -125px 0 0 -175px;
-}
 /*--------------------------
           Wrappers
 --------------------------*/
+//CONTAINS BOTH USER AND MAIN CONTENT PANELS
 .main-wrapper{
   //to account for fixed nav bar
   padding-top: 4em;
+}
+/*--------------------------
+        Content Panel
+--------------------------*/
+// SETTING MAX WIDTH OF ALL CONTENT WITHIN "COL-MD-10 MAIN-CONTENT" PORTIONS
+.main-content{ 
+    padding:0.2em;
+    @media(min-width:520px){padding: 0 2.4em;}
+    background:#fff;
 }
 #form1{max-width:43em; margin:0 auto;}
 /*--------------------------
         User Panel
 --------------------------*/
+//COL-MD-2 USER INFORMATION STYLING
 .user-info{
   #lblUserName{font-size:1.5em;}
   background: #eee;
@@ -84,10 +86,14 @@ a{
   display:none;
   @media(min-width:992px){display:block;}
 }
+
+
+
 /*///////////////////////////////////////////////////////
 ---------------------Reusable Classes--------------------
 ///////////////////////////////////////////////////////*/
 
+//TOP-OF-PAGE TITLES
 /*--------------------------
            Titles
 --------------------------*/
@@ -108,63 +114,27 @@ h1.section-title{
 /*--------------------------
        Borders & Stuff
 --------------------------*/
+// ADD CLASS TO ANY EXISTING DIV THAT NEEDS THE DEFAULT BOX SHADOW
 .box-border{
     box-shadow: 0 2px 18px lighten(@black,40%);
     border:1px solid #ccc;
 }
-/*///////////////////////////////////////////////////////
------------------------Panel Styles----------------------
-///////////////////////////////////////////////////////*/
+
+
+
 
 /*///////////////////////////////////////////////////////
------------------------Login Page------------------------
+-------------------Project Panel Styles------------------
 ///////////////////////////////////////////////////////*/
-.login{
-    #ValidationSummary{
-        color: lighten(@brand-tri,25%) !important; background-color: lighten(#e2e1e9,6%);
-        padding:10px; box-shadow: 0 1px 2px #ccc;
-        border: 1px solid #efefef;
-        ul{
-            margin:0 auto; padding-left: 25px;
-            li{font-weight:700; padding:2px;}
-        }
-    }
-   nav{.nav{display:none} ul{li{display:none}}}
-   .user-info{display:none;}
-   .home-updates{background:transparent;margin:0 auto; width:100%;}
-   .gradient( left, darken(#663333,7%), lighten(@brand-pri,10%) );
-   .login-wrapper{
-        h1{
-            margin-bottom:0.75em;font-size:2.2em; font-weight:400;
-            display:inline;
-        }
-        img{display:inline;width:1em;}
-        margin: 0 auto; margin-top: 4em; margin-bottom:4em;
-        box-shadow: 0 2px 18px @black;
-        max-width: 22em; width: 90%;
-        padding: 1.8em 1.75em 1em 1.75em; background-color: #fefefe;
-        font-size:17px;
-        input,#lblStatus{width: 100% !important;display:block;}
-        .btn{margin:0.5em 0;font-weight:700; font-size:1em;}
-        button{width:100%;margin:0.5em 0;}
-        .form-group{
-            p a{
-                color:lighten(@brand-tri,25%);
-                &:hover{color:lighten(@brand-tri,15%);}
-            }
-        }
-    }
-}
-/*///////////////////////////////////////////////////////
------------------------Home Page-------------------------
-///////////////////////////////////////////////////////*/
+
+//PROJECT SUMMARY PANELS FOUND ON MAINPAGE.ASPX AND PROJECTS/PROJECT-NAME.ASPX
+
 .project-title{
   margin: 0.5em 0 0 0; font-weight:400;
 }
 .project-update-date{
   margin: 0.5em 0 1em 0; font-style: italic;
 }
-span.highlight-change{font-weight: 700;}
 .project-instance{
   margin:2em 0 4em 0;
   padding-bottom:2em;
@@ -185,6 +155,12 @@ span.highlight-change{font-weight: 700;}
   }
     .updated-list{margin-top:2em;}
 }
+//NOW BEING USED TO BOLD REPORT LIST ELEMENTS ON PROJECT SUMMARY PANELS
+span.highlight-change{font-weight: 700;}
+
+/*--------------------------
+         Timeline
+--------------------------*/
 .timeline{
     margin-top:2em;
     padding:2em 2em 2.5em 2em;
@@ -198,6 +174,7 @@ span.highlight-change{font-weight: 700;}
       position:relative; display:block; 
       margin: 0 auto; height:4px; padding:0;
       background:@brand-blue;
+      //SETTING UP POSITIONS/SIZES OF TIMELINE DOTS
       li{
         position: relative; top:-63px;
         display: inline-block; float:left;
@@ -211,6 +188,7 @@ span.highlight-change{font-weight: 700;}
           border:7px solid @brand-blue;
           border-radius:50%;
         }
+        //HOVER COLORS N STUFF
         &:hover{
           cursor:pointer;
           &::before{
@@ -240,6 +218,7 @@ span.highlight-change{font-weight: 700;}
           left:-4px; position:relative;
           margin:0;
         }
+        //SETTING POSITIONS OF EACH DOT
         &:last-child{
           right:0px; position:relative; 
           //margin-right:-5.65em;
@@ -256,6 +235,7 @@ span.highlight-change{font-weight: 700;}
           margin-left:65%;
         } 
       }
+      // HIDDEN HOVER DESCRIPTION OF EACH DOT
       .details {
         display: none;
         position: absolute;
@@ -285,6 +265,91 @@ span.highlight-change{font-weight: 700;}
   }
 
 
+
 /*///////////////////////////////////////////////////////
----------------------Project Instance--------------------
+-----------------------Login Page------------------------
 ///////////////////////////////////////////////////////*/
+.login{
+    #ValidationSummary{
+        color: lighten(@brand-tri,25%) !important; background-color: lighten(#e2e1e9,6%);
+        padding:10px; box-shadow: 0 1px 2px #ccc;
+        border: 1px solid #efefef;
+        ul{
+            margin:0 auto; padding-left: 25px;
+            li{font-weight:700; padding:2px;}
+        }
+    }
+   nav{.nav{display:none} ul{li{display:none}}}
+   .user-info{display:none;}
+   .main-content{background:transparent;margin:0 auto; width:100%;}
+   .gradient( left, darken(#663333,7%), lighten(@brand-pri,10%) );
+   .login-wrapper{
+        h1{
+            margin-bottom:0.75em;font-size:2.2em; font-weight:400;
+            display:inline;
+        }
+        img{display:inline;width:1em;}
+        margin: 0 auto; margin-top: 4em; margin-bottom:4em;
+        box-shadow: 0 2px 18px @black;
+        max-width: 22em; width: 90%;
+        padding: 1.8em 1.75em 1em 1.75em; background-color: #fefefe;
+        font-size:17px;
+        input,#lblStatus{width: 100% !important;display:block;}
+        .btn{margin:0.5em 0;font-weight:700; font-size:1em;}
+        button{width:100%;margin:0.5em 0;}
+        .form-group{
+            p a{
+                color:lighten(@brand-tri,25%);
+                &:hover{color:lighten(@brand-tri,15%);}
+            }
+        }
+    }
+}
+
+
+
+/*///////////////////////////////////////////////////////
+-----------------------Report Body-----------------------
+///////////////////////////////////////////////////////*/
+
+/*
+    ALL COMPONENTS REQUIRED FOR STYLING A REPORT
+*/
+
+//Parent panel of report / set margins between each
+.report-group{margin:2em 0}
+
+//Title of report ONLY
+.report-title{
+    background: @brand-pri;
+    color: #fff;
+    padding: 2em;
+    h1{margin:0;}
+}
+//Individual section of report - where the form elements go
+.client-wrapper, .report-wrapper{
+    width:100%; margin:0 auto;
+    padding:3em; background:#fff; 
+    border-bottom:2px dotted #999;
+    &:last-child{border-bottom:none}
+    .form-group{
+        select{padding:0;}
+    }
+}
+.client-wrapper{margin:2em 0}
+
+// ONLY USE ON DROP DOWN "ADD NEW REPORT?" SECTION
+.add-report{
+    .report-title{
+        background:@brand-tri;
+        &:hover{background:lighten(@brand-tri,5%)}
+        &:hover,h1:hover{cursor:pointer;}
+        h1:hover{color:lighten(#fff,10%);}
+    }
+    //decrease default wrapper padding, we only have one dropdownlist in this div
+    .report-wrapper{
+        padding:1em 2em 2em;
+    }
+    //hide until clicked on
+    .report-list-section{display:none;}
+}

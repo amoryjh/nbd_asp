@@ -40,14 +40,14 @@ nav ul {
   margin: 0;
 }
 nav h1.nav-logo {
-  float: left;
+  float: right;
   z-index: 999;
   position: relative;
   top: 0.1em;
   display: block;
   width: 100%;
   font-size: 2.8em;
-  padding-left: 1em;
+  padding-right: 1em;
 }
 nav h1.nav-logo a:hover {
   color: #f52374;
@@ -57,7 +57,6 @@ nav h1.nav-logo a:hover {
     display: inline-block;
     width: auto;
     font-size: 2.1em;
-    top: 0;
   }
 }
 nav ul.desktop-menu {
@@ -65,9 +64,9 @@ nav ul.desktop-menu {
   vertical-align: middle;
   z-index: 10;
   position: relative;
-  text-align: right;
+  text-align: left;
   list-style-type: none;
-  margin-right: 1em;
+  margin-left: 1em;
 }
 @media (min-width: 992px) {
   nav ul.desktop-menu {
@@ -88,15 +87,15 @@ nav ul.desktop-menu li {
 }
 nav ul.desktop-menu li p.action-btn {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   height: 2.53em;
   z-index: 10;
   box-shadow: none;
 }
 nav .btn-group .dropdown-menu {
-  left: auto;
-  right: 0 !important;
+  right: auto;
+  left: 0 !important;
 }
 nav .btn-group .dropdown-menu .divider {
   width: 100%;
@@ -116,7 +115,7 @@ nav .btn-group .dropdown-menu li a:hover {
   position: fixed;
   font-size: 2.2em;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 1;
   background-color: #f3f3f6;
   transition: all 0.6s ease-in-out;
@@ -133,10 +132,10 @@ nav .btn-group .dropdown-menu li a:hover {
   position: relative;
   top: 45%;
   transform: translateY(-50%);
-  text-align: left;
+  text-align: right;
   width: 11em;
   margin: 0 auto;
-  padding-left: 2em;
+  padding-right: 2em;
 }
 .menu-list ul.menu-first-child li {
   display: block;
@@ -151,12 +150,12 @@ nav .btn-group .dropdown-menu li a:hover {
   font-size: 0.8em;
 }
 .menu-list ul.sub-mobile li {
-  padding-left: 1.25em;
+  padding-right: 1.25em;
 }
 .nav {
   display: block;
   position: absolute;
-  right: 2em;
+  left: 2em;
   top: 1em;
 }
 @media (min-width: 992px) {
@@ -204,10 +203,10 @@ nav .btn-group .dropdown-menu li a:hover {
   border-radius: 3px;
   background: #fff;
   top: -8.5px;
-  left: 43%;
-  transform: translateX(-50%) scaleY(0);
-  -webkit-transform: translateX(-50%) scaleY(0);
-  -ms-transform: translateX(-50%) scaleY(0);
+  right: 43%;
+  transform: translateX(50%) scaleY(0);
+  -webkit-transform: translateX(50%) scaleY(0);
+  -ms-transform: translateX(50%) scaleY(0);
   width: 3px;
 }
 .burger-bun-top {
@@ -224,18 +223,18 @@ nav .btn-group .dropdown-menu li a:hover {
   animation: bun-top-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -ms-transform-origin: 100% 100%;
-  -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
+  -ms-transform-origin: 0% 100%;
+  -webkit-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
 }
 .hamburglar.is-open .burger-bun-bot {
   -webkit-animation: bun-bot-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
   animation: bun-bot-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -ms-transform-origin: 0% 0%;
-  -webkit-transform-origin: 0% 0%;
-  transform-origin: 0% 0%;
+  -ms-transform-origin: 100% 0%;
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
 }
 .hamburglar.is-open .burger-filling {
   -webkit-animation: filling-out 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.4s;
@@ -269,9 +268,9 @@ nav .btn-group .dropdown-menu li a:hover {
   animation: bun-bot-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.4s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -ms-transform-origin: 0% 0%;
-  -webkit-transform-origin: 0% 0%;
-  transform-origin: 0% 0%;
+  -ms-transform-origin: 100% 0%;
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
   opacity: 0;
 }
 .hamburglar.is-closed .burger-bun-top {
@@ -279,14 +278,14 @@ nav .btn-group .dropdown-menu li a:hover {
   animation: bun-top-in 0.3s cubic-bezier(0.1, 0.05, 0.05, 0) normal 0.4s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -ms-transform-origin: 100% 100%;
-  -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
+  -ms-transform-origin: 0% 100%;
+  -webkit-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
   opacity: 0;
 }
 @-webkit-keyframes bun-top-out {
   0% {
-    left: 0px;
+    right: 0px;
     top: 0px;
     transform: rotate(0deg) scaleX(1);
     -webkit-transform: rotate(0deg) scaleX(1);
@@ -294,33 +293,33 @@ nav .btn-group .dropdown-menu li a:hover {
     opacity: 1;
   }
   25% {
-    left: -0.5px;
+    right: -0.5px;
     top: 12px;
-    transform: rotate(10deg) scaleX(1);
-    -webkit-transform: rotate(10deg) scaleX(1);
-    -ms-transform: rotate(10deg) scaleX(1);
+    transform: rotate(-10deg) scaleX(1);
+    -webkit-transform: rotate(-10deg) scaleX(1);
+    -ms-transform: rotate(-10deg) scaleX(1);
     opacity: 1;
   }
   50% {
-    left: -1px;
+    right: -1px;
     top: 12px;
-    transform: rotate(20deg) scaleX(1);
-    -webkit-transform: rotate(20deg) scaleX(1);
-    -ms-transform: rotate(20deg) scaleX(1);
+    transform: rotate(-20deg) scaleX(1);
+    -webkit-transform: rotate(-20deg) scaleX(1);
+    -ms-transform: rotate(-20deg) scaleX(1);
     opacity: 1;
   }
   100% {
-    left: -1px;
+    right: -1px;
     top: 12px;
-    transform: rotate(20deg) scaleX(0);
-    -webkit-transform: rotate(20deg) scaleX(0);
-    -ms-transform: rotate(20deg) scaleX(0);
+    transform: rotate(-20deg) scaleX(0);
+    -webkit-transform: rotate(-20deg) scaleX(0);
+    -ms-transform: rotate(-20deg) scaleX(0);
     opacity: 1;
   }
 }
 @keyframes bun-top-out {
   0% {
-    left: 0px;
+    right: 0px;
     top: 0px;
     transform: rotate(0deg) scaleX(1);
     -webkit-transform: rotate(0deg) scaleX(1);
@@ -328,33 +327,33 @@ nav .btn-group .dropdown-menu li a:hover {
     opacity: 1;
   }
   25% {
-    left: -0.5px;
+    right: -0.5px;
     top: 12px;
-    transform: rotate(10deg) scaleX(1);
-    -webkit-transform: rotate(10deg) scaleX(1);
-    -ms-transform: rotate(10deg) scaleX(1);
+    transform: rotate(-10deg) scaleX(1);
+    -webkit-transform: rotate(-10deg) scaleX(1);
+    -ms-transform: rotate(-10deg) scaleX(1);
     opacity: 1;
   }
   50% {
-    left: -1px;
+    right: -1px;
     top: 12px;
-    transform: rotate(20deg) scaleX(1);
-    -webkit-transform: rotate(20deg) scaleX(1);
-    -ms-transform: rotate(20deg) scaleX(1);
+    transform: rotate(-20deg) scaleX(1);
+    -webkit-transform: rotate(-20deg) scaleX(1);
+    -ms-transform: rotate(-20deg) scaleX(1);
     opacity: 1;
   }
   100% {
-    left: -1px;
+    right: -1px;
     top: 12px;
-    transform: rotate(20deg) scaleX(0);
-    -webkit-transform: rotate(20deg) scaleX(0);
-    -ms-transform: rotate(20deg) scaleX(0);
+    transform: rotate(-20deg) scaleX(0);
+    -webkit-transform: rotate(-20deg) scaleX(0);
+    -ms-transform: rotate(-20deg) scaleX(0);
     opacity: 1;
   }
 }
 @-webkit-keyframes bun-bot-out {
   0% {
-    left: 0px;
+    right: 0px;
     bottom: 0px;
     transform: rotate(0deg) scaleX(1);
     -webkit-transform: rotate(0deg) scaleX(1);
@@ -362,33 +361,33 @@ nav .btn-group .dropdown-menu li a:hover {
     opacity: 1;
   }
   25% {
-    left: 1px;
+    right: 1px;
     bottom: 12px;
-    transform: rotate(15deg) scaleX(1);
-    -webkit-transform: rotate(15deg) scaleX(1);
-    -ms-transform: rotate(15deg) scaleX(1);
+    transform: rotate(-15deg) scaleX(1);
+    -webkit-transform: rotate(-15deg) scaleX(1);
+    -ms-transform: rotate(-15deg) scaleX(1);
     opacity: 1;
   }
   50% {
-    left: 1px;
+    right: 1px;
     bottom: 12px;
-    transform: rotate(20deg) scaleX(1);
-    -webkit-transform: rotate(20deg) scaleX(1);
-    -ms-transform: rotate(20deg) scaleX(1);
+    transform: rotate(-20deg) scaleX(1);
+    -webkit-transform: rotate(-20deg) scaleX(1);
+    -ms-transform: rotate(-20deg) scaleX(1);
     opacity: 1;
   }
   100% {
-    left: 1px;
+    right: 1px;
     bottom: 12px;
-    transform: rotate(20deg) scaleX(0);
-    -webkit-transform: rotate(20deg) scaleX(0);
-    -ms-transform: rotate(20deg) scalex(0);
+    transform: rotate(-20deg) scaleX(0);
+    -webkit-transform: rotate(-20deg) scaleX(0);
+    -ms-transform: rotate(-20deg) scalex(0);
     opacity: 1;
   }
 }
 @keyframes bun-bot-out {
   0% {
-    left: 0px;
+    right: 0px;
     bottom: 0px;
     transform: rotate(0deg) scaleX(1);
     -webkit-transform: rotate(0deg) scaleX(1);
@@ -396,27 +395,27 @@ nav .btn-group .dropdown-menu li a:hover {
     opacity: 1;
   }
   25% {
-    left: 1px;
+    right: 1px;
     bottom: 12px;
-    transform: rotate(15deg) scaleX(1);
-    -webkit-transform: rotate(15deg) scaleX(1);
-    -ms-transform: rotate(15deg) scaleX(1);
+    transform: rotate(-15deg) scaleX(1);
+    -webkit-transform: rotate(-15deg) scaleX(1);
+    -ms-transform: rotate(-15deg) scaleX(1);
     opacity: 1;
   }
   50% {
-    left: 1px;
+    right: 1px;
     bottom: 12px;
-    transform: rotate(20deg) scaleX(1);
-    -webkit-transform: rotate(20deg) scaleX(1);
-    -ms-transform: rotate(20deg) scaleX(1);
+    transform: rotate(-20deg) scaleX(1);
+    -webkit-transform: rotate(-20deg) scaleX(1);
+    -ms-transform: rotate(-20deg) scaleX(1);
     opacity: 1;
   }
   100% {
-    left: 1px;
+    right: 1px;
     bottom: 12px;
-    transform: rotate(20deg) scaleX(0);
-    -webkit-transform: rotate(20deg) scaleX(0);
-    -ms-transform: rotate(20deg) scalex(0);
+    transform: rotate(-20deg) scaleX(0);
+    -webkit-transform: rotate(-20deg) scaleX(0);
+    -ms-transform: rotate(-20deg) scalex(0);
     opacity: 1;
   }
 }
@@ -432,19 +431,19 @@ nav .btn-group .dropdown-menu li a:hover {
     -ms-transform: scaleX(1.5) rotate(0deg);
   }
   50% {
-    transform: scaleX(1) rotate(45deg);
-    -webkit-transform: scaleX(1) rotate(45deg);
-    -ms-transform: scaleX(1) rotate(45deg);
+    transform: scaleX(1) rotate(-45deg);
+    -webkit-transform: scaleX(1) rotate(-45deg);
+    -ms-transform: scaleX(1) rotate(-45deg);
   }
   75% {
-    transform: scaleX(1) rotate(70deg);
-    -webkit-transform: scaleX(1) rotate(70deg);
-    -ms-transform: scaleX(1) rotate(70deg);
+    transform: scaleX(1) rotate(-70deg);
+    -webkit-transform: scaleX(1) rotate(-70deg);
+    -ms-transform: scaleX(1) rotate(-70deg);
   }
   100% {
-    transform: scaleX(1) rotate(45deg);
-    -webkit-transform: scaleX(1) rotate(45deg);
-    -ms-transform: scaleX(1) rotate(45deg);
+    transform: scaleX(1) rotate(-45deg);
+    -webkit-transform: scaleX(1) rotate(-45deg);
+    -ms-transform: scaleX(1) rotate(-45deg);
   }
 }
 @keyframes filling-out {
@@ -459,144 +458,144 @@ nav .btn-group .dropdown-menu li a:hover {
     -ms-transform: scaleX(1.5) rotate(0deg);
   }
   50% {
-    transform: scaleX(1) rotate(45deg);
-    -webkit-transform: scaleX(1) rotate(45deg);
-    -ms-transform: scaleX(1) rotate(45deg);
+    transform: scaleX(1) rotate(-45deg);
+    -webkit-transform: scaleX(1) rotate(-45deg);
+    -ms-transform: scaleX(1) rotate(-45deg);
   }
   75% {
-    transform: scaleX(1) rotate(70deg);
-    -webkit-transform: scaleX(1) rotate(70deg);
-    -ms-transform: scaleX(1) rotate(70deg);
+    transform: scaleX(1) rotate(-70deg);
+    -webkit-transform: scaleX(1) rotate(-70deg);
+    -ms-transform: scaleX(1) rotate(-70deg);
   }
   100% {
-    transform: scaleX(1) rotate(45deg);
-    -webkit-transform: scaleX(1) rotate(45deg);
-    -ms-transform: scaleX(1) rotate(45deg);
+    transform: scaleX(1) rotate(-45deg);
+    -webkit-transform: scaleX(1) rotate(-45deg);
+    -ms-transform: scaleX(1) rotate(-45deg);
   }
 }
 @-webkit-keyframes line-out {
   0% {
-    transform: translateX(-50%) scaleY(0) rotate(0deg);
-    -webkit-transform: translateX(-50%) scaleY(0) rotate(0deg);
-    -ms-transform: translateX(-50%) scaleY(0) rotate(0deg);
+    transform: translateX(50%) scaleY(0) rotate(0deg);
+    -webkit-transform: translateX(50%) scaleY(0) rotate(0deg);
+    -ms-transform: translateX(50%) scaleY(0) rotate(0deg);
   }
   25% {
-    transform: translateX(-50%) scaleY(1) rotate(0deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(0deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(0deg);
+    transform: translateX(50%) scaleY(1) rotate(0deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(0deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(0deg);
   }
   50% {
-    transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(45deg);
+    transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(-45deg);
   }
   75% {
-    transform: translateX(-50%) scaleY(1) rotate(60deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(60deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(60deg);
+    transform: translateX(50%) scaleY(1) rotate(-60deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(-60deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(-60deg);
   }
   100% {
-    transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(45deg);
+    transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(-45deg);
   }
 }
 @keyframes line-out {
   0% {
-    transform: translateX(-50%) scaleY(0) rotate(0deg);
-    -webkit-transform: translateX(-50%) scaleY(0) rotate(0deg);
-    -ms-transform: translateX(-50%) scaleY(0) rotate(0deg);
+    transform: translateX(50%) scaleY(0) rotate(0deg);
+    -webkit-transform: translateX(50%) scaleY(0) rotate(0deg);
+    -ms-transform: translateX(50%) scaleY(0) rotate(0deg);
   }
   25% {
-    transform: translateX(-50%) scaleY(1) rotate(0deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(0deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(0deg);
+    transform: translateX(50%) scaleY(1) rotate(0deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(0deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(0deg);
   }
   50% {
-    transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(45deg);
+    transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(-45deg);
   }
   75% {
-    transform: translateX(-50%) scaleY(1) rotate(60deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(60deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(60deg);
+    transform: translateX(50%) scaleY(1) rotate(-60deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(-60deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(-60deg);
   }
   100% {
-    transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(45deg);
+    transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(-45deg);
   }
 }
 @-webkit-keyframes line-in {
   0% {
-    transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(45deg);
+    transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(-45deg);
   }
   25% {
-    transform: translateX(-50%) scaleY(1) rotate(60deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(60deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(60deg);
+    transform: translateX(50%) scaleY(1) rotate(-60deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(-60deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(-60deg);
   }
   50% {
-    transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(45deg);
+    transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(-45deg);
   }
   75% {
-    transform: translateX(-50%) scaleY(1) rotate(0deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(0deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(0deg);
+    transform: translateX(50%) scaleY(1) rotate(0deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(0deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(0deg);
   }
   100% {
-    transform: translateX(-50%) scaleY(0) rotate(0deg);
-    -webkit-transform: translateX(-50%) scaleY(0) rotate(0deg);
-    -ms-transform: translateX(-50%) scaleY(0) rotate(0deg);
+    transform: translateX(50%) scaleY(0) rotate(0deg);
+    -webkit-transform: translateX(50%) scaleY(0) rotate(0deg);
+    -ms-transform: translateX(50%) scaleY(0) rotate(0deg);
   }
 }
 @keyframes line-in {
   0% {
-    transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(45deg);
+    transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(-45deg);
   }
   25% {
-    transform: translateX(-50%) scaleY(1) rotate(60deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(60deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(60deg);
+    transform: translateX(50%) scaleY(1) rotate(-60deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(-60deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(-60deg);
   }
   50% {
-    transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(45deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(45deg);
+    transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(-45deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(-45deg);
   }
   75% {
-    transform: translateX(-50%) scaleY(1) rotate(0deg);
-    -webkit-transform: translateX(-50%) scaleY(1) rotate(0deg);
-    -ms-transform: translateX(-50%) scaleY(1) rotate(0deg);
+    transform: translateX(50%) scaleY(1) rotate(0deg);
+    -webkit-transform: translateX(50%) scaleY(1) rotate(0deg);
+    -ms-transform: translateX(50%) scaleY(1) rotate(0deg);
   }
   100% {
-    transform: translateX(-50%) scaleY(0) rotate(0deg);
-    -webkit-transform: translateX(-50%) scaleY(0) rotate(0deg);
-    -ms-transform: translateX(-50%) scaleY(0) rotate(0deg);
+    transform: translateX(50%) scaleY(0) rotate(0deg);
+    -webkit-transform: translateX(50%) scaleY(0) rotate(0deg);
+    -ms-transform: translateX(50%) scaleY(0) rotate(0deg);
   }
 }
 @-webkit-keyframes filling-in {
   0% {
-    transform: scaleX(1) rotate(45deg);
-    -webkit-transform: scaleX(1) rotate(45deg);
-    -ms-transform: scaleX(1) rotate(45deg);
+    transform: scaleX(1) rotate(-45deg);
+    -webkit-transform: scaleX(1) rotate(-45deg);
+    -ms-transform: scaleX(1) rotate(-45deg);
   }
   25% {
-    transform: scaleX(1) rotate(70deg);
-    -webkit-transform: scaleX(1) rotate(70deg);
-    -ms-transform: scaleX(1) rotate(70deg);
+    transform: scaleX(1) rotate(-70deg);
+    -webkit-transform: scaleX(1) rotate(-70deg);
+    -ms-transform: scaleX(1) rotate(-70deg);
   }
   50% {
-    transform: scaleX(1) rotate(45deg);
-    -webkit-transform: scaleX(1) rotate(45deg);
-    -ms-transform: scaleX(1) rotate(45deg);
+    transform: scaleX(1) rotate(-45deg);
+    -webkit-transform: scaleX(1) rotate(-45deg);
+    -ms-transform: scaleX(1) rotate(-45deg);
   }
   75% {
     transform: scaleX(1.5) rotate(0deg);
@@ -611,19 +610,19 @@ nav .btn-group .dropdown-menu li a:hover {
 }
 @keyframes filling-in {
   0% {
-    transform: scaleX(1) rotate(45deg);
-    -webkit-transform: scaleX(1) rotate(45deg);
-    -ms-transform: scaleX(1) rotate(45deg);
+    transform: scaleX(1) rotate(-45deg);
+    -webkit-transform: scaleX(1) rotate(-45deg);
+    -ms-transform: scaleX(1) rotate(-45deg);
   }
   25% {
-    transform: scaleX(1) rotate(70deg);
-    -webkit-transform: scaleX(1) rotate(70deg);
-    -ms-transform: scaleX(1) rotate(70deg);
+    transform: scaleX(1) rotate(-70deg);
+    -webkit-transform: scaleX(1) rotate(-70deg);
+    -ms-transform: scaleX(1) rotate(-70deg);
   }
   50% {
-    transform: scaleX(1) rotate(45deg);
-    -webkit-transform: scaleX(1) rotate(45deg);
-    -ms-transform: scaleX(1) rotate(45deg);
+    transform: scaleX(1) rotate(-45deg);
+    -webkit-transform: scaleX(1) rotate(-45deg);
+    -ms-transform: scaleX(1) rotate(-45deg);
   }
   75% {
     transform: scaleX(1.5) rotate(0deg);
@@ -638,31 +637,31 @@ nav .btn-group .dropdown-menu li a:hover {
 }
 @-webkit-keyframes bun-top-in {
   0% {
-    left: -1px;
+    right: -1px;
     top: 12px;
-    transform: rotate(20deg) scaleX(0);
-    -webkit-transform: rotate(20deg) scaleX(0);
-    -ms-transform: rotate(20deg) scaleX(0);
+    transform: rotate(-20deg) scaleX(0);
+    -webkit-transform: rotate(-20deg) scaleX(0);
+    -ms-transform: rotate(-20deg) scaleX(0);
     opacity: 0;
   }
   25% {
-    left: -1px;
+    right: -1px;
     top: 12px;
-    transform: rotate(20deg) scaleX(1);
-    -webkit-transform: rotate(20deg) scaleX(1);
-    -ms-transform: rotate(20deg) scaleX(1);
+    transform: rotate(-20deg) scaleX(1);
+    -webkit-transform: rotate(-20deg) scaleX(1);
+    -ms-transform: rotate(-20deg) scaleX(1);
     opacity: 1;
   }
   50% {
-    left: -0.5px;
+    right: -0.5px;
     top: 12px;
-    transform: rotate(10deg) scaleX(1);
-    -webkit-transform: rotate(10deg) scaleX(1);
-    -ms-transform: rotate(10deg) scaleX(1);
+    transform: rotate(-10deg) scaleX(1);
+    -webkit-transform: rotate(-10deg) scaleX(1);
+    -ms-transform: rotate(-10deg) scaleX(1);
     opacity: 1;
   }
   100% {
-    left: 0px;
+    right: 0px;
     top: 0px;
     transform: rotate(0deg) scaleX(1);
     -webkit-transform: rotate(0deg) scaleX(1);
@@ -672,31 +671,31 @@ nav .btn-group .dropdown-menu li a:hover {
 }
 @keyframes bun-top-in {
   0% {
-    left: -1px;
+    right: -1px;
     top: 12px;
-    transform: rotate(20deg) scaleX(0);
-    -webkit-transform: rotate(20deg) scaleX(0);
-    -ms-transform: rotate(20deg) scaleX(0);
+    transform: rotate(-20deg) scaleX(0);
+    -webkit-transform: rotate(-20deg) scaleX(0);
+    -ms-transform: rotate(-20deg) scaleX(0);
     opacity: 0;
   }
   25% {
-    left: -1px;
+    right: -1px;
     top: 12px;
-    transform: rotate(20deg) scaleX(1);
-    -webkit-transform: rotate(20deg) scaleX(1);
-    -ms-transform: rotate(20deg) scaleX(1);
+    transform: rotate(-20deg) scaleX(1);
+    -webkit-transform: rotate(-20deg) scaleX(1);
+    -ms-transform: rotate(-20deg) scaleX(1);
     opacity: 1;
   }
   50% {
-    left: -0.5px;
+    right: -0.5px;
     top: 12px;
-    transform: rotate(10deg) scaleX(1);
-    -webkit-transform: rotate(10deg) scaleX(1);
-    -ms-transform: rotate(10deg) scaleX(1);
+    transform: rotate(-10deg) scaleX(1);
+    -webkit-transform: rotate(-10deg) scaleX(1);
+    -ms-transform: rotate(-10deg) scaleX(1);
     opacity: 1;
   }
   100% {
-    left: 0px;
+    right: 0px;
     top: 0px;
     transform: rotate(0deg) scaleX(1);
     -webkit-transform: rotate(0deg) scaleX(1);
@@ -706,31 +705,31 @@ nav .btn-group .dropdown-menu li a:hover {
 }
 @-webkit-keyframes bun-bot-in {
   0% {
-    left: 1px;
+    right: 1px;
     bottom: 12px;
-    transform: rotate(20deg) scaleX(0);
-    -webkit-transform: rotate(20deg) scaleX(0);
-    -ms-transform: rotate(20deg) scalex(0);
+    transform: rotate(-20deg) scaleX(0);
+    -webkit-transform: rotate(-20deg) scaleX(0);
+    -ms-transform: rotate(-20deg) scalex(0);
     opacity: 1;
   }
   25% {
-    left: 1px;
+    right: 1px;
     bottom: 12px;
-    transform: rotate(20deg) scaleX(1);
-    -webkit-transform: rotate(20deg) scaleX(1);
-    -ms-transform: rotate(20deg) scaleX(1);
+    transform: rotate(-20deg) scaleX(1);
+    -webkit-transform: rotate(-20deg) scaleX(1);
+    -ms-transform: rotate(-20deg) scaleX(1);
     opacity: 1;
   }
   50% {
-    left: 1px;
+    right: 1px;
     bottom: 12px;
-    transform: rotate(15deg) scaleX(1);
-    -webkit-transform: rotate(15deg) scaleX(1);
-    -ms-transform: rotate(15deg) scaleX(1);
+    transform: rotate(-15deg) scaleX(1);
+    -webkit-transform: rotate(-15deg) scaleX(1);
+    -ms-transform: rotate(-15deg) scaleX(1);
     opacity: 1;
   }
   100% {
-    left: 0px;
+    right: 0px;
     bottom: 0px;
     transform: rotate(0deg) scaleX(1);
     -webkit-transform: rotate(0deg) scaleX(1);
@@ -740,31 +739,31 @@ nav .btn-group .dropdown-menu li a:hover {
 }
 @keyframes bun-bot-in {
   0% {
-    left: 1px;
+    right: 1px;
     bottom: 12px;
-    transform: rotate(20deg) scaleX(0);
-    -webkit-transform: rotate(20deg) scaleX(0);
-    -ms-transform: rotate(20deg) scalex(0);
+    transform: rotate(-20deg) scaleX(0);
+    -webkit-transform: rotate(-20deg) scaleX(0);
+    -ms-transform: rotate(-20deg) scalex(0);
     opacity: 1;
   }
   25% {
-    left: 1px;
+    right: 1px;
     bottom: 12px;
-    transform: rotate(20deg) scaleX(1);
-    -webkit-transform: rotate(20deg) scaleX(1);
-    -ms-transform: rotate(20deg) scaleX(1);
+    transform: rotate(-20deg) scaleX(1);
+    -webkit-transform: rotate(-20deg) scaleX(1);
+    -ms-transform: rotate(-20deg) scaleX(1);
     opacity: 1;
   }
   50% {
-    left: 1px;
+    right: 1px;
     bottom: 12px;
-    transform: rotate(15deg) scaleX(1);
-    -webkit-transform: rotate(15deg) scaleX(1);
-    -ms-transform: rotate(15deg) scaleX(1);
+    transform: rotate(-15deg) scaleX(1);
+    -webkit-transform: rotate(-15deg) scaleX(1);
+    -ms-transform: rotate(-15deg) scaleX(1);
     opacity: 1;
   }
   100% {
-    left: 0px;
+    right: 0px;
     bottom: 0px;
     transform: rotate(0deg) scaleX(1);
     -webkit-transform: rotate(0deg) scaleX(1);
@@ -772,4 +771,4 @@ nav .btn-group .dropdown-menu li a:hover {
     opacity: 1;
   }
 }
-/*# sourceMappingURL=menu.css.map */
+/*# sourceMappingURL=menu.rtl.css.map */

@@ -2,7 +2,7 @@
 @import "colors.less";
 @import "menu.less";
 /*///////////////////////////////////////////////////////
------------------------Base HTML-----------------------
+-----------------------Base Styles-----------------------
 ///////////////////////////////////////////////////////*/
 body {
     font-family:'lato';
@@ -13,7 +13,20 @@ body {
     color:@black;
     background:#fff;
 }
-/*Page Loader Animation*/
+h1,h2,h3,h4,h5,p,ul{margin:0;margin-bottom:0.5em;}
+h1{font-size:1.9em;}
+h2{font-size:1.7em}
+h3{font-size:1.3em;}
+h4{font-size:1em;}
+a{ 
+    text-decoration: none; color: inherit;
+    &:hover,&:active,&:focus{text-decoration:none;color:inherit;}
+}
+.row{ margin:1em 0; }
+.btn{padding: 1em; color:#fff;}
+input{margin-bottom: 0.75em;}
+.form-group{padding:0 10px;}
+#form1{max-width:43em; margin:0 auto;}
 #preloader {
     position: fixed;
     top: 0;
@@ -24,47 +37,40 @@ body {
     .gradient( right, lighten(@brand-pri,8%), lighten(@brand-blue,29%) );
     z-index: 99;
 }
-h1,h2,h3,h4,h5,p,ul{margin:0;margin-bottom:0.5em;}
-h1{font-size:1.9em;}
-h2{font-size:1.7em}
-h3{font-size:1.3em;}
-h4{font-size:1em;}
-input{margin-bottom: 0.75em;} 
-a{ 
-    text-decoration: none; color: inherit;
-    &:hover,&:active,&:focus{text-decoration:none;color:inherit;}
+#status {
+    width: 350px;
+    height: 251px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -125px 0 0 -175px;
 }
-
-
-
 /*///////////////////////////////////////////////////////
------------------------Base Elements---------------------
+--------------------Universal Classes--------------------  
 ///////////////////////////////////////////////////////*/
-.row{margin:1em 0; }
-.btn{padding: 1em; color:#fff;}
-.form-group{padding:0 10px;}
-/*--------------------------
-          Wrappers
---------------------------*/
-//CONTAINS BOTH USER AND MAIN CONTENT PANELS
 .main-wrapper{
   //to account for fixed nav bar
   padding-top: 4em;
 }
-/*--------------------------
-        Content Panel
---------------------------*/
-// SETTING MAX WIDTH OF ALL CONTENT WITHIN "COL-MD-10 MAIN-CONTENT" PORTIONS
-.main-content{ 
-    padding:0.2em;
-    @media(min-width:520px){padding: 0 2.4em;}
-    background:#fff;
+.section-title{
+  font-weight:700;
+  margin: 1em 0; padding-bottom: 0.5em;
 }
-#form1{max-width:43em; margin:0 auto;}
-/*--------------------------
-        User Panel
---------------------------*/
-//COL-MD-2 USER INFORMATION STYLING
+h1.section-title{
+    border-bottom:none;
+    padding-bottom:0; 
+    font-size: 2.75em;
+    text-align: center;
+    @media(min-width:560px){
+        font-size:3.2em;
+        text-align: left;
+    }
+    
+}
+.box-border{
+    box-shadow: 0 2px 18px lighten(@black,40%);
+    border:1px solid #ccc;
+}
 .user-info{
   #lblUserName{font-size:1.5em;}
   background: #eee;
@@ -86,55 +92,13 @@ a{
   display:none;
   @media(min-width:992px){display:block;}
 }
-
-
-
-/*///////////////////////////////////////////////////////
----------------------Reusable Classes--------------------
-///////////////////////////////////////////////////////*/
-
-//TOP-OF-PAGE TITLES
-/*--------------------------
-           Titles
---------------------------*/
-.section-title{
-  font-weight:700;
-  margin: 1em 0; padding-bottom: 0.5em;
-}
-h1.section-title{
-    border-bottom:none;
-    padding-bottom:0; 
-    font-size: 2.75em;
-    text-align: center;
-    @media(min-width:560px){
-        font-size:3.2em;
-        text-align: left;
-    }  
-}
-/*--------------------------
-       Borders & Stuff
---------------------------*/
-// ADD CLASS TO ANY EXISTING DIV THAT NEEDS THE DEFAULT BOX SHADOW
-.box-border{
-    box-shadow: 0 2px 18px lighten(@black,40%);
-    border:1px solid #ccc;
-}
-
-
-
-
-/*///////////////////////////////////////////////////////
--------------------Project Panel Styles------------------
-///////////////////////////////////////////////////////*/
-
-//PROJECT SUMMARY PANELS FOUND ON MAINPAGE.ASPX AND PROJECTS/PROJECT-NAME.ASPX
-
 .project-title{
   margin: 0.5em 0 0 0; font-weight:400;
 }
 .project-update-date{
   margin: 0.5em 0 1em 0; font-style: italic;
 }
+span.highlight-change{font-weight: 700;}
 .project-instance{
   margin:2em 0 4em 0;
   padding-bottom:2em;
@@ -155,12 +119,6 @@ h1.section-title{
   }
     .updated-list{margin-top:2em;}
 }
-//NOW BEING USED TO BOLD REPORT LIST ELEMENTS ON PROJECT SUMMARY PANELS
-span.highlight-change{font-weight: 700;}
-
-/*--------------------------
-         Timeline
---------------------------*/
 .timeline{
     margin-top:2em;
     padding:2em 2em 2.5em 2em;
@@ -174,7 +132,6 @@ span.highlight-change{font-weight: 700;}
       position:relative; display:block; 
       margin: 0 auto; height:4px; padding:0;
       background:@brand-blue;
-      //SETTING UP POSITIONS/SIZES OF TIMELINE DOTS
       li{
         position: relative; top:-63px;
         display: inline-block; float:left;
@@ -188,7 +145,6 @@ span.highlight-change{font-weight: 700;}
           border:7px solid @brand-blue;
           border-radius:50%;
         }
-        //HOVER COLORS N STUFF
         &:hover{
           cursor:pointer;
           &::before{
@@ -218,7 +174,6 @@ span.highlight-change{font-weight: 700;}
           left:-4px; position:relative;
           margin:0;
         }
-        //SETTING POSITIONS OF EACH DOT
         &:last-child{
           right:0px; position:relative; 
           //margin-right:-5.65em;
@@ -235,7 +190,6 @@ span.highlight-change{font-weight: 700;}
           margin-left:65%;
         } 
       }
-      // HIDDEN HOVER DESCRIPTION OF EACH DOT
       .details {
         display: none;
         position: absolute;
@@ -263,8 +217,33 @@ span.highlight-change{font-weight: 700;}
       } 
     }
   }
-
-
+.action-btn{
+  background: @brand-pri;
+  width: 100px;
+  height: 100px;
+  text-align: center !important;
+  padding-top: 25px;
+  font-size: 2em;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: -1px 5px 5px #858585;
+  text-align: right;
+  position: absolute;
+  right: 0.5em;
+  margin-top: -1.12em;
+  transition:all ease-in-out 0.3s;
+  &:hover{
+    transition:all ease-in-out 0.4s;
+    box-shadow: inset 0px 0px 5px #aaa; //0px 1px 5px #999;
+    background: lighten(@brand-pri,5%);
+  }
+}
+.updated-list{ul{li{margin: 0.5em 0;}}}
+.click-options{
+  width: 140px;
+  position: relative;
+  right: 0; top: 0;
+}
 
 /*///////////////////////////////////////////////////////
 -----------------------Login Page------------------------
@@ -281,7 +260,7 @@ span.highlight-change{font-weight: 700;}
     }
    nav{.nav{display:none} ul{li{display:none}}}
    .user-info{display:none;}
-   .main-content{background:transparent;margin:0 auto; width:100%;}
+   .home-updates{background:transparent;margin:0 auto; width:100%;}
    .gradient( left, darken(#663333,7%), lighten(@brand-pri,10%) );
    .login-wrapper{
         h1{
@@ -305,51 +284,57 @@ span.highlight-change{font-weight: 700;}
         }
     }
 }
-
-
+/*///////////////////////////////////////////////////////
+------------------------Home Page-----------------------
+///////////////////////////////////////////////////////*/
+.home-updates{ 
+    padding:0.2em;
+    @media(min-width:520px){padding: 0 2.4em;}
+    background:#fff;
+}
 
 /*///////////////////////////////////////////////////////
------------------------Report Body-----------------------
+----------------------Client Login-----------------------
 ///////////////////////////////////////////////////////*/
-
-/*
-    ALL COMPONENTS REQUIRED FOR STYLING A REPORT
-*/
-
-//Parent panel of report / set margins between each
+.client-wrapper{
+    width:90%; max-width:45em; margin:0 auto; margin-top:4em; margin-bottom:4em;
+    padding:3em 3em 1.5em; background:#fff;
+    .form-group{
+        select{padding:0;}
+    }    
+}
+/*///////////////////////////////////////////////////////
+----------------------Bid Process-----------------------
+///////////////////////////////////////////////////////*/
+.design-bid{
+    background:#fff;
+    .add-new{.section-title{margin-bottom:0.25em;}}
+}
+//Parent Instance of report
 .report-group{margin:2em 0}
-
-//Title of report ONLY
+//Title of report
 .report-title{
     background: @brand-pri;
     color: #fff;
     padding: 2em;
     h1{margin:0;}
 }
-//Individual section of report - where the form elements go
-.client-wrapper, .report-wrapper{
-    width:100%; margin:0 auto;
+//Individual section of report
+.report-wrapper{
+    float:left; width:100%; margin:0 auto; //margin-top:2em; margin-bottom:2em;
     padding:3em; background:#fff; 
     border-bottom:2px dotted #999;
     &:last-child{border-bottom:none}
-    .form-group{
-        select{padding:0;}
-    }
 }
-.client-wrapper{margin:2em 0}
-
-// ONLY USE ON DROP DOWN "ADD NEW REPORT?" SECTION
 .add-report{
     .report-title{
-        background:@brand-tri;
+        background:@brand-tri; padding:1.5em 2em;
         &:hover{background:lighten(@brand-tri,5%)}
         &:hover,h1:hover{cursor:pointer;}
         h1:hover{color:lighten(#fff,10%);}
     }
-    //decrease default wrapper padding, we only have one dropdownlist in this div
     .report-wrapper{
         padding:1em 2em 2em;
     }
-    //hide until clicked on
     .report-list-section{display:none;}
 }

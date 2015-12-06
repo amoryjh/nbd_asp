@@ -242,11 +242,35 @@
     <Content Include="assets\css\bootstrap\bootstrap.min.css">
       <DependentUpon>bootstrap.css</DependentUpon>
     </Content>
+    <Content Include="assets\css\bootstrap\bootstrap.rtl.css">
+      <DependentUpon>bootstrap.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\bootstrap\bootstrap.rtl.min.css">
+      <DependentUpon>bootstrap.rtl.css</DependentUpon>
+    </Content>
     <Content Include="assets\css\colors.css">
       <DependentUpon>colors.less</DependentUpon>
     </Content>
     <Content Include="assets\css\colors.min.css">
       <DependentUpon>colors.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\colors.rtl.css">
+      <DependentUpon>colors.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\colors.rtl.min.css">
+      <DependentUpon>colors.rtl.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\main - Copy.css">
+      <DependentUpon>main - Copy.less</DependentUpon>
+    </Content>
+    <Content Include="assets\css\main - Copy.min.css">
+      <DependentUpon>main - Copy.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\main - Copy.rtl.css">
+      <DependentUpon>main - Copy.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\main - Copy.rtl.min.css">
+      <DependentUpon>main - Copy.rtl.css</DependentUpon>
     </Content>
     <Content Include="assets\css\main.css">
       <DependentUpon>main.less</DependentUpon>
@@ -254,11 +278,23 @@
     <Content Include="assets\css\main.min.css">
       <DependentUpon>main.css</DependentUpon>
     </Content>
+    <Content Include="assets\css\main.rtl.css">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\main.rtl.min.css">
+      <DependentUpon>main.rtl.css</DependentUpon>
+    </Content>
     <Content Include="assets\css\menu.css">
       <DependentUpon>menu.less</DependentUpon>
     </Content>
     <Content Include="assets\css\menu.min.css">
       <DependentUpon>menu.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\menu.rtl.css">
+      <DependentUpon>menu.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\menu.rtl.min.css">
+      <DependentUpon>menu.rtl.css</DependentUpon>
     </Content>
     <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
@@ -336,10 +372,6 @@
     <Content Include="assets\css\bootstrap\bootstrap.less" />
     <Content Include="assets\css\bootstrap\badges.less" />
     <Content Include="assets\css\bootstrap\alerts.less" />
-    <Content Include="assets\css\main.less" />
-    <Content Include="assets\css\main.css.map">
-      <DependentUpon>main.css</DependentUpon>
-    </Content>
     <Content Include="assets\css\bootstrap\bootstrap.css.map">
       <DependentUpon>bootstrap.css</DependentUpon>
     </Content>
@@ -409,6 +441,29 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="assets\css\colors.rtl.css.map">
+      <DependentUpon>colors.rtl.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\bootstrap\bootstrap.rtl.css.map">
+      <DependentUpon>bootstrap.rtl.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\menu.rtl.css.map">
+      <DependentUpon>menu.rtl.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\main.less" />
+    <Content Include="assets\css\main.css.map">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\main.rtl.css.map">
+      <DependentUpon>main.rtl.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\main - Copy.less" />
+    <Content Include="assets\css\main - Copy.css.map">
+      <DependentUpon>main - Copy.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\main - Copy.rtl.css.map">
+      <DependentUpon>main - Copy.rtl.css</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
