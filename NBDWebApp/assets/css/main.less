@@ -40,7 +40,7 @@ a{
 /*///////////////////////////////////////////////////////
 -----------------------Base Elements---------------------
 ///////////////////////////////////////////////////////*/
-.row{margin:1em 0; }
+.row{margin:2em 0; }
 .btn{padding: 1em; color:#fff;}
 .form-group{padding:0 10px;}
 /*--------------------------
@@ -192,7 +192,7 @@ span.highlight-change{font-weight: 700;}
         &:hover{
           cursor:pointer;
           &::before{
-            top: 1px;
+            top: 3px;
             left: -29px;
             width: 9px;
             height: 9px;
@@ -353,7 +353,11 @@ span.highlight-change{font-weight: 700;}
     //hide until clicked on
     .report-list-section{display:none;}
 }
-
+//Add new row of inputs
+.btn-new-row{
+  padding: 0.45em 1em;
+  @media(min-width:992px){margin-top:2em;}
+}
 /*///////////////////////////////////////////////////////
 --------------------Client Directory---------------------
 ///////////////////////////////////////////////////////*/

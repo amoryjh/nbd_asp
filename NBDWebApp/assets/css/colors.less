@@ -10,8 +10,8 @@
 .btn{
     background:@brand-pri; color:#fff;
     padding:0.5em;
-    &:hover,&:active,&:focus,&:visited{
-        color: darken(#fff,5.5%);
+    &:hover,&:active,&:focus,&:visited,&:active:hover{
+        color: darken(#fff,5.5%); outline:inherit;
         background:darken(@brand-pri,5%);
     }
 }

@@ -23,7 +23,7 @@ namespace NBDWebApp.Projects
 
             //Fill Existing Clients Drop Down
             foreach (CLIENT c in db.CLIENTs)
-                this.ddlExistingClientDesign.Items.Add(c.cliName);
+              this.ddlExistingClientBusinessDesign.Items.Add(c.cliName);
 
             //Fill City Drop Down
             foreach (CITY c in db.CITies)

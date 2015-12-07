@@ -22,13 +22,13 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ddlExistingClientDesign control.
+        /// ddlExistingClientBusinessDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlExistingClientDesign;
+        protected global::System.Web.UI.WebControls.DropDownList ddlExistingClientBusinessDesign;
         
         /// <summary>
         /// rfvBusiness control.
@@ -346,15 +346,6 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.TextBox txtMaterialTotalDesign;
         
         /// <summary>
-        /// btnMaterialAddDesign control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMaterialAddDesign;
-        
-        /// <summary>
         /// txtLabourDescDesign control.
         /// </summary>
         /// <remarks>
@@ -389,15 +380,6 @@ namespace NBDWebApp.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLabourTotalDesign;
-        
-        /// <summary>
-        /// btnLabourAddDesign control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLabourAddDesign;
         
         /// <summary>
         /// btnSubmitDesignBid control.
@@ -481,40 +463,31 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.DropDownList ddlProductionWorkerNameProduction;
         
         /// <summary>
-        /// btnProductionWorkerAdd control.
+        /// txtBidDateProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnProductionWorkerAdd;
+        protected global::System.Web.UI.WebControls.TextBox txtBidDateProduction;
         
         /// <summary>
-        /// TextBox24 control.
+        /// txtBidEstBeginDateProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox24;
+        protected global::System.Web.UI.WebControls.TextBox txtBidEstBeginDateProduction;
         
         /// <summary>
-        /// TextBox25 control.
+        /// txtBidEstComDateProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox25;
-        
-        /// <summary>
-        /// TextBox26 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox26;
+        protected global::System.Web.UI.WebControls.TextBox txtBidEstComDateProduction;
         
         /// <summary>
         /// TextBox27 control.
@@ -535,103 +508,85 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.TextBox TextBox28;
         
         /// <summary>
-        /// TextBox29 control.
+        /// txtMaterialDescriptionProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox29;
+        protected global::System.Web.UI.WebControls.TextBox txtMaterialDescriptionProduction;
         
         /// <summary>
-        /// TextBox30 control.
+        /// txtMaterialQuantityProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox30;
+        protected global::System.Web.UI.WebControls.TextBox txtMaterialQuantityProduction;
         
         /// <summary>
-        /// TextBox31 control.
+        /// txtMaterialSizeProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox31;
+        protected global::System.Web.UI.WebControls.TextBox txtMaterialSizeProduction;
         
         /// <summary>
-        /// TextBox32 control.
+        /// txtMaterialUnitPriceProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox32;
+        protected global::System.Web.UI.WebControls.TextBox txtMaterialUnitPriceProduction;
         
         /// <summary>
-        /// TextBox33 control.
+        /// txtMaterialExtendedPriceProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox33;
+        protected global::System.Web.UI.WebControls.TextBox txtMaterialExtendedPriceProduction;
         
         /// <summary>
-        /// Button3 control.
+        /// txtLabourDepartmentProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.TextBox txtLabourDepartmentProduction;
         
         /// <summary>
-        /// TextBox34 control.
+        /// txtLabourHoursProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox34;
+        protected global::System.Web.UI.WebControls.TextBox txtLabourHoursProduction;
         
         /// <summary>
-        /// TextBox35 control.
+        /// txtLabourUnitPriceProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox35;
+        protected global::System.Web.UI.WebControls.TextBox txtLabourUnitPriceProduction;
         
         /// <summary>
-        /// TextBox36 control.
+        /// txtLabourTotalPriceProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox36;
-        
-        /// <summary>
-        /// TextBox37 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox37;
-        
-        /// <summary>
-        /// Button5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
+        protected global::System.Web.UI.WebControls.TextBox txtLabourTotalPriceProduction;
         
         /// <summary>
         /// Button6 control.

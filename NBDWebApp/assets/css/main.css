@@ -4943,8 +4943,10 @@ button.close {
 .btn:hover,
 .btn:active,
 .btn:focus,
-.btn:visited {
+.btn:visited,
+.btn:active:hover {
   color: #f1f1f1;
+  outline: inherit;
   background: #c30951;
 }
 .btn-primary {
@@ -5784,7 +5786,7 @@ a:focus {
 -----------------------Base Elements---------------------
 ///////////////////////////////////////////////////////*/
 .row {
-  margin: 1em 0;
+  margin: 2em 0;
 }
 .btn {
   padding: 1em;
@@ -5974,7 +5976,7 @@ span.highlight-change {
   cursor: pointer;
 }
 .timeline ul li:hover::before {
-  top: 1px;
+  top: 3px;
   left: -29px;
   width: 9px;
   height: 9px;
@@ -6178,6 +6180,14 @@ span.highlight-change {
 }
 .add-report .report-list-section {
   display: none;
+}
+.btn-new-row {
+  padding: 0.45em 1em;
+}
+@media (min-width: 992px) {
+  .btn-new-row {
+    margin-top: 2em;
+  }
 }
 /*///////////////////////////////////////////////////////
 --------------------Client Directory---------------------

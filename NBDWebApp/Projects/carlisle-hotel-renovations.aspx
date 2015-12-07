@@ -36,21 +36,24 @@
     </div>
 
 
-    <div class="report-group box-border add-report clearfix">
+    <div class="row box-border add-report clearfix">
         <div class="report-title">
             <h1 class="project-title">Add New Report?</h1>
         </div>
         <div class="report-wrapper report-list-section clearfix">
             <label id="" for="ddlProv">Report</label>
             <select id="ddlProjectType" class="form-control">
-                <option value="dailyreport">Daily Report</option>
-                <option value="designbid">Design Bid</option>
-                <option value="prouctionreport">Production Report</option>
+                <option value="project-designBid">Design Bid</option>
+                <option value="project-productionPlan">Production Report</option>
             </select>
         </div>
     </div>
     
-
+    <!-- 
+    //////////////////////////////////////////////////////////
+    -----------------------Design Bid-------------------------
+    //////////////////////////////////////////////////////////  
+    -->
     <div id="project-designBid" class="report-group box-border clearfix">
     <div class="report-title">
         <h1 class="project-title">New Design Bid</h1>
@@ -60,16 +63,13 @@
             <h1>Client Info</h1>
         </div>
 
-        <div class="form-group col-md-12">
-            <h3>Existing Client?</h3>
-        </div>
-
-        <div class="form-group col-md-12">
-            <asp:DropDownList ID="ddlExistingClientDesign" runat="server"></asp:DropDownList>
+        <div class="form-group col-md-6">
+            <label id="lblExistingClientBusinessDesign" for="ddlExistingClientBusinessDesign">Existing Client</label>       
+            <asp:DropDownList ID="ddlExistingClientBusinessDesign" CssClass="form-control" runat="server"></asp:DropDownList>
         </div>
 
         <!-- Hide the projects button and the add report button-->
-        <div class="form-group col-md-12">
+        <div class="form-group col-md-6">
           <label id="lblClientBusinessDesign" for="txtClientBusinessDesign">Business</label>
             <asp:RequiredFieldValidator ID="rfvBusiness" runat="server" ErrorMessage="Business Name Required" ControlToValidate="txtClientBusinessDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
           <asp:TextBox ID="txtClientBusinessDesign" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
@@ -155,17 +155,17 @@
             <h3>Sales Associate:</h3>
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
           <label id="lblSalesAssocFNameDesign" for="txtSalesAssocFNameDesign">First Name</label>
           <asp:TextBox ID="txtSalesAssocFNameDesign" runat="server" class="form-control" placeholder="First Name"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
             <label id="lblSalesAssocLNameDesign" for="txtSalesAssocFNameDesign">Last Name</label>
           &nbsp;<asp:TextBox ID="txtSalesAssocLNameDesign" runat="server" class="form-control" placeholder="Last Name"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
             <label id="lblSalesAssocPhoneDesign" for="txtSalesAssocPhoneDesign">Phone</label>
             <asp:TextBox ID="txtSalesAssocPhoneDesign" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
         </div>
@@ -174,17 +174,17 @@
             <h3>Designer:</h3>
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
             <label id="lblDesignerFNameDesign" for="txtDesignerFNameDesign">First Name</label>
             &nbsp;<asp:TextBox ID="txtDesignerFNameDesign" class="form-control" placeholder="First Name" runat="server"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
             <label id="lblDesignerLNameDesign" for="txtDesignerLNameDesign">Last Name</label>
             &nbsp;<asp:TextBox ID="txtDesignerLNameDesign" class="form-control" placeholder="Last Name" runat="server"></asp:TextBox>
         </div>
         
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
           <label id="lblDesignerPhoneDesign" for="txtDesignerPhoneDesign">Phone</label>
           <asp:TextBox ID="txtDesignerPhoneDesign" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
         </div>
@@ -196,18 +196,18 @@
             <h1>Project</h1>
         </div>
 
-        <div class="form-group col-md-12">
+        <div class="form-group col-md-4">
           <label id="lblBidDateDesign" for="txtBidDateDesign">Bid Date</label>
           <asp:TextBox ID="txtBidDateDesign" runat="server" class="form-control" placeholder="Business Name" TextMode="Date"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-6">
-          <label id="lblBidEstBeginDateDesign" for="txtBidEstBeginDateDesign">Estimated Begin Date</label>
+        <div class="form-group col-md-4">
+          <label id="lblBidEstBeginDateDesign" for="txtBidEstBeginDateDesign">Begin Date</label>
           <asp:TextBox ID="txtBidEstBeginDateDesign" runat="server" class="form-control" placeholder="Contact Name" TextMode="Date"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-6">
-            <label id="lblBidEstComDateDesign" for="txtBidEstComDateDesign">Estimated Completion Date</label>
+        <div class="form-group col-md-4">
+            <label id="lblBidEstComDateDesign" for="txtBidEstComDateDesign">Completion Date</label>
             <asp:TextBox ID="txtBidEstComDateDesign" class="form-control" placeholder="City" runat="server" TextMode="Date"></asp:TextBox>
         </div>
 
@@ -227,33 +227,33 @@
             <h1>Material Requirements</h1>
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-3">
           <label id="lblMaterialDescDesign" for="txtMaterialDescDesign">Description</label>
           <asp:TextBox ID="txtMaterialDescDesign" runat="server" class="form-control" placeholder="Description"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
           <label id="lblMaterialQuantityDesign" for="txtMaterialQuantityDesign">Quantity</label>
           <asp:TextBox ID="txtMaterialQuantityDesign" runat="server" class="form-control" placeholder="Quantity"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
             <label id="lblMaterialSizeDesign" for="txtMaterialSizeDesign">Size</label>
             <asp:TextBox ID="txtMaterialSizeDesign" class="form-control" placeholder="Size" runat="server"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
             <label id="lblMaterialUnitPriceDesign" for="txtMaterialUnitPriceDesign">Unit Price</label>
-            <asp:TextBox ID="txtMaterialUnitPriceDesign" class="form-control" placeholder="Unit Price" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtMaterialUnitPriceDesign" class="form-control" placeholder="Price" runat="server"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
             <label id="lblMaterialTotalDesign" for="txtMaterialTotalDesign">Total</label>
-            <asp:TextBox ID="txtMaterialTotalDesign" class="form-control"  runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtMaterialTotalDesign" class="form-control"  runat="server" placeholder="Total"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-3">
-        <asp:Button ID="btnMaterialAddDesign" CssClass="btn" runat="server" Text="+" />
+        <div class="form-group col-md-1">
+          <a id="btnMaterialAddDesign" class="btn btn-new-row">+</a>
         </div>
         
     </div>
@@ -263,7 +263,7 @@
             <h1>Labour Requirements</h1>
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-5">
           <label id="lblLabourDescDesign" for="txtLabourDescDesign">Description</label>
           <asp:TextBox ID="txtLabourDescDesign" runat="server" class="form-control" placeholder="Description"></asp:TextBox>
         </div>
@@ -280,24 +280,28 @@
 
         <div class="form-group col-md-2">
           <label id="lblLabourTotalDesign" for="txtLabourTotalDesign">Total</label>
-          <asp:TextBox ID="txtLabourTotalDesign" runat="server" class="form-control" ></asp:TextBox>
+          <asp:TextBox ID="txtLabourTotalDesign" runat="server" class="form-control" placeholder="Total" ></asp:TextBox>
         </div>
         
-        <div class="form-group col-md-12">
-        <asp:Button ID="btnLabourAddDesign" CssClass="btn" runat="server" Text="+" />
+        <div class="form-group col-md-1">
+          <a id="btnLabourAddDesign" class="btn btn-new-row">+</a>
         </div>
     </div>
-    <div class="report-wrapper clearfix">
+    <div class="report-wrapper text-center clearfix">
         <div class="form-group col-md-12">
             <h1>Submit Form</h1>
         </div>
         <div class="form-group col-md-12">
-        <asp:Button ID="btnSubmitDesignBid" CssClass="btn" runat="server" Text="Submit" />
+          <asp:Button ID="btnSubmitDesignBid" CssClass="btn" runat="server" Text="Submit" />
         </div>
     </div>
     </div>
 
-    
+    <!-- 
+    //////////////////////////////////////////////////////////
+    ---------------------Production Plan----------------------
+    //////////////////////////////////////////////////////////  
+    -->
     <div id="project-productionPlan" class="report-group box-border clearfix">
     <div class="report-title">
         <h1 class="project-title">New Production Plan</h1>
@@ -365,37 +369,37 @@
 
         <div class="form-group col-md-6">
             <label id="lblProductionWorkerNameProduction" for="ddlProductionWorkerNameProduction">Name</label>
-            <asp:DropDownList ID="ddlProductionWorkerNameProduction" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="ddlProductionWorkerNameProduction" CssClass="form-control" runat="server"></asp:DropDownList>
         </div>
 
         <div class="form-group col-md-6">
-        <asp:Button ID="btnProductionWorkerAdd" CssClass="btn" runat="server" Text="+" />
+          <a id="btnProductionWorkerAdd" class="btn btn-new-row">+</a>
         </div>
 
     </div>
-
+    <!-- 
     <div class="report-wrapper clearfix">
         <div class="form-group col-md-12">
             <h1>Project</h1>
         </div>
 
         <div class="form-group col-md-12">
-          <label id="lblBidDate" for="txtBidDate">Bid Date</label>
-          <asp:TextBox ID="TextBox24" runat="server" class="form-control" placeholder="Business Name" TextMode="Date"></asp:TextBox>
+          <label id="lblBidDateProduction" for="txtBidDateProduction">Bid Date</label>
+          <asp:TextBox ID="txtBidDateProduction" runat="server" class="form-control" placeholder="Business Name" TextMode="Date"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
-          <label id="lblBidEstBeginDate" for="txtBidEstBeginDate">Estimated Begin Date</label>
-          <asp:TextBox ID="TextBox25" runat="server" class="form-control" placeholder="Contact Name" TextMode="Date"></asp:TextBox>
+          <label id="lblBidEstBeginDateProduction" for="txtBidEstBeginDateProduction">Estimated Begin Date</label>
+          <asp:TextBox ID="txtBidEstBeginDateProduction" runat="server" class="form-control" placeholder="Contact Name" TextMode="Date"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
-            <label id="lblBidEstComDate" for="txtBidEstComDate">Estimated Completion Date</label>
-            <asp:TextBox ID="TextBox26" class="form-control" placeholder="City" runat="server" TextMode="Date"></asp:TextBox>
+            <label id="lblBidEstComDateProduction" for="txtBidEstComDateProduction">Estimated Completion Date</label>
+            <asp:TextBox ID="txtBidEstComDateProduction" class="form-control" placeholder="City" runat="server" TextMode="Date"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
-            <label id="lblProjSite" for="txtProjSite">Project Site</label>
+            <label id="lblProjSiteProduction" for="txtProjSiteProduction">Project Site</label>
             <asp:TextBox ID="TextBox27" class="form-control" placeholder="Project Site" runat="server"></asp:TextBox>
         </div>      
         
@@ -404,40 +408,40 @@
         <asp:TextBox ID="TextBox28" class="form-control" placeholder="Estimated Cost" runat="server" TextMode="Email"></asp:TextBox>
         </div>
     </div>
-    
+    -->
+
     <div class="report-wrapper clearfix">
         <div class="form-group col-md-12">
             <h1>Material Requirements</h1>
         </div>
 
-        <div class="form-group col-md-6">
-          <label id="lblBusiness" for="txtClient">Description</label>
-          <asp:TextBox ID="TextBox29" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+        <div class="form-group col-md-3">
+          <label id="lblMaterialDescriptionProduction" for="txtMaterialDescriptionProduction">Description</label>
+          <asp:TextBox ID="txtMaterialDescriptionProduction" runat="server" class="form-control" placeholder="Material Name"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-3">
-          <label id="lblClient" for="txtClient">Quantity</label>
-          <asp:TextBox ID="TextBox30" runat="server" class="form-control" placeholder="Contact Name"></asp:TextBox>
+        <div class="form-group col-md-2">
+          <label id="lblMaterialQuantityProduction" for="txtMaterialQuantityProduction">Quantity</label>
+          <asp:TextBox ID="txtMaterialQuantityProduction" runat="server" class="form-control" placeholder="Quantity"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-3">
-            <label id="lblCity" for="txtCity">Size</label>
-            <asp:TextBox ID="TextBox31" class="form-control" placeholder="City" runat="server"></asp:TextBox>
+        <div class="form-group col-md-2">
+            <label id="lblMaterialSizeProduction" for="txtMaterialSizeProduction">Size</label>
+            <asp:TextBox ID="txtMaterialSizeProduction" class="form-control" placeholder="" runat="server"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-3">
-            <label id="lblAddress" for="txtAddress">Unit Price</label>
-            <asp:TextBox ID="TextBox32" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+        <div class="form-group col-md-2">
+            <label id="lblMaterialUnitPriceProduction" for="txtMaterialUnitPriceProduction">Price</label>
+            <asp:TextBox ID="txtMaterialUnitPriceProduction" class="form-control" placeholder="" runat="server"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-3">
-            <label id="lblAddress" for="txtAddress">Extended Price</label>
-            <asp:TextBox ID="TextBox33" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+        <div class="form-group col-md-2">
+            <label id="lblMaterialExtendedPriceProduction" for="txtMaterialExtendedPriceProduction">Total</label>
+            <asp:TextBox ID="txtMaterialExtendedPriceProduction" class="form-control" placeholder="" runat="server"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-3">
-            <label id="lblBusiness" for="txtClient">Description</label>
-        <asp:Button ID="Button3" CssClass="btn" runat="server" Text="+" />
+        <div class="form-group col-md-1">
+          <a id="btnProductionMaterialAdd" class="btn btn-new-row">+</a>
         </div>
         
     </div>
@@ -447,43 +451,38 @@
             <h1>Labour Requirements</h1>
         </div>
 
-        <div class="form-group col-md-6">
-          <label id="lblBusiness" for="txtClient">Description</label>
-          <asp:TextBox ID="TextBox34" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+        <div class="form-group col-md-4">
+          <label id="lblLabourDepartmentProduction" for="txtLabourDepartmentProduction">Department</label>
+          <asp:TextBox ID="txtLabourDepartmentProduction" runat="server" class="form-control" placeholder="Department"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
-          <label id="lblBusiness" for="txtClient">Hours</label>
-          <asp:TextBox ID="TextBox35" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+          <label id="lblLabourHoursProduction" for="txtLabourHoursProduction">Hours</label>
+          <asp:TextBox ID="txtLabourHoursProduction" runat="server" class="form-control" placeholder="Hours"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
-          <label id="lblBusiness" for="txtClient">Unit Price</label>
-          <asp:TextBox ID="TextBox36" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+          <label id="lblLabourUnitPriceProduction" for="txtLabourUnitPriceProduction">Unit Price</label>
+          <asp:TextBox ID="txtLabourUnitPriceProduction" runat="server" class="form-control" placeholder="Unit Price"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
-          <label id="lblBusiness" for="txtClient">Total</label>
-          <asp:TextBox ID="TextBox37" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+          <label id="lblLabourTotalPriceProduction" for="txtLabourTotalPriceProduction">Total</label>
+          <asp:TextBox ID="txtLabourTotalPriceProduction" runat="server" class="form-control" placeholder="Total"></asp:TextBox>
         </div>
         
-        <div class="form-group col-md-12">
-        <asp:Button ID="Button5" CssClass="btn" runat="server" Text="Insert Client" />
+        <div class="form-group col-md-2">
+          <a id="addLabourProduction" class="btn btn-new-row">+</a>
         </div>
     </div>
-    <div class="report-wrapper clearfix">
+    <div class="report-wrapper text-center clearfix">
         <div class="form-group col-md-12">
             <h1>Submit Form</h1>
         </div>
         <div class="form-group col-md-12">
-        <asp:Button ID="Button6" CssClass="btn" runat="server" Text="Submit" />
+          <asp:Button ID="Button6" CssClass="btn" runat="server" Text="Submit" />
         </div>
     </div>
     </div>
     </form>
-    <script>
-        $('.add-report h1').click(function () {
-            $('.report-list-section').slideToggle(300);
-        })
-    </script>
 </asp:Content>
