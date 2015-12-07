@@ -28,5 +28,17 @@ namespace NBDWebApp
         public virtual ICollection<PROD_TEAM> PROD_TEAM { get; set; }
         public virtual ICollection<PROJECT> PROJECTs { get; set; }
         public virtual WORKER_TYPE WORKER_TYPE { get; set; }
+
+        //Property to display only production workers
+        public string prodWorkerFName
+        {
+            get
+            {
+                if (this.wrkTypeID == 1)
+                    return this.wrkFName + " " + this.wrkLName;
+                else
+                    return null;
+            }
+        }
     }
 }
