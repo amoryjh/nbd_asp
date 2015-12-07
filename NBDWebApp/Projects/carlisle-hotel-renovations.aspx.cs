@@ -31,7 +31,8 @@ namespace NBDWebApp.Projects
 
             //Fill Production Worker Drop Down
             foreach (WORKER c in db.WORKERs)
-                this.ddlProductionWorkerNameProduction.Items.Add(c.prodWorkerFName);
+                if(c.prodWorkerFName != null)
+                    this.ddlProductionWorkerNameProduction.Items.Add(c.prodWorkerFName);
         }
     }
 }

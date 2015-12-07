@@ -3,7 +3,10 @@
     $('#preloader').delay(50).fadeOut('slow');
     $('body').delay(350).css({ 'overflow': 'visible' });
 });
-
+//Initialize DatePicker widget
+$(function () {
+    $(".datepicker").datepicker();
+});
 $('document').ready(function () {
     
   //Mobile menu animation

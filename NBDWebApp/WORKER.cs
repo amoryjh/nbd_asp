@@ -34,10 +34,10 @@ namespace NBDWebApp
         {
             get
             {
-                if (this.wrkTypeID == 1)
-                    return this.wrkFName + " " + this.wrkLName;
-                else
+                if (this.wrkTypeID != 1)
                     return null;
+                else
+                    return this.wrkFName + " " + this.wrkLName;
             }
         }
     }

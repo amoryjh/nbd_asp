@@ -198,17 +198,17 @@
 
         <div class="form-group col-md-4">
           <label id="lblBidDateDesign" for="txtBidDateDesign">Bid Date</label>
-          <asp:TextBox ID="txtBidDateDesign" runat="server" class="form-control" placeholder="Business Name" TextMode="Date"></asp:TextBox>
+          <asp:TextBox ID="txtBidDateDesign" runat="server" class="form-control datepicker" placeholder="Business Name" ></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
           <label id="lblBidEstBeginDateDesign" for="txtBidEstBeginDateDesign">Begin Date</label>
-          <asp:TextBox ID="txtBidEstBeginDateDesign" runat="server" class="form-control" placeholder="Contact Name" TextMode="Date"></asp:TextBox>
+          <asp:TextBox ID="txtBidEstBeginDateDesign" runat="server" class="form-control datepicker" placeholder="Begin Date"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
             <label id="lblBidEstComDateDesign" for="txtBidEstComDateDesign">Completion Date</label>
-            <asp:TextBox ID="txtBidEstComDateDesign" class="form-control" placeholder="City" runat="server" TextMode="Date"></asp:TextBox>
+            <asp:TextBox ID="txtBidEstComDateDesign" class="form-control datepicker" placeholder="Completion Date" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
