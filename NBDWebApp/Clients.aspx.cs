@@ -24,7 +24,26 @@ namespace NBDWebApp
         this.ddlClientName.Items.Add(c.cliName);
       foreach (CLIENT c in db.CLIENTs )
         this.ddlClientContact.Items.Add(c.cliConFName + " " + c.cliConLName);
-    
-     }
+      List<CLIENT> cList = new List<CLIENT>();
+      List<PROJECT> pList = new List<PROJECT>();
+
+      foreach (CLIENT c in db.CLIENTs)
+      {
+        CLIENT clientStuff = new CLIENT();
+        clientStuff.cliConFName = c.cliConFName;
+        clientStuff.cliConLName = c.cliConLName;
+        clientStuff.cliConPosition = c.cliConPosition;
+        cList.Add(clientStuff);
+      }
+      foreach (PROJECT p in db.PROJECTs)
+      {
+        PROJECT project = new PROJECT();
+        project.projName = p.projName;
+        pList.Add(project);
+      }
+
+      clients.DataSource = cList;
+      clients.DataBind(); 
+    }
   }
 }

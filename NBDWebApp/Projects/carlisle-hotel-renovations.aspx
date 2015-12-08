@@ -318,12 +318,12 @@
         
         <div class="form-group col-md-4">
           <label id="lblBeginDateProduction" for="txtBeginDateProduction">Begin Date</label>
-          <asp:TextBox ID="txtBeginDateProduction" runat="server" class="form-control" placeholder="Contact Name" TextMode="Date"></asp:TextBox>
+          <asp:TextBox ID="txtBeginDateProduction" runat="server" class="form-control datepicker" placeholder="Begin Date"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
             <label id="lblComDateProduction" for="txtComDateProdcution">Completion Date</label>
-            <asp:TextBox ID="txtComDateProdcution" class="form-control" runat="server" TextMode="Date"></asp:TextBox>
+            <asp:TextBox ID="txtComDateProdcution" class="form-control datepicker" placeholder="Completion Date" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
@@ -427,17 +427,17 @@
 
         <div class="form-group col-md-2">
             <label id="lblMaterialSizeProduction" for="txtMaterialSizeProduction">Size</label>
-            <asp:TextBox ID="txtMaterialSizeProduction" class="form-control" placeholder="" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtMaterialSizeProduction" class="form-control" placeholder="Size" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
             <label id="lblMaterialUnitPriceProduction" for="txtMaterialUnitPriceProduction">Price</label>
-            <asp:TextBox ID="txtMaterialUnitPriceProduction" class="form-control" placeholder="" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtMaterialUnitPriceProduction" class="form-control" placeholder="Price" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
             <label id="lblMaterialExtendedPriceProduction" for="txtMaterialExtendedPriceProduction">Total</label>
-            <asp:TextBox ID="txtMaterialExtendedPriceProduction" class="form-control" placeholder="" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtMaterialExtendedPriceProduction" class="form-control" placeholder="Total" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-1">
@@ -451,7 +451,7 @@
             <h1>Labour Requirements</h1>
         </div>
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-5">
           <label id="lblLabourDepartmentProduction" for="txtLabourDepartmentProduction">Department</label>
           <asp:TextBox ID="txtLabourDepartmentProduction" runat="server" class="form-control" placeholder="Department"></asp:TextBox>
         </div>
@@ -471,7 +471,7 @@
           <asp:TextBox ID="txtLabourTotalPriceProduction" runat="server" class="form-control" placeholder="Total"></asp:TextBox>
         </div>
         
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-1">
           <a id="addLabourProduction" class="btn btn-new-row">+</a>
         </div>
     </div>

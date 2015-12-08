@@ -65,7 +65,7 @@ $('document').ready(function () {
 
     $('.btn-new-row').click(function () {
       var theParent  = $(this).parent().parent('.report-wrapper'),//shortcut reference
-          $theClonee = $(this).parent().parent('.report-wrapper').clone(); //copy all html of parent 
+          $theClonee = $(theParent).clone(); //copy all html of parent 
       $theClonee.removeClass('report-wrapper');//also remove the extra padding
       $(this).hide();//hide btn just clicked
       theParent.append($theClonee);//throw copied html at bottom of div

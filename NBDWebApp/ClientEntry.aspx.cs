@@ -22,6 +22,7 @@ namespace NBDWebApp
             NBD_DatabaseEntities db = new NBD_DatabaseEntities();
             foreach (CITY c in db.CITies)
                 this.ddlCity.Items.Add(c.city1);
+
         }
 
         protected void btnInsert_Click(object sender, EventArgs e)

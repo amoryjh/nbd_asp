@@ -32,5 +32,16 @@
       </div>
     </div>
   </div>
+  <div class="row col-md-12 clearfix client-listings">
+     <asp:Repeater id="clients" runat="server">
+      <ItemTemplate>
+         <div class="col-md-6">
+          <p><%# Eval("cliConFName") %></p>
+          <p><%# Eval("cliConLName") %></p>
+          <p><%# Eval("cliConPosition") %></p>
+        </div>
+      </ItemTemplate>
+    </asp:Repeater>
+  </div>
 </form>
 </asp:Content>
