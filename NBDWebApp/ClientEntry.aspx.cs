@@ -31,7 +31,7 @@ namespace NBDWebApp
             CLIENT c = new CLIENT();
             c.cliName = this.txtBusiness.Text;
             c.cliAddress = this.txtAddress.Text;
-            c.cityID = this.ddlCity.SelectedIndex;
+            c.cityID = this.ddlCity.SelectedIndex+1;
             c.cliProvince = this.ddlProv.SelectedValue;
             c.cliPCode = this.txtPCode.Text;
             c.cliPhone = this.txtPhone.Text;
