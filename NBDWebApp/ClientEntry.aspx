@@ -89,7 +89,7 @@
         </div>
 
         <div class="form-group col-md-6">
-        <asp:Button ID="btnInsert" CssClass="btn" runat="server" Text="Insert Client" />
+        <asp:Button ID="btnInsert" CssClass="btn" runat="server" Text="Insert Client" OnClick="btnInsert_Click" />
         </div>
     </div>
     </div>

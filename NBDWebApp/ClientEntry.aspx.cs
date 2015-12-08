@@ -23,5 +23,24 @@ namespace NBDWebApp
             foreach (CITY c in db.CITies)
                 this.ddlCity.Items.Add(c.city1);
         }
+
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            //Inserting new client into databse
+            NBD_DatabaseEntities db = new NBD_DatabaseEntities();
+            CLIENT c = new CLIENT();
+            c.cliName = this.txtBusiness.Text;
+            c.cliAddress = this.txtAddress.Text;
+            c.cityID = this.ddlCity.SelectedIndex;
+            c.cliProvince = this.ddlProv.SelectedValue;
+            c.cliPCode = this.txtPCode.Text;
+            c.cliPhone = this.txtPhone.Text;
+            c.cliConFName = this.txtClientFName.Text;
+            c.cliConLName = this.txtClientLName.Text;
+            c.cliConPosition = this.txtClientPos.Text;
+
+            db.CLIENTs.Add(c);
+            db.SaveChanges();
+        }
     }
 }
