@@ -70,4 +70,10 @@ $('document').ready(function () {
       $(this).hide();//hide btn just clicked
       theParent.append($theClonee);//throw copied html at bottom of div
     });
+    
+    //Client Listings Page -- Display Message if database fields be empty
+    $(".client-listings span.highlight-change").each(function () {
+      //alert($(this).html());
+      if ($(this).text() == "" || $(this).text().length <= 3) { $(this).text("This field appears to be empty! :O") }
+    });
 });

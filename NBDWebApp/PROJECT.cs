@@ -11,7 +11,6 @@ namespace NBDWebApp
 {
     using System;
     using System.Collections.Generic;
-    
     public partial class PROJECT
     {
         public PROJECT()
@@ -45,5 +44,15 @@ namespace NBDWebApp
         public virtual ICollection<PROD_TEAM> PROD_TEAM { get; set; }
         public virtual ICollection<PROD_TOOL> PROD_TOOL { get; set; }
         public virtual WORKER WORKER { get; set; }
+
+        public string cliName { get; set; }
+        public string cliConPosition { get; set; }
+        public string cliConLName { get; set; }
+        public string cliConFName { get; set; }
+        public string cliPhone { get; set; }
+        public string cliPCode { get; set; }
+        public string cliProvince { get; set; }
+        public string cliCity { get; set; }
+        public string cliAddress { get; set; }
     }
 }

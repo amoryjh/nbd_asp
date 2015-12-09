@@ -17,7 +17,7 @@
       <button type="button" class="btn btn-danger">U-Z</button>
     </div>
   </div>  
-  <div class="col-md-11 client-search-main form-group clearfix">
+  <div class="col-md-12 client-search-main clearfix">
     <h3 >Filter By:</h3>
     <div class="well clearfix">
       <div class="form-group col-md-6">
@@ -32,13 +32,40 @@
       </div>
     </div>
   </div>
-  <div class="row col-md-12 clearfix client-listings">
-     <asp:Repeater id="clients" runat="server">
+  <div class="col-md-12 clearfix client-listings">
+    <asp:Repeater id="Projects" runat="server">
       <ItemTemplate>
-         <div class="col-md-6">
-          <p><%# Eval("cliConFName") %></p>
-          <p><%# Eval("cliConLName") %></p>
-          <p><%# Eval("cliConPosition") %></p>
+        <div class="project-instance box-border clearfix">
+          <div class="project-instance-title">
+            <h2 class="project-title"><a href=""><%# Eval("cliName") %></a></h2>
+            <p class="project-update-date">Contact : <%# Eval("cliConFName") %> <%# Eval("cliConLName") %>, <%# Eval("cliConPosition") %></p>
+          </div>
+          <div class="updated-list well col-md-10 col-md-offset-1">   
+            <h3>Contact Details</h3>
+            <ul>
+              <li><a href="">Phone: <span class="highlight-change"><%#Eval("cliPhone")%></span></a></li>
+              <li><a href="">Project Site: <span class="highlight-change"><%#Eval("cliAddress")%> <%#Eval("cliProvince")%></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </ItemTemplate>
+    </asp:Repeater>
+
+    <h2 class="text-center section-title">These Clients don't have any projects yet.</h2>
+    <asp:Repeater id="sansProjects" runat="server">
+      <ItemTemplate>
+        <div class="project-instance box-border clearfix">
+          <div class="project-instance-title">
+              <h2 class="project-title"><a href=""><%#Eval("cliName") %></a></h2>
+              <p class="project-update-date">Contact: <%#Eval("cliConFName")%> <%# Eval("cliConLName") %>, <%# Eval("cliConPosition") %></p>
+          </div>
+          <div class="updated-list well col-md-10 col-md-offset-1">   
+            <h3>Contact Details</h3>
+            <ul>
+              <li><a href="">Phone: <span class="highlight-change"><%#Eval("cliPhone")%></span></a></li>
+              <li><a href="">Project Site: <span class="highlight-change"><%#Eval("cliAddress")%> <%#Eval("cliProvince")%></span></a></li>
+            </ul>
+          </div>
         </div>
       </ItemTemplate>
     </asp:Repeater>
