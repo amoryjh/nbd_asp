@@ -26,6 +26,8 @@ namespace NBDWebApp
         this.ddlClientName.Items.Add(c.cliName);
       foreach (CLIENT c in db.CLIENTs)
         this.ddlClientContact.Items.Add(c.cliConFName + " " + c.cliConLName);
+      foreach (CITY c in db.CITies)
+          this.ddlCityProjectFilter.Items.Add(c.city1);
 
       List<CLIENT> cList = new List<CLIENT>();
       foreach (CLIENT c in db.CLIENTs)

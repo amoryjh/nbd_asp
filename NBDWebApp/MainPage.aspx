@@ -7,14 +7,19 @@
     <h1 class="section-title">Recent Projects</h1>
         <h3 >Filter By:</h3>
     <div class="well clearfix">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
             <label>Client Name</label>
             <asp:DropDownList ID="ddlClientName" class="form-control" runat="server">
             </asp:DropDownList>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
             <label>Completion Date</label>
             <asp:DropDownList ID="ddlProject" class="form-control" runat="server">
+            </asp:DropDownList>
+        </div>
+        <div class="form-group col-md-4">
+            <label>City</label>
+            <asp:DropDownList ID="ddlCityProjectFilter" class="form-control" runat="server">
             </asp:DropDownList>
         </div>
     </div>

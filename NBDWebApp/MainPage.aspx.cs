@@ -20,7 +20,10 @@ namespace NBDWebApp
           this.ddlClientName.Items.Add(c.cliName);
               
         foreach (PROJECT c in db.PROJECTs)
-          this.ddlProject.Items.Add(c.projEstEnd);         
+          this.ddlProject.Items.Add(c.projEstEnd);
+
+        foreach (CITY c in db.CITies)
+            this.ddlCityProjectFilter.Items.Add(c.city1);
       }
     }
   }
