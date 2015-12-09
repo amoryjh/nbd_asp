@@ -73,7 +73,6 @@
       </ItemTemplate>
     </asp:Repeater>
 
-    <h2 class="text-center section-title">These Clients don't have any projects yet.</h2>
     <asp:Repeater id="sansProjects" runat="server">
       <ItemTemplate>
         <div class="project-instance box-border clearfix">
@@ -86,6 +85,12 @@
             <ul>
               <li>Phone: <span class="highlight-change"><%#Eval("cliPhone")%></span></li>
               <li>Project Site: <span class="highlight-change"><%#Eval("cliAddress")%> <%#Eval("cliProvince")%></span></li>
+            </ul>
+          </div>
+          <div class="updated-list well col-md-10 col-md-offset-1">   
+            <h3>Project Details</h3>
+            <ul>
+                <li><span class="highlight-change">This project doesn't exist yet.</span></a></li>
             </ul>
           </div>
         </div>
