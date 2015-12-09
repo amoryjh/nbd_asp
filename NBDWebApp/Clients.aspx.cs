@@ -79,5 +79,9 @@ namespace NBDWebApp
       Projects.DataSource = pList;
       Projects.DataBind();
     }
+
+    protected void ddlClientName_SelectedIndexChanged(object sender, EventArgs e)
+    {
+    }
   }
 }  

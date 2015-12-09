@@ -54,5 +54,10 @@ namespace NBDWebApp
         public string cliProvince { get; set; }
         public string cliCity { get; set; }
         public string cliAddress { get; set; }
+
+        public string cliNameAsID
+        {
+          get { return System.Text.RegularExpressions.Regex.Replace(cliName, @"\W", string.Empty).ToLower(); }
+        }
     }
 }

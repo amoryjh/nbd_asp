@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Clients.aspx.cs" Inherits="NBDWebApp.Clients" %>
+﻿<%@ Page Title="Clients Directory" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Clients.aspx.cs" Inherits="NBDWebApp.Clients" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
@@ -22,7 +22,7 @@
     <div class="well clearfix">
       <div class="form-group col-md-6">
         <label>Client Name</label>
-        <asp:DropDownList ID="ddlClientName" class="form-control" runat="server">
+        <asp:DropDownList ID="ddlClientName" class="form-control" runat="server" OnSelectedIndexChanged="ddlClientName_SelectedIndexChanged" AutoPostBack="True">
         </asp:DropDownList>
       </div>
       <div class="form-group col-md-6">
@@ -35,7 +35,7 @@
   <div class="col-md-12 clearfix client-listings">
     <asp:Repeater id="Projects" runat="server">
       <ItemTemplate>
-        <div class="project-instance box-border clearfix">
+        <div class="project-instance box-border clearfix" id="<%# Eval("cliNameAsID") %>">
           <div class="project-instance-title">
             <h2 class="project-title"><a href=""><%# Eval("cliName") %></a></h2>
             <p class="project-update-date">Contact : <%# Eval("cliConFName") %> <%# Eval("cliConLName") %>, <%# Eval("cliConPosition") %></p>

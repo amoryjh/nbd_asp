@@ -20,7 +20,7 @@ namespace NBDWebApp
                 CookieName = "NBDCookie",
                 LoginPath = new PathString("/LogIn"),
                 LogoutPath = new PathString("/LogIn"),
-                ExpireTimeSpan = System.TimeSpan.FromMinutes(5)
+                ExpireTimeSpan = System.TimeSpan.FromMinutes(50)
             });
         }
     }
