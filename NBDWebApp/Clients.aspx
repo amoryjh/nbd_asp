@@ -23,7 +23,7 @@
     <div class="well clearfix">
       <div class="form-group col-md-4">
         <label>Client Name</label>
-        <asp:DropDownList ID="ddlClientName" class="form-control" runat="server" OnSelectedIndexChanged="ddlClientName_SelectedIndexChanged" AutoPostBack="True">
+        <asp:DropDownList ID="ddlClientName" class="form-control" runat="server">
         </asp:DropDownList>
       </div>
       <div class="form-group col-md-4">
@@ -41,7 +41,7 @@
   <div class="col-md-12 clearfix client-listings">
     <asp:Repeater id="Projects" runat="server">
       <ItemTemplate>
-        <div class="project-instance box-border clearfix" id="<%# Eval("cliNameAsID") %>">
+        <div class="project-instance box-border clearfix" id="<%#Eval("cliName")%>">
           <div class="project-instance-title">
             <h2 class="project-title"><%# Eval("cliName") %></h2>
             <p class="project-update-date">Contact : <%# Eval("cliConFName") %> <%# Eval("cliConLName") %>, <%# Eval("cliConPosition") %></p>
@@ -75,7 +75,7 @@
 
     <asp:Repeater id="sansProjects" runat="server">
       <ItemTemplate>
-        <div class="project-instance box-border clearfix">
+        <div class="project-instance box-border clearfix" id="<%#Eval("cliName")%>">
           <div class="project-instance-title">
               <h2 class="project-title"><%#Eval("cliName") %></h2>
               <p class="project-update-date">Contact: <%#Eval("cliConFName")%> <%# Eval("cliConLName") %>, <%# Eval("cliConPosition") %></p>
@@ -98,22 +98,4 @@
     </asp:Repeater>
   </div>
 </form>
-  <script>
-    $('.view-all').click(function () {
-      $(".project-instance").fadeIn('fast');
-    })
-    $('button.btn-sort').click(function () {
-      var attrr = $(this).attr('value');
-      console.log(attrr);
-      $('h2.project-title').each(function () {
-        //if($(this).text().charAt(0) == attrr.charAt(0) || $(this).text().charAt(0) == attrr.charAt(1) || $(this).text().charAt(0) == attrr.charAt(2) || $(this).text().charAt(0) == attrr.charAt(3) || $(this).text().charAt(0) == attrr.charAt(4) || $(this).text().charAt(0) == attrr.charAt(5)) {
-        var $thisText = $(this).text().toLowerCase();
-        if ($thisText.charAt(0) == attrr.charAt(0) || $thisText.charAt(0) == attrr.charAt(1) || $thisText.charAt(0) == attrr.charAt(2) || $thisText.charAt(0) == attrr.charAt(3) || $thisText.charAt(0) == attrr.charAt(4) || $thisText.charAt(0) == attrr.charAt(5))
-        {
-          $(".project-instance").hide();
-          $(this).parent().parent('.project-instance').fadeIn('fast');
-        } 
-      })
-    })
-  </script>
 </asp:Content>

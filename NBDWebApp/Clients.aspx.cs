@@ -23,9 +23,9 @@ namespace NBDWebApp
 
       //Fill Dropdownlists
       foreach (CLIENT c in db.CLIENTs)
-        this.ddlClientName.Items.Add(c.cliName);
+        this.ddlClientName.Items.Add(c.cliName.Trim());
       foreach (CLIENT c in db.CLIENTs)
-        this.ddlClientContact.Items.Add(c.cliConFName + " " + c.cliConLName);
+        this.ddlClientContact.Items.Add(c.cliConFName.Trim() + " " + c.cliConLName.Trim());
       foreach (CITY c in db.CITies)
           this.ddlCityProjectFilter.Items.Add(c.city1);
 
@@ -33,10 +33,10 @@ namespace NBDWebApp
       foreach (CLIENT c in db.CLIENTs)
       {
         CLIENT clientStuff = new CLIENT();
-        clientStuff.cliName = c.cliName;
-        clientStuff.cliConFName = c.cliConFName;
-        clientStuff.cliConLName = c.cliConLName;
-        clientStuff.cliConPosition = c.cliConPosition;
+        clientStuff.cliName = c.cliName.Trim();
+        clientStuff.cliConFName = c.cliConFName.Trim();
+        clientStuff.cliConLName = c.cliConLName.Trim();
+        clientStuff.cliConPosition = c.cliConPosition.Trim();
         //Only Add in Client If they Have no projects created yet.
         if (c.PROJECTs.Count == 0)
           cList.Add(clientStuff);
@@ -51,39 +51,35 @@ namespace NBDWebApp
       {
         PROJECT projectStuff = new PROJECT();
 
-        projectStuff.projName = c.projName;
-        projectStuff.projSite = c.projSite;
+        projectStuff.projName = c.projName.Trim();
+        projectStuff.projSite = c.projSite.Trim();
         projectStuff.projBidDate = c.projBidDate;
-        projectStuff.projEstStart = c.projEstStart;
-        projectStuff.projEstEnd = c.projEstEnd;
-        projectStuff.projActStart = c.projActStart;
-        projectStuff.projActEnd = c.projActEnd;
-        projectStuff.projActCost = c.projActCost;
+        projectStuff.projEstStart = c.projEstStart.Trim();
+        projectStuff.projEstEnd = c.projEstEnd.Trim();
+        projectStuff.projActStart = c.projActStart.Trim();
+        projectStuff.projActEnd = c.projActEnd.Trim();
+        projectStuff.projActCost = c.projActCost.Trim();
         projectStuff.projBidCustAccept = c.projBidCustAccept;
         projectStuff.projBidMgmtAccept = c.projBidMgmtAccept;
-        projectStuff.projCurrentPhase = c.projCurrentPhase;
+        projectStuff.projCurrentPhase = c.projCurrentPhase.Trim();
         projectStuff.projIsFlagged = c.projIsFlagged;
 
         //Client Stuff
-        projectStuff.cliName = c.CLIENT.cliName;
-        projectStuff.cliAddress = c.CLIENT.cliAddress;
-        projectStuff.cliCity = c.CLIENT.CITY.city1;
-        projectStuff.cliProvince = c.CLIENT.cliProvince;
-        projectStuff.cliPCode = c.CLIENT.cliPCode;
-        projectStuff.cliPhone = c.CLIENT.cliPhone;
-        projectStuff.cliConFName = c.CLIENT.cliConFName;
-        projectStuff.cliConLName = c.CLIENT.cliConLName;
-        projectStuff.cliConPosition = c.CLIENT.cliConPosition;
+        projectStuff.cliName = c.CLIENT.cliName.Trim();
+        projectStuff.cliAddress = c.CLIENT.cliAddress.Trim();
+        projectStuff.cliCity = c.CLIENT.CITY.city1.Trim();
+        projectStuff.cliProvince = c.CLIENT.cliProvince.Trim();
+        projectStuff.cliPCode = c.CLIENT.cliPCode.Trim();
+        projectStuff.cliPhone = c.CLIENT.cliPhone.Trim();
+        projectStuff.cliConFName = c.CLIENT.cliConFName.Trim();
+        projectStuff.cliConLName = c.CLIENT.cliConLName.Trim();
+        projectStuff.cliConPosition = c.CLIENT.cliConPosition.Trim();
 
         //Add everything to the list
         pList.Add(projectStuff);
       }
       Projects.DataSource = pList;
       Projects.DataBind();
-    }
-
-    protected void ddlClientName_SelectedIndexChanged(object sender, EventArgs e)
-    {
     }
   }
 }  
