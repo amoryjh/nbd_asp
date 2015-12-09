@@ -20,15 +20,20 @@
   <div class="col-md-12 client-search-main clearfix">
     <h3 >Filter By:</h3>
     <div class="well clearfix">
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-4">
         <label>Client Name</label>
         <asp:DropDownList ID="ddlClientName" class="form-control" runat="server" OnSelectedIndexChanged="ddlClientName_SelectedIndexChanged" AutoPostBack="True">
         </asp:DropDownList>
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-4">
         <label>Contact Name</label>
         <asp:DropDownList ID="ddlClientContact" class="form-control" runat="server">
         </asp:DropDownList>
+      </div>
+      <div class="form-group col-md-4">
+            <label>City</label>
+            <asp:DropDownList ID="ddlCityProjectFilter" class="form-control" runat="server">
+            </asp:DropDownList>
       </div>
     </div>
   </div>
