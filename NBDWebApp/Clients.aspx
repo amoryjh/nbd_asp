@@ -52,6 +52,22 @@
               <li><a href="">Project Site: <span class="highlight-change"><%#Eval("cliAddress")%> <%#Eval("cliProvince")%></span></a></li>
             </ul>
           </div>
+          <div class="updated-list well col-md-10 col-md-offset-1">   
+            <h3>Project Details</h3>
+            <ul>
+                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projName")%></span></a></li>
+                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projSite")%></span></a></li>
+                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projBidDate")%></span></a></li>
+                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projActCost")%></span></a></li>
+            </ul>
+              <hr />
+            <ul>
+                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projName")%></span></a></li>
+                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projSite")%></span></a></li>
+                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projBidDate")%></span></a></li>
+                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projActCost")%></span></a></li>
+            </ul>
+          </div>
         </div>
       </ItemTemplate>
     </asp:Repeater>
