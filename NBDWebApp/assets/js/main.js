@@ -76,4 +76,16 @@ $('document').ready(function () {
       //alert($(this).html());
       if ($(this).text() == "" || $(this).text().length <= 3) { $(this).text("This field appears to be empty! :O") }
     });
+
+  //Get Todays Date -- For report started field 
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+    var todaysBidDate = mm + '/' + dd + '/' + yyyy;
+    function toDay() {
+      return mm + '/' + dd + '/' + yyyy;
+    }
+    console.log(toDay());
+    $('#ContentPlaceHolder2_txtBidDateDesign').val(toDay());
 });
