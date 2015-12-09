@@ -107,7 +107,7 @@ $('document').ready(function () {
       })
     })
     $('#ContentPlaceHolder2_ddlClientName').change(function () {
-      $('.project-instance').fadeIn('slow');
+      $('.project-instance').show();
       var valueThing = $(this).val();
       $('.project-instance').each(function () {
         if ($(this).attr('id') == valueThing) {
@@ -117,7 +117,7 @@ $('document').ready(function () {
       })
     })
     $('#ContentPlaceHolder2_ddlClientContact').change(function () {
-      $('.project-instance').show('');
+      $('.project-instance').show();
       var childString = $(this).val();
       $('.project-instance').each(function () {
         var mainString = $(this).children().text();
