@@ -9,12 +9,13 @@
   </p>
   <div class="col-md-1 client-search-aside clearfix">
     <div class="btn-group-vertical">
-      <button type="button" class="btn btn-danger">A-D</button>
-      <button type="button" class="btn btn-danger">E-H</button>
-      <button type="button" class="btn btn-danger">I-L</button>
-      <button type="button" class="btn btn-danger">M-P</button>
-      <button type="button" class="btn btn-danger">Q-T</button>
-      <button type="button" class="btn btn-danger">U-Z</button>
+      <button type="button" class="btn btn-danger view-all">ALL</button>
+      <button type="button" class="btn btn-danger btn-sort" value="abcd">A-D</button>
+      <button type="button" class="btn btn-danger btn-sort" value="efgh">E-H</button>
+      <button type="button" class="btn btn-danger btn-sort" value="ijkl">I-L</button>
+      <button type="button" class="btn btn-danger btn-sort" value="mnop">M-P</button>
+      <button type="button" class="btn btn-danger btn-sort" value="qrst">Q-T</button>
+      <button type="button" class="btn btn-danger btn-sort" value="uvwxyz">U-Z</button>
     </div>
   </div>  
   <div class="col-md-12 client-search-main clearfix">
@@ -42,30 +43,30 @@
       <ItemTemplate>
         <div class="project-instance box-border clearfix" id="<%# Eval("cliNameAsID") %>">
           <div class="project-instance-title">
-            <h2 class="project-title"><a href=""><%# Eval("cliName") %></a></h2>
+            <h2 class="project-title"><%# Eval("cliName") %></h2>
             <p class="project-update-date">Contact : <%# Eval("cliConFName") %> <%# Eval("cliConLName") %>, <%# Eval("cliConPosition") %></p>
           </div>
           <div class="updated-list well col-md-10 col-md-offset-1">   
             <h3>Contact Details</h3>
             <ul>
-              <li><a href="">Phone: <span class="highlight-change"><%#Eval("cliPhone")%></span></a></li>
-              <li><a href="">Project Site: <span class="highlight-change"><%#Eval("cliAddress")%> <%#Eval("cliProvince")%></span></a></li>
+              <li>Phone: <span class="highlight-change"><%#Eval("cliPhone")%></span></li>
+              <li>Project Site: <span class="highlight-change"><%#Eval("cliAddress")%> <%#Eval("cliProvince")%></span></li>
             </ul>
           </div>
           <div class="updated-list well col-md-10 col-md-offset-1">   
             <h3>Project Details</h3>
             <ul>
-                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projName")%></span></a></li>
-                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projSite")%></span></a></li>
-                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projBidDate")%></span></a></li>
-                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projActCost")%></span></a></li>
+                <li>Project Name: <span class="highlight-change"><%#Eval("projName")%></span></a></li>
+                <li>Project Name: <span class="highlight-change"><%#Eval("projSite")%></span></li>
+                <li>Project Name: <span class="highlight-change"><%#Eval("projBidDate")%></span></li>
+                <li>Project Name: <span class="highlight-change"><%#Eval("projActCost")%></span></li>
             </ul>
               <hr />
             <ul>
-                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projName")%></span></a></li>
-                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projSite")%></span></a></li>
-                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projBidDate")%></span></a></li>
-                <li><a href="">Project Name: <span class="highlight-change"><%#Eval("projActCost")%></span></a></li>
+                <li>Project Name: <span class="highlight-change"><%#Eval("projName")%></span></li>
+                <li>Project Name: <span class="highlight-change"><%#Eval("projSite")%></span></li>
+                <li>Project Name: <span class="highlight-change"><%#Eval("projBidDate")%></span></li>
+                <li>Project Name: <span class="highlight-change"><%#Eval("projActCost")%></span></li>
             </ul>
           </div>
         </div>
@@ -77,14 +78,14 @@
       <ItemTemplate>
         <div class="project-instance box-border clearfix">
           <div class="project-instance-title">
-              <h2 class="project-title"><a href=""><%#Eval("cliName") %></a></h2>
+              <h2 class="project-title"><%#Eval("cliName") %></h2>
               <p class="project-update-date">Contact: <%#Eval("cliConFName")%> <%# Eval("cliConLName") %>, <%# Eval("cliConPosition") %></p>
           </div>
           <div class="updated-list well col-md-10 col-md-offset-1">   
             <h3>Contact Details</h3>
             <ul>
-              <li><a href="">Phone: <span class="highlight-change"><%#Eval("cliPhone")%></span></a></li>
-              <li><a href="">Project Site: <span class="highlight-change"><%#Eval("cliAddress")%> <%#Eval("cliProvince")%></span></a></li>
+              <li>Phone: <span class="highlight-change"><%#Eval("cliPhone")%></span></li>
+              <li>Project Site: <span class="highlight-change"><%#Eval("cliAddress")%> <%#Eval("cliProvince")%></span></li>
             </ul>
           </div>
         </div>
@@ -92,4 +93,22 @@
     </asp:Repeater>
   </div>
 </form>
+  <script>
+    $('.view-all').click(function () {
+      $(".project-instance").fadeIn('fast');
+    })
+    $('button.btn-sort').click(function () {
+      var attrr = $(this).attr('value');
+      console.log(attrr);
+      $('h2.project-title').each(function () {
+        //if($(this).text().charAt(0) == attrr.charAt(0) || $(this).text().charAt(0) == attrr.charAt(1) || $(this).text().charAt(0) == attrr.charAt(2) || $(this).text().charAt(0) == attrr.charAt(3) || $(this).text().charAt(0) == attrr.charAt(4) || $(this).text().charAt(0) == attrr.charAt(5)) {
+        var $thisText = $(this).text().toLowerCase();
+        if ($thisText.charAt(0) == attrr.charAt(0) || $thisText.charAt(0) == attrr.charAt(1) || $thisText.charAt(0) == attrr.charAt(2) || $thisText.charAt(0) == attrr.charAt(3) || $thisText.charAt(0) == attrr.charAt(4) || $thisText.charAt(0) == attrr.charAt(5))
+        {
+          $(".project-instance").hide();
+          $(this).parent().parent('.project-instance').fadeIn('fast');
+        } 
+      })
+    })
+  </script>
 </asp:Content>
