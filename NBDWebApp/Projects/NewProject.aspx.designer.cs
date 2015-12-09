@@ -31,6 +31,24 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.TextBox txtProjName;
         
         /// <summary>
+        /// txtProjSite control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtProjSite;
+        
+        /// <summary>
+        /// txtBidDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBidDate;
+        
+        /// <summary>
         /// ddlClientName control.
         /// </summary>
         /// <remarks>

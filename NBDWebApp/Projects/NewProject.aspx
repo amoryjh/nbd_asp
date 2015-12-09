@@ -13,6 +13,14 @@
           <asp:TextBox ID="txtProjName" runat="server" class="form-control" placeholder="Project Name"></asp:TextBox>
         </div>
         <div class="form-group col-md-6">
+          <label id="lblProjSite" for="txtProjSite">Project Name</label>
+          <asp:TextBox ID="txtProjSite" runat="server" class="form-control" placeholder="Project Site"></asp:TextBox>
+        </div>
+        <div class="form-group col-md-6">
+          <label id="lblBidDate" for="txtBidDate">Bid Date</label>
+          <asp:TextBox ID="txtBidDate" runat="server" class="form-control" placeholder="Bid Date"></asp:TextBox>
+        </div>
+        <div class="form-group col-md-6">
             <label>Client</label>
             <asp:DropDownList ID="ddlClientName" class="form-control" runat="server">
             </asp:DropDownList>
