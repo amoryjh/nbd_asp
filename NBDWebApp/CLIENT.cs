@@ -32,5 +32,7 @@ namespace NBDWebApp
     
         public virtual CITY CITY { get; set; }
         public virtual ICollection<PROJECT> PROJECTs { get; set; }
+
+        public string cliCity { get; set; }
     }
 }

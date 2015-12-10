@@ -86,7 +86,6 @@ $('document').ready(function () {
     function toDay() {
       return mm + '/' + dd + '/' + yyyy;
     }
-    console.log(toDay());
     $('#ContentPlaceHolder2_txtBidDateDesign').val(toDay());
 
 
@@ -126,8 +125,19 @@ $('document').ready(function () {
           $('.project-instance').fadeOut('fast');
           $(this).fadeIn('slow')
         }
-            
       })
     })
-    
+
+    $('#ContentPlaceHolder2_ddlCityProjectFilter').change(function () {
+      $('.project-instance').show();
+      var childString = $(this).val();
+      $('.project-instance').each(function () {
+        var mainString = $(this).children().text();
+        var stringSoln = mainString.indexOf(childString) > -1;
+        if (stringSoln) {
+          $('.project-instance').fadeOut('fast');
+          $(this).fadeIn('slow')
+        }
+      })
+    })
 });

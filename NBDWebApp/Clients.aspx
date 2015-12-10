@@ -51,17 +51,18 @@
             <ul>
               <li>Phone: <span class="highlight-change"><%#Eval("cliPhone")%></span></li>
               <li>Project Site: <span class="highlight-change"><%#Eval("cliAddress")%> <%#Eval("cliProvince")%></span></li>
+              <li id="city-string">Client City: <span class="highlight-change"><%#Eval("cliCity")%></span></li>
             </ul>
           </div>
           <div class="updated-list well col-md-10 col-md-offset-1">   
             <h3>Project Details</h3>
             <ul>
-                <li>Project Name: <span class="highlight-change"><%#Eval("projName")%></span></a></li>
-                <li>Project Name: <span class="highlight-change"><%#Eval("projSite")%></span></li>
-                <li>Project Name: <span class="highlight-change"><%#Eval("projBidDate")%></span></li>
-                <li>Project Name: <span class="highlight-change"><%#Eval("projActCost")%></span></li>
+                <li>Name: <span class="highlight-change"><%#Eval("projName")%></span></a></li>
+                <li>Site: <span class="highlight-change"><%#Eval("projSite")%></span></li>
+                <li>Bid Date: <span class="highlight-change"><%#Eval("projBidDate")%></span></li>
+                <li>Actual Cost: <span class="highlight-change"><%#Eval("projActCost")%></span></li>
             </ul>
-              <hr />
+            <hr />
             <ul>
                 <li>Project Name: <span class="highlight-change"><%#Eval("projName")%></span></li>
                 <li>Project Name: <span class="highlight-change"><%#Eval("projSite")%></span></li>
@@ -84,7 +85,7 @@
             <h3>Contact Details</h3>
             <ul>
               <li>Phone: <span class="highlight-change"><%#Eval("cliPhone")%></span></li>
-              <li>Project Site: <span class="highlight-change"><%#Eval("cliAddress")%> <%#Eval("cliProvince")%></span></li>
+              <li id="city-string">Client City: <span class="highlight-change"><%#Eval("cliCity")%></span></li>
             </ul>
           </div>
           <div class="updated-list well col-md-10 col-md-offset-1">   

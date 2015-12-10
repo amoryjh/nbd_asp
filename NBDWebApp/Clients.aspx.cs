@@ -37,6 +37,7 @@ namespace NBDWebApp
         clientStuff.cliConFName = c.cliConFName.Trim();
         clientStuff.cliConLName = c.cliConLName.Trim();
         clientStuff.cliConPosition = c.cliConPosition.Trim();
+        clientStuff.cliCity = c.CITY.city1.Trim();
         //Only Add in Client If they Have no projects created yet.
         if (c.PROJECTs.Count == 0)
           cList.Add(clientStuff);
