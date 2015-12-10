@@ -77,31 +77,20 @@ namespace NBDWebApp
         projectStuff.cliConLName = c.CLIENT.cliConLName.Trim();
         projectStuff.cliConPosition = c.CLIENT.cliConPosition.Trim();
 
+        ////nbd staff
+        //if (c.WORKER.WORKER_TYPE.ID == 7)
+        //{
+        //    projectStuff.salRole = c.WORKER.WORKER_TYPE.wrkTypeDesc;
+        //    projectStuff.salFName = c.WORKER.wrkFName.Trim();
+        //    projectStuff.salLName = c.WORKER.wrkLName.Trim();
+        //}
 
-
-
-        //nbd staff
-        if (c.WORKER.WORKER_TYPE.ID == 7)
-        {
-            projectStuff.salRole = c.WORKER.WORKER_TYPE.wrkTypeDesc;
-            projectStuff.salFName = c.WORKER.wrkFName.Trim();
-            projectStuff.salLName = c.WORKER.wrkLName.Trim();
-        }
-
-
-        if (c.WORKER.WORKER_TYPE.ID == 2)
-        {
-            projectStuff.desRole = c.WORKER.WORKER_TYPE.wrkTypeDesc;
-            projectStuff.desFName = c.WORKER.wrkFName.Trim();
-            projectStuff.desLName = c.WORKER.wrkLName.Trim();
-        }
-
-
-        //materials
-            
-
-        //labour
-
+        //if (c.WORKER.WORKER_TYPE.ID == 2)
+        //{
+        //    projectStuff.desRole = c.WORKER.WORKER_TYPE.wrkTypeDesc;
+        //    projectStuff.desFName = c.WORKER.wrkFName.Trim();
+        //    projectStuff.desLName = c.WORKER.wrkLName.Trim();
+        //}
 
         //Add everything to the list
         pList.Add(projectStuff);

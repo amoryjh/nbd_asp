@@ -216,6 +216,13 @@
     <Compile Include="Projects\carlisle-hotel-renovations.aspx.designer.cs">
       <DependentUpon>carlisle-hotel-renovations.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Projects\project-page.aspx.cs">
+      <DependentUpon>project-page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\project-page.aspx.designer.cs">
+      <DependentUpon>project-page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Projects\NewProject.aspx.cs">
       <DependentUpon>NewProject.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -232,13 +239,6 @@
     </Compile>
     <Compile Include="TOOL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="WORKER.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -408,7 +408,7 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="WebForm1.aspx" />
+    <Content Include="Projects\project-page.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BidProcess.aspx" />

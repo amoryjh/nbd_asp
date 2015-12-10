@@ -33,6 +33,8 @@ namespace NBDWebApp.Projects
             foreach (WORKER c in db.WORKERs)
                 if(c.prodWorkerFName != null)
                     this.ddlProductionWorkerNameProduction.Items.Add(c.prodWorkerFName);
+            
+      
         }
     }
 }
