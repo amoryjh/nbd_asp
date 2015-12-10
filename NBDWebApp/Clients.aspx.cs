@@ -34,6 +34,7 @@ namespace NBDWebApp
       {
         CLIENT clientStuff = new CLIENT();
         clientStuff.cliName = c.cliName.Trim();
+        clientStuff.cliPhone = c.cliPhone.Trim();
         clientStuff.cliConFName = c.cliConFName.Trim();
         clientStuff.cliConLName = c.cliConLName.Trim();
         clientStuff.cliConPosition = c.cliConPosition.Trim();
