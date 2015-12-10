@@ -66,6 +66,21 @@
                 <li>Actual End: <span class="highlight-change"><%#Eval("projActEnd")%></span></li>
                 <li>Est Cost: <span class="highlight-change"><%#Eval("projEstCost")%></span></li>
                 <li>Actual Cost: <span class="highlight-change"><%#Eval("projActCost")%></span></li>
+
+                
+            </ul>
+          </div>
+            <div class="updated-list well col-md-10 col-md-offset-1">   
+            <h3>NBD Staff</h3>
+                 <label class="highlight-change"><%#Eval("desRole")%></label>
+            <ul>
+                <li>First Name: <span class="highlight-change"><%#Eval("desFName")%></span></li>
+                <li>Last Name: <span class="highlight-change"><%#Eval("desLName")%></span></li>
+            </ul>
+                <label class="highlight-change"><%#Eval("salRole")%></label>
+            <ul>
+                <li>First Name: <span class="highlight-change"><%#Eval("salFName")%></span></li>
+                <li>Last Name: <span class="highlight-change"><%#Eval("salLName")%></span></li>
             </ul>
           </div>
         </div>

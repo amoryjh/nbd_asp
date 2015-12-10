@@ -29,7 +29,7 @@ namespace NBDWebApp
       foreach (CITY c in db.CITies)
           this.ddlCityProjectFilter.Items.Add(c.city1);
 
-      List<CLIENT> cList = new List<CLIENT>();
+      List<Object> cList = new List<Object>();
       foreach (CLIENT c in db.CLIENTs)
       {
         CLIENT clientStuff = new CLIENT();
@@ -76,6 +76,32 @@ namespace NBDWebApp
         projectStuff.cliConFName = c.CLIENT.cliConFName.Trim();
         projectStuff.cliConLName = c.CLIENT.cliConLName.Trim();
         projectStuff.cliConPosition = c.CLIENT.cliConPosition.Trim();
+
+
+
+
+        //nbd staff
+        if (c.WORKER.WORKER_TYPE.ID == 7)
+        {
+            projectStuff.salRole = c.WORKER.WORKER_TYPE.wrkTypeDesc;
+            projectStuff.salFName = c.WORKER.wrkFName.Trim();
+            projectStuff.salLName = c.WORKER.wrkLName.Trim();
+        }
+
+
+        if (c.WORKER.WORKER_TYPE.ID == 2)
+        {
+            projectStuff.desRole = c.WORKER.WORKER_TYPE.wrkTypeDesc;
+            projectStuff.desFName = c.WORKER.wrkFName.Trim();
+            projectStuff.desLName = c.WORKER.wrkLName.Trim();
+        }
+
+
+        //materials
+            
+
+        //labour
+
 
         //Add everything to the list
         pList.Add(projectStuff);

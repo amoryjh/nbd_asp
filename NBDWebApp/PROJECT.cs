@@ -55,9 +55,22 @@ namespace NBDWebApp
         public string cliCity { get; set; }
         public string cliAddress { get; set; }
 
+
         public string cliNameAsID
         {
           get { return System.Text.RegularExpressions.Regex.Replace(cliName, @"\W", string.Empty).ToLower(); }
         }
+
+        public string desRole { get; set; }
+
+        public string desFName { get; set; }
+
+        public string desLName { get; set; }
+
+        public string salRole { get; set; }
+
+        public string salFName { get; set; }
+
+        public string salLName { get; set; }
     }
 }
