@@ -76,7 +76,7 @@
     </nav>
     <div class="main-wrapper">
         <div class="col-md-2 user-info text-center">
-            <img src="/assets/img/usrImage.png" alt="">
+            <img src="/assets/img/usrImage.png" alt=""/>
             <h2 runat="server" id="lblUserName"><%=HttpContext.Current.User.Identity.Name %></h2>
             <div class="usr-options">       
                 <a class="btn btn-primary" href="<%= Page.ResolveUrl("~/MainPage.aspx") %>">Projects</a>
