@@ -28,11 +28,56 @@ namespace NBDWebApp.Projects
 
       foreach (var client in query)
       {
-        this.txtClientAddressDesign.Text = client.CITY.city1 + " " + client.cliAddress;
+          //client info
+        this.txtClientAddressDesign.Text    = client.cliAddress;
+        this.txtClientCityDesign.Text       = client.CITY.city1;
+        this.txtClientPCodeDesign.Text      = client.cliPCode;
+        this.txtClientPhoneDesign.Text      = client.cliPhone;
+        this.txtClientFNameDesign.Text      = client.cliConFName;
+        this.txtClientLNameDesign.Text      = client.cliConLName;
+        this.txtClientPosDesign.Text        = client.cliConPosition;
+
       }
+
       foreach (var q in query2)
       {
+          //Client Info
         this.txtClientBusinessDesign.Text = q.projName;
+          
+          //NBD staff
+          if(q.WORKER.WORKER_TYPE.ID == 7)
+          {
+              //DESIGN BID
+              this.txtSalesAssocFNameDesign.Text = q.WORKER.wrkFName;
+              this.txtSalesAssocLNameDesign.Text = q.WORKER.wrkLName;
+
+
+          }
+          else if (q.WORKER.wrkTypeID == 2)
+          {
+              //DESIGN BID
+              this.txtDesignerFNameDesign.Text = q.WORKER.wrkFName;
+              this.txtDesignerLNameDesign.Text = q.WORKER.wrkLName;
+
+          }
+          //project
+          this.txtBidDateDesign.Text = Convert.ToString(q.projBidDate);
+          this.txtBidEstBeginDateDesign.Text = Convert.ToString(q.projEstStart);
+          this.txtBidEstComDateDesign.Text = Convert.ToString(q.projEstEnd);
+          this.txtProjSiteDesign.Text = q.projSite;
+          this.txtBidEstCostDesign.Text = q.projEstCost;
+          
+          //Production PLAN Project
+          //project
+          //this.txtProjSiteProducton.Text = q.projName;
+          //this.txtProjSiteProduction.Text = q.projSite;
+          //this.txtBeginDateProduction.Text = q.projActStart;
+          //this.txtComDateProdcution.Text = q.projActEnd;
+          //this.txtBidCostProduction.Text = q.projEstCost;
+          //Total Expenses
+          //this.LblTotal.Text = q.projEstCost;
+          
+
       }
     }
   }

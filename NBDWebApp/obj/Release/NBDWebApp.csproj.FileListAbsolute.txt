@@ -256,3 +256,4 @@ C:\Users\Administrator\Documents\GitHub\nbd_asp\NBDWebApp\bin\System.Web.Http.Ow
 C:\Users\Administrator\Documents\GitHub\nbd_asp\NBDWebApp\bin\System.Web.Http.WebHost.xml
 C:\Users\Administrator\Documents\GitHub\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.dll
 C:\Users\Administrator\Documents\GitHub\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.pdb
+C:\Users\Administrator\Documents\GitHub\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.csprojResolveAssemblyReference.cache

@@ -68,6 +68,7 @@
       <div class="form-group col-md-6">
           <label id="lblExistingClientBusinessDesign" for="ddlExistingClientBusinessDesign">Existing Client</label>       
           <asp:DropDownList CssClass="form-control" ID="DropDownList2" runat="server" DataSourceID="EntityDataSource2" DataTextField="cliName" DataValueField="ID" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged1" AutoPostBack="True">
+              <asp:ListItem Selected="True" Value="0">Select A Client</asp:ListItem>
           </asp:DropDownList>
       </div>
 
@@ -250,6 +251,8 @@
         </div>
     </div>
   </div>
+  
+     
 
 <asp:EntityDataSource ID="EntityDataSource2" runat="server" ConnectionString="name=NBD_DatabaseEntities" DefaultContainerName="NBD_DatabaseEntities" EnableFlattening="False" EntitySetName="CLIENTs">
 </asp:EntityDataSource>
