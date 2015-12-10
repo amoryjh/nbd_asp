@@ -11,12 +11,11 @@ namespace NBDWebApp.Projects
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        
     }
     protected void DropDownList2_SelectedIndexChanged1(object sender, EventArgs e)
     {
-      this.txtClientAddressDesign.Text = "";
-      this.txtClientBusinessDesign.Text = "";
+
       NBD_DatabaseEntities db = new NBD_DatabaseEntities();
       int id = Convert.ToInt32(this.DropDownList2.SelectedValue);
       //this.ListBox1.Items.Clear();
@@ -45,7 +44,14 @@ namespace NBDWebApp.Projects
         this.txtClientBusinessDesign.Text = q.projName;
           
           //NBD staff
-          if(q.WORKER.WORKER_TYPE.ID == 7)
+          if (q.WORKER.wrkTypeID == 2)
+          {
+              //DESIGN BID
+              this.txtDesignerFNameDesign.Text = q.WORKER.wrkFName;
+              this.txtDesignerLNameDesign.Text = q.WORKER.wrkLName;
+
+          }
+          else if(q.WORKER.WORKER_TYPE.ID == 7)
           {
               //DESIGN BID
               this.txtSalesAssocFNameDesign.Text = q.WORKER.wrkFName;
@@ -53,19 +59,14 @@ namespace NBDWebApp.Projects
 
 
           }
-          else if (q.WORKER.wrkTypeID == 2)
-          {
-              //DESIGN BID
-              this.txtDesignerFNameDesign.Text = q.WORKER.wrkFName;
-              this.txtDesignerLNameDesign.Text = q.WORKER.wrkLName;
 
-          }
           //project
           this.txtBidDateDesign.Text = Convert.ToString(q.projBidDate);
           this.txtBidEstBeginDateDesign.Text = Convert.ToString(q.projEstStart);
           this.txtBidEstComDateDesign.Text = Convert.ToString(q.projEstEnd);
           this.txtProjSiteDesign.Text = q.projSite;
           this.txtBidEstCostDesign.Text = q.projEstCost;
+          this.LlblTitle.Text = q.projName;
           
           //Production PLAN Project
           //project

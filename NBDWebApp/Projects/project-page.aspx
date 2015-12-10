@@ -7,7 +7,8 @@
     
 
     <div class="form-group">
-        <h1 class="section-title">Carlisle Hotel Renovations</h1>
+        <h1 class="section-title">
+            <asp:Label ID="LlblTitle" runat="server" Text=""></asp:Label></h1>
     </div>
     <div class="timeline well clearfix">    
         <h3>
@@ -58,7 +59,7 @@
     -->
     <div id="project-designBid" class="report-group box-border clearfix">
     <div class="report-title">
-        <h1 class="project-title">New Design Bid</h1>
+        <h1 class="project-title">Design Bid</h1>
     </div>
     <div class="report-wrapper clearfix">
       <div class="form-group col-md-12">
