@@ -22,6 +22,15 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// rfvProjName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvProjName;
+        
+        /// <summary>
         /// txtProjName control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace NBDWebApp.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtProjName;
+        
+        /// <summary>
+        /// rfvProjSite control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvProjSite;
         
         /// <summary>
         /// txtProjSite control.
@@ -40,6 +58,42 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.TextBox txtProjSite;
         
         /// <summary>
+        /// ddlClientName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlClientName;
+        
+        /// <summary>
+        /// ddlDesignerFName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlDesignerFName;
+        
+        /// <summary>
+        /// rfvBidDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBidDate;
+        
+        /// <summary>
+        /// revBidDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revBidDate;
+        
+        /// <summary>
         /// txtBidDate control.
         /// </summary>
         /// <remarks>
@@ -49,13 +103,13 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.TextBox txtBidDate;
         
         /// <summary>
-        /// ddlClientName control.
+        /// ValidationSummary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlClientName;
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary;
         
         /// <summary>
         /// btnInsert control.
