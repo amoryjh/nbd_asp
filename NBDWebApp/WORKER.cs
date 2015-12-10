@@ -40,5 +40,17 @@ namespace NBDWebApp
                     return this.wrkFName + " " + this.wrkLName;
             }
         }
+
+        //Property to display only designers
+        public string designerFName
+        {
+            get
+            {
+                if (this.wrkTypeID != 2)
+                    return null;
+                else
+                    return this.wrkFName + " " + this.wrkLName;
+            }
+        }
     }
 }

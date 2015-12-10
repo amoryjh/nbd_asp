@@ -16,8 +16,15 @@ namespace NBDWebApp.Projects
             if (IsPostBack) return;
 
             NBD_DatabaseEntities db = new NBD_DatabaseEntities();
+
+            //Fill drop down lists
             foreach (CLIENT c in db.CLIENTs)
                 this.ddlClientName.Items.Add(c.cliName);
+
+            foreach (WORKER d in db.WORKERs)
+                if (d.designerFName != null)
+                    this.ddlDesignerFName.Items.Add(d.designerFName);
+
         }
     }
 }
