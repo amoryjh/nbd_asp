@@ -60,14 +60,12 @@
                 <li>Name: <span class="highlight-change"><%#Eval("projName")%></span></a></li>
                 <li>Site: <span class="highlight-change"><%#Eval("projSite")%></span></li>
                 <li>Bid Date: <span class="highlight-change"><%#Eval("projBidDate")%></span></li>
+                <li>Est Start: <span class="highlight-change"><%#Eval("projEstStart")%></span></li>
+                <li>Est End: <span class="highlight-change"><%#Eval("projEstEnd")%></span></li>
+                <li>Actual Start: <span class="highlight-change"><%#Eval("projActStart")%></span></li>
+                <li>Actual End: <span class="highlight-change"><%#Eval("projActEnd")%></span></li>
+                <li>Est Cost: <span class="highlight-change"><%#Eval("projEstCost")%></span></li>
                 <li>Actual Cost: <span class="highlight-change"><%#Eval("projActCost")%></span></li>
-            </ul>
-            <hr />
-            <ul>
-                <li>Project Name: <span class="highlight-change"><%#Eval("projName")%></span></li>
-                <li>Project Name: <span class="highlight-change"><%#Eval("projSite")%></span></li>
-                <li>Project Name: <span class="highlight-change"><%#Eval("projBidDate")%></span></li>
-                <li>Project Name: <span class="highlight-change"><%#Eval("projActCost")%></span></li>
             </ul>
           </div>
         </div>
