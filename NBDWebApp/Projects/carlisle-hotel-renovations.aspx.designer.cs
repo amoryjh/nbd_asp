@@ -463,51 +463,6 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.DropDownList ddlProductionWorkerNameProduction;
         
         /// <summary>
-        /// txtBidDateProduction control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBidDateProduction;
-        
-        /// <summary>
-        /// txtBidEstBeginDateProduction control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBidEstBeginDateProduction;
-        
-        /// <summary>
-        /// txtBidEstComDateProduction control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBidEstComDateProduction;
-        
-        /// <summary>
-        /// TextBox27 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox27;
-        
-        /// <summary>
-        /// TextBox28 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox28;
-        
-        /// <summary>
         /// txtMaterialDescriptionProduction control.
         /// </summary>
         /// <remarks>
@@ -553,13 +508,13 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.TextBox txtMaterialExtendedPriceProduction;
         
         /// <summary>
-        /// txtLabourDepartmentProduction control.
+        /// txtLabourDescriptionProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLabourDepartmentProduction;
+        protected global::System.Web.UI.WebControls.TextBox txtLabourDescriptionProduction;
         
         /// <summary>
         /// txtLabourHoursProduction control.
@@ -571,13 +526,13 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.TextBox txtLabourHoursProduction;
         
         /// <summary>
-        /// txtLabourUnitPriceProduction control.
+        /// txtLabourCostPerHourProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLabourUnitPriceProduction;
+        protected global::System.Web.UI.WebControls.TextBox txtLabourCostPerHourProduction;
         
         /// <summary>
         /// txtLabourTotalPriceProduction control.
@@ -587,6 +542,15 @@ namespace NBDWebApp.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLabourTotalPriceProduction;
+        
+        /// <summary>
+        /// txtLabourTaskProduction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtLabourTaskProduction;
         
         /// <summary>
         /// Button6 control.

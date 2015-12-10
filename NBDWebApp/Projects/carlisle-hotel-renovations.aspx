@@ -377,38 +377,6 @@
         </div>
 
     </div>
-    <!-- 
-    <div class="report-wrapper clearfix">
-        <div class="form-group col-md-12">
-            <h1>Project</h1>
-        </div>
-
-        <div class="form-group col-md-12">
-          <label id="lblBidDateProduction" for="txtBidDateProduction">Bid Date</label>
-          <asp:TextBox ID="txtBidDateProduction" runat="server" class="form-control" placeholder="Business Name" TextMode="Date"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-6">
-          <label id="lblBidEstBeginDateProduction" for="txtBidEstBeginDateProduction">Estimated Begin Date</label>
-          <asp:TextBox ID="txtBidEstBeginDateProduction" runat="server" class="form-control" placeholder="Contact Name" TextMode="Date"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-6">
-            <label id="lblBidEstComDateProduction" for="txtBidEstComDateProduction">Estimated Completion Date</label>
-            <asp:TextBox ID="txtBidEstComDateProduction" class="form-control" placeholder="City" runat="server" TextMode="Date"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-6">
-            <label id="lblProjSiteProduction" for="txtProjSiteProduction">Project Site</label>
-            <asp:TextBox ID="TextBox27" class="form-control" placeholder="Project Site" runat="server"></asp:TextBox>
-        </div>      
-        
-        <div class="form-group col-md-6">
-        <label id="lblBidEstCost" for="txtBidEstCost">Estimated Cost</label>
-        <asp:TextBox ID="TextBox28" class="form-control" placeholder="Estimated Cost" runat="server" TextMode="Email"></asp:TextBox>
-        </div>
-    </div>
-    -->
 
     <div class="report-wrapper clearfix">
         <div class="form-group col-md-12">
@@ -451,30 +419,90 @@
             <h1>Labour Requirements</h1>
         </div>
 
-        <div class="form-group col-md-5">
-          <label id="lblLabourDepartmentProduction" for="txtLabourDepartmentProduction">Department</label>
-          <asp:TextBox ID="txtLabourDepartmentProduction" runat="server" class="form-control" placeholder="Department"></asp:TextBox>
+        <div class="form-group col-md-4">
+          <label id="lblLabourDescriptionProduction" for="txtLabourDescriptionProduction">Description</label>
+          <asp:TextBox ID="txtLabourDescriptionProduction" runat="server" class="form-control" placeholder="Description"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-3">
           <label id="lblLabourHoursProduction" for="txtLabourHoursProduction">Hours</label>
           <asp:TextBox ID="txtLabourHoursProduction" runat="server" class="form-control" placeholder="Hours"></asp:TextBox>
         </div>
 
-        <div class="form-group col-md-2">
-          <label id="lblLabourUnitPriceProduction" for="txtLabourUnitPriceProduction">Unit Price</label>
-          <asp:TextBox ID="txtLabourUnitPriceProduction" runat="server" class="form-control" placeholder="Unit Price"></asp:TextBox>
+        <div class="form-group col-md-3">
+          <label id="lblLabourCostPerHourProduction" for="txtLabourCostPerHourProduction">Cost/Hr</label>
+          <asp:TextBox ID="txtLabourCostPerHourProduction" runat="server" class="form-control" placeholder="Cost/Hr"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
-          <label id="lblLabourTotalPriceProduction" for="txtLabourTotalPriceProduction">Total</label>
-          <asp:TextBox ID="txtLabourTotalPriceProduction" runat="server" class="form-control" placeholder="Total"></asp:TextBox>
+          <label id="lblLabourTotalPriceProduction" for="txtLabourTotalPriceProduction">Total Cost</label>
+          <asp:TextBox ID="txtLabourTotalPriceProduction" runat="server" class="form-control" placeholder="Total Cost"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-11">
+             <label id="lblLabourTaskProduction" for="txtLabourTaskProduction">Task</label>
+            <asp:TextBox ID="txtLabourTaskProduction" runat="server" class="form-control" placeholder="Task"></asp:TextBox>
         </div>
         
         <div class="form-group col-md-1">
           <a id="addLabourProduction" class="btn btn-new-row">+</a>
         </div>
     </div>
+
+    <div class="report-wrapper clearfix">
+        <div class="form-group col-md-12">
+            <h1>Total Expenses</h1>
+        </div>
+
+        <div class="form-group col-md-8">
+        </div>
+
+        <div class="form-group col-md-2">
+             <label id="lblTotalEstHoursProduction">Hours</label>
+        </div>
+        <div class="form-group col-md-2">
+             <label id="lblTotalEstCostProduction">Cost</label>
+        </div>
+
+        <div class="form-group col-md-8">
+             <label id="lblTotalEstDesignerProduction">Estimated Designer</label>
+        </div>
+        <div class="form-group col-md-2">
+             <label id="lblTotalEstDesignerHourProduction">...</label>
+        </div>
+        <div class="form-group col-md-2">
+             <label id="lblTotalEstDesignerCostProduction">...</label>
+        </div>
+
+        <div class="form-group col-md-8">
+             <label id="lblTotalEstProductionHoursCostProduction">Estimated Prodction Hours/Cost</label>
+        </div>
+        <div class="form-group col-md-2">
+             <label id="lblTotalEstProductionHourProduction">...</label>
+        </div>
+        <div class="form-group col-md-2">
+             <label id="lblTotalEstProductionCostProduction">...</label>
+        </div>
+
+        <div class="form-group col-md-8">
+             <label id="lblTotalEstMaterialCostsProduction">Estimated Material Costs</label>
+        </div>
+        <div class="form-group col-md-2">
+        </div>
+        <div class="form-group col-md-2">
+             <label id="lblTotalMaterialCostProduction">...</label>
+        </div>
+
+        <div class="form-group col-md-12">
+            <hr />
+        </div>
+
+        <div class="form-group col-md-12">
+             <label id="lblTotalEstCostsProduction">Total Costs</label>
+        </div>
+
+    </div>
+
     <div class="report-wrapper text-center clearfix">
         <div class="form-group col-md-12">
             <h1>Submit Form</h1>
