@@ -19,7 +19,7 @@ namespace NBDWebApp
         public int workerTypeID { get; set; }
         public short lsHours { get; set; }
     
-        public virtual PROJECT PROJECT { get; set; }
         public virtual WORKER_TYPE WORKER_TYPE { get; set; }
+        public virtual PROJECT PROJECT { get; set; }
     }
 }

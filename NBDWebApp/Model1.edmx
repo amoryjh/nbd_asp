@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="NBD_DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="NBD_DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CITY">
           <Key>
             <PropertyRef Name="ID" />
@@ -105,7 +105,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="projName" Type="nchar" MaxLength="100" Nullable="false" />
           <Property Name="projSite" Type="nchar" MaxLength="100" Nullable="false" />
           <Property Name="projBidDate" Type="date" Nullable="false" />
@@ -120,7 +120,7 @@
           <Property Name="projCurrentPhase" Type="nchar" MaxLength="1" />
           <Property Name="projIsFlagged" Type="bit" />
           <Property Name="clientID" Type="int" Nullable="false" />
-          <Property Name="designerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="designerID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -423,8 +423,7 @@
             <End Role="WORKER" EntitySet="WORKER" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="NBD_DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -451,7 +450,7 @@
           <Property Name="cliConLName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="cliConPosition" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="CITY" Relationship="Self.FK_CLIENT_CITY" FromRole="CLIENT" ToRole="CITY" />
-          <NavigationProperty Name="PROJECTs" Relationship="Self.FK_PROJECT_CLIENT" FromRole="CLIENT" ToRole="PROJECT" />
+          <NavigationProperty Name="PROJECTs" Relationship="NBD_DatabaseModel.FK_PROJECT_CLIENT" FromRole="CLIENT" ToRole="PROJECT" />
         </EntityType>
         <EntityType Name="INVENTORY">
           <Key>
@@ -490,8 +489,8 @@
           <Property Name="projectID" Type="Int32" Nullable="false" />
           <Property Name="workerTypeID" Type="Int32" Nullable="false" />
           <Property Name="lsHours" Type="Int16" Nullable="false" />
-          <NavigationProperty Name="PROJECT" Relationship="Self.FK_LABOUR_SUMMARY_PROJECT" FromRole="LABOUR_SUMMARY" ToRole="PROJECT" />
           <NavigationProperty Name="WORKER_TYPE" Relationship="Self.FK_LABOUR_SUMMARY_WORKER_TYPE" FromRole="LABOUR_SUMMARY" ToRole="WORKER_TYPE" />
+          <NavigationProperty Name="PROJECT" Relationship="NBD_DatabaseModel.FK_LABOUR_SUMMARY_PROJECT" FromRole="LABOUR_SUMMARY" ToRole="PROJECT" />
         </EntityType>
         <EntityType Name="MATERIAL">
           <Key>
@@ -514,7 +513,7 @@
           <Property Name="mreqEstQty" Type="Int16" />
           <Property Name="mreqActQty" Type="Int16" />
           <NavigationProperty Name="INVENTORY" Relationship="Self.FK_MATERIAL_REQ_INVENTORY" FromRole="MATERIAL_REQ" ToRole="INVENTORY" />
-          <NavigationProperty Name="PROJECT" Relationship="Self.FK_MATERIAL_REQ_PROJECT" FromRole="MATERIAL_REQ" ToRole="PROJECT" />
+          <NavigationProperty Name="PROJECT" Relationship="NBD_DatabaseModel.FK_MATERIAL_REQ_PROJECT" FromRole="MATERIAL_REQ" ToRole="PROJECT" />
         </EntityType>
         <EntityType Name="PROD_TEAM">
           <Key>
@@ -525,8 +524,8 @@
           <Property Name="workerID" Type="Int32" Nullable="false" />
           <Property Name="teamPhaseIn" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="LABOUR_REQUIREMENT" Relationship="Self.FK_LABOUR_REQUIREMENT_PROD_TEAM" FromRole="PROD_TEAM" ToRole="LABOUR_REQUIREMENT" />
-          <NavigationProperty Name="PROJECT" Relationship="Self.FK_PROD_TEAM_PROJECT" FromRole="PROD_TEAM" ToRole="PROJECT" />
           <NavigationProperty Name="WORKER" Relationship="Self.FK_PROD_TEAM_WORKER" FromRole="PROD_TEAM" ToRole="WORKER" />
+          <NavigationProperty Name="PROJECT" Relationship="NBD_DatabaseModel.FK_PROD_TEAM_PROJECT" FromRole="PROD_TEAM" ToRole="PROJECT" />
         </EntityType>
         <EntityType Name="PROD_TOOL">
           <Key>
@@ -538,35 +537,8 @@
           <Property Name="ptQty" Type="Byte" Nullable="false" />
           <Property Name="ptDeliverFrom" Type="DateTime" Precision="0" />
           <Property Name="ptDeliverTo" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="PROJECT" Relationship="Self.FK_PROD_TOOL_PROJECT" FromRole="PROD_TOOL" ToRole="PROJECT" />
           <NavigationProperty Name="TOOL" Relationship="Self.FK_PROD_TOOL_TOOL" FromRole="PROD_TOOL" ToRole="TOOL" />
-        </EntityType>
-        <EntityType Name="PROJECT">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="projName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="projSite" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="projBidDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="projEstStart" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="projEstEnd" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="projActStart" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="projActEnd" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="projEstCost" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="projActCost" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="projBidCustAccept" Type="Boolean" />
-          <Property Name="projBidMgmtAccept" Type="Boolean" />
-          <Property Name="projCurrentPhase" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
-          <Property Name="projIsFlagged" Type="Boolean" />
-          <Property Name="clientID" Type="Int32" Nullable="false" />
-          <Property Name="designerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="CLIENT" Relationship="Self.FK_PROJECT_CLIENT" FromRole="PROJECT" ToRole="CLIENT" />
-          <NavigationProperty Name="LABOUR_SUMMARY" Relationship="Self.FK_LABOUR_SUMMARY_PROJECT" FromRole="PROJECT" ToRole="LABOUR_SUMMARY" />
-          <NavigationProperty Name="MATERIAL_REQ" Relationship="Self.FK_MATERIAL_REQ_PROJECT" FromRole="PROJECT" ToRole="MATERIAL_REQ" />
-          <NavigationProperty Name="PROD_TEAM" Relationship="Self.FK_PROD_TEAM_PROJECT" FromRole="PROJECT" ToRole="PROD_TEAM" />
-          <NavigationProperty Name="PROD_TOOL" Relationship="Self.FK_PROD_TOOL_PROJECT" FromRole="PROJECT" ToRole="PROD_TOOL" />
-          <NavigationProperty Name="WORKER" Relationship="Self.FK_PROJECT_WORKER" FromRole="PROJECT" ToRole="WORKER" />
+          <NavigationProperty Name="PROJECT" Relationship="NBD_DatabaseModel.FK_PROD_TOOL_PROJECT" FromRole="PROD_TOOL" ToRole="PROJECT" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -605,8 +577,8 @@
           <Property Name="wrkLName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="wrkTypeID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="PROD_TEAM" Relationship="Self.FK_PROD_TEAM_WORKER" FromRole="WORKER" ToRole="PROD_TEAM" />
-          <NavigationProperty Name="PROJECTs" Relationship="Self.FK_PROJECT_WORKER" FromRole="WORKER" ToRole="PROJECT" />
           <NavigationProperty Name="WORKER_TYPE" Relationship="Self.FK_WORKER_WORKER_TYPE" FromRole="WORKER" ToRole="WORKER_TYPE" />
+          <NavigationProperty Name="PROJECTs" Relationship="NBD_DatabaseModel.FK_PROJECT_WORKER" FromRole="WORKER" ToRole="PROJECT" />
         </EntityType>
         <EntityType Name="WORKER_TYPE">
           <Key>
@@ -628,18 +600,6 @@
             </Principal>
             <Dependent Role="CLIENT">
               <PropertyRef Name="cityID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PROJECT_CLIENT">
-          <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1" />
-          <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CLIENT">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PROJECT">
-              <PropertyRef Name="clientID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -691,18 +651,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_LABOUR_SUMMARY_PROJECT">
-          <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="1" />
-          <End Role="LABOUR_SUMMARY" Type="Self.LABOUR_SUMMARY" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PROJECT">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="LABOUR_SUMMARY">
-              <PropertyRef Name="projectID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_LABOUR_SUMMARY_WORKER_TYPE">
           <End Role="WORKER_TYPE" Type="Self.WORKER_TYPE" Multiplicity="1" />
           <End Role="LABOUR_SUMMARY" Type="Self.LABOUR_SUMMARY" Multiplicity="*" />
@@ -712,30 +660,6 @@
             </Principal>
             <Dependent Role="LABOUR_SUMMARY">
               <PropertyRef Name="workerTypeID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_MATERIAL_REQ_PROJECT">
-          <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="1" />
-          <End Role="MATERIAL_REQ" Type="Self.MATERIAL_REQ" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PROJECT">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="MATERIAL_REQ">
-              <PropertyRef Name="projectID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PROD_TEAM_PROJECT">
-          <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="1" />
-          <End Role="PROD_TEAM" Type="Self.PROD_TEAM" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PROJECT">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PROD_TEAM">
-              <PropertyRef Name="projectID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -751,18 +675,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PROD_TOOL_PROJECT">
-          <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="1" />
-          <End Role="PROD_TOOL" Type="Self.PROD_TOOL" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PROJECT">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PROD_TOOL">
-              <PropertyRef Name="projectID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_PROD_TOOL_TOOL">
           <End Role="TOOL" Type="Self.TOOL" Multiplicity="1" />
           <End Role="PROD_TOOL" Type="Self.PROD_TOOL" Multiplicity="*" />
@@ -772,18 +684,6 @@
             </Principal>
             <Dependent Role="PROD_TOOL">
               <PropertyRef Name="toolID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PROJECT_WORKER">
-          <End Role="WORKER" Type="Self.WORKER" Multiplicity="1" />
-          <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="WORKER">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PROJECT">
-              <PropertyRef Name="designerID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -809,7 +709,6 @@
           <EntitySet Name="MATERIAL_REQ" EntityType="Self.MATERIAL_REQ" />
           <EntitySet Name="PROD_TEAM" EntityType="Self.PROD_TEAM" />
           <EntitySet Name="PROD_TOOL" EntityType="Self.PROD_TOOL" />
-          <EntitySet Name="PROJECTs" EntityType="Self.PROJECT" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TASKs" EntityType="Self.TASK" />
           <EntitySet Name="TOOLs" EntityType="Self.TOOL" />
@@ -818,10 +717,6 @@
           <AssociationSet Name="FK_CLIENT_CITY" Association="Self.FK_CLIENT_CITY">
             <End Role="CITY" EntitySet="CITies" />
             <End Role="CLIENT" EntitySet="CLIENTs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PROJECT_CLIENT" Association="Self.FK_PROJECT_CLIENT">
-            <End Role="CLIENT" EntitySet="CLIENTs" />
-            <End Role="PROJECT" EntitySet="PROJECTs" />
           </AssociationSet>
           <AssociationSet Name="FK_INVENTORY_MATERIAL" Association="Self.FK_INVENTORY_MATERIAL">
             <End Role="MATERIAL" EntitySet="MATERIALs" />
@@ -839,43 +734,147 @@
             <End Role="TASK" EntitySet="TASKs" />
             <End Role="LABOUR_REQUIREMENT" EntitySet="LABOUR_REQUIREMENT" />
           </AssociationSet>
-          <AssociationSet Name="FK_LABOUR_SUMMARY_PROJECT" Association="Self.FK_LABOUR_SUMMARY_PROJECT">
-            <End Role="PROJECT" EntitySet="PROJECTs" />
-            <End Role="LABOUR_SUMMARY" EntitySet="LABOUR_SUMMARY" />
-          </AssociationSet>
           <AssociationSet Name="FK_LABOUR_SUMMARY_WORKER_TYPE" Association="Self.FK_LABOUR_SUMMARY_WORKER_TYPE">
             <End Role="WORKER_TYPE" EntitySet="WORKER_TYPE" />
             <End Role="LABOUR_SUMMARY" EntitySet="LABOUR_SUMMARY" />
-          </AssociationSet>
-          <AssociationSet Name="FK_MATERIAL_REQ_PROJECT" Association="Self.FK_MATERIAL_REQ_PROJECT">
-            <End Role="PROJECT" EntitySet="PROJECTs" />
-            <End Role="MATERIAL_REQ" EntitySet="MATERIAL_REQ" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PROD_TEAM_PROJECT" Association="Self.FK_PROD_TEAM_PROJECT">
-            <End Role="PROJECT" EntitySet="PROJECTs" />
-            <End Role="PROD_TEAM" EntitySet="PROD_TEAM" />
           </AssociationSet>
           <AssociationSet Name="FK_PROD_TEAM_WORKER" Association="Self.FK_PROD_TEAM_WORKER">
             <End Role="WORKER" EntitySet="WORKERs" />
             <End Role="PROD_TEAM" EntitySet="PROD_TEAM" />
           </AssociationSet>
-          <AssociationSet Name="FK_PROD_TOOL_PROJECT" Association="Self.FK_PROD_TOOL_PROJECT">
-            <End Role="PROJECT" EntitySet="PROJECTs" />
-            <End Role="PROD_TOOL" EntitySet="PROD_TOOL" />
-          </AssociationSet>
           <AssociationSet Name="FK_PROD_TOOL_TOOL" Association="Self.FK_PROD_TOOL_TOOL">
             <End Role="TOOL" EntitySet="TOOLs" />
             <End Role="PROD_TOOL" EntitySet="PROD_TOOL" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PROJECT_WORKER" Association="Self.FK_PROJECT_WORKER">
-            <End Role="WORKER" EntitySet="WORKERs" />
-            <End Role="PROJECT" EntitySet="PROJECTs" />
           </AssociationSet>
           <AssociationSet Name="FK_WORKER_WORKER_TYPE" Association="Self.FK_WORKER_WORKER_TYPE">
             <End Role="WORKER_TYPE" EntitySet="WORKER_TYPE" />
             <End Role="WORKER" EntitySet="WORKERs" />
           </AssociationSet>
+          <EntitySet Name="PROJECTs" EntityType="NBD_DatabaseModel.PROJECT" />
+          <AssociationSet Name="FK_PROJECT_CLIENT" Association="NBD_DatabaseModel.FK_PROJECT_CLIENT">
+            <End Role="CLIENT" EntitySet="CLIENTs" />
+            <End Role="PROJECT" EntitySet="PROJECTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LABOUR_SUMMARY_PROJECT" Association="NBD_DatabaseModel.FK_LABOUR_SUMMARY_PROJECT">
+            <End Role="PROJECT" EntitySet="PROJECTs" />
+            <End Role="LABOUR_SUMMARY" EntitySet="LABOUR_SUMMARY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MATERIAL_REQ_PROJECT" Association="NBD_DatabaseModel.FK_MATERIAL_REQ_PROJECT">
+            <End Role="PROJECT" EntitySet="PROJECTs" />
+            <End Role="MATERIAL_REQ" EntitySet="MATERIAL_REQ" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROD_TEAM_PROJECT" Association="NBD_DatabaseModel.FK_PROD_TEAM_PROJECT">
+            <End Role="PROJECT" EntitySet="PROJECTs" />
+            <End Role="PROD_TEAM" EntitySet="PROD_TEAM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROD_TOOL_PROJECT" Association="NBD_DatabaseModel.FK_PROD_TOOL_PROJECT">
+            <End Role="PROJECT" EntitySet="PROJECTs" />
+            <End Role="PROD_TOOL" EntitySet="PROD_TOOL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROJECT_WORKER" Association="NBD_DatabaseModel.FK_PROJECT_WORKER">
+            <End Role="WORKER" EntitySet="WORKERs" />
+            <End Role="PROJECT" EntitySet="PROJECTs" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="PROJECT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="projName" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="projSite" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="projBidDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="projEstStart" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="projEstEnd" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="projActStart" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="projActEnd" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="projEstCost" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="projActCost" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="projBidCustAccept" Type="Boolean" />
+          <Property Name="projBidMgmtAccept" Type="Boolean" />
+          <Property Name="projCurrentPhase" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="projIsFlagged" Type="Boolean" />
+          <Property Name="clientID" Type="Int32" Nullable="false" />
+          <Property Name="designerID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CLIENT" Relationship="NBD_DatabaseModel.FK_PROJECT_CLIENT" FromRole="PROJECT" ToRole="CLIENT" />
+          <NavigationProperty Name="LABOUR_SUMMARY" Relationship="NBD_DatabaseModel.FK_LABOUR_SUMMARY_PROJECT" FromRole="PROJECT" ToRole="LABOUR_SUMMARY" />
+          <NavigationProperty Name="MATERIAL_REQ" Relationship="NBD_DatabaseModel.FK_MATERIAL_REQ_PROJECT" FromRole="PROJECT" ToRole="MATERIAL_REQ" />
+          <NavigationProperty Name="PROD_TEAM" Relationship="NBD_DatabaseModel.FK_PROD_TEAM_PROJECT" FromRole="PROJECT" ToRole="PROD_TEAM" />
+          <NavigationProperty Name="PROD_TOOL" Relationship="NBD_DatabaseModel.FK_PROD_TOOL_PROJECT" FromRole="PROJECT" ToRole="PROD_TOOL" />
+          <NavigationProperty Name="WORKER" Relationship="NBD_DatabaseModel.FK_PROJECT_WORKER" FromRole="PROJECT" ToRole="WORKER" />
+        </EntityType>
+        <Association Name="FK_PROJECT_CLIENT">
+          <End Type="NBD_DatabaseModel.CLIENT" Role="CLIENT" Multiplicity="1" />
+          <End Type="NBD_DatabaseModel.PROJECT" Role="PROJECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PROJECT">
+              <PropertyRef Name="clientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LABOUR_SUMMARY_PROJECT">
+          <End Type="NBD_DatabaseModel.PROJECT" Role="PROJECT" Multiplicity="1" />
+          <End Type="NBD_DatabaseModel.LABOUR_SUMMARY" Role="LABOUR_SUMMARY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROJECT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LABOUR_SUMMARY">
+              <PropertyRef Name="projectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MATERIAL_REQ_PROJECT">
+          <End Type="NBD_DatabaseModel.PROJECT" Role="PROJECT" Multiplicity="1" />
+          <End Type="NBD_DatabaseModel.MATERIAL_REQ" Role="MATERIAL_REQ" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROJECT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MATERIAL_REQ">
+              <PropertyRef Name="projectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROD_TEAM_PROJECT">
+          <End Type="NBD_DatabaseModel.PROJECT" Role="PROJECT" Multiplicity="1" />
+          <End Type="NBD_DatabaseModel.PROD_TEAM" Role="PROD_TEAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROJECT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PROD_TEAM">
+              <PropertyRef Name="projectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROD_TOOL_PROJECT">
+          <End Type="NBD_DatabaseModel.PROJECT" Role="PROJECT" Multiplicity="1" />
+          <End Type="NBD_DatabaseModel.PROD_TOOL" Role="PROD_TOOL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROJECT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PROD_TOOL">
+              <PropertyRef Name="projectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROJECT_WORKER">
+          <End Type="NBD_DatabaseModel.WORKER" Role="WORKER" Multiplicity="1" />
+          <End Type="NBD_DatabaseModel.PROJECT" Role="PROJECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WORKER">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PROJECT">
+              <PropertyRef Name="designerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -987,28 +986,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PROJECTs">
-            <EntityTypeMapping TypeName="NBD_DatabaseModel.PROJECT">
-              <MappingFragment StoreEntitySet="PROJECT">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="projName" ColumnName="projName" />
-                <ScalarProperty Name="projSite" ColumnName="projSite" />
-                <ScalarProperty Name="projBidDate" ColumnName="projBidDate" />
-                <ScalarProperty Name="projEstStart" ColumnName="projEstStart" />
-                <ScalarProperty Name="projEstEnd" ColumnName="projEstEnd" />
-                <ScalarProperty Name="projActStart" ColumnName="projActStart" />
-                <ScalarProperty Name="projActEnd" ColumnName="projActEnd" />
-                <ScalarProperty Name="projEstCost" ColumnName="projEstCost" />
-                <ScalarProperty Name="projActCost" ColumnName="projActCost" />
-                <ScalarProperty Name="projBidCustAccept" ColumnName="projBidCustAccept" />
-                <ScalarProperty Name="projBidMgmtAccept" ColumnName="projBidMgmtAccept" />
-                <ScalarProperty Name="projCurrentPhase" ColumnName="projCurrentPhase" />
-                <ScalarProperty Name="projIsFlagged" ColumnName="projIsFlagged" />
-                <ScalarProperty Name="clientID" ColumnName="clientID" />
-                <ScalarProperty Name="designerID" ColumnName="designerID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="NBD_DatabaseModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
@@ -1055,6 +1032,28 @@
                 <ScalarProperty Name="wrkTypeDesc" ColumnName="wrkTypeDesc" />
                 <ScalarProperty Name="wrkTypePrice" ColumnName="wrkTypePrice" />
                 <ScalarProperty Name="wrkTypeCost" ColumnName="wrkTypeCost" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PROJECTs">
+            <EntityTypeMapping TypeName="NBD_DatabaseModel.PROJECT">
+              <MappingFragment StoreEntitySet="PROJECT">
+                <ScalarProperty Name="designerID" ColumnName="designerID" />
+                <ScalarProperty Name="clientID" ColumnName="clientID" />
+                <ScalarProperty Name="projIsFlagged" ColumnName="projIsFlagged" />
+                <ScalarProperty Name="projCurrentPhase" ColumnName="projCurrentPhase" />
+                <ScalarProperty Name="projBidMgmtAccept" ColumnName="projBidMgmtAccept" />
+                <ScalarProperty Name="projBidCustAccept" ColumnName="projBidCustAccept" />
+                <ScalarProperty Name="projActCost" ColumnName="projActCost" />
+                <ScalarProperty Name="projEstCost" ColumnName="projEstCost" />
+                <ScalarProperty Name="projActEnd" ColumnName="projActEnd" />
+                <ScalarProperty Name="projActStart" ColumnName="projActStart" />
+                <ScalarProperty Name="projEstEnd" ColumnName="projEstEnd" />
+                <ScalarProperty Name="projEstStart" ColumnName="projEstStart" />
+                <ScalarProperty Name="projBidDate" ColumnName="projBidDate" />
+                <ScalarProperty Name="projSite" ColumnName="projSite" />
+                <ScalarProperty Name="projName" ColumnName="projName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

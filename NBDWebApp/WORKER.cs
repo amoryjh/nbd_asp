@@ -26,10 +26,9 @@ namespace NBDWebApp
         public int wrkTypeID { get; set; }
     
         public virtual ICollection<PROD_TEAM> PROD_TEAM { get; set; }
-        public virtual ICollection<PROJECT> PROJECTs { get; set; }
         public virtual WORKER_TYPE WORKER_TYPE { get; set; }
+        public virtual ICollection<PROJECT> PROJECTs { get; set; }
 
-        //Property to display only production workers
         public string prodWorkerFName
         {
             get

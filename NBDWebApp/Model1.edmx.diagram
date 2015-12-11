@@ -14,27 +14,27 @@
         <EntityTypeShape EntityType="NBD_DatabaseModel.MATERIAL_REQ" Width="1.5" PointX="13.5" PointY="9.375" IsExpanded="true" />
         <EntityTypeShape EntityType="NBD_DatabaseModel.PROD_TEAM" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
         <EntityTypeShape EntityType="NBD_DatabaseModel.PROD_TOOL" Width="1.5" PointX="10.5" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="NBD_DatabaseModel.PROJECT" Width="1.5" PointX="8.25" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="NBD_DatabaseModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NBD_DatabaseModel.TASK" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NBD_DatabaseModel.TOOL" Width="1.5" PointX="8.25" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="NBD_DatabaseModel.WORKER" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
         <EntityTypeShape EntityType="NBD_DatabaseModel.WORKER_TYPE" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
         <AssociationConnector Association="NBD_DatabaseModel.FK_CLIENT_CITY" ManuallyRouted="false" />
-        <AssociationConnector Association="NBD_DatabaseModel.FK_PROJECT_CLIENT" ManuallyRouted="false" />
         <AssociationConnector Association="NBD_DatabaseModel.FK_INVENTORY_MATERIAL" ManuallyRouted="false" />
         <AssociationConnector Association="NBD_DatabaseModel.FK_MATERIAL_REQ_INVENTORY" ManuallyRouted="false" />
         <AssociationConnector Association="NBD_DatabaseModel.FK_LABOUR_REQUIREMENT_PROD_TEAM" ManuallyRouted="false" />
         <AssociationConnector Association="NBD_DatabaseModel.FK_LABOUR_REQUIREMENT_TASK" ManuallyRouted="false" />
-        <AssociationConnector Association="NBD_DatabaseModel.FK_LABOUR_SUMMARY_PROJECT" ManuallyRouted="false" />
         <AssociationConnector Association="NBD_DatabaseModel.FK_LABOUR_SUMMARY_WORKER_TYPE" ManuallyRouted="false" />
-        <AssociationConnector Association="NBD_DatabaseModel.FK_MATERIAL_REQ_PROJECT" ManuallyRouted="false" />
-        <AssociationConnector Association="NBD_DatabaseModel.FK_PROD_TEAM_PROJECT" ManuallyRouted="false" />
         <AssociationConnector Association="NBD_DatabaseModel.FK_PROD_TEAM_WORKER" ManuallyRouted="false" />
-        <AssociationConnector Association="NBD_DatabaseModel.FK_PROD_TOOL_PROJECT" ManuallyRouted="false" />
         <AssociationConnector Association="NBD_DatabaseModel.FK_PROD_TOOL_TOOL" ManuallyRouted="false" />
-        <AssociationConnector Association="NBD_DatabaseModel.FK_PROJECT_WORKER" ManuallyRouted="false" />
         <AssociationConnector Association="NBD_DatabaseModel.FK_WORKER_WORKER_TYPE" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="NBD_DatabaseModel.PROJECT" Width="1.5" PointX="8.25" PointY="8.25" />
+        <AssociationConnector Association="NBD_DatabaseModel.FK_PROJECT_CLIENT" />
+        <AssociationConnector Association="NBD_DatabaseModel.FK_LABOUR_SUMMARY_PROJECT" />
+        <AssociationConnector Association="NBD_DatabaseModel.FK_MATERIAL_REQ_PROJECT" />
+        <AssociationConnector Association="NBD_DatabaseModel.FK_PROD_TEAM_PROJECT" />
+        <AssociationConnector Association="NBD_DatabaseModel.FK_PROD_TOOL_PROJECT" />
+        <AssociationConnector Association="NBD_DatabaseModel.FK_PROJECT_WORKER" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
