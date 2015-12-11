@@ -41,8 +41,7 @@ namespace NBDWebApp.Projects
 
     }
     protected void DropDownList2_SelectedIndexChanged1(object sender, EventArgs e)
-    {
-
+    { 
       NBD_DatabaseEntities db = new NBD_DatabaseEntities();
       int id = Convert.ToInt32(this.DropDownList2.SelectedValue);
       //this.ListBox1.Items.Clear();
@@ -51,6 +50,10 @@ namespace NBDWebApp.Projects
       var query2 = from project in db.PROJECTs
                    where project.ID == id
                    select project;
+
+      txtClientBusinessDesign.Text = this.DropDownList2.SelectedItem.ToString();
+      this.txtDesignerPhoneDesign.Text = "4087753645";
+      this.txtSalesAssocPhoneDesign.Text = "4087753652";
 
       foreach (var client in query)
       {
@@ -68,8 +71,6 @@ namespace NBDWebApp.Projects
 
       foreach (var q in query2)
       {
-          //Client Info
-        this.txtClientBusinessDesign.Text = q.projName;
           
           //NBD staff
           if (q.WORKER.wrkTypeID == 2)
@@ -84,6 +85,7 @@ namespace NBDWebApp.Projects
               //DESIGN BID
               this.txtSalesAssocFNameDesign.Text = q.WORKER.wrkFName;
               this.txtSalesAssocLNameDesign.Text = q.WORKER.wrkLName;
+             
 
 
           }
@@ -91,6 +93,7 @@ namespace NBDWebApp.Projects
           {
               txtSalesAssocLNameDesign.Text = "Reinhardt";
               txtSalesAssocFNameDesign.Text = "Bob";
+              
           }
 
           //project
