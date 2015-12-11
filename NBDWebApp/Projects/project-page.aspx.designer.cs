@@ -310,6 +310,51 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.TextBox txtBidEstCostDesign;
         
         /// <summary>
+        /// ddlProjectID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlProjectID;
+        
+        /// <summary>
+        /// gvMaterialReqDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvMaterialReqDesign;
+        
+        /// <summary>
+        /// ddlMaterialDescDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlMaterialDescDesign;
+        
+        /// <summary>
+        /// txtQtyEstDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtQtyEstDesign;
+        
+        /// <summary>
+        /// btnAddMaterial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddMaterial;
+        
+        /// <summary>
         /// btnSubmitDesignBid control.
         /// </summary>
         /// <remarks>
@@ -317,6 +362,24 @@ namespace NBDWebApp.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmitDesignBid;
+        
+        /// <summary>
+        /// ObjectDataSourceProject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSourceProject;
+        
+        /// <summary>
+        /// ObjectDataSourceMaterialDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSourceMaterialDesign;
         
         /// <summary>
         /// EntityDataSource2 control.

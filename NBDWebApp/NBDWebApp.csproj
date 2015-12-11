@@ -199,6 +199,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="NBDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NBDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="OwinStartup.cs" />
     <Compile Include="PROD_TEAM.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -246,6 +251,10 @@
     <Compile Include="WORKER_TYPE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Content Include="App_Data\NBD_Database.mdf" />
+    <Content Include="App_Data\NBD_Database_log.ldf">
+      <DependentUpon>NBD_Database.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\NBD_SB.mdf" />
     <Content Include="App_Data\NBD_SB_log.ldf" />
     <Content Include="App_Data\Users.mdf" />
@@ -480,6 +489,17 @@
     </Content>
     <Content Include="assets\css\main - Copy.rtl.css.map">
       <DependentUpon>main - Copy.rtl.css</DependentUpon>
+    </Content>
+    <Content Include="NBDDataSet.xsc">
+      <DependentUpon>NBDDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="NBDDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NBDDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="NBDDataSet.xss">
+      <DependentUpon>NBDDataSet.xsd</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

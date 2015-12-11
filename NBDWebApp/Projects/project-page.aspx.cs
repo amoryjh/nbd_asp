@@ -30,6 +30,10 @@ namespace NBDWebApp.Projects
         this.txtBidEstCostDesign.Text = "";
         this.LlblTitle.Text =  "";
 
+        NBD_DatabaseEntities db = new NBD_DatabaseEntities();
+        foreach (INVENTORY i in db.INVENTORies)
+            this.ddlMaterialDescDesign.Items.Add(i.MATERIAL.matDesc + " " + i.invSizeAmnt + " " + i.invSizeUnit);
+
     }
     protected void DropDownList2_SelectedIndexChanged1(object sender, EventArgs e)
     {
@@ -104,6 +108,25 @@ namespace NBDWebApp.Projects
           
 
       }
+    }
+
+    protected void btnAddMaterial_Click(object sender, EventArgs e)
+    {
+        //Add Material To Req Material for Project
+
+        NBD_DatabaseEntities db = new NBD_DatabaseEntities();
+
+        MATERIAL_REQ mr = new MATERIAL_REQ();
+
+        mr.projectID = this.ddlProjectID.SelectedIndex +1;
+        mr.inventoryID = this.ddlMaterialDescDesign.SelectedIndex + 1;
+        mr.mreqEstQty = Convert.ToInt16(this.txtQtyEstDesign.Text);
+
+        db.MATERIAL_REQ.Add(mr);
+        db.SaveChanges();
+
+        gvMaterialReqDesign.DataBind();
+
     }
   }
 }

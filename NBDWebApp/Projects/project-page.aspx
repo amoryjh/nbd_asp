@@ -230,8 +230,40 @@
         <div class="form-group col-md-12">
             <h1>Material Requirements</h1>
         </div>
-        
-          
+        <div class="form-group col-md-12">
+            <asp:DropDownList ID="ddlProjectID" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID"></asp:DropDownList> 
+        </div>
+        <div class="form-group col-md-12">
+            <asp:GridView ID="gvMaterialReqDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceMaterialDesign" ShowHeaderWhenEmpty="True">
+                <Columns>
+                    <asp:BoundField DataField="matType" HeaderText="Type" SortExpression="matType" />
+                    <asp:BoundField DataField="matDesc" HeaderText="Desc" SortExpression="matDesc" />
+                    <asp:BoundField DataField="mreqEstQty" HeaderText="Qty" SortExpression="mreqEstQty" />
+                    <asp:BoundField DataField="invSizeAmnt" HeaderText="Amount" SortExpression="invSizeAmnt" />
+                    <asp:BoundField DataField="invSizeUnit" HeaderText="Size" SortExpression="invSizeUnit" />
+                </Columns>
+            </asp:GridView>
+        </div>
+
+        <div class="form-group col-md-5">
+           <label id="lblMaterialDescDesign" for="ddlMaterialDescDesign">Desc.</label> 
+        </div>
+
+        <div class="form-group col-md-5">
+           <label id="lblMaterialQtyDesign" for="txtQtyEstDesign">Qty</label> 
+        </div>
+
+        <div class="form-group col-md-5">
+            <asp:DropDownList ID="ddlMaterialDescDesign" runat="server"></asp:DropDownList> 
+        </div>
+
+        <div class="form-group col-md-5">
+            <asp:TextBox ID="txtQtyEstDesign" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-2">
+            <asp:Button ID="btnAddMaterial" CssClass="btn" runat="server" Text="+" OnClick="btnAddMaterial_Click" /> 
+        </div> 
         
     </div>
 
@@ -253,8 +285,20 @@
     </div>
   </div>
   
-     
-
+<asp:ObjectDataSource ID="ObjectDataSourceProject" runat="server" DeleteMethod="Delete" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NBDWebApp.NBDDataSetTableAdapters.ProjectTableAdapter" UpdateMethod="Update">
+    <DeleteParameters>
+        <asp:Parameter Name="Original_ID" Type="Int32" />
+    </DeleteParameters>
+    <UpdateParameters>
+        <asp:Parameter Name="projName" Type="String" />
+        <asp:Parameter Name="Original_ID" Type="Int32" />
+    </UpdateParameters>
+    </asp:ObjectDataSource>     
+<asp:ObjectDataSource ID="ObjectDataSourceMaterialDesign" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NBDWebApp.NBDDataSetTableAdapters.MaterialDataTableTableAdapter">
+    <SelectParameters>
+        <asp:ControlParameter ControlID="ddlProjectID" DefaultValue="0" Name="Param1" PropertyName="SelectedValue" Type="Int32" />
+    </SelectParameters>
+    </asp:ObjectDataSource>
 <asp:EntityDataSource ID="EntityDataSource2" runat="server" ConnectionString="name=NBD_DatabaseEntities" DefaultContainerName="NBD_DatabaseEntities" EnableFlattening="False" EntitySetName="CLIENTs">
 </asp:EntityDataSource>
 </form>
