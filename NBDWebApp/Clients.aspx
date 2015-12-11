@@ -69,8 +69,10 @@
             </ul>
               
           </div>
-             <div class="updated-list well col-md-10 col-md-offset-1">   
-             <h3 class="project-title"><a href="Projects/project-page.aspx">Design Bid</a></h3>
+             <div class="updated-list well col-md-10 col-md-offset-1 text-center">   
+             <h2 class="project-title">View Rest of Design Bid</h2>
+               <br />
+             <a style="color:#fff;padding:14px;font-weight:700;font-size:1.35em;background:#188ea8;" class="btn" href="Projects/project-page.aspx">Let's go!</a>
              </div>
         </div>
       </ItemTemplate>

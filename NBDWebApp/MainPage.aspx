@@ -25,7 +25,7 @@
     </div>
     <div class="project-instance box-border clearfix">
         <div class="project-instance-title">
-            <h2 class="project-title"><a href="Projects/carlisle-hotel-renovations.aspx">Carlisle Hotel Renovations</a></h2>
+            <h2 class="project-title"><a href="Projects/project-page.aspx">Carlisle Hotel Renovations</a></h2>
             <p class="project-update-date">Updated on: 12/01/2015</p>
         </div>
         <div class="timeline well col-md-10 col-md-offset-1">    
@@ -67,7 +67,7 @@
     </div>
     <div class="project-instance box-border clearfix">
         <div class="project-instance-title">
-            <h2 class="project-title"><a href="Projects/carlisle-hotel-renovations.aspx">Montebello Landscaping</a></h2>
+            <h2 class="project-title"><a href="Projects/project-page.aspx">Montebello Landscaping</a></h2>
             <p class="project-update-date">Updated on: 12/01/2015</p>
         </div>
         <div class="timeline well col-md-10 col-md-offset-1">    

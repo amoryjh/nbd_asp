@@ -231,17 +231,21 @@
             <h1>Material Requirements</h1>
         </div>
         <div class="form-group col-md-12">
-            <asp:DropDownList ID="ddlProjectID" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID"></asp:DropDownList> 
+            <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID"></asp:DropDownList> 
         </div>
-        <div class="form-group col-md-12">
-            <asp:GridView ID="gvMaterialReqDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceMaterialDesign" ShowHeaderWhenEmpty="True">
+
+        <div class="form-group col-md-12" style="margin-top:1.5em">
+            <asp:GridView ID="gvMaterialReqDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceMaterialDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
                 <Columns>
                     <asp:BoundField DataField="matType" HeaderText="Type" SortExpression="matType" />
-                    <asp:BoundField DataField="matDesc" HeaderText="Desc" SortExpression="matDesc" />
+                    <asp:BoundField DataField="matDesc" HeaderText="Desc" SortExpression="matDesc" >
+                    <HeaderStyle Font-Underline="False" />
+                    </asp:BoundField>
                     <asp:BoundField DataField="mreqEstQty" HeaderText="Qty" SortExpression="mreqEstQty" />
                     <asp:BoundField DataField="invSizeAmnt" HeaderText="Amount" SortExpression="invSizeAmnt" />
                     <asp:BoundField DataField="invSizeUnit" HeaderText="Size" SortExpression="invSizeUnit" />
                 </Columns>
+            <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
             </asp:GridView>
         </div>
 
@@ -254,11 +258,11 @@
         </div>
 
         <div class="form-group col-md-5">
-            <asp:DropDownList ID="ddlMaterialDescDesign" runat="server"></asp:DropDownList> 
+            <asp:DropDownList ID="ddlMaterialDescDesign" class="form-control" runat="server"></asp:DropDownList> 
         </div>
 
         <div class="form-group col-md-5">
-            <asp:TextBox ID="txtQtyEstDesign" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtQtyEstDesign" class="form-control" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
@@ -273,12 +277,13 @@
       </div>
 
         <div class="form-group col-md-12">
-            <asp:GridView ID="gvLabourSummaryDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceLabourSummaryDesign" ShowHeaderWhenEmpty="True">
+            <asp:GridView ID="gvLabourSummaryDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceLabourSummaryDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
                 <Columns>
                     <asp:BoundField DataField="lsHours" HeaderText="lsHours" SortExpression="lsHours" />
                     <asp:BoundField DataField="wrkTypeDesc" HeaderText="wrkTypeDesc" SortExpression="wrkTypeDesc" />
                     <asp:BoundField DataField="wrkTypePrice" HeaderText="wrkTypePrice" SortExpression="wrkTypePrice" />
                 </Columns>
+              <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
             </asp:GridView>
         </div>
 
@@ -291,11 +296,11 @@
         </div>
 
         <div class="form-group col-md-5">
-            <asp:TextBox ID="txtLabourSummaryHoursDesign" runat="server"></asp:TextBox> 
+            <asp:TextBox class="form-control" ID="txtLabourSummaryHoursDesign" runat="server"></asp:TextBox> 
         </div>
 
         <div class="form-group col-md-5">
-            <asp:DropDownList ID="ddlLabourSummaryDescDesign" runat="server"></asp:DropDownList>
+            <asp:DropDownList class="form-control" ID="ddlLabourSummaryDescDesign" runat="server"></asp:DropDownList>
         </div>
 
         <div class="form-group col-md-2">

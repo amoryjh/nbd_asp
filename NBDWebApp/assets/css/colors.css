@@ -12,6 +12,9 @@
   outline: inherit;
   background: #c30951;
 }
+.whitetxt {
+  color: #fff !important;
+}
 .btn-primary {
   background: #337ab7;
   border-color: inherit;
