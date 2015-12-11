@@ -25,7 +25,7 @@ namespace NBDWebApp
         public string teamPhaseIn { get; set; }
     
         public virtual ICollection<LABOUR_REQUIREMENT> LABOUR_REQUIREMENT { get; set; }
-        public virtual PROJECT PROJECT { get; set; }
         public virtual WORKER WORKER { get; set; }
+        public virtual PROJECT PROJECT { get; set; }
     }
 }

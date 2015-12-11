@@ -106,28 +106,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PROJECTs">
-      <EntityTypeMapping TypeName="NBD_DatabaseModel.PROJECT">
-        <MappingFragment StoreEntitySet="PROJECT">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="projName" ColumnName="projName" />
-          <ScalarProperty Name="projSite" ColumnName="projSite" />
-          <ScalarProperty Name="projBidDate" ColumnName="projBidDate" />
-          <ScalarProperty Name="projEstStart" ColumnName="projEstStart" />
-          <ScalarProperty Name="projEstEnd" ColumnName="projEstEnd" />
-          <ScalarProperty Name="projActStart" ColumnName="projActStart" />
-          <ScalarProperty Name="projActEnd" ColumnName="projActEnd" />
-          <ScalarProperty Name="projEstCost" ColumnName="projEstCost" />
-          <ScalarProperty Name="projActCost" ColumnName="projActCost" />
-          <ScalarProperty Name="projBidCustAccept" ColumnName="projBidCustAccept" />
-          <ScalarProperty Name="projBidMgmtAccept" ColumnName="projBidMgmtAccept" />
-          <ScalarProperty Name="projCurrentPhase" ColumnName="projCurrentPhase" />
-          <ScalarProperty Name="projIsFlagged" ColumnName="projIsFlagged" />
-          <ScalarProperty Name="clientID" ColumnName="clientID" />
-          <ScalarProperty Name="designerID" ColumnName="designerID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="NBD_DatabaseModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
@@ -174,6 +152,28 @@
           <ScalarProperty Name="wrkTypeDesc" ColumnName="wrkTypeDesc" />
           <ScalarProperty Name="wrkTypePrice" ColumnName="wrkTypePrice" />
           <ScalarProperty Name="wrkTypeCost" ColumnName="wrkTypeCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROJECTs">
+      <EntityTypeMapping TypeName="NBD_DatabaseModel.PROJECT">
+        <MappingFragment StoreEntitySet="PROJECT">
+          <ScalarProperty Name="designerID" ColumnName="designerID" />
+          <ScalarProperty Name="clientID" ColumnName="clientID" />
+          <ScalarProperty Name="projIsFlagged" ColumnName="projIsFlagged" />
+          <ScalarProperty Name="projCurrentPhase" ColumnName="projCurrentPhase" />
+          <ScalarProperty Name="projBidMgmtAccept" ColumnName="projBidMgmtAccept" />
+          <ScalarProperty Name="projBidCustAccept" ColumnName="projBidCustAccept" />
+          <ScalarProperty Name="projActCost" ColumnName="projActCost" />
+          <ScalarProperty Name="projEstCost" ColumnName="projEstCost" />
+          <ScalarProperty Name="projActEnd" ColumnName="projActEnd" />
+          <ScalarProperty Name="projActStart" ColumnName="projActStart" />
+          <ScalarProperty Name="projEstEnd" ColumnName="projEstEnd" />
+          <ScalarProperty Name="projEstStart" ColumnName="projEstStart" />
+          <ScalarProperty Name="projBidDate" ColumnName="projBidDate" />
+          <ScalarProperty Name="projSite" ColumnName="projSite" />
+          <ScalarProperty Name="projName" ColumnName="projName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

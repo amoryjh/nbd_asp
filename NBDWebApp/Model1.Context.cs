@@ -34,11 +34,11 @@ namespace NBDWebApp
         public virtual DbSet<MATERIAL_REQ> MATERIAL_REQ { get; set; }
         public virtual DbSet<PROD_TEAM> PROD_TEAM { get; set; }
         public virtual DbSet<PROD_TOOL> PROD_TOOL { get; set; }
-        public virtual DbSet<PROJECT> PROJECTs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TASK> TASKs { get; set; }
         public virtual DbSet<TOOL> TOOLs { get; set; }
         public virtual DbSet<WORKER> WORKERs { get; set; }
         public virtual DbSet<WORKER_TYPE> WORKER_TYPE { get; set; }
+        public virtual DbSet<PROJECT> PROJECTs { get; set; }
     }
 }

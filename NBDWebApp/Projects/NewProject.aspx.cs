@@ -29,10 +29,17 @@ namespace NBDWebApp.Projects
 
         protected void btnInsert_Click(object sender, EventArgs e)
         {
-            NBD_DatabaseEntities bd = new NBD_DatabaseEntities();
+            NBD_DatabaseEntities db = new NBD_DatabaseEntities();
 
             PROJECT p = new PROJECT();
 
+            p.projSite = this.txtProjSite.Text;
+            p.projName = this.txtProjName.Text;
+            p.clientID = this.ddlClientName.SelectedIndex + 1;
+            p.designerID = 3;
+
+            db.PROJECTs.Add(p);
+            db.SaveChanges();
 
         }
     }

@@ -21,7 +21,7 @@ namespace NBDWebApp
         public Nullable<System.DateTime> ptDeliverFrom { get; set; }
         public Nullable<System.DateTime> ptDeliverTo { get; set; }
     
-        public virtual PROJECT PROJECT { get; set; }
         public virtual TOOL TOOL { get; set; }
+        public virtual PROJECT PROJECT { get; set; }
     }
 }
