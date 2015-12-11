@@ -5891,6 +5891,34 @@ hr {
   background: #188EA8;
   color: #fff;
 }
+.mobile-btn-search {
+  display: block;
+}
+@media (min-width: 992px) {
+  .mobile-btn-search {
+    display: none;
+  }
+}
+.client-search-aside {
+  position: absolute;
+  top: 12em;
+  display: none;
+}
+@media (min-width: 992px) {
+  .client-search-aside {
+    display: block;
+  }
+}
+@media (max-width: 1100px) {
+  .client-search-aside {
+    left: 0;
+  }
+}
+@media (min-width: 1105px) {
+  .client-search-aside {
+    left: 2.5%;
+  }
+}
 /*///////////////////////////////////////////////////////
 ---------------------Reusable Classes--------------------
 ///////////////////////////////////////////////////////*/
@@ -6229,40 +6257,12 @@ span.highlight-change {
 --------------------Client Directory---------------------
 ///////////////////////////////////////////////////////*/
 .client-directory h1.section-title {
-  margin-bottom: 0.4em;
+  margin-bottom: 0.5em;
 }
 .client-directory p {
   margin-bottom: 1em;
 }
 .client-directory p img {
   width: 1em;
-}
-.client-directory .mobile-btn-search {
-  display: block;
-}
-@media (min-width: 992px) {
-  .client-directory .mobile-btn-search {
-    display: none;
-  }
-}
-.client-directory .client-search-aside {
-  position: absolute;
-  top: 12em;
-  display: none;
-}
-@media (min-width: 992px) {
-  .client-directory .client-search-aside {
-    display: block;
-  }
-}
-@media (max-width: 1100px) {
-  .client-directory .client-search-aside {
-    left: 0;
-  }
-}
-@media (min-width: 1105px) {
-  .client-directory .client-search-aside {
-    left: 2.5%;
-  }
 }
 /*# sourceMappingURL=main.css.map */

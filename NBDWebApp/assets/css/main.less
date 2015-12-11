@@ -106,6 +106,27 @@ hr{border-top-color:lighten(@brand-tri,20%);}
     background: #188EA8;
     color: #fff;
 }
+//Search Bars
+
+.mobile-btn-search{
+  display:block;
+  @media(min-width:992px){display:none;}
+}
+.client-search-aside{
+  position:absolute;
+  top:12em;
+  display:none;
+  @media(min-width:992px)
+  {
+      display:block;
+  }
+  @media(max-width:1100px)
+  {
+      left:0;
+  }
+  @media(min-width: 1105px){left:2.5%; }
+} 
+
 /*///////////////////////////////////////////////////////
 ---------------------Reusable Classes--------------------
 ///////////////////////////////////////////////////////*/
@@ -379,27 +400,9 @@ span.highlight-change{font-weight: 700;}
 --------------------Client Directory---------------------
 ///////////////////////////////////////////////////////*/
 .client-directory{
-  h1.section-title{margin-bottom:0.4em}
+  h1.section-title{margin-bottom:0.5em}
   p{
     margin-bottom:1em;
     img{width:1em;}
   }
-  .mobile-btn-search{
-    display:block;
-    @media(min-width:992px){display:none;}
-  }
-  .client-search-aside{
-    position:absolute;
-    top:12em;
-    display:none;
-    @media(min-width:992px)
-    {
-        display:block;
-    }
-    @media(max-width:1100px)
-    {
-        left:0;
-    }
-    @media(min-width: 1105px){left:2.5%; }
-  } 
 }
