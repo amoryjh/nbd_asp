@@ -279,9 +279,9 @@
         <div class="form-group col-md-12">
             <asp:GridView ID="gvLabourSummaryDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceLabourSummaryDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
                 <Columns>
-                    <asp:BoundField DataField="lsHours" HeaderText="lsHours" SortExpression="lsHours" />
-                    <asp:BoundField DataField="wrkTypeDesc" HeaderText="wrkTypeDesc" SortExpression="wrkTypeDesc" />
-                    <asp:BoundField DataField="wrkTypePrice" HeaderText="wrkTypePrice" SortExpression="wrkTypePrice" />
+                    <asp:BoundField DataField="lsHours" HeaderText="Hours" SortExpression="lsHours" />
+                    <asp:BoundField DataField="wrkTypeDesc" HeaderText="Worker Type" SortExpression="wrkTypeDesc" />
+                    <asp:BoundField DataField="wrkTypePrice" HeaderText="Price/Hour" SortExpression="wrkTypePrice" />
                 </Columns>
               <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
             </asp:GridView>
