@@ -62,7 +62,8 @@
             <h2 class="project-title"><%# Eval("cliName") %></h2>
             <p class="project-update-date">Contact : <%# Eval("cliConFName") %> <%# Eval("cliConLName") %>, <%# Eval("cliConPosition") %></p>
           </div>
-          <div class="timeline well clearfix">    
+
+        <div class="timeline well col-md-10 col-md-offset-1 clearfix">    
         <h3>
             Project Timeline
         </h3>
