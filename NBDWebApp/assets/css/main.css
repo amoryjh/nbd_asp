@@ -6237,9 +6237,32 @@ span.highlight-change {
 .client-directory p img {
   width: 1em;
 }
+.client-directory .mobile-btn-search {
+  display: block;
+}
+@media (min-width: 992px) {
+  .client-directory .mobile-btn-search {
+    display: none;
+  }
+}
 .client-directory .client-search-aside {
   position: absolute;
-  left: 2.5%;
   top: 12em;
+  display: none;
+}
+@media (min-width: 992px) {
+  .client-directory .client-search-aside {
+    display: block;
+  }
+}
+@media (max-width: 1100px) {
+  .client-directory .client-search-aside {
+    left: 0;
+  }
+}
+@media (min-width: 1105px) {
+  .client-directory .client-search-aside {
+    left: 2.5%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
