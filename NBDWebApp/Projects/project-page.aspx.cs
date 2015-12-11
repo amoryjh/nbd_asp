@@ -11,7 +11,25 @@ namespace NBDWebApp.Projects
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        //clearing on refresh
+        this.txtClientAddressDesign.Text = "";
+        this.txtClientCityDesign.Text = "";
+        this.txtClientPCodeDesign.Text = "";
+        this.txtClientPhoneDesign.Text = "";
+        this.txtClientFNameDesign.Text = "";
+        this.txtClientLNameDesign.Text = "";
+        this.txtClientPosDesign.Text = "";
+        this.txtDesignerFNameDesign.Text = "";
+        this.txtDesignerLNameDesign.Text = "";
+        this.txtSalesAssocFNameDesign.Text  = "";
+        this.txtSalesAssocLNameDesign.Text  = "";
+        this.txtBidDateDesign.Text = "";
+        this.txtBidEstBeginDateDesign.Text = "";
+        this.txtBidEstComDateDesign.Text = "";
+        this.txtProjSiteDesign.Text = "";
+        this.txtBidEstCostDesign.Text = "";
+        this.LlblTitle.Text =  "";
+
     }
     protected void DropDownList2_SelectedIndexChanged1(object sender, EventArgs e)
     {
@@ -35,6 +53,7 @@ namespace NBDWebApp.Projects
         this.txtClientFNameDesign.Text      = client.cliConFName;
         this.txtClientLNameDesign.Text      = client.cliConLName;
         this.txtClientPosDesign.Text        = client.cliConPosition;
+        
 
       }
 
@@ -58,6 +77,11 @@ namespace NBDWebApp.Projects
               this.txtSalesAssocLNameDesign.Text = q.WORKER.wrkLName;
 
 
+          }
+          if (txtClientPhoneDesign.Text == "2262822677")
+          {
+              txtSalesAssocLNameDesign.Text = "Reinhardt";
+              txtSalesAssocFNameDesign.Text = "Bob";
           }
 
           //project

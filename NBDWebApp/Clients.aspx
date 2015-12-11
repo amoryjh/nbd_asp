@@ -67,7 +67,11 @@
                 <li>Est Cost: <span class="highlight-change"><%#Eval("projEstCost")%></span></li>
                 <li>Actual Cost: <span class="highlight-change"><%#Eval("projActCost")%></span></li>  
             </ul>
+              
           </div>
+             <div class="updated-list well col-md-10 col-md-offset-1">   
+             <h3 class="project-title"><a href="Projects/project-page.aspx">Design Bid</a></h3>
+             </div>
         </div>
       </ItemTemplate>
     </asp:Repeater>
@@ -95,6 +99,7 @@
         </div>
       </ItemTemplate>
     </asp:Repeater>
+      
   </div>
 </form>
 </asp:Content>
