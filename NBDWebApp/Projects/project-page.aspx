@@ -271,6 +271,36 @@
       <div class="form-group col-md-12">
           <h1>Labour Requirements</h1>
       </div>
+
+        <div class="form-group col-md-12">
+            <asp:GridView ID="gvLabourSummaryDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceLabourSummaryDesign" ShowHeaderWhenEmpty="True">
+                <Columns>
+                    <asp:BoundField DataField="lsHours" HeaderText="lsHours" SortExpression="lsHours" />
+                    <asp:BoundField DataField="wrkTypeDesc" HeaderText="wrkTypeDesc" SortExpression="wrkTypeDesc" />
+                    <asp:BoundField DataField="wrkTypePrice" HeaderText="wrkTypePrice" SortExpression="wrkTypePrice" />
+                </Columns>
+            </asp:GridView>
+        </div>
+
+        <div class="form-group col-md-5">
+           <label id="lblLabourSummaryHoursDesign" for="txtLabourSummaryHoursDesign">Hours</label> 
+        </div>
+
+        <div class="form-group col-md-5">
+           <label id="lblLabourSummaryDescDesign" for="txtQtyEstDesign">Desc.</label> 
+        </div>
+
+        <div class="form-group col-md-5">
+            <asp:TextBox ID="txtLabourSummaryHoursDesign" runat="server"></asp:TextBox> 
+        </div>
+
+        <div class="form-group col-md-5">
+            <asp:DropDownList ID="ddlLabourSummaryDescDesign" runat="server"></asp:DropDownList>
+        </div>
+
+        <div class="form-group col-md-2">
+            <asp:Button ID="btnAddLabourSummaryDesign" CssClass="btn" runat="server" Text="+" OnClick="btnAddLabourSummaryDesign_Click" /> 
+        </div>
       
 
         
@@ -284,7 +314,13 @@
         </div>
     </div>
   </div>
-  
+ 
+    
+<asp:ObjectDataSource ID="ObjectDataSourceLabourSummaryDesign" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NBDWebApp.NBDDataSetTableAdapters.LabourSummaryDataTableTableAdapter">
+    <SelectParameters>
+        <asp:ControlParameter ControlID="ddlProjectID" DefaultValue="0" Name="Param1" PropertyName="SelectedValue" Type="Int32" />
+    </SelectParameters>
+    </asp:ObjectDataSource>     
 <asp:ObjectDataSource ID="ObjectDataSourceProject" runat="server" DeleteMethod="Delete" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NBDWebApp.NBDDataSetTableAdapters.ProjectTableAdapter" UpdateMethod="Update">
     <DeleteParameters>
         <asp:Parameter Name="Original_ID" Type="Int32" />

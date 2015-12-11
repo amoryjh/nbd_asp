@@ -355,6 +355,42 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.Button btnAddMaterial;
         
         /// <summary>
+        /// gvLabourSummaryDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvLabourSummaryDesign;
+        
+        /// <summary>
+        /// txtLabourSummaryHoursDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtLabourSummaryHoursDesign;
+        
+        /// <summary>
+        /// ddlLabourSummaryDescDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlLabourSummaryDescDesign;
+        
+        /// <summary>
+        /// btnAddLabourSummaryDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddLabourSummaryDesign;
+        
+        /// <summary>
         /// btnSubmitDesignBid control.
         /// </summary>
         /// <remarks>
@@ -362,6 +398,15 @@ namespace NBDWebApp.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmitDesignBid;
+        
+        /// <summary>
+        /// ObjectDataSourceLabourSummaryDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSourceLabourSummaryDesign;
         
         /// <summary>
         /// ObjectDataSourceProject control.

@@ -31,8 +31,13 @@ namespace NBDWebApp.Projects
         this.LlblTitle.Text =  "";
 
         NBD_DatabaseEntities db = new NBD_DatabaseEntities();
+        //Fill inventory items ddl for material requirments 
         foreach (INVENTORY i in db.INVENTORies)
             this.ddlMaterialDescDesign.Items.Add(i.MATERIAL.matDesc + " " + i.invSizeAmnt + " " + i.invSizeUnit);
+
+        //Fill worker desc for labour requirments
+        foreach (WORKER_TYPE wt in db.WORKER_TYPE)
+            this.ddlLabourSummaryDescDesign.Items.Add(wt.wrkTypeDesc);
 
     }
     protected void DropDownList2_SelectedIndexChanged1(object sender, EventArgs e)
@@ -127,6 +132,22 @@ namespace NBDWebApp.Projects
 
         gvMaterialReqDesign.DataBind();
 
+    }
+
+    protected void btnAddLabourSummaryDesign_Click(object sender, EventArgs e)
+    {
+        NBD_DatabaseEntities db = new NBD_DatabaseEntities();
+
+        LABOUR_SUMMARY ls = new LABOUR_SUMMARY();
+
+        ls.projectID = this.ddlProjectID.SelectedIndex + 1;
+        ls.lsHours = Convert.ToInt16(this.txtLabourSummaryHoursDesign.Text);
+        ls.workerTypeID = this.ddlLabourSummaryDescDesign.SelectedIndex + 1;
+
+        db.LABOUR_SUMMARY.Add(ls);
+        db.SaveChanges();
+
+        gvLabourSummaryDesign.DataBind();
     }
   }
 }
