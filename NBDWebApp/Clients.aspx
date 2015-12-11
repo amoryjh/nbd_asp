@@ -37,22 +37,7 @@
             </asp:DropDownList>
       </div>
     </div>
-
-    <div class="col-md-12 text-center mobile-btn-search clearfix">
-      <h3>Filter by Letter:</h3>
-      <div class="btn-group">
-        <button type="button" class="btn btn-danger view-all">ALL</button>
-        <button type="button" class="btn btn-danger btn-sort" value="abcd">A-D</button>
-        <button type="button" class="btn btn-danger btn-sort" value="efgh">E-H</button>
-        <button type="button" class="btn btn-danger btn-sort" value="ijkl">I-L</button>
-        <button type="button" class="btn btn-danger btn-sort" value="mnop">M-P</button>
-        <button type="button" class="btn btn-danger btn-sort" value="qrst">Q-T</button>
-        <button type="button" class="btn btn-danger btn-sort" value="uvwxyz">U-Z</button>
-      </div>
-    </div>  
-  
   </div>
-
   <div class="col-md-12 clearfix client-listings">
     <asp:Repeater id="Projects" runat="server">
       <ItemTemplate>

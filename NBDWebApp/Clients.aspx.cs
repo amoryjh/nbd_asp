@@ -56,14 +56,14 @@ namespace NBDWebApp
         projectStuff.projName = c.projName.Trim();
         projectStuff.projSite = c.projSite.Trim();
         projectStuff.projBidDate = c.projBidDate;
-        projectStuff.projEstStart = c.projEstStart.Trim();
-        projectStuff.projEstEnd = c.projEstEnd.Trim();
-        projectStuff.projActStart = c.projActStart.Trim();
-        projectStuff.projActEnd = c.projActEnd.Trim();
-        projectStuff.projActCost = c.projActCost.Trim();
+        projectStuff.projEstStart = c.projEstStart;
+        projectStuff.projEstEnd = c.projEstEnd;
+        projectStuff.projActStart = c.projActStart;
+        projectStuff.projActEnd = c.projActEnd;
+        projectStuff.projActCost = c.projActCost;
         projectStuff.projBidCustAccept = c.projBidCustAccept;
         projectStuff.projBidMgmtAccept = c.projBidMgmtAccept;
-        projectStuff.projCurrentPhase = c.projCurrentPhase.Trim();
+        projectStuff.projCurrentPhase = c.projCurrentPhase;
         projectStuff.projIsFlagged = c.projIsFlagged;
 
         //Client Stuff

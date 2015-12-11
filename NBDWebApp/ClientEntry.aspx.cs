@@ -27,41 +27,21 @@ namespace NBDWebApp
 
         protected void btnInsert_Click(object sender, EventArgs e)
         {
-            try
-            {
-                //Inserting new client into databse
-                NBD_DatabaseEntities db = new NBD_DatabaseEntities();
-                CLIENT c = new CLIENT();
-                c.cliName = this.txtBusiness.Text;
-                c.cliAddress = this.txtAddress.Text;
-                c.cityID = this.ddlCity.SelectedIndex + 1;
-                c.cliProvince = this.ddlProv.SelectedValue;
-                c.cliPCode = this.txtPCode.Text;
-                c.cliPhone = this.txtPhone.Text;
-                c.cliConFName = this.txtClientFName.Text;
-                c.cliConLName = this.txtClientLName.Text;
-                c.cliConPosition = this.txtClientPos.Text;
+            //Inserting new client into databse
+            NBD_DatabaseEntities db = new NBD_DatabaseEntities();
+            CLIENT c = new CLIENT();
+            c.cliName = this.txtBusiness.Text;
+            c.cliAddress = this.txtAddress.Text;
+            c.cityID = this.ddlCity.SelectedIndex+1;
+            c.cliProvince = this.ddlProv.SelectedValue;
+            c.cliPCode = this.txtPCode.Text;
+            c.cliPhone = this.txtPhone.Text;
+            c.cliConFName = this.txtClientFName.Text;
+            c.cliConLName = this.txtClientLName.Text;
+            c.cliConPosition = this.txtClientPos.Text;
 
-                db.CLIENTs.Add(c);
-                db.SaveChanges();
-                LblMessage.Text = "Sucessfuly Added.";
-            }
-            catch
-            {
-                LblMessage.Text = "Error";
-            }
-
-        }
-
-        protected void btnClear_Click(object sender, EventArgs e)
-        {
-            this.txtBusiness.Text = "";
-            this.txtAddress.Text = "";
-            this.txtPCode.Text = "";
-            this.txtPhone.Text = "";
-            this.txtClientFName.Text = "";
-            this.txtClientLName.Text = "";
-            this.txtClientPos.Text = "";
+            db.CLIENTs.Add(c);
+            db.SaveChanges();
         }
     }
 }
