@@ -266,7 +266,7 @@
         </div>
 
         <div class="form-group col-md-2">
-            <asp:Button ID="btnAddMaterial" CssClass="btn" runat="server" Text="+" OnClick="btnAddMaterial_Click" /> 
+            <a id="btnAddMaterial" class="btn" runat="server" onServerClick="btnAddMaterial_Click">+</a> 
         </div> 
         
     </div>

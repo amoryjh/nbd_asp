@@ -11,24 +11,28 @@ namespace NBDWebApp.Projects
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //clearing on refresh
-        this.txtClientAddressDesign.Text = "";
-        this.txtClientCityDesign.Text = "";
-        this.txtClientPCodeDesign.Text = "";
-        this.txtClientPhoneDesign.Text = "";
-        this.txtClientFNameDesign.Text = "";
-        this.txtClientLNameDesign.Text = "";
-        this.txtClientPosDesign.Text = "";
-        this.txtDesignerFNameDesign.Text = "";
-        this.txtDesignerLNameDesign.Text = "";
-        this.txtSalesAssocFNameDesign.Text  = "";
-        this.txtSalesAssocLNameDesign.Text  = "";
-        this.txtBidDateDesign.Text = "";
-        this.txtBidEstBeginDateDesign.Text = "";
-        this.txtBidEstComDateDesign.Text = "";
-        this.txtProjSiteDesign.Text = "";
-        this.txtBidEstCostDesign.Text = "";
-        this.LlblTitle.Text =  "";
+
+        if (!IsPostBack)
+        {
+            //clearing on refresh
+            this.txtClientAddressDesign.Text = "";
+            this.txtClientCityDesign.Text = "";
+            this.txtClientPCodeDesign.Text = "";
+            this.txtClientPhoneDesign.Text = "";
+            this.txtClientFNameDesign.Text = "";
+            this.txtClientLNameDesign.Text = "";
+            this.txtClientPosDesign.Text = "";
+            this.txtDesignerFNameDesign.Text = "";
+            this.txtDesignerLNameDesign.Text = "";
+            this.txtSalesAssocFNameDesign.Text = "";
+            this.txtSalesAssocLNameDesign.Text = "";
+            this.txtBidDateDesign.Text = "";
+            this.txtBidEstBeginDateDesign.Text = "";
+            this.txtBidEstComDateDesign.Text = "";
+            this.txtProjSiteDesign.Text = "";
+            this.txtBidEstCostDesign.Text = "";
+            this.LlblTitle.Text = "";
+        }
 
         NBD_DatabaseEntities db = new NBD_DatabaseEntities();
         //Fill inventory items ddl for material requirments 
@@ -134,6 +138,8 @@ namespace NBDWebApp.Projects
         db.SaveChanges();
 
         gvMaterialReqDesign.DataBind();
+        //Puts you back to the materials table
+        Response.Redirect("~/Projects/project-page.aspx#ContentPlaceHolder2_gvMaterialReqDesign");
 
     }
 
