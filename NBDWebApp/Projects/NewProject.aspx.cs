@@ -26,5 +26,14 @@ namespace NBDWebApp.Projects
                     this.ddlDesignerFName.Items.Add(d.designerFName);
 
         }
+
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            NBD_DatabaseEntities bd = new NBD_DatabaseEntities();
+
+            PROJECT p = new PROJECT();
+
+
+        }
     }
 }

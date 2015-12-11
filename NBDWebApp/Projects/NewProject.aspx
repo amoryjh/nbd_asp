@@ -43,7 +43,7 @@
         </div>
 
         <div class="form-group col-md-12">
-            <asp:Button ID="btnInsert" CssClass="btn" runat="server" Text="Create New Project" />
+            <asp:Button ID="btnInsert" CssClass="btn" runat="server" Text="Create New Project" OnClick="btnInsert_Click" />
         </div>
     </div></div>
     </form>
