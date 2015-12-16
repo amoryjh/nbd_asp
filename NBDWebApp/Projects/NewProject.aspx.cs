@@ -29,17 +29,29 @@ namespace NBDWebApp.Projects
 
         protected void btnInsert_Click(object sender, EventArgs e)
         {
-            NBD_DatabaseEntities db = new NBD_DatabaseEntities();
+            try
+            {
+                NBD_DatabaseEntities db = new NBD_DatabaseEntities();
 
-            PROJECT p = new PROJECT();
+                PROJECT p = new PROJECT();
 
-            p.projSite = this.txtProjSite.Text;
-            p.projName = this.txtProjName.Text;
-            p.clientID = this.ddlClientName.SelectedIndex + 1;
-            p.designerID = 3;
+                p.projSite = this.txtProjSite.Text;
+                p.projName = this.txtProjName.Text;
+                p.clientID = this.ddlClientName.SelectedIndex + 1;
+                p.designerID = 3;
 
-            db.PROJECTs.Add(p);
-            db.SaveChanges();
+                db.PROJECTs.Add(p);
+                db.SaveChanges();
+
+                LblMessage.Text = "New Project Sucessfuly Added.";
+            }
+            catch
+            {
+                LblMessage.Text = "Error";
+            }
+
+            //Call click event for btnClear the clear the form
+            btnClear_Click(sender, e);
 
         }
 

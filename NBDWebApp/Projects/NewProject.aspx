@@ -39,6 +39,7 @@
         </div>
 
         <div class="form-group col-md-12">
+            <asp:Label ID="LblMessage" runat="server" Text="" ViewStateMode="Disabled"></asp:Label>
             <asp:ValidationSummary ID="ValidationSummary" runat="server" ForeColor="Red" />
         </div>
 

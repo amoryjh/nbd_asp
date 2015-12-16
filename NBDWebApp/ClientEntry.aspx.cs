@@ -44,7 +44,7 @@ namespace NBDWebApp
 
                 db.CLIENTs.Add(c);
                 db.SaveChanges();
-                LblMessage.Text = "Sucessfuly Added.";
+                LblMessage.Text = "New Client Sucessfuly Added.";
             }
             catch
             {
