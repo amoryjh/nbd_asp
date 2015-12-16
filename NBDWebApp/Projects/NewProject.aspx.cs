@@ -42,5 +42,14 @@ namespace NBDWebApp.Projects
             db.SaveChanges();
 
         }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            this.txtProjName.Text = "";
+            this.txtProjSite.Text = "";
+            this.ddlClientName.SelectedIndex = 0;
+            this.ddlDesignerFName.SelectedIndex = 0;
+            this.txtBidDate.Text = "";
+        }
     }
 }

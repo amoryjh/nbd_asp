@@ -91,7 +91,7 @@
 
         <div class="form-group col-md-6">
         <asp:Button ID="btnInsert" CssClass="btn" runat="server" Text="Insert Client" OnClick="btnInsert_Click" />
-        <asp:Button ID="btnClear" CssClass="btn" runat="server" Text="Clear" OnClick="btnClear_Click" />
+        <asp:Button ID="btnClear" CssClass="btn" runat="server" Text="Clear" CausesValidation="false" OnClick="btnClear_Click" />
         </div>
     </div>
     </div>

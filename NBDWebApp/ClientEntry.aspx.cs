@@ -56,7 +56,9 @@ namespace NBDWebApp
         protected void btnClear_Click(object sender, EventArgs e)
         {
             this.txtBusiness.Text = "";
+            this.ddlCity.SelectedIndex = 0;
             this.txtAddress.Text = "";
+            this.ddlProv.SelectedIndex = 0;
             this.txtPCode.Text = "";
             this.txtPhone.Text = "";
             this.txtClientFName.Text = "";
