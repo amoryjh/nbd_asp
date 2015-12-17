@@ -65,6 +65,80 @@ namespace NBDWebApp.Projects
         this.txtSalesAssocFNameProduction.Text = "Bob Reinhardt";
         this.txtDesignerFNameProduction.Text = "Tamara Bakken";
 
+        if(!Page.IsPostBack)
+        {
+            DataTable dt1 = new DataTable();
+            DataTable dt2 = new DataTable();
+            DataRow dr1 = null;
+            DataRow dr2 = null;
+            DataRow dr3 = null;
+            DataRow dr4 = null;
+            DataRow dr5 = null;
+            DataRow dr6 = null;
+            DataRow dr7 = null;
+
+            dt1.Columns.Add("Task");
+            dt1.Columns.Add("Date");
+            dt1.Columns.Add("Hours");
+
+            dt2.Columns.Add("Task");
+            dt2.Columns.Add("Date");
+            dt2.Columns.Add("Hours");
+
+            dr1 = dt1.NewRow();
+            dr1["Task"] = "Inital Meeting With Client";
+            dr1["Date"] = "April 15";
+            dr1["Hours"] = 1;
+            dt1.Rows.Add(dr1);
+
+            /////////////////
+            //1
+            dr2 = dt2.NewRow();
+            dr2["Task"] = "Prepare preliminary sketches";
+            dr2["Date"] = "April 21";
+            dr2["Hours"] = 2;
+            dt2.Rows.Add(dr2);
+            //2
+            dr3 = dt2.NewRow();
+            dr3["Task"] = "Prepare design bid";
+            dr3["Date"] = "April 21";
+            dr3["Hours"] = 2;
+            dt2.Rows.Add(dr3);
+            //3
+            dr4 = dt2.NewRow();
+            dr4["Task"] = "Meet with client";
+            dr4["Date"] = "April 25";
+            dr4["Hours"] = 1;
+            dt2.Rows.Add(dr4);
+            //4
+            dr5 = dt2.NewRow();
+            dr5["Task"] = "Revise Sketches & Bid";
+            dr5["Date"] = "April 25";
+            dr5["Hours"] = 2;
+            dt2.Rows.Add(dr5);
+            //5
+            dr6 = dt2.NewRow();
+            dr6["Task"] = "Meet with client";
+            dr6["Date"] = "May 2";
+            dr6["Hours"] = 1;
+            dt2.Rows.Add(dr6);
+            //6
+            dr7 = dt2.NewRow();
+            dr7["Task"] = "Prepare Initial blueprint";
+            dr7["Date"] = "May 3";
+            dr7["Hours"] = 3;
+            dt2.Rows.Add(dr7);
+
+            dt1.AcceptChanges();
+            dt2.AcceptChanges();
+            gvHoursToDateDBudget.DataSource = dt1;
+            gvEstimatedHoursDBudget.DataSource = dt2;
+            gvHoursToDateDBudget.DataBind();
+            gvEstimatedHoursDBudget.DataBind();
+        }
+
+
+
     }
     protected void DropDownList2_SelectedIndexChanged1(object sender, EventArgs e)
     { 

@@ -459,28 +459,40 @@
                 <h1>Design Budget</h1>
             </div>
 
-            <div class="form-group col-md-12">
+            <div class="form-group col-md-4">
+            </div>
+
+             <div class="form-group col-md-12">
                 <h3>Hours To Date</h3>
             </div>
 
             <div class="form-group col-md-12">
-                <asp:GridView ID="gvHoursToDateDBudget" runat="server" ShowHeaderWhenEmpty="True">
-                    <Columns>
-                        <asp:TemplateField HeaderText="Task"></asp:TemplateField>
-                        <asp:TemplateField HeaderText="Date"></asp:TemplateField>
-                        <asp:TemplateField HeaderText="Hours"></asp:TemplateField>
-                    </Columns>
+                <asp:GridView ID="gvHoursToDateDBudget" runat="server" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
+                    <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
                 </asp:GridView>
+            </div>
+
+             <div class="form-group col-md-12">
+                <hr />
             </div>
 
             <div class="form-group col-md-12">
                 <h3>Estimated Hours</h3>
             </div>
 
+             <div class="form-group col-md-12">
+                <asp:GridView ID="gvEstimatedHoursDBudget" runat="server" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
+                    <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
+                </asp:GridView>
+            </div>
+
+            <div class="form-group col-md-12">
+                <hr />
+            </div>
+
             <div class="form-group col-md-12">
                 <h3>Total Hours</h3>
             </div>
-
 
         </div>
 
