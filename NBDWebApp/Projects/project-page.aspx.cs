@@ -9,8 +9,17 @@ namespace NBDWebApp.Projects
 {
   public partial class london_mall : System.Web.UI.Page
   {
+    NBD_DatabaseEntities db = new NBD_DatabaseEntities();
     protected void Page_Load(object sender, EventArgs e)
     {
+
+        //////////////////////////////////////
+        //**********************************//
+        //**********************************//
+        //************DESIGN BID************//
+        //**********************************//
+        //**********************************//
+        //////////////////////////////////////
 
         if (!IsPostBack)
         {
@@ -34,21 +43,32 @@ namespace NBDWebApp.Projects
             this.LlblTitle.Text = "";
         }
 
-        NBD_DatabaseEntities db = new NBD_DatabaseEntities();
-        //Fill inventory items ddl for material requirments 
+        //Fill Inventory Desc for Material Req
         foreach (INVENTORY i in db.INVENTORies)
             this.ddlMaterialDescDesign.Items.Add(i.MATERIAL.matDesc + " " + i.invSizeAmnt + " " + i.invSizeUnit);
 
-        //Fill worker desc for labour requirments
+        //Fill Worker desc for Labour requirments
         foreach (WORKER_TYPE wt in db.WORKER_TYPE)
             this.ddlLabourSummaryDescDesign.Items.Add(wt.wrkTypeDesc);
+
+        //////////////////////////////////////
+        //**********************************//
+        //**********************************//
+        //*******PRODUCTION PLAN************//
+        //**********************************//
+        //**********************************//
+        //////////////////////////////////////
+
+        //Fill projTeam Sales Assoc. & Designer
+        this.txtSalesAssocFNameProduction.Text = "Bob Reinhardt";
+        this.txtDesignerFNameProduction.Text = "Tamara Bakken";
+
 
     }
     protected void DropDownList2_SelectedIndexChanged1(object sender, EventArgs e)
     { 
       NBD_DatabaseEntities db = new NBD_DatabaseEntities();
       int id = Convert.ToInt32(this.DropDownList2.SelectedValue);
-      //this.ListBox1.Items.Clear();
       var query = from client in db.CLIENTs where client.ID == id select client;
 
       var query2 = from project in db.PROJECTs
