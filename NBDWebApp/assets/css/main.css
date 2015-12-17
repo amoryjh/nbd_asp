@@ -6237,7 +6237,7 @@ span.highlight-change {
 .client-directory p img {
   width: 1em;
 }
-.client-directory .client-search-aside {
+.client-search-aside {
   position: absolute;
   left: 2.5%;
   top: 12em;
