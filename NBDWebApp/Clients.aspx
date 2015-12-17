@@ -43,12 +43,13 @@
       <ItemTemplate>
         <div class="project-instance box-border clearfix" id="<%#Eval("cliName")%>">
           <div class="project-instance-title">
-            <h2 class="project-title"><%# Eval("cliName") %></h2>
+            <h2 class="project-title"><%# Eval("projName") %></h2>
             <p class="project-update-date">Contact : <%# Eval("cliConFName") %> <%# Eval("cliConLName") %>, <%# Eval("cliConPosition") %></p>
           </div>
           <div class="updated-list well col-md-10 col-md-offset-1">   
             <h3>Contact Details</h3>
             <ul>
+              <li>Client: <span class="highlight-change"><%#Eval("cliName")%></span></a></li>
               <li>Phone: <span class="highlight-change"><%#Eval("cliPhone")%></span></li>
               <li>Project Site: <span class="highlight-change"><%#Eval("cliAddress")%> <%#Eval("cliProvince")%></span></li>
               <li id="city-string">Client City: <span class="highlight-change"><%#Eval("cliCity")%></span></li>

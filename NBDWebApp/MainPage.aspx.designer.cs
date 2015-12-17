@@ -31,13 +31,13 @@ namespace NBDWebApp {
         protected global::System.Web.UI.WebControls.DropDownList ddlClientName;
         
         /// <summary>
-        /// ddlProject control.
+        /// ddlClientContact control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlProject;
+        protected global::System.Web.UI.WebControls.DropDownList ddlClientContact;
         
         /// <summary>
         /// ddlCityProjectFilter control.
@@ -47,5 +47,23 @@ namespace NBDWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCityProjectFilter;
+        
+        /// <summary>
+        /// Projects control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Projects;
+        
+        /// <summary>
+        /// sansProjects control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater sansProjects;
     }
 }
