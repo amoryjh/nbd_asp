@@ -464,6 +464,16 @@
             </div>
 
             <div class="form-group col-md-12">
+                <asp:GridView ID="gvHoursToDateDBudget" runat="server" ShowHeaderWhenEmpty="True">
+                    <Columns>
+                        <asp:TemplateField HeaderText="Task"></asp:TemplateField>
+                        <asp:TemplateField HeaderText="Date"></asp:TemplateField>
+                        <asp:TemplateField HeaderText="Hours"></asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+            </div>
+
+            <div class="form-group col-md-12">
                 <h3>Estimated Hours</h3>
             </div>
 

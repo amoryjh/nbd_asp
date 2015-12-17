@@ -4,12 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace NBDWebApp.Projects
 {
   public partial class london_mall : System.Web.UI.Page
   {
     NBD_DatabaseEntities db = new NBD_DatabaseEntities();
+    int projID = 1;
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -62,7 +64,6 @@ namespace NBDWebApp.Projects
         //Fill projTeam Sales Assoc. & Designer
         this.txtSalesAssocFNameProduction.Text = "Bob Reinhardt";
         this.txtDesignerFNameProduction.Text = "Tamara Bakken";
-
 
     }
     protected void DropDownList2_SelectedIndexChanged1(object sender, EventArgs e)
