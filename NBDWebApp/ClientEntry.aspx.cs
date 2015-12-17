@@ -51,6 +51,9 @@ namespace NBDWebApp
                 LblMessage.Text = "Error";
             }
 
+            //Call click event for btnClear the clear the form
+            btnClear_Click(sender, e);
+
         }
 
         protected void btnClear_Click(object sender, EventArgs e)
