@@ -120,13 +120,6 @@
     <Compile Include="CLIENT.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Clients.aspx.cs">
-      <DependentUpon>Clients.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Clients.aspx.designer.cs">
-      <DependentUpon>Clients.aspx</DependentUpon>
-    </Compile>
     <Compile Include="DailyReports.aspx.cs">
       <DependentUpon>DailyReports.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -408,7 +401,6 @@
     <Content Include="assets\js\jquery-2.1.4.js" />
     <Content Include="assets\js\jquery-2.1.4.min.js" />
     <Content Include="assets\js\main.js" />
-    <Content Include="Clients.aspx" />
     <Content Include="DailyReports.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Employee.aspx" />
