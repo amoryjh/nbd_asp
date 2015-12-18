@@ -6093,6 +6093,17 @@ span.highlight-change {
   border-bottom-color: #fff;
   border-top: 0;
 }
+.projecttimeline ul {
+  background: #4B77BE;
+}
+.projecttimeline ul li:first-child:before,
+.projecttimeline ul li:nth-child(2):before,
+.projecttimeline ul li:nth-child(3):before {
+  border-color: #db0a5b;
+}
+.projecttimeline ul li:last-child:before {
+  border-color: #188ea8;
+}
 /*///////////////////////////////////////////////////////
 -----------------------Login Page------------------------
 ///////////////////////////////////////////////////////*/

@@ -285,8 +285,17 @@ span.highlight-change{font-weight: 700;}
       } 
     }
   }
-
-
+.projecttimeline{
+  ul{
+    background: #4B77BE;
+    li{
+      &:first-child, &:nth-child(2),&:nth-child(3){ &:before{border-color:@brand-pri}}
+    }
+    li{
+      &:last-child{ &:before{border-color:@brand-blue}}
+    }
+  }
+}
 
 /*///////////////////////////////////////////////////////
 -----------------------Login Page------------------------

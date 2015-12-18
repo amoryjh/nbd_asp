@@ -10,29 +10,29 @@
         <h1 class="section-title">
             <asp:Label ID="LlblTitle" runat="server" Text=""></asp:Label></h1>
     </div>
-    <div class="timeline well clearfix">    
+    <div class="timeline well clearfix projecttimeline">    
         <h3>
             Project Timeline
         </h3>
         <ul>
             <li>
                 <span class="details">
-                    Design Bid
+                    Approved Design Bid
                 </span>
             </li>
             <li>
                 <span class="details">
-                    Design Budget
+                    Approved Design Budget
                 </span>
             </li>
             <li>
                 <span class="details">
-                    Production Plan
+                    Approved Production Plan
                 </span>
             </li>
             <li>
                 <span class="details">
-                    Approved
+                    Completed
                 </span>
             </li>
         </ul>
@@ -47,9 +47,9 @@
             <label id="" for="ddlProjectType">Report</label>
             <select id="ddlProjectType" class="form-control">
                 <option value="project-designBid">Design Bid</option>
-                <option value="project-designBid">Design Budget</option>
+                <option value="project-designBudget">Design Budget</option>
                 <option value="project-productionPlan">Production Plan</option>
-                <option value="project-productionPlan">Project Administrative Report</option>
+                <option value="project-par">Project Administrative Report</option>
             </select>
         </div>
     </div>
@@ -295,7 +295,7 @@
     ---------------------Design Budget----------------------
     //////////////////////////////////////////////////////////  
     -->
-    <div id="project-DesignBudget" class="report-group box-border clearfix">
+    <div id="project-designBudget" class="report-group box-border clearfix">
     <div class="report-title">
         <h1 class="project-title">Design Budget</h1>
     </div>
@@ -827,7 +827,7 @@
     </div>
     </div>
 
-    <div id="project-PAR" class="report-group box-border clearfix">
+    <div id="project-par" class="report-group box-border clearfix">
     <div class="report-title">
         <h1 class="project-title">Project Administration Report</h1>
     </div>

@@ -51,8 +51,10 @@ $('document').ready(function () {
 
   //When value from above list ^^ is selected - display the hidden div of a report matching selected value
     $('.project-page .report-group').hide();
+    $('.report-group').hide();
     $('#ddlProjectType').on('click', function () {
       var reveal = $(this).val();
+      console.log(reveal);
       $('.report-group').hide();
       $('#' + reveal).show();
     });

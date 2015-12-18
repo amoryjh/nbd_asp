@@ -182,7 +182,6 @@ H:\nbd_asp\NBDWebApp\bin\System.Web.Http.xml
 H:\nbd_asp\NBDWebApp\bin\System.Web.Http.Owin.xml
 H:\nbd_asp\NBDWebApp\bin\System.Web.Http.WebHost.xml
 H:\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.csprojResolveAssemblyReference.cache
-C:\Users\Amory\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\GitHub\nbd_asp\NBDWebApp\bin\NBDWebApp.dll.config
 C:\Users\Administrator\Documents\GitHub\nbd_asp\NBDWebApp\bin\NBDWebApp.dll
 C:\Users\Administrator\Documents\GitHub\nbd_asp\NBDWebApp\bin\NBDWebApp.pdb
