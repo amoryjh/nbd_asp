@@ -534,6 +534,8 @@ namespace NBDWebApp {
             
             private global::System.Data.DataColumn columnmatType;
             
+            private global::System.Data.DataColumn columnID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public MaterialDataTableDataTable() {
@@ -609,6 +611,14 @@ namespace NBDWebApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -651,10 +661,18 @@ namespace NBDWebApp {
                         invSizeAmnt,
                         invSizeUnit,
                         matDesc,
-                        matType};
+                        matType,
+                        null};
                 rowMaterialDataTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMaterialDataTableRow);
                 return rowMaterialDataTableRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MaterialDataTableRow FindByID(int ID) {
+                return ((MaterialDataTableRow)(this.Rows.Find(new object[] {
+                            ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -679,6 +697,7 @@ namespace NBDWebApp {
                 this.columninvSizeUnit = base.Columns["invSizeUnit"];
                 this.columnmatDesc = base.Columns["matDesc"];
                 this.columnmatType = base.Columns["matType"];
+                this.columnID = base.Columns["ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -694,11 +713,21 @@ namespace NBDWebApp {
                 base.Columns.Add(this.columnmatDesc);
                 this.columnmatType = new global::System.Data.DataColumn("matType", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmatType);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID}, true));
                 this.columninvSizeUnit.MaxLength = 20;
                 this.columnmatDesc.AllowDBNull = false;
                 this.columnmatDesc.MaxLength = 50;
                 this.columnmatType.AllowDBNull = false;
                 this.columnmatType.MaxLength = 20;
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
+                this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
+                this.columnID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3005,6 +3034,17 @@ namespace NBDWebApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID {
+                get {
+                    return ((int)(this[this.tableMaterialDataTable.IDColumn]));
+                }
+                set {
+                    this[this.tableMaterialDataTable.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsmreqEstQtyNull() {
                 return this.IsNull(this.tableMaterialDataTable.mreqEstQtyColumn);
             }
@@ -4090,6 +4130,7 @@ namespace NBDWebApp.NBDDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("invSizeUnit", "invSizeUnit");
             tableMapping.ColumnMappings.Add("matDesc", "matDesc");
             tableMapping.ColumnMappings.Add("matType", "matType");
+            tableMapping.ColumnMappings.Add("ID", "ID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -4106,7 +4147,7 @@ namespace NBDWebApp.NBDDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT MATERIAL_REQ.mreqEstQty, INVENTORY.invSizeAmnt, INVENTORY.invSizeUnit, MATERIAL.matDesc, MATERIAL.matType
+            this._commandCollection[0].CommandText = @"SELECT MATERIAL_REQ.mreqEstQty, INVENTORY.invSizeAmnt, INVENTORY.invSizeUnit, MATERIAL.matDesc, MATERIAL.matType, MATERIAL_REQ.ID
 FROM     PROJECT INNER JOIN
                   MATERIAL_REQ ON PROJECT.ID = MATERIAL_REQ.projectID INNER JOIN
                   INVENTORY ON MATERIAL_REQ.inventoryID = INVENTORY.ID INNER JOIN

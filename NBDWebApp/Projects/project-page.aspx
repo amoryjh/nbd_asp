@@ -210,17 +210,16 @@
         </div>
 
         <div class="form-group col-md-12" style="margin-top:1.5em">
-            <asp:GridView ID="gvMaterialReqDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceMaterialDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
+            <asp:GridView ID="gvMaterialReqDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceMaterialDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40" OnSelectedIndexChanging="gvMaterialReqDesign_SelectedIndexChanging" DataKeyNames="ID">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
-                    <asp:CommandField ShowDeleteButton="True" />
-                    <asp:BoundField DataField="matType" HeaderText="Type" SortExpression="matType" />
-                    <asp:BoundField DataField="matDesc" HeaderText="Desc" SortExpression="matDesc" >
-                    <HeaderStyle Font-Underline="False" />
+                    <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+                    <asp:BoundField DataField="mreqEstQty" HeaderText="mreqEstQty" SortExpression="mreqEstQty" />
+                    <asp:BoundField DataField="invSizeAmnt" HeaderText="invSizeAmnt" SortExpression="invSizeAmnt" >
                     </asp:BoundField>
-                    <asp:BoundField DataField="mreqEstQty" HeaderText="Qty" SortExpression="mreqEstQty" />
-                    <asp:BoundField DataField="invSizeAmnt" HeaderText="Amount" SortExpression="invSizeAmnt" />
-                    <asp:BoundField DataField="invSizeUnit" HeaderText="Size" SortExpression="invSizeUnit" />
+                    <asp:BoundField DataField="invSizeUnit" HeaderText="invSizeUnit" SortExpression="invSizeUnit" />
+                    <asp:BoundField DataField="matDesc" HeaderText="matDesc" SortExpression="matDesc" />
+                    <asp:BoundField DataField="matType" HeaderText="matType" SortExpression="matType" />
                 </Columns>
             <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
 
@@ -240,6 +239,10 @@
 
         <div class="form-group col-md-2">
             <a id="btnAddMaterial" class="btn" runat="server" onServerClick="btnAddMaterial_Click">+</a> 
+        </div>
+
+        <div class="form-group col-md-5">
+            <asp:TextBox ID="txtSubMaterial" class="form-control" runat="server"></asp:TextBox>
         </div>
         
         <div class="form-group col-md-2">

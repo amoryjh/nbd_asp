@@ -356,12 +356,12 @@ namespace NBDWebApp.Projects
 
     protected void btnSubMaterial_Click(object sender, EventArgs e)
     {
-        //var matReq = new MATERIAL_REQ {ID=id};
-        //db.MATERIAL_REQ.Attach(matReq);
-        //db.MATERIAL_REQ.Remove(matReq);
-        //db.SaveChanges();
+        var matReq = new MATERIAL_REQ {ID=Convert.ToInt32(txtSubMaterial.Text)};
+        db.MATERIAL_REQ.Attach(matReq);
+        db.MATERIAL_REQ.Remove(matReq);
+        db.SaveChanges();
 
-        //gvMaterialReqDesign.DataBind();
+        gvMaterialReqDesign.DataBind();
     }
 
     protected void btnAddLabourSummaryDesign_Click(object sender, EventArgs e)
@@ -424,5 +424,14 @@ namespace NBDWebApp.Projects
 
         gvToolRequirementProduction.DataBind();
     }
+
+    protected void gvMaterialReqDesign_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+    {
+        GridViewRow row = gvMaterialReqDesign.Rows[e.NewSelectedIndex];
+
+        this.txtSubMaterial.Text = row.Cells[1].Text;
+
+    }
+    
   }
 }
