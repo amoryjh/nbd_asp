@@ -794,11 +794,11 @@
         <h1 class="project-title">Project Administration Report</h1>
     </div>
     <div class="report-wrapper clearfix">
-        <div class="form-group col-md-12">
-            <h1>Bid Stage Projects</h1>
-        </div>
       <div class="form-group col-md-12">
-        <div>
+          <h1>Bid Stage Projects</h1>
+      </div>
+      <div class="form-group col-md-12">
+        <div style="overflow-x: scroll;">
           <table rules="all" border="1" id="ContentPlaceHolder2_gvMaterialReqDesign" style="border-color:Transparent;width:100% !important;">
             <tr class="whitetxt" style="color:White;background-color:#DB0A5B;">
               <th scope="col">Project</th>
@@ -827,6 +827,47 @@
               <td>9/8</td>
               <td>$360/$320</td>
               <td>1/$40</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="report-wrapper clearfix">
+      <div class="form-group col-md-12">
+          <h1>Production Stage Projects</h1>
+      </div>
+      <div class="form-group col-md-12">
+        <div style="overflow-x: scroll;">
+          <table rules="all" border="1" id="PARProdStage" style="border-color:Transparent;width:100% !important;">
+            <tr class="whitetxt" style="color:White;background-color:#DB0A5B;">
+              <th scope="col">Project</th>
+              <th scope="col">Bid Cost</th>
+              <th scope="col">Prod Plan Est.</th>
+              <th scope="col">Cost to Date</th>
+              <th scope="col">Act. Labor Prod</th>
+              <th scope="col">Est. Labor Prod</th>
+              <th scope="col">Act. Labor Design</th>
+              <th scope="col">Est. Labor Design</th>
+            </tr>
+            <tr style="height:40px;width:30px;">
+              <td>LS Mall</td>
+              <td>$7651</td>
+              <td>$5110</td>
+              <td>$5230</td>
+              <td>$1008</td>
+              <td>$990</td>
+              <td>$880</td>
+              <td>$880</td>
+            </tr>
+            <tr style="height:40px;width:30px;">
+              <td>IBM</td>
+              <td>$11,500</td>
+              <td>$6290</td>
+              <td>$5705</td>
+              <td>$1260</td>
+              <td>$1440</td>
+              <td>$920</td>
+              <td>$1000</td>
             </tr>
           </table>
         </div>
