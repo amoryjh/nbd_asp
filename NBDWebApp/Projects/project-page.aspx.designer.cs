@@ -589,6 +589,42 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.GridView gvHoursToDateDBudget;
         
         /// <summary>
+        /// txtTaskHoursToDateDBudget control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTaskHoursToDateDBudget;
+        
+        /// <summary>
+        /// txtDateHoursToDateDBudget control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDateHoursToDateDBudget;
+        
+        /// <summary>
+        /// txtHoursToDateDBudget control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtHoursToDateDBudget;
+        
+        /// <summary>
+        /// btnAddHoursToDateDBudget control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnAddHoursToDateDBudget;
+        
+        /// <summary>
         /// gvEstimatedHoursDBudget control.
         /// </summary>
         /// <remarks>
@@ -596,6 +632,51 @@ namespace NBDWebApp.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvEstimatedHoursDBudget;
+        
+        /// <summary>
+        /// txtTaskEstimatedHoursDBudget control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTaskEstimatedHoursDBudget;
+        
+        /// <summary>
+        /// txtDateEstimatedHoursDBudget control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDateEstimatedHoursDBudget;
+        
+        /// <summary>
+        /// txtHoursEstimatedHoursDBudget control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtHoursEstimatedHoursDBudget;
+        
+        /// <summary>
+        /// btnAddEstimatedHoursDBudget control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnAddEstimatedHoursDBudget;
+        
+        /// <summary>
+        /// btnSubmitDesignBudget control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSubmitDesignBudget;
         
         /// <summary>
         /// txtProjSiteProducton control.

@@ -468,9 +468,42 @@
 
             <div class="form-group col-md-12">
                 <asp:GridView ID="gvHoursToDateDBudget" runat="server" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
+                    <Columns>
+                        <asp:CommandField ShowSelectButton="True" />
+                        <asp:CommandField ShowDeleteButton="True" />
+                    </Columns>
                     <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
+                    <RowStyle Height="40px" Width="30px"></RowStyle>
                 </asp:GridView>
             </div>
+
+            <div class="form-group col-md-3">
+                 <label id="lblTaskHoursToDateDBudget" for="txtTaskHoursToDateDBudget">Task</label>
+            </div>
+
+            <div class="form-group col-md-3">
+                 <label id="lblDateHoursToDateDBudget" for="txtDateHoursToDateDBudget">Date</label>
+            </div>
+
+            <div class="form-group col-md-6">
+                 <label id="lblHoursToDateDBudget" for="txtHoursToDateDBudget">Hours</label>
+            </div>
+
+            <div class="form-group col-md-3">
+                <asp:TextBox ID="txtTaskHoursToDateDBudget" class="form-control" placeholder="Task" runat="server"></asp:TextBox> 
+            </div>
+
+             <div class="form-group col-md-3">
+                <asp:TextBox ID="txtDateHoursToDateDBudget" class="form-control" placeholder="Date" runat="server"></asp:TextBox> 
+            </div>
+
+            <div class="form-group col-md-3">
+                <asp:TextBox ID="txtHoursToDateDBudget" class="form-control" placeholder="Hours" runat="server"></asp:TextBox> 
+            </div>
+
+            <div class="form-group col-md-3">
+                <a id="btnAddHoursToDateDBudget" class="btn" runat="server">+</a> 
+            </div> 
 
              <div class="form-group col-md-12">
                 <hr />
@@ -482,20 +515,63 @@
 
              <div class="form-group col-md-12">
                 <asp:GridView ID="gvEstimatedHoursDBudget" runat="server" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
+                    <Columns>
+                        <asp:CommandField ShowSelectButton="True" />
+                        <asp:CommandField ShowDeleteButton="True" />
+                    </Columns>
                     <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
+                    <RowStyle Height="40px" Width="30px"></RowStyle>
                 </asp:GridView>
             </div>
+
+            <div class="form-group col-md-3">
+                 <label id="lblTaskEstimatedHoursDBudget" for="txtTaskEstimatedHoursDBudget">Task</label>
+            </div>
+
+            <div class="form-group col-md-3">
+                 <label id="lblDateEstimatedHoursDBudget" for="txtDateEstimatedHoursDBudget">Date</label>
+            </div>
+
+            <div class="form-group col-md-6">
+                 <label id="lblEstimatedHoursDBudget" for="txtHoursEstimatedHoursDBudget">Hours</label>
+            </div>
+
+            <div class="form-group col-md-3">
+                <asp:TextBox ID="txtTaskEstimatedHoursDBudget" class="form-control" placeholder="Task" runat="server"></asp:TextBox> 
+            </div>
+
+             <div class="form-group col-md-3">
+                <asp:TextBox ID="txtDateEstimatedHoursDBudget" class="form-control" placeholder="Date" runat="server"></asp:TextBox> 
+            </div>
+
+            <div class="form-group col-md-3">
+                <asp:TextBox ID="txtHoursEstimatedHoursDBudget" class="form-control" placeholder="Hours" runat="server"></asp:TextBox> 
+            </div>
+
+            <div class="form-group col-md-3">
+                <a id="btnAddEstimatedHoursDBudget" class="btn" runat="server">+</a> 
+            </div> 
 
             <div class="form-group col-md-12">
                 <hr />
             </div>
 
-            <div class="form-group col-md-12">
+            <div class="form-group col-md-10">
                 <h3>Total Hours</h3>
             </div>
 
+            <div class="form-group col-md-2">
+               <h3>12</h3>
+            </div>
         </div>
-
+        <div class="report-wrapper text-center clearfix">
+            <div class="form-group col-md-12">
+                <h1>Submit Form</h1>
+            </div>
+            <div class="form-group col-md-12">
+                <asp:Button ID="btnSubmitDesignBudget" CssClass="btn" runat="server" Text="Submit" />
+            </div>
+        </div>
     </div>
     <!-- 
     //////////////////////////////////////////////////////////
