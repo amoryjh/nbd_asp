@@ -67,6 +67,9 @@ namespace NBDWebApp.Projects
 
             foreach (INVENTORY i in db.INVENTORies)
                 this.ddlMaterialDescProduction.Items.Add(i.MATERIAL.matDesc + " " + i.invSizeAmnt + " " + i.invSizeUnit);
+
+            foreach (TOOL t in db.TOOLs)
+                this.ddlToolDescProduction.Items.Add(t.toolDesc);
         }
 
         if(!Page.IsPostBack)
@@ -361,6 +364,22 @@ namespace NBDWebApp.Projects
         db.SaveChanges();
 
         gvMaterialReqProduction.DataBind();
+    }
+
+    protected void btnAddToolProduction_Click(object sender, EventArgs e)
+    {
+        PROD_TOOL t = new PROD_TOOL();
+
+        t.projectID = this.ddlProjectID.SelectedIndex + 1;
+        t.ptQty = Convert.ToByte(this.txtToolQtyEstProduction.Text);
+        t.ptDeliverFrom = Convert.ToDateTime(this.txtToolDeliverFromProduction.Text);
+        t.ptDeliverTo = Convert.ToDateTime(this.txtToolDeliverToProduction.Text);
+        t.toolID = this.ddlToolDescProduction.SelectedIndex + 1;
+
+        db.PROD_TOOL.Add(t);
+        db.SaveChanges();
+
+        gvToolRequirementProduction.DataBind();
     }
   }
 }

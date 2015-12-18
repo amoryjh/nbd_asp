@@ -695,6 +695,49 @@
         </div>
         
     </div>
+    <div class="report-wrapper clearfix">
+        <div class="form-group col-md-12">
+            <h1>Tool Requirements</h1>
+        </div>
+
+        <div class="form-group col-md-12">
+            <asp:GridView ID="gvToolRequirementProduction" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceToolRequirementProduction" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
+                <Columns>
+                    <asp:BoundField DataField="ptQty" HeaderText="Qty" SortExpression="ptQty" />
+                    <asp:BoundField DataField="toolDesc" HeaderText="Desc" SortExpression="toolDesc" />
+                    <asp:BoundField DataField="ptDeliverFrom" HeaderText="Deliver From" SortExpression="ptDeliverFrom" />
+                    <asp:BoundField DataField="ptDeliverTo" HeaderText="Deliver To" SortExpression="ptDeliverTo" />
+                </Columns>
+                <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
+                <RowStyle Height="40px" Width="30px"></RowStyle>
+            </asp:GridView>
+        </div>
+
+        <div class="form-group col-md-8">
+           <label id="lblToolDescProduction" for="ddlToolDescProduction">Desc.</label> 
+            <asp:DropDownList ID="ddlToolDescProduction" class="form-control" runat="server"></asp:DropDownList>
+        </div>
+
+        <div class="form-group col-md-4">
+           <label id="lblToolQtyProduction" for="txtToolQtyEstProduction">Qty</label> 
+            <asp:TextBox ID="txtToolQtyEstProduction" class="form-control" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-5">
+           <label id="lblToolDeliverFromProduction" for="txtToolDeliverFromProduction">Deliver From</label> 
+            <asp:TextBox ID="txtToolDeliverFromProduction" class="form-control datepicker" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-5">
+           <label id="lblToolDeliverToProduction" for="txtToolDeliverToProduction">Install</label> 
+            <asp:TextBox ID="txtToolDeliverToProduction" class="form-control datepicker" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-2">
+            <asp:Button ID="btnAddToolProduction" runat="server" Text="+" CssClass="btn" CausesValidation="False" OnClick="btnAddToolProduction_Click" />            
+        </div>
+
+    </div>
 
     <div class="report-wrapper clearfix">
         <div class="form-group col-md-12">
@@ -882,6 +925,11 @@
     </div>
   </div>
 
+<asp:ObjectDataSource ID="ObjectDataSourceToolRequirementProduction" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NBDWebApp.NBDDataSetTableAdapters.ToolReqDataTableTableAdapter">
+    <SelectParameters>
+        <asp:ControlParameter ControlID="ddlProjectID" DefaultValue="0" Name="Param1" PropertyName="SelectedValue" Type="Int32" />
+    </SelectParameters>
+    </asp:ObjectDataSource>
 <asp:ObjectDataSource ID="ObjectDataSourceProductionMaterials" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NBDWebApp.NBDDataSetTableAdapters.ProductionMaterialDataTableTableAdapter">
     <SelectParameters>
         <asp:ControlParameter ControlID="ddlProjectID" DefaultValue="0" Name="Param1" PropertyName="SelectedValue" Type="Int32" />
