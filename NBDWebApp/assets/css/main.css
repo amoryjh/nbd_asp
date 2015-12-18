@@ -6242,4 +6242,8 @@ span.highlight-change {
   left: 2.5%;
   top: 12em;
 }
+#project-PAR th,
+#project-PAR td {
+  padding: 11px;
+}
 /*# sourceMappingURL=main.css.map */

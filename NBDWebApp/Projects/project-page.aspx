@@ -788,6 +788,51 @@
         </div>
     </div>
     </div>
+
+    <div id="project-PAR" class="report-group box-border clearfix">
+    <div class="report-title">
+        <h1 class="project-title">Project Administration Report</h1>
+    </div>
+    <div class="report-wrapper clearfix">
+        <div class="form-group col-md-12">
+            <h1>Bid Stage Projects</h1>
+        </div>
+      <div class="form-group col-md-12">
+        <div>
+          <table rules="all" border="1" id="ContentPlaceHolder2_gvMaterialReqDesign" style="border-color:Transparent;width:100% !important;">
+            <tr class="whitetxt" style="color:White;background-color:#DB0A5B;">
+              <th scope="col">Project</th>
+              <th scope="col">Est. Bid</th>
+              <th scope="col">Actual/Est. Design Hours</th>
+              <th scope="col">Actual/Est. Design Costs</th>
+              <th scope="col">Hrs/$ Remaining</th>
+            </tr>
+            <tr style="height:40px;width:30px;">
+              <td>Astor</td>
+              <td>$13,000</td>
+              <td>6/20</td>
+              <td>$240/$800</td>
+              <td>14/$660</td>
+            </tr>
+            <tr style="height:40px;width:30px;">
+              <td>Freemont</td>
+              <td>$16,250</td>
+              <td>10/25</td>
+              <td>$360/$1000</td>
+              <td>16/$640</td>
+            </tr>
+            <tr style="height:40px;width:30px;">
+              <td>SJSU</td>
+              <td>$5000</td>
+              <td>9/8</td>
+              <td>$360/$320</td>
+              <td>1/$40</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
  
     
 <asp:ObjectDataSource ID="ObjectDataSourceLabourSummaryDesign" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NBDWebApp.NBDDataSetTableAdapters.LabourSummaryDataTableTableAdapter">
