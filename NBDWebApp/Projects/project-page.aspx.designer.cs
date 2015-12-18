@@ -868,6 +868,15 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.Button btnAddToolProduction;
         
         /// <summary>
+        /// gvLabourReqProduction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvLabourReqProduction;
+        
+        /// <summary>
         /// txtLabourDescriptionProduction control.
         /// </summary>
         /// <remarks>
@@ -920,6 +929,15 @@ namespace NBDWebApp.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button6;
+        
+        /// <summary>
+        /// ObjectDataSourceLabourRequirementProduction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSourceLabourRequirementProduction;
         
         /// <summary>
         /// ObjectDataSourceToolRequirementProduction control.

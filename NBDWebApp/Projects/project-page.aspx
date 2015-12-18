@@ -744,6 +744,23 @@
             <h1>Labour Requirements</h1>
         </div>
 
+        <div class="form-group col-md-12" style="margin-top:1.5em;overflow-x:scroll">
+            <asp:GridView ID="gvLabourReqProduction" runat="server" DataSourceID="ObjectDataSourceLabourRequirementProduction" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
+                <Columns>
+                    <asp:BoundField DataField="wrkTypeDesc" HeaderText="Worker Type" SortExpression="wrkTypeDesc" />
+                    <asp:BoundField DataField="wrkFName" HeaderText="First Name" SortExpression="wrkFName" />
+                    <asp:BoundField DataField="wrkLName" HeaderText="Last Name" SortExpression="wrkLName" />
+                    <asp:BoundField DataField="lreqEstHours" HeaderText="Est. Hours" SortExpression="lreqEstHours" />
+                    <asp:BoundField DataField="wrkTypeCost" HeaderText="Cost/Hr." SortExpression="wrkTypeCost" />
+                    <asp:BoundField DataField="lreqEstDate" HeaderText="Est. Date" SortExpression="lreqEstDate" />
+                    <asp:BoundField DataField="taskDesc" HeaderText="Task" SortExpression="taskDesc" />
+                </Columns>
+                <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
+                <RowStyle Height="40px" Width="30px"></RowStyle>
+            </asp:GridView>           
+        </div>
+
+
         <div class="form-group col-md-4">
           <label id="lblLabourDescriptionProduction" for="txtLabourDescriptionProduction">Description</label>
           <asp:TextBox ID="txtLabourDescriptionProduction" runat="server" class="form-control" placeholder="Description"></asp:TextBox>
@@ -925,6 +942,11 @@
     </div>
   </div>
 
+<asp:ObjectDataSource ID="ObjectDataSourceLabourRequirementProduction" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NBDWebApp.NBDDataSetTableAdapters.LabourRequirementProductionDataTableTableAdapter">
+    <SelectParameters>
+        <asp:ControlParameter ControlID="ddlProjectID" DefaultValue="0" Name="Param2" PropertyName="SelectedValue" Type="Int32" />
+    </SelectParameters>
+    </asp:ObjectDataSource>
 <asp:ObjectDataSource ID="ObjectDataSourceToolRequirementProduction" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NBDWebApp.NBDDataSetTableAdapters.ToolReqDataTableTableAdapter">
     <SelectParameters>
         <asp:ControlParameter ControlID="ddlProjectID" DefaultValue="0" Name="Param1" PropertyName="SelectedValue" Type="Int32" />
