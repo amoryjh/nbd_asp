@@ -231,7 +231,7 @@
         <div class="form-group col-md-12">
             <h1>Material Requirements</h1>
         </div>
-        <div class="form-group col-md-12">
+        <div class="form-group col-md-12" style="display:none">
             <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID"></asp:DropDownList> 
         </div>
 
@@ -764,9 +764,10 @@
              <label id="lblTotalEstMaterialCostsProduction">Estimated Material Costs</label>
         </div>
         <div class="form-group col-md-2">
+          <label id="lblDots">...</label>
         </div>
         <div class="form-group col-md-2">
-             <label id="lblTotalMaterialCostProduction">...</label>
+          <label id="lblTotalMaterialCostProduction">...</label>
         </div>
 
         <div class="form-group col-md-12">
