@@ -251,18 +251,12 @@
         </div>
 
         <div class="form-group col-md-5">
-           <label id="lblMaterialDescDesign" for="ddlMaterialDescDesign">Desc.</label> 
-        </div>
-
-        <div class="form-group col-md-5">
-           <label id="lblMaterialQtyDesign" for="txtQtyEstDesign">Qty</label> 
-        </div>
-
-        <div class="form-group col-md-5">
+            <label id="lblMaterialDescDesign" for="ddlMaterialDescDesign">Desc.</label> 
             <asp:DropDownList ID="ddlMaterialDescDesign" class="form-control" runat="server"></asp:DropDownList> 
         </div>
 
         <div class="form-group col-md-5">
+            <label id="lblMaterialQtyDesign" for="txtQtyEstDesign">Qty</label> 
             <asp:TextBox ID="txtQtyEstDesign" class="form-control" runat="server"></asp:TextBox>
         </div>
 
@@ -289,18 +283,12 @@
         </div>
 
         <div class="form-group col-md-5">
-           <label id="lblLabourSummaryHoursDesign" for="txtLabourSummaryHoursDesign">Hours</label> 
-        </div>
-
-        <div class="form-group col-md-5">
-           <label id="lblLabourSummaryDescDesign" for="txtQtyEstDesign">Desc.</label> 
-        </div>
-
-        <div class="form-group col-md-5">
+            <label id="lblLabourSummaryHoursDesign" for="txtLabourSummaryHoursDesign">Hours</label>
             <asp:TextBox class="form-control" ID="txtLabourSummaryHoursDesign" runat="server"></asp:TextBox> 
         </div>
 
         <div class="form-group col-md-5">
+            <label id="lblLabourSummaryDescDesign" for="txtQtyEstDesign">Desc.</label>
             <asp:DropDownList class="form-control" ID="ddlLabourSummaryDescDesign" runat="server"></asp:DropDownList>
         </div>
 
@@ -475,29 +463,20 @@
                     <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
                     <RowStyle Height="40px" Width="30px"></RowStyle>
                 </asp:GridView>
-            </div>
+            </div>    
 
             <div class="form-group col-md-3">
-                 <label id="lblTaskHoursToDateDBudget" for="txtTaskHoursToDateDBudget">Task</label>
-            </div>
-
-            <div class="form-group col-md-3">
-                 <label id="lblDateHoursToDateDBudget" for="txtDateHoursToDateDBudget">Date</label>
-            </div>
-
-            <div class="form-group col-md-6">
-                 <label id="lblHoursToDateDBudget" for="txtHoursToDateDBudget">Hours</label>
-            </div>
-
-            <div class="form-group col-md-3">
+                <label id="lblTaskHoursToDateDBudget" for="txtTaskHoursToDateDBudget">Task</label>
                 <asp:TextBox ID="txtTaskHoursToDateDBudget" class="form-control" placeholder="Task" runat="server"></asp:TextBox> 
             </div>
 
              <div class="form-group col-md-3">
+                 <label id="lblDateHoursToDateDBudget" for="txtDateHoursToDateDBudget">Date</label>
                 <asp:TextBox ID="txtDateHoursToDateDBudget" class="form-control" placeholder="Date" runat="server"></asp:TextBox> 
             </div>
 
             <div class="form-group col-md-3">
+                <label id="lblHoursToDateDBudget" for="txtHoursToDateDBudget">Hours</label>
                 <asp:TextBox ID="txtHoursToDateDBudget" class="form-control" placeholder="Hours" runat="server"></asp:TextBox> 
             </div>
 
@@ -525,26 +504,17 @@
             </div>
 
             <div class="form-group col-md-3">
-                 <label id="lblTaskEstimatedHoursDBudget" for="txtTaskEstimatedHoursDBudget">Task</label>
-            </div>
-
-            <div class="form-group col-md-3">
-                 <label id="lblDateEstimatedHoursDBudget" for="txtDateEstimatedHoursDBudget">Date</label>
-            </div>
-
-            <div class="form-group col-md-6">
-                 <label id="lblEstimatedHoursDBudget" for="txtHoursEstimatedHoursDBudget">Hours</label>
-            </div>
-
-            <div class="form-group col-md-3">
+                <label id="lblTaskEstimatedHoursDBudget" for="txtTaskEstimatedHoursDBudget">Task</label>
                 <asp:TextBox ID="txtTaskEstimatedHoursDBudget" class="form-control" placeholder="Task" runat="server"></asp:TextBox> 
             </div>
 
              <div class="form-group col-md-3">
+                <label id="lblDateEstimatedHoursDBudget" for="txtDateEstimatedHoursDBudget">Date</label>
                 <asp:TextBox ID="txtDateEstimatedHoursDBudget" class="form-control" placeholder="Date" runat="server"></asp:TextBox> 
             </div>
 
             <div class="form-group col-md-3">
+                <label id="lblEstimatedHoursDBudget" for="txtHoursEstimatedHoursDBudget">Hours</label>
                 <asp:TextBox ID="txtHoursEstimatedHoursDBudget" class="form-control" placeholder="Hours" runat="server"></asp:TextBox> 
             </div>
 
@@ -796,52 +766,65 @@
             <h1>Total Expenses</h1>
         </div>
 
-        <div class="form-group col-md-8">
+        <div class="form-group col-md-12">
+             <label id="lblTotalEstDesignerProduction">Total Estimated Designer Hours/Costs</label>
         </div>
 
-        <div class="form-group col-md-2">
-             <label id="lblTotalEstHoursProduction">Hours</label>
+        <div class="form-group col-md-4">
+        </div>
+        <div class="form-group col-md-4">
+             <label id="lblTotalEstDesignerBidProcessProduction">Bid Process</label>
         </div>
         <div class="form-group col-md-2">
-             <label id="lblTotalEstCostProduction">Cost</label>
+            <label id="lblTotalEstDesignerBidProcessHoursProduction">12</label>
+        </div>
+        <div class="form-group col-md-2">
+            <label id="lblTotalEstDesignerBidProcessCostProduction">$480.00</label>
         </div>
 
-        <div class="form-group col-md-8">
-             <label id="lblTotalEstDesignerProduction">Estimated Designer</label>
+        <div class="form-group col-md-4">
+        </div>
+        <div class="form-group col-md-4">
+             <label id="lblTotalEstDesignerProductionPlanProduction">Production</label>
         </div>
         <div class="form-group col-md-2">
-             <label id="lblTotalEstDesignerHourProduction">...</label>
+            <label id="lblTotalEstDesignerProductionHoursProduction">10</label>
         </div>
         <div class="form-group col-md-2">
-             <label id="lblTotalEstDesignerCostProduction">...</label>
-        </div>
-
-        <div class="form-group col-md-8">
-             <label id="lblTotalEstProductionHoursCostProduction">Estimated Prodction Hours/Cost</label>
-        </div>
-        <div class="form-group col-md-2">
-             <label id="lblTotalEstProductionHourProduction">...</label>
-        </div>
-        <div class="form-group col-md-2">
-             <label id="lblTotalEstProductionCostProduction">...</label>
+            <label id="lblTotalEstDesignerProductionCostProduction">$400.00</label>
         </div>
 
         <div class="form-group col-md-8">
-             <label id="lblTotalEstMaterialCostsProduction">Estimated Material Costs</label>
+             <label id="lblTotalEstProductionHoursCostProduction">Total Estimated Prodction Labour Hours/Cost</label>
         </div>
         <div class="form-group col-md-2">
-          <label id="lblDots">...</label>
+             <label id="lblTotalEstProductionHourProduction">40</label>
         </div>
         <div class="form-group col-md-2">
-          <label id="lblTotalMaterialCostProduction">...</label>
+             <label id="lblTotalEstProductionCostProduction">$990.00</label>
+        </div>
+
+        <div class="form-group col-md-8">
+             <label id="lblTotalEstMaterialCostsProduction">Total Estimated Material Costs</label>
+        </div>
+        <div class="form-group col-md-2">
+        </div>
+        <div class="form-group col-md-2">
+          <label id="lblTotalMaterialCostProduction">$3,240.00</label>
         </div>
 
         <div class="form-group col-md-12">
             <hr />
         </div>
 
-        <div class="form-group col-md-12">
-             <label id="lblTotalEstCostsProduction">Total Costs</label>
+        <div class="form-group col-md-6">
+             <label id="lblTotalEstCostsProduction">Total Hours/Costs</label>
+        </div>
+        <div class="form-group col-md-2">
+            <label id="lblTotalHourProduction">62</label>
+        </div>
+        <div class="form-group col-md-4">
+          <label id="lblTotalCostProduction">$5,110.00  (67% of Bid)</label>
         </div>
 
     </div>
