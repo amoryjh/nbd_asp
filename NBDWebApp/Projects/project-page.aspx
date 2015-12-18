@@ -41,14 +41,15 @@
 
     <div class="row box-border add-report clearfix">
         <div class="report-title">
-            <h1 class="project-title">Add New Report?</h1>
+            <h1 class="project-title">Reports</h1>
         </div>
         <div class="report-wrapper report-list-section clearfix">
             <label id="" for="ddlProjectType">Report</label>
             <select id="ddlProjectType" class="form-control">
                 <option value="project-designBid">Design Bid</option>
                 <option value="project-designBid">Design Budget</option>
-                <option value="project-productionPlan">Production Report</option>
+                <option value="project-productionPlan">Production Plan</option>
+                <option value="project-productionPlan">Project Administrative Report</option>
             </select>
         </div>
     </div>
@@ -77,51 +78,31 @@
       <!-- Hide the projects button and the add report button-->
       <div class="form-group col-md-6">
         <label id="lblClientBusinessDesign" for="txtClientBusinessDesign">Business</label>
-          <asp:RequiredFieldValidator ID="rfvBusiness" runat="server" ErrorMessage="Business Name Required" ControlToValidate="txtClientBusinessDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
-        <asp:TextBox ID="txtClientBusinessDesign" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+        <asp:TextBox ID="txtClientBusinessDesign" runat="server" class="form-control" placeholder="Business Name" ReadOnly="true"></asp:TextBox>
       </div>
 
       <div class="form-group col-md-3">
           <label id="lblClientCityDesign" for="ddlClientCityDesign">City</label>
-          <asp:TextBox  ID="txtClientCityDesign" class="form-control" placeholder="City" runat="server"></asp:TextBox>
+          <asp:TextBox  ID="txtClientCityDesign" class="form-control" placeholder="City" runat="server" ReadOnly="true"></asp:TextBox>
       </div>    
 
       <div class="form-group col-md-6">
           <label id="lblClientAddressDesign" for="txtClientAddressDesign">Address</label>
-            <asp:RequiredFieldValidator ID="rfvAddress" runat="server" ErrorMessage="Address Required" ControlToValidate="txtClientAddressDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
-          <asp:TextBox ID="txtClientAddressDesign" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+          <asp:TextBox ID="txtClientAddressDesign" class="form-control" placeholder="Address" runat="server" ReadOnly="true"></asp:TextBox>
       </div>
 
       <div class="form-group col-md-3">
-          <label id="lblClientProvDesign" for="ddlClientProvDesign">Province</label>
-          <asp:DropDownList  ID="ddlClientProvDesign" class="form-control" placeholder="Prov" runat="server">
-              <asp:ListItem Selected="True">Ontario</asp:ListItem>
-              <asp:ListItem>Quebec</asp:ListItem>
-              <asp:ListItem>Nova Scotia</asp:ListItem>
-              <asp:ListItem>New Brunswick</asp:ListItem>
-              <asp:ListItem>Manitoba</asp:ListItem>
-              <asp:ListItem>British Columbia</asp:ListItem>
-              <asp:ListItem>Prince Edward Island</asp:ListItem>
-              <asp:ListItem>Saskatchewan</asp:ListItem>
-              <asp:ListItem>Alberta</asp:ListItem>
-              <asp:ListItem>Newfoundland and Labrador</asp:ListItem>
-              <asp:ListItem>Northwest Territories</asp:ListItem>
-              <asp:ListItem>Yukon</asp:ListItem>
-              <asp:ListItem>Nunavut</asp:ListItem>
-          </asp:DropDownList>  
+          <label id="lblClientProvDesign" for="txtClientProvDesign">Province</label>
+          <asp:TextBox ID="txtClientProvDesign" class="form-control" placeholder="Province" runat="server" ReadOnly="True"></asp:TextBox>
       </div>    
     <div class="form-group col-md-4">
           <label id="lblClientPCodeDesign" for="txtClientPCodeDesign">Postal Code</label>
-             <asp:RequiredFieldValidator ID="rfvPCode" runat="server" ErrorMessage="Postal Code Required" ControlToValidate="txtClientPCodeDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
-             <asp:RegularExpressionValidator ID="revPCode" runat="server" ErrorMessage="Postal Code Not Valid" ControlToValidate="txtClientPCodeDesign" Text="*" ValidationExpression="^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$" ForeColor="Red"></asp:RegularExpressionValidator>
-          <asp:TextBox ID="txtClientPCodeDesign" class="form-control" placeholder="Postal Code" runat="server"></asp:TextBox>
+          <asp:TextBox ID="txtClientPCodeDesign" class="form-control" placeholder="Postal Code" runat="server" ReadOnly="true"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-8">
           <label id="lblClientPhoneDesign" for="txtClientPhoneDesign">Phone</label>
-            <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ErrorMessage="Phone Number Required" ControlToValidate="txtClientPhoneDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="revPhone" runat="server" ErrorMessage="Phone Number Must Be 10 Digits" ControlToValidate="txtClientPhoneDesign" Text="*" ValidationExpression="^\d{10}$" ForeColor="Red"></asp:RegularExpressionValidator>
-          <asp:TextBox ID="txtClientPhoneDesign" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
+          <asp:TextBox ID="txtClientPhoneDesign" class="form-control" placeholder="Phone" runat="server" ReadOnly="true"></asp:TextBox>
         </div>
 
          <div class="form-group col-md-12">
@@ -130,24 +111,17 @@
 
         <div class="form-group col-md-4">
           <label id="lblClientFNameDesign" for="txtClientFNameDesign">First Name</label>
-            <asp:RequiredFieldValidator ID="rfvClientFName" runat="server" ErrorMessage="Primary Contact Frist Name Required" ControlToValidate="txtClientFNameDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
-          <asp:TextBox ID="txtClientFNameDesign" runat="server" class="form-control" placeholder="First Name"></asp:TextBox>
+          <asp:TextBox ID="txtClientFNameDesign" runat="server" class="form-control" placeholder="First Name" ReadOnly="true"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
           <label id="lblClientLNameDesign" for="txtClientLNameDesign">Last Name</label>
-            <asp:RequiredFieldValidator ID="rfvClientLName" runat="server" ErrorMessage="Primary Contact Last Name Required" ControlToValidate="txtClientLNameDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
-          <asp:TextBox ID="txtClientLNameDesign" runat="server" class="form-control" placeholder="Last Name"></asp:TextBox>
+          <asp:TextBox ID="txtClientLNameDesign" runat="server" class="form-control" placeholder="Last Name" ReadOnly="true"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
           <label id="lblClientPosDesign" for="txtClientPosDesign">Position</label>
-            <asp:RequiredFieldValidator ID="rfvClientPos" runat="server" ErrorMessage="Primary Contact Position Required" ControlToValidate="txtClientPosDesign" ForeColor="Red">*</asp:RequiredFieldValidator>
-          <asp:TextBox ID="txtClientPosDesign" runat="server" class="form-control" placeholder="Position"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-12">
-            <asp:ValidationSummary ID="ValidationSummaryClientDesign" runat="server" ForeColor="Red" />
+          <asp:TextBox ID="txtClientPosDesign" runat="server" class="form-control" placeholder="Position" ReadOnly="true"></asp:TextBox>
         </div>
         
     </div>
@@ -324,31 +298,31 @@
 
       <div class="form-group col-md-12">
         <label id="lblClientBusinessDBudget" for="txtClientBusinessdBudget">Business</label>
-        <asp:TextBox ID="txtClientBusinessdBudget" runat="server" class="form-control" placeholder="Business Name"></asp:TextBox>
+        <asp:TextBox ID="txtClientBusinessdBudget" runat="server" class="form-control" placeholder="Business Name" ReadOnly="True"></asp:TextBox>
       </div>
 
       <div class="form-group col-md-3">
           <label id="lblClientCityDBudget" for="txtClientCityDBudget">City</label>
-          <asp:TextBox  ID="txtClientCityDBudget" class="form-control" placeholder="City" runat="server"></asp:TextBox>
+          <asp:TextBox  ID="txtClientCityDBudget" class="form-control" placeholder="City" runat="server" ReadOnly="True"></asp:TextBox>
       </div>    
 
       <div class="form-group col-md-6">
           <label id="lblClientAddressDBudget" for="txtClientAddressDBudget">Address</label>
-          <asp:TextBox ID="txtClientAddressDBudget" class="form-control" placeholder="Address" runat="server"></asp:TextBox>
+          <asp:TextBox ID="txtClientAddressDBudget" class="form-control" placeholder="Address" runat="server" ReadOnly="True"></asp:TextBox>
       </div>
 
       <div class="form-group col-md-3">
           <label id="lblClientProvDBudget" for="txtClientProvDBudget">Province</label>
-           <asp:TextBox ID="txtClientProvDBudget" class="form-control" placeholder="Province" runat="server"></asp:TextBox>
+           <asp:TextBox ID="txtClientProvDBudget" class="form-control" placeholder="Province" runat="server" ReadOnly="True"></asp:TextBox>
       </div>    
     <div class="form-group col-md-4">
           <label id="lblClientPCodeDBudget" for="txtClientPCodeDBudget">Postal Code</label>
-          <asp:TextBox ID="txtClientPCodeDBudget" class="form-control" placeholder="Postal Code" runat="server"></asp:TextBox>
+          <asp:TextBox ID="txtClientPCodeDBudget" class="form-control" placeholder="Postal Code" runat="server" ReadOnly="True"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-8">
           <label id="lblClientPhoneDBudget" for="txtClientPhoneDBudget">Phone</label>
-          <asp:TextBox ID="txtClientPhoneDBudget" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
+          <asp:TextBox ID="txtClientPhoneDBudget" class="form-control" placeholder="Phone" runat="server" ReadOnly="True"></asp:TextBox>
         </div>
 
          <div class="form-group col-md-12">
@@ -357,17 +331,17 @@
 
         <div class="form-group col-md-4">
           <label id="lblClientFNameDBudget" for="txtClientFNameDBudget">First Name</label>
-          <asp:TextBox ID="txtClientFNameDBudget" runat="server" class="form-control" placeholder="First Name"></asp:TextBox>
+          <asp:TextBox ID="txtClientFNameDBudget" runat="server" class="form-control" placeholder="First Name" ReadOnly="True"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
           <label id="lblClientLNameDBudget" for="txtClientLNameDBudget">Last Name</label>
-          <asp:TextBox ID="txtClientLNameDBudget" runat="server" class="form-control" placeholder="Last Name"></asp:TextBox>
+          <asp:TextBox ID="txtClientLNameDBudget" runat="server" class="form-control" placeholder="Last Name" ReadOnly="True"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
           <label id="lblClientPosDBudget" for="txtClientPosDBudget">Position</label>
-          <asp:TextBox ID="txtClientPosDBudget" runat="server" class="form-control" placeholder="Position"></asp:TextBox>
+          <asp:TextBox ID="txtClientPosDBudget" runat="server" class="form-control" placeholder="Position" ReadOnly="True"></asp:TextBox>
         </div>   
     </div>
     <div class="report-wrapper clearfix">
@@ -380,17 +354,17 @@
 
         <div class="form-group col-md-4">
           <label id="lblSalesAssocFNameDBudget" for="txtSalesAssocFNameDBudget">First Name</label>
-          <asp:TextBox ID="txtSalesAssocFNameDBudget" runat="server" class="form-control" placeholder="First Name"></asp:TextBox>
+          <asp:TextBox ID="txtSalesAssocFNameDBudget" runat="server" class="form-control" placeholder="First Name" ReadOnly="true"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
             <label id="lblSalesAssocLNameDBudget" for="txtSalesAssocLNameDBudget">Last Name</label>
-          &nbsp;<asp:TextBox ID="txtSalesAssocLNameDBudget" runat="server" class="form-control" placeholder="Last Name"></asp:TextBox>
+          &nbsp;<asp:TextBox ID="txtSalesAssocLNameDBudget" runat="server" class="form-control" placeholder="Last Name" ReadOnly="true"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
             <label id="lblSalesAssocPhoneDBudget" for="txtSalesAssocPhoneDBudget">Phone</label>
-            <asp:TextBox ID="txtSalesAssocPhoneDBudget" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtSalesAssocPhoneDBudget" class="form-control" placeholder="Phone" runat="server" ReadOnly="true"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-12">
@@ -399,17 +373,17 @@
 
         <div class="form-group col-md-4">
             <label id="lblDesignerFNameDBudget" for="txtDesignerFNameDBudget">First Name</label>
-            &nbsp;<asp:TextBox ID="txtDesignerFNameDBudget" class="form-control" placeholder="First Name" runat="server"></asp:TextBox>
+            &nbsp;<asp:TextBox ID="txtDesignerFNameDBudget" class="form-control" placeholder="First Name" runat="server" ReadOnly="true"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
             <label id="lblDesignerLNameDBudget" for="txtDesignerLNameDBudget">Last Name</label>
-            &nbsp;<asp:TextBox ID="txtDesignerLNameDBudget" class="form-control" placeholder="Last Name" runat="server"></asp:TextBox>
+            &nbsp;<asp:TextBox ID="txtDesignerLNameDBudget" class="form-control" placeholder="Last Name" runat="server" ReadOnly="true"></asp:TextBox>
         </div>
         
         <div class="form-group col-md-4">
           <label id="lblDesignerPhoneDBudget" for="txtDesignerPhoneDBudget">Phone</label>
-          <asp:TextBox ID="txtDesignerPhoneDBudget" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
+          <asp:TextBox ID="txtDesignerPhoneDBudget" class="form-control" placeholder="Phone" runat="server" ReadOnly="true"></asp:TextBox>
         </div>
     </div>
         <div class="report-wrapper clearfix">
@@ -419,27 +393,27 @@
 
         <div class="form-group col-md-4">
           <label id="lblBudgetSubmittedDBudget" for="txtBudgetSubmittedDBudget">Budget Submitted</label>
-          <asp:TextBox ID="txtBudgetSubmittedDBudget" runat="server" class="form-control" placeholder="Budget Submitted"></asp:TextBox>
+          <asp:TextBox ID="txtBudgetSubmittedDBudget" runat="server" class="form-control datepicker" placeholder="Budget Submitted"></asp:TextBox>
         </div>
         
         <div class="form-group col-md-4">
           <label id="lblBeginDateDBudget" for="txtBeginDatedBudget">Begin Date</label>
-          <asp:TextBox ID="txtBeginDatedBudget" runat="server" class="form-control datepicker" placeholder="Begin Date"></asp:TextBox>
+          <asp:TextBox ID="txtBeginDatedBudget" runat="server" class="form-control datepicker" placeholder="Begin Date" ReadOnly="true"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
             <label id="lblComDateDBudget" for="txtComDateDBudget">Completion Date</label>
-            <asp:TextBox ID="txtComDateDBudget" class="form-control datepicker" placeholder="Completion Date" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtComDateDBudget" class="form-control datepicker" placeholder="Completion Date" runat="server" ReadOnly="true"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
             <label id="lblProjSiteDBudget" for="txtProjSiteDBudget">Project Site</label>
-            <asp:TextBox ID="txtProjSiteDBudget" class="form-control" placeholder="Project Site" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtProjSiteDBudget" class="form-control" placeholder="Project Site" runat="server" ReadOnly="true"></asp:TextBox>
         </div>      
         
         <div class="form-group col-md-6">
         <label id="lblBidCostDBudget" for="txtBidCostDBudget">Estimated Cost</label>
-        <asp:TextBox ID="txtBidCostDBudget" class="form-control" placeholder="Cost" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtBidCostDBudget" class="form-control" placeholder="Cost" runat="server" ReadOnly="true"></asp:TextBox>
         </div>      
     </div>
         <div class="report-wrapper clearfix">
@@ -558,28 +532,28 @@
         </div>
 
         <div class="form-group col-md-4">
-          <label id="lblProjProduction" for="txtProjSiteProducton">Project</label>
-          <asp:TextBox ID="txtProjSiteProducton" runat="server" class="form-control" placeholder="Project"></asp:TextBox>
+          <label id="lblProjProduction" for="txtProjProducton">Project</label>
+          <asp:TextBox ID="txtProjProducton" runat="server" class="form-control" placeholder="Project" ReadOnly="True"></asp:TextBox>
         </div>
         
         <div class="form-group col-md-4">
           <label id="lblBeginDateProduction" for="txtBeginDateProduction">Begin Date</label>
-          <asp:TextBox ID="txtBeginDateProduction" runat="server" class="form-control datepicker" placeholder="Begin Date"></asp:TextBox>
+          <asp:TextBox ID="txtBeginDateProduction" runat="server" class="form-control datepicker" placeholder="Begin Date" ReadOnly="True"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-4">
             <label id="lblComDateProduction" for="txtComDateProdcution">Completion Date</label>
-            <asp:TextBox ID="txtComDateProdcution" class="form-control datepicker" placeholder="Completion Date" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtComDateProdcution" class="form-control datepicker" placeholder="Completion Date" runat="server" ReadOnly="True"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-6">
             <label id="lblProjSiteProduction" for="txtProjSiteProduction">Project Site</label>
-            <asp:TextBox ID="txtProjSiteProduction" class="form-control" placeholder="Project Site" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtProjSiteProduction" class="form-control" placeholder="Project Site" runat="server" ReadOnly="True"></asp:TextBox>
         </div>      
         
         <div class="form-group col-md-6">
         <label id="lblBidCostProduction" for="txtBidCostProduction">Estimated Cost</label>
-        <asp:TextBox ID="txtBidCostProduction" class="form-control" placeholder="Cost" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtBidCostProduction" class="form-control" placeholder="Cost" runat="server" ReadOnly="True"></asp:TextBox>
         </div>
         
     </div>

@@ -72,6 +72,14 @@ namespace NBDWebApp.Projects
                 this.ddlToolDescProduction.Items.Add(t.toolDesc);
         }
 
+        //////////////////////////////////////
+        //**********************************//
+        //**********************************//
+        //*******Design Budget**************//
+        //**********************************//
+        //**********************************//
+        //////////////////////////////////////
+
         if(!Page.IsPostBack)
         {
             DataTable dt1 = new DataTable();
@@ -160,19 +168,34 @@ namespace NBDWebApp.Projects
 
         txtClientBusinessDesign.Text = this.DropDownList2.SelectedItem.ToString();
         this.txtDesignerPhoneDesign.Text = "4087753645";
+        this.txtDesignerPhoneDBudget.Text = "4087753645";
+
         this.txtSalesAssocPhoneDesign.Text = "4087753652";
+        this.txtSalesAssocPhoneDBudget.Text = "4087753652";
 
         foreach (var client in query)
         {
-          //client info
+          //Client info for design bid
+          this.txtClientBusinessDesign.Text = client.cliName;
           this.txtClientAddressDesign.Text = client.cliAddress;
           this.txtClientCityDesign.Text = client.CITY.city1;
+          this.txtClientProvDesign.Text = client.cliProvince;
           this.txtClientPCodeDesign.Text = client.cliPCode;
           this.txtClientPhoneDesign.Text = client.cliPhone;
           this.txtClientFNameDesign.Text = client.cliConFName;
           this.txtClientLNameDesign.Text = client.cliConLName;
           this.txtClientPosDesign.Text = client.cliConPosition;
 
+          //Client info for design Budget
+          this.txtClientBusinessdBudget.Text = client.cliName;
+          this.txtClientCityDBudget.Text = client.CITY.city1;
+          this.txtClientAddressDBudget.Text = client.cliAddress;
+          this.txtClientProvDBudget.Text = client.cliProvince;
+          this.txtClientPCodeDBudget.Text = client.cliPCode;
+          this.txtClientPhoneDBudget.Text = client.cliPhone;
+          this.txtClientFNameDBudget.Text = client.cliConFName;
+          this.txtClientLNameDBudget.Text = client.cliConLName;
+          this.txtClientPosDBudget.Text = client.cliConPosition;
 
         }
 
@@ -186,24 +209,31 @@ namespace NBDWebApp.Projects
             this.txtDesignerFNameDesign.Text = q.WORKER.wrkFName;
             this.txtDesignerLNameDesign.Text = q.WORKER.wrkLName;
 
+            //DESIGN BUDGET
+            this.txtDesignerFNameDBudget.Text = q.WORKER.wrkFName;
+            this.txtDesignerLNameDBudget.Text = q.WORKER.wrkLName;
+
           }
-          else if (q.WORKER.WORKER_TYPE.ID == 7)
+          if (q.WORKER.wrkTypeID == 7)
           {
             //DESIGN BID
             this.txtSalesAssocFNameDesign.Text = q.WORKER.wrkFName;
             this.txtSalesAssocLNameDesign.Text = q.WORKER.wrkLName;
 
-
-
+            //DESIGN BUDGET
+            this.txtSalesAssocFNameDBudget.Text = q.WORKER.wrkFName;
+            this.txtSalesAssocLNameDBudget.Text = q.WORKER.wrkLName;
           }
           if (txtClientPhoneDesign.Text == "2262822677")
           {
-            txtSalesAssocLNameDesign.Text = "Reinhardt";
-            txtSalesAssocFNameDesign.Text = "Bob";
+              txtSalesAssocLNameDesign.Text = "Reinhardt";
+              txtSalesAssocLNameDBudget.Text = "Reinhardt";
+              txtSalesAssocFNameDesign.Text = "Bob";
+              txtSalesAssocFNameDBudget.Text = "Bob";
 
           }
 
-          //project
+          //project information for design bid
           this.txtBidDateDesign.Text = Convert.ToString(q.projBidDate);
           this.txtBidEstBeginDateDesign.Text = Convert.ToString(q.projEstStart);
           this.txtBidEstComDateDesign.Text = Convert.ToString(q.projEstEnd);
@@ -211,16 +241,19 @@ namespace NBDWebApp.Projects
           this.txtBidEstCostDesign.Text = q.projEstCost;
           this.LlblTitle.Text = q.projName;
 
-          //Production PLAN Project
-          //project
-          //this.txtProjSiteProducton.Text = q.projName;
-          //this.txtProjSiteProduction.Text = q.projSite;
-          //this.txtBeginDateProduction.Text = q.projActStart;
-          //this.txtComDateProdcution.Text = q.projActEnd;
-          //this.txtBidCostProduction.Text = q.projEstCost;
-          //Total Expenses
-          //this.LblTotal.Text = q.projEstCost;
+            //project information for design budget
+          this.txtBudgetSubmittedDBudget.Text = Convert.ToString(q.projBidDate);
+          this.txtBeginDatedBudget.Text = Convert.ToString(q.projEstStart);
+          this.txtComDateDBudget.Text = Convert.ToString(q.projEstEnd);
+          this.txtProjSiteDBudget.Text = q.projSite;
+          this.txtBidCostDBudget.Text = q.projEstCost;
 
+        //project information for production plan
+          this.txtProjProducton.Text = q.projName;
+          this.txtBeginDateProduction.Text = Convert.ToString(q.projEstStart);
+          this.txtComDateProdcution.Text = Convert.ToString(q.projEstEnd);
+          this.txtProjSiteProduction.Text = q.projSite;
+          this.txtBidCostProduction.Text = q.projEstCost;
 
         }
 
