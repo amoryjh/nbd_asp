@@ -64,6 +64,9 @@ namespace NBDWebApp.Projects
         {
             foreach (WORKER w in db.WORKERs)
                 this.ddlProductionWorkerNameProduction.Items.Add(w.prodWorkerFName);
+
+            foreach (INVENTORY i in db.INVENTORies)
+                this.ddlMaterialDescProduction.Items.Add(i.MATERIAL.matDesc + " " + i.invSizeAmnt + " " + i.invSizeUnit);
         }
 
         if(!Page.IsPostBack)
@@ -299,10 +302,7 @@ namespace NBDWebApp.Projects
 
     protected void btnAddMaterial_Click(object sender, EventArgs e)
     {
-        //Add Material To Req Material for Project
-
-        NBD_DatabaseEntities db = new NBD_DatabaseEntities();
-
+        //Add Material Req For DesignBid
         MATERIAL_REQ mr = new MATERIAL_REQ();
 
         mr.projectID = this.ddlProjectID.SelectedIndex +1;
@@ -344,6 +344,21 @@ namespace NBDWebApp.Projects
         db.SaveChanges();
 
         gvProdTeamProduction.DataBind();
+    }
+
+    protected void btnAddMaterialProduction_Click(object sender, EventArgs e)
+    {
+        //Add Material Req For DesignBid
+        MATERIAL_REQ mr = new MATERIAL_REQ();
+
+        mr.projectID = this.ddlProjectID.SelectedIndex + 1;
+        mr.inventoryID = this.ddlMaterialDescProduction.SelectedIndex + 1;
+        mr.mreqEstQty = Convert.ToInt16(this.txtQtyEstProduction.Text);
+
+        db.MATERIAL_REQ.Add(mr);
+        db.SaveChanges();
+
+        gvMaterialReqProduction.DataBind();
     }
   }
 }

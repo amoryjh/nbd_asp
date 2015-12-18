@@ -769,49 +769,31 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.GridView gvMaterialReqProduction;
         
         /// <summary>
-        /// txtMaterialDescriptionProduction control.
+        /// ddlMaterialDescProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaterialDescriptionProduction;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMaterialDescProduction;
         
         /// <summary>
-        /// txtMaterialQuantityProduction control.
+        /// txtQtyEstProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaterialQuantityProduction;
+        protected global::System.Web.UI.WebControls.TextBox txtQtyEstProduction;
         
         /// <summary>
-        /// txtMaterialSizeProduction control.
+        /// btnAddMaterialProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaterialSizeProduction;
-        
-        /// <summary>
-        /// txtMaterialUnitPriceProduction control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaterialUnitPriceProduction;
-        
-        /// <summary>
-        /// txtMaterialExtendedPriceProduction control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaterialExtendedPriceProduction;
+        protected global::System.Web.UI.WebControls.Button btnAddMaterialProduction;
         
         /// <summary>
         /// txtLabourDescriptionProduction control.

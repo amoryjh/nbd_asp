@@ -670,33 +670,18 @@
             </asp:GridView>
         </div>
 
-        <div class="form-group col-md-3">
-          <label id="lblMaterialDescriptionProduction" for="txtMaterialDescriptionProduction">Description</label>
-          <asp:TextBox ID="txtMaterialDescriptionProduction" runat="server" class="form-control" placeholder="Material Name"></asp:TextBox>
+        <div class="form-group col-md-5">
+           <label id="lblMaterialDescProduction" for="ddlMaterialDescProduction">Desc.</label> 
+            <asp:DropDownList ID="ddlMaterialDescProduction" class="form-control" runat="server"></asp:DropDownList>
+        </div>
+
+        <div class="form-group col-md-5">
+           <label id="lblMaterialQtyProduction" for="txtQtyEstProduction">Qty</label> 
+            <asp:TextBox ID="txtQtyEstProduction" class="form-control" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
-          <label id="lblMaterialQuantityProduction" for="txtMaterialQuantityProduction">Quantity</label>
-          <asp:TextBox ID="txtMaterialQuantityProduction" runat="server" class="form-control" placeholder="Quantity"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-2">
-            <label id="lblMaterialSizeProduction" for="txtMaterialSizeProduction">Size</label>
-            <asp:TextBox ID="txtMaterialSizeProduction" class="form-control" placeholder="Size" runat="server"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-2">
-            <label id="lblMaterialUnitPriceProduction" for="txtMaterialUnitPriceProduction">Price</label>
-            <asp:TextBox ID="txtMaterialUnitPriceProduction" class="form-control" placeholder="Price" runat="server"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-2">
-            <label id="lblMaterialExtendedPriceProduction" for="txtMaterialExtendedPriceProduction">Total</label>
-            <asp:TextBox ID="txtMaterialExtendedPriceProduction" class="form-control" placeholder="Total" runat="server"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-1">
-          <a id="btnProductionMaterialAdd" class="btn">+</a>
+            <asp:Button ID="btnAddMaterialProduction" runat="server" Text="+" CssClass="btn" CausesValidation="False" OnClick="btnAddMaterialProduction_Click"/>            
         </div>
         
     </div>
