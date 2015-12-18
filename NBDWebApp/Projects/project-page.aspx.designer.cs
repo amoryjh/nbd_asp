@@ -787,6 +787,24 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.TextBox txtQtyEstProduction;
         
         /// <summary>
+        /// txtMaterialDeliverProduction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMaterialDeliverProduction;
+        
+        /// <summary>
+        /// txtMaterialInstallProduction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMaterialInstallProduction;
+        
+        /// <summary>
         /// btnAddMaterialProduction control.
         /// </summary>
         /// <remarks>

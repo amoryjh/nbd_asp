@@ -354,6 +354,8 @@ namespace NBDWebApp.Projects
         mr.projectID = this.ddlProjectID.SelectedIndex + 1;
         mr.inventoryID = this.ddlMaterialDescProduction.SelectedIndex + 1;
         mr.mreqEstQty = Convert.ToInt16(this.txtQtyEstProduction.Text);
+        mr.mreqDeliver = Convert.ToDateTime(this.txtMaterialDeliverProduction.Text);
+        mr.mreqInstall = Convert.ToDateTime(this.txtMaterialInstallProduction.Text);
 
         db.MATERIAL_REQ.Add(mr);
         db.SaveChanges();

@@ -653,7 +653,7 @@
             <h1>Material Requirements</h1>
         </div>
 
-        <div class="form-group col-md-12">
+        <div class="form-group col-md-12" style="margin-top:1.5em;overflow-x:scroll">
             <asp:GridView ID="gvMaterialReqProduction" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceProductionMaterials" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
                 <Columns>
                     <asp:BoundField DataField="matType" HeaderText="Type" SortExpression="matType" />
@@ -670,14 +670,24 @@
             </asp:GridView>
         </div>
 
-        <div class="form-group col-md-5">
+        <div class="form-group col-md-8">
            <label id="lblMaterialDescProduction" for="ddlMaterialDescProduction">Desc.</label> 
             <asp:DropDownList ID="ddlMaterialDescProduction" class="form-control" runat="server"></asp:DropDownList>
         </div>
 
-        <div class="form-group col-md-5">
+        <div class="form-group col-md-4">
            <label id="lblMaterialQtyProduction" for="txtQtyEstProduction">Qty</label> 
             <asp:TextBox ID="txtQtyEstProduction" class="form-control" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-5">
+           <label id="lblMaterialDeliverProduction" for="txtMaterialDeliverProduction">Deliver</label> 
+            <asp:TextBox ID="txtMaterialDeliverProduction" class="form-control datepicker" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-5">
+           <label id="lblMaterialInstallProduction" for="txtMaterialInstallProduction">Install</label> 
+            <asp:TextBox ID="txtMaterialInstallProduction" class="form-control datepicker" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-2">
