@@ -354,6 +354,16 @@ namespace NBDWebApp.Projects
 
     }
 
+    protected void btnSubMaterial_Click(object sender, EventArgs e)
+    {
+        //var matReq = new MATERIAL_REQ {ID=id};
+        //db.MATERIAL_REQ.Attach(matReq);
+        //db.MATERIAL_REQ.Remove(matReq);
+        //db.SaveChanges();
+
+        //gvMaterialReqDesign.DataBind();
+    }
+
     protected void btnAddLabourSummaryDesign_Click(object sender, EventArgs e)
     {
 

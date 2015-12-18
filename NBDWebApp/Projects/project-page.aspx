@@ -240,7 +240,11 @@
 
         <div class="form-group col-md-2">
             <a id="btnAddMaterial" class="btn" runat="server" onServerClick="btnAddMaterial_Click">+</a> 
-        </div> 
+        </div>
+        
+        <div class="form-group col-md-2">
+            <a id="btnSubMaterial" class="btn" runat="server" onServerClick="btnSubMaterial_Click">-</a> 
+        </div>  
         
     </div>
 
