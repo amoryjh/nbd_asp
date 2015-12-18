@@ -320,7 +320,6 @@ namespace NBDWebApp.Projects
 
     protected void btnAddLabourSummaryDesign_Click(object sender, EventArgs e)
     {
-        NBD_DatabaseEntities db = new NBD_DatabaseEntities();
 
         LABOUR_SUMMARY ls = new LABOUR_SUMMARY();
 
@@ -332,6 +331,19 @@ namespace NBDWebApp.Projects
         db.SaveChanges();
 
         gvLabourSummaryDesign.DataBind();
+    }
+
+    protected void btnAddProdWorker_Click(object sender, EventArgs e)
+    {
+        PROD_TEAM pt = new PROD_TEAM();
+        pt.projectID = this.ddlProjectID.SelectedIndex + 1;
+        pt.workerID = this.ddlProductionWorkerNameProduction.SelectedIndex + 1;
+        pt.teamPhaseIn = this.txtProductionTeamPhaseProduction.Text;
+
+        db.PROD_TEAM.Add(pt);
+        db.SaveChanges();
+
+        gvProdTeamProduction.DataBind();
     }
   }
 }
