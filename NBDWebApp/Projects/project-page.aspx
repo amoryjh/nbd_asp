@@ -653,6 +653,23 @@
             <h1>Material Requirements</h1>
         </div>
 
+        <div class="form-group col-md-12">
+            <asp:GridView ID="gvMaterialReqProduction" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceProductionMaterials" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
+                <Columns>
+                    <asp:BoundField DataField="matType" HeaderText="Type" SortExpression="matType" />
+                    <asp:BoundField DataField="mreqEstQty" HeaderText="Qty" SortExpression="mreqEstQty" />
+                    <asp:BoundField DataField="matDesc" HeaderText="Desc" SortExpression="matDesc" />
+                    <asp:BoundField DataField="invSizeAmnt" HeaderText="Size" SortExpression="invSizeAmnt" />
+                    <asp:BoundField DataField="invSizeUnit" HeaderText="Unit" SortExpression="invSizeUnit" />
+                    <asp:BoundField DataField="invAvgNet" HeaderText="Net/Unit" SortExpression="invAvgNet" />
+                    <asp:BoundField DataField="mreqDeliver" HeaderText="Deliver" SortExpression="mreqDeliver" />
+                    <asp:BoundField DataField="mreqInstall" HeaderText="Install" SortExpression="mreqInstall" />
+                </Columns>
+                <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
+                <RowStyle Height="40px" Width="30px"></RowStyle>
+            </asp:GridView>
+        </div>
+
         <div class="form-group col-md-3">
           <label id="lblMaterialDescriptionProduction" for="txtMaterialDescriptionProduction">Description</label>
           <asp:TextBox ID="txtMaterialDescriptionProduction" runat="server" class="form-control" placeholder="Material Name"></asp:TextBox>
@@ -679,7 +696,7 @@
         </div>
 
         <div class="form-group col-md-1">
-          <a id="btnProductionMaterialAdd" class="btn btn-new-row">+</a>
+          <a id="btnProductionMaterialAdd" class="btn">+</a>
         </div>
         
     </div>
@@ -869,7 +886,12 @@
       </div>
     </div>
   </div>
- 
+
+<asp:ObjectDataSource ID="ObjectDataSourceProductionMaterials" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NBDWebApp.NBDDataSetTableAdapters.ProductionMaterialDataTableTableAdapter">
+    <SelectParameters>
+        <asp:ControlParameter ControlID="ddlProjectID" DefaultValue="0" Name="Param1" PropertyName="SelectedValue" Type="Int32" />
+    </SelectParameters>
+    </asp:ObjectDataSource> 
 <asp:ObjectDataSource ID="ObjectDataSourceProdTeam" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NBDWebApp.NBDDataSetTableAdapters.ProdTeamDataTableTableAdapter">
     <SelectParameters>
         <asp:ControlParameter ControlID="ddlProjectID" DefaultValue="0" Name="Param1" PropertyName="SelectedValue" Type="Int32" />
