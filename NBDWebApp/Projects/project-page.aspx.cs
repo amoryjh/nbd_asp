@@ -60,9 +60,11 @@ namespace NBDWebApp.Projects
         //**********************************//
         //////////////////////////////////////
 
-        //Fill projTeam Sales Assoc. & Designer
-        this.txtSalesAssocFNameProduction.Text = "Bob Reinhardt";
-        this.txtDesignerFNameProduction.Text = "Tamara Bakken";
+        if (!IsPostBack)
+        {
+            foreach (WORKER w in db.WORKERs)
+                this.ddlProductionWorkerNameProduction.Items.Add(w.prodWorkerFName);
+        }
 
         if(!Page.IsPostBack)
         {

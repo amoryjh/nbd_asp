@@ -724,22 +724,13 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.TextBox txtBidCostProduction;
         
         /// <summary>
-        /// txtSalesAssocFNameProduction control.
+        /// gvProdTeamProduction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSalesAssocFNameProduction;
-        
-        /// <summary>
-        /// txtDesignerFNameProduction control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDesignerFNameProduction;
+        protected global::System.Web.UI.WebControls.GridView gvProdTeamProduction;
         
         /// <summary>
         /// ddlProductionWorkerNameProduction control.
@@ -749,6 +740,24 @@ namespace NBDWebApp.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlProductionWorkerNameProduction;
+        
+        /// <summary>
+        /// txtProductionTeamPhaseProduction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtProductionTeamPhaseProduction;
+        
+        /// <summary>
+        /// btnAddProdWorker control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddProdWorker;
         
         /// <summary>
         /// txtMaterialDescriptionProduction control.
@@ -848,6 +857,15 @@ namespace NBDWebApp.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button6;
+        
+        /// <summary>
+        /// ObjectDataSourceProdTeam control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSourceProdTeam;
         
         /// <summary>
         /// ObjectDataSourceLabourSummaryDesign control.

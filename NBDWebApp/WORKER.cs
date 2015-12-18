@@ -33,10 +33,7 @@ namespace NBDWebApp
         {
             get
             {
-                if (this.wrkTypeID != 1)
-                    return null;
-                else
-                    return this.wrkFName + " " + this.wrkLName;
+                return this.wrkFName + " " + this.wrkLName + "  -  " + this.WORKER_TYPE.wrkTypeDesc;
             }
         }
 

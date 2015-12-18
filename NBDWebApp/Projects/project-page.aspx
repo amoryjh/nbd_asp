@@ -618,38 +618,32 @@
         <div class="form-group col-md-12">
             <h1>Project Team</h1>
         </div>
-        <div class="form-group col-md-12">
-            <h3>Sales Associate:</h3>
-        </div>
-
-        <div class="form-group col-md-6">
-          <label id="lblSalesAssocFNameProduction" for="txtSalesAssocFNameProduction">Name</label>
-          <asp:TextBox ID="txtSalesAssocFNameProduction" runat="server" class="form-control" placeholder="Full Name"></asp:TextBox>
-        </div>
 
         <div class="form-group col-md-12">
-            <h3>Designer:</h3>
+            <asp:GridView ID="gvProdTeamProduction" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceProdTeam" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
+                <Columns>
+                    <asp:BoundField DataField="wrkTypeDesc" HeaderText="Worker Type" SortExpression="wrkTypeDesc" />
+                    <asp:BoundField DataField="wrkFName" HeaderText="First Name" SortExpression="wrkFName" />
+                    <asp:BoundField DataField="wrkLName" HeaderText="Last Name" SortExpression="wrkLName" />
+                    <asp:BoundField DataField="teamPhaseIn" HeaderText="Phase In" SortExpression="teamPhaseIn" />
+                </Columns>
+                <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
+                <RowStyle Height="40px" Width="30px"></RowStyle>
+            </asp:GridView>
         </div>
 
-        <div class="form-group col-md-6">
-            <label id="lblDesignerFNameProduction" for="txtDesignerFNameProduction">Name</label>
-            &nbsp;<asp:TextBox ID="txtDesignerFNameProduction" class="form-control" placeholder="Full Name" runat="server"></asp:TextBox>
-        </div>
-   
-    </div>
-
-    <div class="report-wrapper clearfix">
-        <div class="form-group col-md-12">
-            <h1>Add Production Workers</h1>
-        </div>
-
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-5">
             <label id="lblProductionWorkerNameProduction" for="ddlProductionWorkerNameProduction">Name</label>
             <asp:DropDownList ID="ddlProductionWorkerNameProduction" CssClass="form-control" runat="server"></asp:DropDownList>
         </div>
 
-        <div class="form-group col-md-6">
-          <a id="btnProductionWorkerAdd" class="btn btn-new-row">+</a>
+        <div class="form-group col-md-5">
+            <label id="lblProductionTeamPhaseProduction" for="txtProductionTeamPhaseProduction">Phase In</label>
+            <asp:TextBox ID="txtProductionTeamPhaseProduction" class="form-control" placeholder="Phase" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-2">
+           <asp:Button ID="btnAddProdWorker" CssClass="btn" runat="server" Text="+" OnClick="btnAddProdWorker_Click" CausesValidation="False"/>
         </div>
 
     </div>
@@ -876,7 +870,11 @@
     </div>
   </div>
  
-    
+<asp:ObjectDataSource ID="ObjectDataSourceProdTeam" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NBDWebApp.NBDDataSetTableAdapters.ProdTeamDataTableTableAdapter">
+    <SelectParameters>
+        <asp:ControlParameter ControlID="ddlProjectID" DefaultValue="0" Name="Param1" PropertyName="SelectedValue" Type="Int32" />
+    </SelectParameters>
+    </asp:ObjectDataSource>     
 <asp:ObjectDataSource ID="ObjectDataSourceLabourSummaryDesign" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NBDWebApp.NBDDataSetTableAdapters.LabourSummaryDataTableTableAdapter">
     <SelectParameters>
         <asp:ControlParameter ControlID="ddlProjectID" DefaultValue="0" Name="Param1" PropertyName="SelectedValue" Type="Int32" />
