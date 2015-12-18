@@ -5791,6 +5791,18 @@ hr {
 .formthing {
   width: 100% !important;
 }
+table td,
+table th {
+  padding: 11px !important;
+}
+td,
+th {
+  padding: 11px !important;
+}
+tr td,
+tr th {
+  padding: 11px !important;
+}
 /*///////////////////////////////////////////////////////
 -----------------------Base Elements---------------------
 ///////////////////////////////////////////////////////*/
