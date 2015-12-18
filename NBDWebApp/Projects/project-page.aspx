@@ -212,6 +212,8 @@
         <div class="form-group col-md-12" style="margin-top:1.5em">
             <asp:GridView ID="gvMaterialReqDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceMaterialDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
                 <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:CommandField ShowDeleteButton="True" />
                     <asp:BoundField DataField="matType" HeaderText="Type" SortExpression="matType" />
                     <asp:BoundField DataField="matDesc" HeaderText="Desc" SortExpression="matDesc" >
                     <HeaderStyle Font-Underline="False" />
@@ -221,6 +223,8 @@
                     <asp:BoundField DataField="invSizeUnit" HeaderText="Size" SortExpression="invSizeUnit" />
                 </Columns>
             <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
+
+<RowStyle Height="40px" Width="30px"></RowStyle>
             </asp:GridView>
         </div>
 
@@ -248,11 +252,15 @@
         <div class="form-group col-md-12">
             <asp:GridView ID="gvLabourSummaryDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceLabourSummaryDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
                 <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:CommandField ShowDeleteButton="True" />
                     <asp:BoundField DataField="lsHours" HeaderText="Hours" SortExpression="lsHours" />
                     <asp:BoundField DataField="wrkTypeDesc" HeaderText="Worker Type" SortExpression="wrkTypeDesc" />
                     <asp:BoundField DataField="wrkTypePrice" HeaderText="Price/Hour" SortExpression="wrkTypePrice" />
                 </Columns>
               <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
+
+<RowStyle Height="40px" Width="30px"></RowStyle>
             </asp:GridView>
         </div>
 
@@ -566,6 +574,8 @@
         <div class="form-group col-md-12">
             <asp:GridView ID="gvProdTeamProduction" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceProdTeam" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
                 <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:CommandField ShowDeleteButton="True" />
                     <asp:BoundField DataField="wrkTypeDesc" HeaderText="Worker Type" SortExpression="wrkTypeDesc" />
                     <asp:BoundField DataField="wrkFName" HeaderText="First Name" SortExpression="wrkFName" />
                     <asp:BoundField DataField="wrkLName" HeaderText="Last Name" SortExpression="wrkLName" />
@@ -600,6 +610,8 @@
         <div class="form-group col-md-12" style="margin-top:1.5em;overflow-x:scroll">
             <asp:GridView ID="gvMaterialReqProduction" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceProductionMaterials" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
                 <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:CommandField ShowDeleteButton="True" />
                     <asp:BoundField DataField="matType" HeaderText="Type" SortExpression="matType" />
                     <asp:BoundField DataField="mreqEstQty" HeaderText="Qty" SortExpression="mreqEstQty" />
                     <asp:BoundField DataField="matDesc" HeaderText="Desc" SortExpression="matDesc" />
@@ -647,6 +659,8 @@
         <div class="form-group col-md-12">
             <asp:GridView ID="gvToolRequirementProduction" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceToolRequirementProduction" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
                 <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:CommandField ShowDeleteButton="True" />
                     <asp:BoundField DataField="ptQty" HeaderText="Qty" SortExpression="ptQty" />
                     <asp:BoundField DataField="toolDesc" HeaderText="Desc" SortExpression="toolDesc" />
                     <asp:BoundField DataField="ptDeliverFrom" HeaderText="Deliver From" SortExpression="ptDeliverFrom" />
