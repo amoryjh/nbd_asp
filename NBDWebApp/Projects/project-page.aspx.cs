@@ -14,6 +14,7 @@ namespace NBDWebApp.Projects
     protected void Page_Load(object sender, EventArgs e)
     {
 
+       
         //////////////////////////////////////
         //**********************************//
         //**********************************//
@@ -356,12 +357,19 @@ namespace NBDWebApp.Projects
 
     protected void btnSubMaterial_Click(object sender, EventArgs e)
     {
+        try { 
         var matReq = new MATERIAL_REQ {ID=Convert.ToInt32(txtSubMaterial.Text)};
         db.MATERIAL_REQ.Attach(matReq);
         db.MATERIAL_REQ.Remove(matReq);
         db.SaveChanges();
-
         gvMaterialReqDesign.DataBind();
+        
+        }
+        catch
+        {
+            LblErrormsg.Text = "Please select a valid row to delete!"; 
+        }
+        Response.Redirect("~/Projects/project-page.aspx#ContentPlaceHolder2_gvMaterialReqDesign");
     }
 
     protected void btnAddLabourSummaryDesign_Click(object sender, EventArgs e)
@@ -427,10 +435,16 @@ namespace NBDWebApp.Projects
 
     protected void gvMaterialReqDesign_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
     {
+        //Response.Redirect("#ContentPlaceHolder2_gvMaterialReqDesign");
         GridViewRow row = gvMaterialReqDesign.Rows[e.NewSelectedIndex];
 
         this.txtSubMaterial.Text = row.Cells[1].Text;
+        
 
+    }
+
+    protected void gvMaterialReqDesign_SelectedIndexChanged(object sender, EventArgs e)
+    {
     }
     
   }

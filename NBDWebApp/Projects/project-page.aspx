@@ -210,7 +210,7 @@
         </div>
 
         <div class="form-group col-md-12" style="margin-top:1.5em">
-            <asp:GridView ID="gvMaterialReqDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceMaterialDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40" OnSelectedIndexChanging="gvMaterialReqDesign_SelectedIndexChanging" DataKeyNames="ID">
+            <asp:GridView ID="gvMaterialReqDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceMaterialDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40" OnSelectedIndexChanging="gvMaterialReqDesign_SelectedIndexChanging" DataKeyNames="ID" OnSelectedIndexChanged="gvMaterialReqDesign_SelectedIndexChanged">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
                     <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
@@ -242,11 +242,14 @@
         </div>
 
         <div class="form-group col-md-5">
-            <asp:TextBox ID="txtSubMaterial" class="form-control" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtSubMaterial" class="form-control" runat="server">Please Enter Or Select Row</asp:TextBox>
         </div>
         
         <div class="form-group col-md-2">
-            <a id="btnSubMaterial" class="btn" runat="server" onServerClick="btnSubMaterial_Click">-</a> 
+            <a id="btnSubMaterial" class="btn" runat="server" onServerClick="btnSubMaterial_Click">-</a>
+            <br />
+            <br />
+            <asp:Label ID="LblErrormsg" runat="server" ForeColor="Red"></asp:Label>
         </div>  
         
     </div>
