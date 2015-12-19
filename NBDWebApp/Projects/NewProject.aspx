@@ -33,8 +33,6 @@
 
         <div class="form-group col-md-6">
           <label id="lblBidDate" for="txtBidDate">Bid Date</label>
-            <asp:RequiredFieldValidator ID="rfvBidDate" runat="server" ErrorMessage="Bid Date Required" ControlToValidate="txtBidDate" ForeColor="Red">*</asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="revBidDate" runat="server" ErrorMessage="Bid Date Not Valid" ControlToValidate="txtBidDate" ForeColor="Red" ValidationExpression="\d{4}-\d{2}-\d{2}" >*</asp:RegularExpressionValidator>
           <asp:TextBox ID="txtBidDate" runat="server" class="form-control" placeholder="Bid Date"></asp:TextBox>
         </div>
 

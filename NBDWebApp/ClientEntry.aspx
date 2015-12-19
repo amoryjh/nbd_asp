@@ -49,15 +49,15 @@
          <div class="form-group col-md-4">
           <label id="lblPCode" for="txtPCode">Postal Code</label>
              <asp:RequiredFieldValidator ID="rfvPCode" runat="server" ErrorMessage="Postal Code Required" ControlToValidate="txtPCode" ForeColor="Red">*</asp:RequiredFieldValidator>
-             <asp:RegularExpressionValidator ID="revPCode" runat="server" ErrorMessage="Postal Code Not Valid" ControlToValidate="txtPCode" Text="*" ValidationExpression="^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$" ForeColor="Red"></asp:RegularExpressionValidator>
-          <asp:TextBox ID="txtPCode" class="form-control" placeholder="Postal Code" runat="server"></asp:TextBox>
+             <asp:RegularExpressionValidator ID="revPCode" runat="server" ErrorMessage="Postal Code Not Valid - Must be like A1B 2C4" ControlToValidate="txtPCode" Text="*" ValidationExpression="^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$" ForeColor="Red"></asp:RegularExpressionValidator>
+          <asp:TextBox ID="txtPCode" class="form-control" placeholder="Format: L1A2A3" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-8">
           <label id="lblPhone" for="txtPhone">Phone</label>
             <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ErrorMessage="Phone Number Required" ControlToValidate="txtPhone" ForeColor="Red">*</asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="revPhone" runat="server" ErrorMessage="Phone Number Must Be 10 Digits" ControlToValidate="txtPhone" Text="*" ValidationExpression="^\d{10}$" ForeColor="Red"></asp:RegularExpressionValidator>
-          <asp:TextBox ID="txtPhone" class="form-control" placeholder="Phone" runat="server"></asp:TextBox>
+            <asp:RegularExpressionValidator ID="revPhone" runat="server" ErrorMessage="Phone Number Must Be 10 Digits - ie 9051234567" ControlToValidate="txtPhone" Text="*" ValidationExpression="^\d{10}$" ForeColor="Red"></asp:RegularExpressionValidator>
+          <asp:TextBox ID="txtPhone" class="form-control" placeholder="9051234567" runat="server"></asp:TextBox>
         </div>
       </div>
 
