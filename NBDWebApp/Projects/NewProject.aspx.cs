@@ -37,9 +37,9 @@ namespace NBDWebApp.Projects
 
                 p.projSite = this.txtProjSite.Text;
                 p.projName = this.txtProjName.Text;
-                p.clientID = this.ddlClientName.SelectedIndex + 1;
+                p.clientID = Convert.ToInt32(this.ddlClientName.SelectedValue);
                 p.designerID = 3;
-
+                p.projBidDate = Convert.ToDateTime(this.txtBidDate.Text);
                 db.PROJECTs.Add(p);
                 db.SaveChanges();
 

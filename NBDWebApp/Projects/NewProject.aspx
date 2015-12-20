@@ -21,7 +21,7 @@
         
         <div class="form-group col-md-6">
             <label id="lblClientName" for="ddlClientName">Client</label>
-            <asp:DropDownList ID="ddlClientName" class="form-control" runat="server">
+            <asp:DropDownList ID="ddlClientName" class="form-control" runat="server" DataSourceID="clientEntityDataSource" DataTextField="cliName" DataValueField="ID">
             </asp:DropDownList>
         </div>
 
@@ -33,7 +33,7 @@
 
         <div class="form-group col-md-6">
           <label id="lblBidDate" for="txtBidDate">Bid Date</label>
-          <asp:TextBox ID="txtBidDate" runat="server" class="form-control" placeholder="Bid Date"></asp:TextBox>
+          <asp:TextBox ID="txtBidDate" runat="server" class="form-control datepicker" placeholder="Bid Date"></asp:TextBox>
         </div>
 
         <div class="form-group col-md-12">
@@ -46,5 +46,6 @@
             <asp:Button ID="btnClear" CssClass="btn" runat="server" Text="Clear" CausesValidation="false" OnClick="btnClear_Click" />
         </div>
     </div></div>
+      <asp:EntityDataSource ID="clientEntityDataSource" runat="server" ConnectionString="name=NBD_DatabaseEntities" DefaultContainerName="NBD_DatabaseEntities" EnableFlattening="False" EntitySetName="CLIENTs" Select="it.[cliName], it.[ID]"></asp:EntityDataSource>
     </form>
 </asp:Content>

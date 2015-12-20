@@ -76,24 +76,6 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.DropDownList ddlDesignerFName;
         
         /// <summary>
-        /// rfvBidDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBidDate;
-        
-        /// <summary>
-        /// revBidDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revBidDate;
-        
-        /// <summary>
         /// txtBidDate control.
         /// </summary>
         /// <remarks>
@@ -137,5 +119,14 @@ namespace NBDWebApp.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnClear;
+        
+        /// <summary>
+        /// clientEntityDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.EntityDataSource clientEntityDataSource;
     }
 }
