@@ -37,6 +37,18 @@
             </li>
         </ul>
     </div>
+    
+
+    <div class="row box-border add-report clearfix">
+        <div class="report-title">
+            <h1 class="project-title">Select A Project</h1>
+        </div>
+        <div class="form-group col-md-12">
+            <div class="report-wrapper report-list-section clearfix">
+                <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID"></asp:DropDownList> 
+            </div>
+        </div>
+    </div>
 
 
     <div class="row box-border add-report clearfix">
@@ -204,9 +216,6 @@
     <div class="report-wrapper clearfix">
         <div class="form-group col-md-12">
             <h1>Material Requirements</h1>
-        </div>
-        <div class="form-group col-md-12" style="display:none">
-            <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID"></asp:DropDownList> 
         </div>
 
         <div class="form-group col-md-12" style="margin-top:1.5em">
