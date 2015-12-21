@@ -43,10 +43,15 @@
         <div class="report-title">
             <h1 class="project-title">Select A Project</h1>
         </div>
+<<<<<<< HEAD
         <div class="form-group col-md-12">
             <div class="report-wrapper report-list-section clearfix">
                 <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID" OnSelectedIndexChanged="ddlProjectID_SelectedIndexChanged"></asp:DropDownList> 
             </div>
+=======
+        <div class="report-wrapper report-list-section clearfix">
+            <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID"></asp:DropDownList> 
+>>>>>>> 092193c1f78e82b6b057f3ec44a7f89335145cf8
         </div>
     </div>
 
