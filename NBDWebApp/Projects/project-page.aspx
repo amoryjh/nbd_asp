@@ -204,14 +204,14 @@
         <asp:TextBox ID="txtBidEstCostDesign" class="form-control" placeholder="Estimated Cost" runat="server"></asp:TextBox>
         </div>
     </div>
-    
-    <div class="report-wrapper clearfix">
+
+        <div class="report-wrapper clearfix">
         <div class="form-group col-md-12">
             <h1>Material Requirements</h1>
         </div>
 
         <div class="form-group col-md-12" style="margin-top:1.5em">
-            <asp:GridView ID="gvMaterialReqDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceMaterialDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40" OnSelectedIndexChanging="gvMaterialReqDesign_SelectedIndexChanging" DataKeyNames="ID" OnSelectedIndexChanged="gvMaterialReqDesign_SelectedIndexChanged">
+            <asp:GridView ID="gvMaterialReqDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceMaterialDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40" OnSelectedIndexChanging="gvMaterialReqDesign_SelectedIndexChanging" DataKeyNames="ID">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
                     <asp:BoundField DataField="ID" HeaderText="Row" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
@@ -263,12 +263,13 @@
       </div>
 
         <div class="form-group col-md-12">
-            <asp:GridView ID="gvLabourSummaryDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceLabourSummaryDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
+            <asp:GridView ID="gvLabourSummaryDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceLabourSummaryDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40" DataKeyNames="ID" OnSelectedIndexChanging="gvLabourSummaryDesign_SelectedIndexChanging">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
+                    <asp:BoundField DataField="ID" HeaderText="Row" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
                     <asp:BoundField DataField="lsHours" HeaderText="Hours" SortExpression="lsHours" />
                     <asp:BoundField DataField="wrkTypeDesc" HeaderText="Worker Type" SortExpression="wrkTypeDesc" />
-                    <asp:BoundField DataField="wrkTypePrice" HeaderText="Price/Hour" SortExpression="wrkTypePrice" />
+                    <asp:BoundField DataField="wrkTypePrice" HeaderText="Price" SortExpression="wrkTypePrice" />
                 </Columns>
               <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
             <RowStyle Height="40px" Width="30px"></RowStyle>
@@ -288,8 +289,21 @@
         <div class="form-group col-md-2">
             <asp:Button ID="btnAddLabourSummaryDesign" CssClass="btn btn-new-row" runat="server" Text="+" OnClick="btnAddLabourSummaryDesign_Click" /> 
         </div>
-      
 
+        <div class="form-group col-md-5">
+        </div>
+
+        <div class="form-group col-md-5">
+            <asp:TextBox ID="txtSubLabourSummary" class="form-control" runat="server" placeholder="Enter Or Select A Row Number"></asp:TextBox>
+        </div>
+        
+        <div class="form-group col-md-2">
+            <a id="btnSubLabourSummary" class="btn" runat="server" onServerClick="btnSubLabourSummary_Click">-</a>           
+        </div> 
+
+        <div class="form-group col-md-12">
+            <asp:Label ID="lblErrormsgLabourSummaryDesign" runat="server" ForeColor="Red"></asp:Label>
+        </div>
         
     </div>
     <div class="report-wrapper text-center clearfix">
@@ -297,10 +311,15 @@
             <h1>Submit Form</h1>
         </div>
         <div class="form-group col-md-12">
-          <asp:Button ID="btnSubmitDesignBid" CssClass="btn" runat="server" Text="Submit" />
+          <asp:Button ID="btnSubmitDesignBid" CssClass="btn" runat="server" Text="Submit" OnClick="btnSubmitDesignBid_Click" />
+        </div>
+        <div class="form-group col-md-12">
+          <asp:Label ID="lblErrormsgDesignBidSudmit" runat="server" ForeColor="Red"></asp:Label>
         </div>
     </div>
   </div>
+    
+    
     <!-- 
     //////////////////////////////////////////////////////////
     ---------------------Design Budget----------------------
