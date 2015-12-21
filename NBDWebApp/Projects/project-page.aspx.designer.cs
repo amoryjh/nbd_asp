@@ -40,15 +40,6 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.DropDownList ddlProjectID;
         
         /// <summary>
-        /// txtClientNameDesign control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClientNameDesign;
-        
-        /// <summary>
         /// txtClientBusinessDesign control.
         /// </summary>
         /// <remarks>
@@ -58,15 +49,6 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.TextBox txtClientBusinessDesign;
         
         /// <summary>
-        /// txtClientCityDesign control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClientCityDesign;
-        
-        /// <summary>
         /// txtClientAddressDesign control.
         /// </summary>
         /// <remarks>
@@ -74,6 +56,15 @@ namespace NBDWebApp.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtClientAddressDesign;
+        
+        /// <summary>
+        /// txtClientCityDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtClientCityDesign;
         
         /// <summary>
         /// txtClientProvDesign control.

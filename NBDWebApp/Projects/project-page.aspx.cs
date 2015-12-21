@@ -166,7 +166,7 @@ namespace NBDWebApp.Projects
     }
     protected void ddlProjectID_SelectedIndexChanged(object sender, EventArgs e)
     {
-      int id = 1;
+        int id = Convert.ToInt32(this.ddlProjectID.SelectedValue);
         var query = from client in db.CLIENTs where client.ID == id select client;
 
         var query2 = from project in db.PROJECTs

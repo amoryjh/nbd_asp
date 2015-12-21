@@ -79,26 +79,21 @@
           <h1>Client Info</h1>
       </div>
 
-      <div class="form-group col-md-6">
-          <label id="lblExistingClientBusinessDesign" for="txtClientNameDesign">Existing Client</label>       
-            <asp:TextBox ID="txtClientNameDesign" runat="server" class="form-control" placeholder="Client Name" ReadOnly="true"></asp:TextBox>
-      </div>
-
       <!-- Hide the projects button and the add report button-->
       <div class="form-group col-md-6">
         <label id="lblClientBusinessDesign" for="txtClientBusinessDesign">Business</label>
         <asp:TextBox ID="txtClientBusinessDesign" runat="server" class="form-control" placeholder="Business Name" ReadOnly="true"></asp:TextBox>
       </div>
 
+       <div class="form-group col-md-6">
+          <label id="lblClientAddressDesign" for="txtClientAddressDesign">Address</label>
+          <asp:TextBox ID="txtClientAddressDesign" class="form-control" placeholder="Address" runat="server" ReadOnly="true"></asp:TextBox>
+      </div>
+
       <div class="form-group col-md-3">
           <label id="lblClientCityDesign" for="ddlClientCityDesign">City</label>
           <asp:TextBox  ID="txtClientCityDesign" class="form-control" placeholder="City" runat="server" ReadOnly="true"></asp:TextBox>
       </div>    
-
-      <div class="form-group col-md-6">
-          <label id="lblClientAddressDesign" for="txtClientAddressDesign">Address</label>
-          <asp:TextBox ID="txtClientAddressDesign" class="form-control" placeholder="Address" runat="server" ReadOnly="true"></asp:TextBox>
-      </div>
 
       <div class="form-group col-md-3">
           <label id="lblClientProvDesign" for="txtClientProvDesign">Province</label>
