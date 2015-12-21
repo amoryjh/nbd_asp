@@ -45,7 +45,7 @@
           <h1 class="project-title">Select A Project</h1>
       </div>
       <div class="report-wrapper clearfix">
-          <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID" OnSelectedIndexChanged="ddlProjectID_SelectedIndexChanged"></asp:DropDownList> 
+          <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID" OnSelectedIndexChanged="ddlProjectID_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList> 
       </div>
     </div>
 
