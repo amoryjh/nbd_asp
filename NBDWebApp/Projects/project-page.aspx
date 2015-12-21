@@ -294,11 +294,12 @@
         </div>
 
         <div class="form-group col-md-5">
+            <label id="lblBringDownRowLabor" for="txtSubLabourSummary">Select A Row to Edit/Delete</label>
             <asp:TextBox ID="txtSubLabourSummary" class="form-control" runat="server" placeholder="Enter Or Select A Row Number"></asp:TextBox>
         </div>
         
         <div class="form-group col-md-2">
-            <a id="btnSubLabourSummary" class="btn" runat="server" onServerClick="btnSubLabourSummary_Click">-</a>           
+            <a id="btnSubLabourSummary" class="btn btn-new-row" runat="server" onServerClick="btnSubLabourSummary_Click">-</a>           
         </div> 
 
         <div class="form-group col-md-12">
