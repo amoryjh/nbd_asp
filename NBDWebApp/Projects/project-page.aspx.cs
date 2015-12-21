@@ -171,11 +171,12 @@ namespace NBDWebApp.Projects
             ClientID = project.clientID;
             lblTitle.Text = project.projName;
             
+            //Project information for design bid
             this.txtBidDateDesign.Text = Convert.ToString(project.projBidDate);
             this.txtBidEstBeginDateDesign.Text = Convert.ToString(project.projEstStart);
             this.txtBidEstComDateDesign.Text = Convert.ToString(project.projEstEnd);
             this.txtProjSiteDesign.Text = project.projSite;
-            this.txtBidEstCostDesign.Text = project.projEstCost;
+            this.txtBidEstCostDesign.Text = project.projEstCost; 
 
             //project information for design budget
             this.txtBudgetSubmittedDBudget.Text = Convert.ToString(project.projBidDate);
@@ -207,6 +208,11 @@ namespace NBDWebApp.Projects
             this.txtClientLNameDesign.Text = client.cliConLName;
             this.txtClientPosDesign.Text = client.cliConPosition;
 
+            this.txtSalesAssocFNameDesign.Text = "Bob";
+            this.txtSalesAssocLNameDesign.Text = "Reinhardt";
+            this.txtDesignerFNameDesign.Text = "Tamara";
+            this.txtDesignerLNameDesign.Text = "Bakken";
+
             this.txtClientBusinessdBudget.Text = client.cliName;
             this.txtClientCityDBudget.Text = client.CITY.city1;
             this.txtClientAddressDBudget.Text = client.cliAddress;
@@ -216,6 +222,11 @@ namespace NBDWebApp.Projects
             this.txtClientFNameDBudget.Text = client.cliConFName;
             this.txtClientLNameDBudget.Text = client.cliConLName;
             this.txtClientPosDBudget.Text = client.cliConPosition;
+
+            this.txtSalesAssocFNameDBudget.Text = "Bob";
+            this.txtSalesAssocLNameDBudget.Text = "Reinhardt";
+            this.txtDesignerFNameDBudget.Text = "Tamara";
+            this.txtDesignerLNameDBudget.Text = "Bakken";
         }
 
         //No phone numbers actually in database so hardcoded values
@@ -231,16 +242,14 @@ namespace NBDWebApp.Projects
         //Add Material Req For DesignBid
         MATERIAL_REQ mr = new MATERIAL_REQ();
 
-        mr.projectID = this.ddlProjectID.SelectedIndex +1;
+        mr.projectID = Convert.ToInt32(this.ddlProjectID.SelectedValue);
         mr.inventoryID = this.ddlMaterialDescDesign.SelectedIndex + 1;
         mr.mreqEstQty = Convert.ToInt16(this.txtQtyEstDesign.Text);
 
         db.MATERIAL_REQ.Add(mr);
         db.SaveChanges();
 
-        gvMaterialReqDesign.DataBind();
-        //Puts you back to the materials table
-        Response.Redirect("~/Projects/project-page.aspx#ContentPlaceHolder2_gvMaterialReqDesign");
+        gvMaterialReqDesign.DataBind();        
 
     }
 
@@ -258,7 +267,6 @@ namespace NBDWebApp.Projects
         {
             LblErrormsg.Text = "Please select a valid row to delete!"; 
         }
-        Response.Redirect("~/Projects/project-page.aspx#ContentPlaceHolder2_gvMaterialReqDesign");
     }
 
     protected void btnAddLabourSummaryDesign_Click(object sender, EventArgs e)
@@ -266,7 +274,7 @@ namespace NBDWebApp.Projects
 
         LABOUR_SUMMARY ls = new LABOUR_SUMMARY();
 
-        ls.projectID = this.ddlProjectID.SelectedIndex + 1;
+        ls.projectID = Convert.ToInt32(this.ddlProjectID.SelectedValue);
         ls.lsHours = Convert.ToInt16(this.txtLabourSummaryHoursDesign.Text);
         ls.workerTypeID = this.ddlLabourSummaryDescDesign.SelectedIndex + 1;
 

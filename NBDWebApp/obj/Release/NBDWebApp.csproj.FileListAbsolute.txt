@@ -329,5 +329,4 @@ C:\Users\Administrator\Desktop\nbd_asp-d4b8acd4fc14b06ad26232d422471d18a60b5d9d\
 C:\Users\Administrator\Desktop\nbd_asp-d4b8acd4fc14b06ad26232d422471d18a60b5d9d\NBDWebApp\obj\Release\NBDWebApp.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\nbd_asp-d4b8acd4fc14b06ad26232d422471d18a60b5d9d\NBDWebApp\obj\Release\NBDWebApp.dll
 C:\Users\Administrator\Desktop\nbd_asp-d4b8acd4fc14b06ad26232d422471d18a60b5d9d\NBDWebApp\obj\Release\NBDWebApp.pdb
-C:\Users\Brandon\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.csprojResolveAssemblyReference.cache
 C:\Users\Amory\Desktop\nbd_asp\NBDWebApp\obj\Release\NBDWebApp.csprojResolveAssemblyReference.cache
