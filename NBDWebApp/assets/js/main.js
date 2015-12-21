@@ -58,20 +58,6 @@ $('document').ready(function () {
       $('#' + reveal).show();
     });
     
-  //Get Existing client input into textbox
-    $('#ContentPlaceHolder2_ddlExistingClientBusinessDesign').on('click', function () {
-      var clientName = $(this).val();
-      $('#ContentPlaceHolder2_txtClientBusinessDesign').val(clientName);
-    })
-
-    $('.btn-new-row').click(function () {
-      var theParent  = $(this).parent().parent('.report-wrapper'),//shortcut reference
-          $theClonee = $(theParent).clone(); //copy all html of parent 
-      $theClonee.removeClass('report-wrapper');//also remove the extra padding
-      $(this).hide();//hide btn just clicked
-      theParent.append($theClonee);//throw copied html at bottom of div
-    });
-    
     //Client Listings Page -- Display Message if database fields be empty
     $(".client-listings span.highlight-change").each(function () {
       //alert($(this).html());

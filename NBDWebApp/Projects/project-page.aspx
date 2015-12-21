@@ -239,16 +239,20 @@
         </div>
 
         <div class="form-group col-md-2">
-            <a id="btnAddMaterial" class="btn" runat="server" onServerClick="btnAddMaterial_Click">+</a> 
+            <a id="btnAddMaterial" class="btn btn-new-row" runat="server" onServerClick="btnAddMaterial_Click">+</a> 
         </div>
 
         <div class="form-group col-md-5">
-            <asp:TextBox ID="txtSubMaterial" class="form-control" runat="server" placeholder="Enter Or Select A Row Number"></asp:TextBox>
+          <label id="lblBringDownRowMaterial" for="txtQtyEstDesign">Select A Row to Edit/Delete</label>
+          <asp:TextBox ID="txtSubMaterial" class="form-control" runat="server" placeholder="Enter Or Select A Row Number"></asp:TextBox>
         </div>
         
         <div class="form-group col-md-2">
-            <a id="btnSubMaterial" class="btn" runat="server" onServerClick="btnSubMaterial_Click">-</a>
-            <asp:Label ID="lblErrormsgMaterialReqDesign" runat="server" ForeColor="Red"></asp:Label>
+          <a id="btnSubMaterial" class="btn btn-new-row" runat="server" onServerClick="btnSubMaterial_Click">-</a>
+        </div>
+      
+        <div class="col-md-12 form-group">
+          <asp:Label ID="lblErrormsgMaterialReqDesign" runat="server" ForeColor="Red"></asp:Label>
         </div>  
         
     </div>
@@ -282,7 +286,7 @@
         </div>
 
         <div class="form-group col-md-2">
-            <asp:Button ID="btnAddLabourSummaryDesign" CssClass="btn" runat="server" Text="+" OnClick="btnAddLabourSummaryDesign_Click" /> 
+            <asp:Button ID="btnAddLabourSummaryDesign" CssClass="btn btn-new-row" runat="server" Text="+" OnClick="btnAddLabourSummaryDesign_Click" /> 
         </div>
       
 
@@ -470,7 +474,7 @@
             </div>
 
             <div class="form-group col-md-3">
-                <a id="btnAddHoursToDateDBudget" class="btn" runat="server">+</a> 
+                <a id="btnAddHoursToDateDBudget" class="btn btn-new-row" runat="server">+</a> 
             </div> 
 
              <div class="form-group col-md-12">
@@ -508,7 +512,7 @@
             </div>
 
             <div class="form-group col-md-3">
-                <a id="btnAddEstimatedHoursDBudget" class="btn" runat="server">+</a> 
+                <a id="btnAddEstimatedHoursDBudget" class="btn btn-new-row" runat="server">+</a> 
             </div> 
 
             <div class="form-group col-md-12">
@@ -604,7 +608,7 @@
         </div>
 
         <div class="form-group col-md-2">
-           <asp:Button ID="btnAddProdWorker" CssClass="btn" runat="server" Text="+" OnClick="btnAddProdWorker_Click" CausesValidation="False"/>
+           <asp:Button ID="btnAddProdWorker" CssClass="btn btn-new-row" runat="server" Text="+" OnClick="btnAddProdWorker_Click" CausesValidation="False"/>
         </div>
 
     </div>
@@ -654,7 +658,7 @@
         </div>
 
         <div class="form-group col-md-2">
-            <asp:Button ID="btnAddMaterialProduction" runat="server" Text="+" CssClass="btn" CausesValidation="False" OnClick="btnAddMaterialProduction_Click"/>            
+            <asp:Button ID="btnAddMaterialProduction" runat="server" Text="+" CssClass="btn btn-new-row" CausesValidation="False" OnClick="btnAddMaterialProduction_Click"/>            
         </div>
         
     </div>
@@ -699,7 +703,7 @@
         </div>
 
         <div class="form-group col-md-2">
-            <asp:Button ID="btnAddToolProduction" runat="server" Text="+" CssClass="btn" CausesValidation="False" OnClick="btnAddToolProduction_Click" />            
+            <asp:Button ID="btnAddToolProduction" runat="server" Text="+" CssClass="btn btn-new-row" CausesValidation="False" OnClick="btnAddToolProduction_Click" />            
         </div>
 
     </div>
