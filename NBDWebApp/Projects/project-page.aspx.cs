@@ -42,7 +42,7 @@ namespace NBDWebApp.Projects
             this.txtBidEstComDateDesign.Text = "";
             this.txtProjSiteDesign.Text = "";
             this.txtBidEstCostDesign.Text = "";
-            this.LlblTitle.Text = "";
+            this.lblTitle.Text = "";
         }
 
         //Fill Inventory Desc for Material Req
@@ -152,116 +152,78 @@ namespace NBDWebApp.Projects
             gvHoursToDateDBudget.DataBind();
             gvEstimatedHoursDBudget.DataBind();
         }
-
-        //////////////////////////////////////
-        //**********************************//
-        //**********************************//
-        //*******Fill With London Proj******//
-        //**********************************//
-        //**********************************//
-        //////////////////////////////////////
         
-
-
     }
     protected void ddlProjectID_SelectedIndexChanged(object sender, EventArgs e)
     {
-        int id = Convert.ToInt32(this.ddlProjectID.SelectedValue);
-        var query = from client in db.CLIENTs where client.ID == id select client;
+        //Gets the ProjectID from the dropdownlist
+        int ProjectID = Convert.ToInt32(this.ddlProjectID.SelectedValue);
+        //Set clientID to default value
+        int ClientID = 0;
 
-        var query2 = from project in db.PROJECTs
-                     where project.ID == id
-                     select project;
 
-        txtClientBusinessDesign.Text = this.ddlProjectID.SelectedItem.ToString();
+        //Query for project information
+        var queryProject = from project in db.PROJECTs where project.ID == ProjectID select project;
+
+        foreach (var project in queryProject)
+        {
+            //Get clientID for specefic project 
+            ClientID = project.clientID;
+            lblTitle.Text = project.projName;
+            
+            this.txtBidDateDesign.Text = Convert.ToString(project.projBidDate);
+            this.txtBidEstBeginDateDesign.Text = Convert.ToString(project.projEstStart);
+            this.txtBidEstComDateDesign.Text = Convert.ToString(project.projEstEnd);
+            this.txtProjSiteDesign.Text = project.projSite;
+            this.txtBidEstCostDesign.Text = project.projEstCost;
+
+            //project information for design budget
+            this.txtBudgetSubmittedDBudget.Text = Convert.ToString(project.projBidDate);
+            this.txtBeginDatedBudget.Text = Convert.ToString(project.projEstStart);
+            this.txtComDateDBudget.Text = Convert.ToString(project.projEstEnd);
+            this.txtProjSiteDBudget.Text = project.projSite;
+            this.txtBidCostDBudget.Text = project.projEstCost;
+
+            //project information for production plan
+            this.txtProjProducton.Text = project.projName;
+            this.txtBeginDateProduction.Text = Convert.ToString(project.projEstStart);
+            this.txtComDateProdcution.Text = Convert.ToString(project.projEstEnd);
+            this.txtProjSiteProduction.Text = project.projSite;
+            this.txtBidCostProduction.Text = project.projEstCost;
+        }
+
+        //Quaery for client information
+        var queryClient = from client in db.CLIENTs where client.ID == ClientID select client;
+
+        foreach (var client in queryClient)
+        {
+            this.txtClientBusinessDesign.Text = client.cliName;
+            this.txtClientAddressDesign.Text = client.cliAddress;
+            this.txtClientCityDesign.Text = client.CITY.city1;
+            this.txtClientProvDesign.Text = client.cliProvince;
+            this.txtClientPCodeDesign.Text = client.cliPCode;
+            this.txtClientPhoneDesign.Text = client.cliPhone;
+            this.txtClientFNameDesign.Text = client.cliConFName;
+            this.txtClientLNameDesign.Text = client.cliConLName;
+            this.txtClientPosDesign.Text = client.cliConPosition;
+
+            this.txtClientBusinessdBudget.Text = client.cliName;
+            this.txtClientCityDBudget.Text = client.CITY.city1;
+            this.txtClientAddressDBudget.Text = client.cliAddress;
+            this.txtClientProvDBudget.Text = client.cliProvince;
+            this.txtClientPCodeDBudget.Text = client.cliPCode;
+            this.txtClientPhoneDBudget.Text = client.cliPhone;
+            this.txtClientFNameDBudget.Text = client.cliConFName;
+            this.txtClientLNameDBudget.Text = client.cliConLName;
+            this.txtClientPosDBudget.Text = client.cliConPosition;
+        }
+
+        //No phone numbers actually in database so hardcoded values
         this.txtDesignerPhoneDesign.Text = "4087753645";
         this.txtDesignerPhoneDBudget.Text = "4087753645";
 
         this.txtSalesAssocPhoneDesign.Text = "4087753652";
         this.txtSalesAssocPhoneDBudget.Text = "4087753652";
-
-        foreach (var client in query)
-        {
-          //Client info for design bid
-          this.txtClientBusinessDesign.Text = client.cliName;
-          this.txtClientAddressDesign.Text = client.cliAddress;
-          this.txtClientCityDesign.Text = client.CITY.city1;
-          this.txtClientProvDesign.Text = client.cliProvince;
-          this.txtClientPCodeDesign.Text = client.cliPCode;
-          this.txtClientPhoneDesign.Text = client.cliPhone;
-          this.txtClientFNameDesign.Text = client.cliConFName;
-          this.txtClientLNameDesign.Text = client.cliConLName;
-          this.txtClientPosDesign.Text = client.cliConPosition;
-
-          //Client info for design Budget
-          this.txtClientBusinessdBudget.Text = client.cliName;
-          this.txtClientCityDBudget.Text = client.CITY.city1;
-          this.txtClientAddressDBudget.Text = client.cliAddress;
-          this.txtClientProvDBudget.Text = client.cliProvince;
-          this.txtClientPCodeDBudget.Text = client.cliPCode;
-          this.txtClientPhoneDBudget.Text = client.cliPhone;
-          this.txtClientFNameDBudget.Text = client.cliConFName;
-          this.txtClientLNameDBudget.Text = client.cliConLName;
-          this.txtClientPosDBudget.Text = client.cliConPosition;
-
-        }
-
-        foreach (var q in query2)
-        {
-
-          //NBD staff
-          if (q.WORKER.wrkTypeID == 2)
-          {
-            //DESIGN BID
-            this.txtDesignerFNameDesign.Text = q.WORKER.wrkFName;
-            this.txtDesignerLNameDesign.Text = q.WORKER.wrkLName;
-
-            //DESIGN BUDGET
-            this.txtDesignerFNameDBudget.Text = q.WORKER.wrkFName;
-            this.txtDesignerLNameDBudget.Text = q.WORKER.wrkLName;
-
-          }
-          if (q.WORKER.wrkTypeID == 7)
-          {
-            //DESIGN BID
-            this.txtSalesAssocFNameDesign.Text = q.WORKER.wrkFName;
-            this.txtSalesAssocLNameDesign.Text = q.WORKER.wrkLName;
-
-            //DESIGN BUDGET
-            this.txtSalesAssocFNameDBudget.Text = q.WORKER.wrkFName;
-            this.txtSalesAssocLNameDBudget.Text = q.WORKER.wrkLName;
-          }
-          if (txtClientPhoneDesign.Text == "2262822677")
-          {
-              txtSalesAssocLNameDesign.Text = "Reinhardt";
-              txtSalesAssocLNameDBudget.Text = "Reinhardt";
-              txtSalesAssocFNameDesign.Text = "Bob";
-              txtSalesAssocFNameDBudget.Text = "Bob";
-
-          }
-
-          //project information for design bid
-          this.txtBidDateDesign.Text = Convert.ToString(q.projBidDate);
-          this.txtBidEstBeginDateDesign.Text = Convert.ToString(q.projEstStart);
-          this.txtBidEstComDateDesign.Text = Convert.ToString(q.projEstEnd);
-          this.txtProjSiteDesign.Text = q.projSite;
-          this.txtBidEstCostDesign.Text = q.projEstCost;
-          this.LlblTitle.Text = q.projName;
-
-            //project information for design budget
-          this.txtBudgetSubmittedDBudget.Text = Convert.ToString(q.projBidDate);
-          this.txtBeginDatedBudget.Text = Convert.ToString(q.projEstStart);
-          this.txtComDateDBudget.Text = Convert.ToString(q.projEstEnd);
-          this.txtProjSiteDBudget.Text = q.projSite;
-          this.txtBidCostDBudget.Text = q.projEstCost;
-
-        //project information for production plan
-          this.txtProjProducton.Text = q.projName;
-          this.txtBeginDateProduction.Text = Convert.ToString(q.projEstStart);
-          this.txtComDateProdcution.Text = Convert.ToString(q.projEstEnd);
-          this.txtProjSiteProduction.Text = q.projSite;
-          this.txtBidCostProduction.Text = q.projEstCost;
-      }
     }
 
     protected void btnAddMaterial_Click(object sender, EventArgs e)

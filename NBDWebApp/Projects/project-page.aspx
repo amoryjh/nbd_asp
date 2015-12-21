@@ -8,7 +8,7 @@
 
     <div class="form-group">
         <h1 class="section-title">
-            <asp:Label ID="LlblTitle" runat="server" Text=""></asp:Label>
+            <asp:Label ID="lblTitle" runat="server" Text=""></asp:Label>
         </h1>
     </div>
     <div class="timeline well clearfix projecttimeline">    
