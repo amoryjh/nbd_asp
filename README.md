@@ -2,8 +2,8 @@
 The NBD.ASP Application is intended for employees of NBD to generate daily reports, documents, and review project information with ease. It allows for employees to create new clients and projects, and manage reports, bids, budgets, and client information. 
 
 ##Login Information:
-	* User: Administrator
-	* Password: Administrator
+	*User: Administrator
+	*Password: Administrator
 
 ## Page Structure
 	* Home / Recent Project Listings (MainPage.aspx)
