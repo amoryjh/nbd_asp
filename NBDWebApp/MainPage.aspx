@@ -36,7 +36,7 @@
       </div>
     </div>
   </div>
-  <div class="col-md-12 clearfix text-center">
+  <div class="col-md-12 clearfix text-center client-search-center">
     <div class="btn-group">
       <button type="button" class="btn btn-danger view-all">ALL</button>
       <button type="button" class="btn btn-danger btn-sort" value="abcd">A-D</button>

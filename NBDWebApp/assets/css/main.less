@@ -394,10 +394,14 @@ span.highlight-change{font-weight: 700;}
   }
 }
 .client-search-aside{
-  position:absolute;
+  position:absolute; display:none;
   left:2.5%; top:12em;
+  @media(min-width:1102px){display:block}
 }
-
+.client-search-center{
+  display:block;
+  @media(min-width:1102px){display:none;}
+}
 #project-PAR{
   th,td{padding:11px;}
 }

@@ -6262,8 +6262,22 @@ span.highlight-change {
 }
 .client-search-aside {
   position: absolute;
+  display: none;
   left: 2.5%;
   top: 12em;
+}
+@media (min-width: 1102px) {
+  .client-search-aside {
+    display: block;
+  }
+}
+.client-search-center {
+  display: block;
+}
+@media (min-width: 1102px) {
+  .client-search-center {
+    display: none;
+  }
 }
 #project-PAR th,
 #project-PAR td {
