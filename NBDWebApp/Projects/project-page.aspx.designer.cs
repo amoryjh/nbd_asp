@@ -319,33 +319,6 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.Button btnAddLabourSummaryDesign;
         
         /// <summary>
-        /// txtSubLabourSummary control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSubLabourSummary;
-        
-        /// <summary>
-        /// btnSubLabourSummary control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnSubLabourSummary;
-        
-        /// <summary>
-        /// lblErrormsgLabourSummaryDesign control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrormsgLabourSummaryDesign;
-        
-        /// <summary>
         /// btnSubmitDesignBid control.
         /// </summary>
         /// <remarks>
@@ -353,15 +326,6 @@ namespace NBDWebApp.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmitDesignBid;
-        
-        /// <summary>
-        /// lblErrormsgDesignBidSudmit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrormsgDesignBidSudmit;
         
         /// <summary>
         /// txtClientBusinessdBudget control.
