@@ -1,4 +1,5 @@
-﻿$(window).load(function () { 
+﻿//Fade in animation on all page loads
+$(window).load(function () {
     $('#status').fadeOut(); 
     $('#preloader').delay(50).fadeOut('slow');
     $('body').delay(350).css({ 'overflow': 'visible' });
@@ -7,9 +8,15 @@
 $(function () {
     $(".datepicker").datepicker();
 });
+
+
+//All other functions
 $('document').ready(function () {
-    
-  //Mobile menu animation
+
+  //-------------------------------------------------
+  //******************Mobile Menu********************
+  //-------------------------------------------------
+    //Mobile menu animation
     var trigger = $('#hamburger'),
         menu = $('.menu-list'),
         isClosed = true;
@@ -17,7 +24,7 @@ $('document').ready(function () {
     trigger.click(function () {
         burgerTime();
     });
-
+    //Mobile Nav Animation
     function burgerTime() {
         if (isClosed == true) {
             isClosed = false;
@@ -34,7 +41,7 @@ $('document').ready(function () {
             $('body').css('overflow', 'auto');
         }
     }
-  //Mobile Menu Sub menu toggling
+    //Mobile Menu Sub menu toggling
     $('.sub-mobile').hide();
     $('.sup-mobile .a').click(function () {
       $('.sub-mobile').slideUp(300, 'swing');
@@ -44,26 +51,82 @@ $('document').ready(function () {
   //-------------------------------------------------
   //*************Project Instance Page****************
   //-------------------------------------------------
-    //Reveal "Add new report" drop down list
+
+    //Reveal "Reports" drop down list
     $('.add-report .report-title').click(function () {
       $('.report-list-section').slideToggle(300);
     });
 
-  //When value from above list ^^ is selected - display the hidden div of a report matching selected value
-    $('.project-page .report-group').hide();
+    //When value from above list ^^ is selected - display the div of a report matching selected value
+    $('.project-page .report-group').hide(); //On default hide
     $('#ddlProjectType').on('click', function () {
       var reveal = $(this).val();
       console.log(reveal);
-      $('.report-group').hide();
-      $('#' + reveal).show();
+      $('.report-group').hide(); //hide all other reports
+      $('#' + reveal).show(); // display matching report div
     });
     
-    //Client Listings Page -- Display Message if database fields be empty
+
+  //-------------------------------------------------
+  //*****************Main Page***********************
+  //-------------------------------------------------
+
+    //Home Page - Project Information Cards 
+    //-- Display Message if database fields are empty
     $(".client-listings span.highlight-change").each(function () {
-      //alert($(this).html());
       if ($(this).text() == "" || $(this).text().length <= 3) { $(this).text("This field appears to be empty! :O") }
     });
+   
+    $('.view-all').click(function () {
+      $(".project-instance").fadeIn('slow'); // Display All Project Cards
+    })
 
+    //Sort By Alphabetical Buttons
+    $('button.btn-sort').click(function () {
+      $('.project-instance').fadeIn('fast'); // if no matching values found, show all divs
+      var attrr = $(this).attr('value'); //get value of button clicked
+      $('h2.project-title').each(function () { //loop through each project title
+        var $thisText = $(this).text().toLowerCase();
+        //Check if first char of project name matches any of the values in selected button
+        if ($thisText.charAt(0) == attrr.charAt(0) || $thisText.charAt(0) == attrr.charAt(1) || $thisText.charAt(0) == attrr.charAt(2) || $thisText.charAt(0) == attrr.charAt(3) || $thisText.charAt(0) == attrr.charAt(4) || $thisText.charAt(0) == attrr.charAt(5)) {
+          $(".project-instance").hide();//hide all other projects
+          $(this).parent().parent('.project-instance').fadeIn('fast');//display projects that match this range
+        }
+      })
+    })
+
+    $('#ContentPlaceHolder2_ddlClientName').change(function () {
+      $('.project-instance').show();//show all on default
+      var valueThing = $(this).val();//get value of selected index
+      $('.project-instance').each(function () {//loop through each project
+        if ($(this).attr('id') == valueThing) {//the value is stored in the divs id - see if id matches the value
+          $('.project-instance').fadeOut('fast');//hide everything else
+          $(this).fadeIn('slow');//show matching entry
+        }
+      })
+    })
+
+    subStringSearch('#ContentPlaceHolder2_ddlCityProjectFilter , #ContentPlaceHolder2_ddlClientContact');
+    
+    //Search For Substrings Within Project Divs
+    function subStringSearch(thisDiv) {
+      $(thisDiv).change(function () {
+        $('.project-instance').show();
+        var childString = $(this).val();//value of ddl as a string
+        $('.project-instance').each(function () {
+          var mainString = $(this).children().text();
+          var stringSoln = mainString.indexOf(childString) > -1; // search for the substring in each div
+          if (stringSoln) {
+            $('.project-instance').fadeOut('fast');
+            $(this).fadeIn('slow')//show matching entry
+          }
+        })
+      })
+    }
+
+  //-------------------------------------------------
+  //**************New Project Page*******************
+  //-------------------------------------------------
   //Get Todays Date -- For report started field 
     var today = new Date();
     var dd = today.getDate();
@@ -73,58 +136,6 @@ $('document').ready(function () {
     function toDay() {
       return mm + '/' + dd + '/' + yyyy;
     }
-    $('#ContentPlaceHolder2_txtBidDateDesign').val(toDay());
+    $('#ContentPlaceHolder2_txtBidDate').val(toDay()); // set the above functions value to textbox
 
-
-    $('.view-all').click(function () {
-      $(".project-instance").fadeIn('slow');
-    })
-    $('button.btn-sort').click(function () {
-      $('.project-instance').fadeIn('fast');
-      var attrr = $(this).attr('value');
-      console.log(attrr);
-      $('h2.project-title').each(function () {
-        //if($(this).text().charAt(0) == attrr.charAt(0) || $(this).text().charAt(0) == attrr.charAt(1) || $(this).text().charAt(0) == attrr.charAt(2) || $(this).text().charAt(0) == attrr.charAt(3) || $(this).text().charAt(0) == attrr.charAt(4) || $(this).text().charAt(0) == attrr.charAt(5)) {
-        var $thisText = $(this).text().toLowerCase();
-        if ($thisText.charAt(0) == attrr.charAt(0) || $thisText.charAt(0) == attrr.charAt(1) || $thisText.charAt(0) == attrr.charAt(2) || $thisText.charAt(0) == attrr.charAt(3) || $thisText.charAt(0) == attrr.charAt(4) || $thisText.charAt(0) == attrr.charAt(5)) {
-          $(".project-instance").hide();
-          $(this).parent().parent('.project-instance').fadeIn('fast');
-        }
-      })
-    })
-    $('#ContentPlaceHolder2_ddlClientName').change(function () {
-      $('.project-instance').show();
-      var valueThing = $(this).val();
-      $('.project-instance').each(function () {
-        if ($(this).attr('id') == valueThing) {
-          $('.project-instance').fadeOut('fast');
-          $(this).fadeIn('slow');
-        }
-      })
-    })
-    $('#ContentPlaceHolder2_ddlClientContact').change(function () {
-      $('.project-instance').show();
-      var childString = $(this).val();
-      $('.project-instance').each(function () {
-        var mainString = $(this).children().text();
-        var stringSoln = mainString.indexOf(childString) > -1;
-        if (stringSoln) {
-          $('.project-instance').fadeOut('fast');
-          $(this).fadeIn('slow')
-        }
-      })
-    })
-
-    $('#ContentPlaceHolder2_ddlCityProjectFilter').change(function () {
-      $('.project-instance').show();
-      var childString = $(this).val();
-      $('.project-instance').each(function () {
-        var mainString = $(this).children().text();
-        var stringSoln = mainString.indexOf(childString) > -1;
-        if (stringSoln) {
-          $('.project-instance').fadeOut('fast');
-          $(this).fadeIn('slow')
-        }
-      })
-    })
 });
