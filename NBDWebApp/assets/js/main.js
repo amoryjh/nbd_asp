@@ -51,7 +51,7 @@ $('document').ready(function () {
   //-------------------------------------------------
   //*************Project Instance Page****************
   //-------------------------------------------------
-
+    $('#project-productionPlan, #project-designBudget, #project-par').hide();
     //Reveal "Reports" drop down list
     $('.add-report .report-title').click(function () {
       $('.report-list-section').slideToggle(300);

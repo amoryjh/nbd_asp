@@ -54,7 +54,7 @@
         <div class="report-title">
             <h1 class="project-title">Reports</h1>
         </div>
-        <div class="report-wrapper report-list-section clearfix">
+        <div class="report-wrapper clearfix">
             <label id="" for="ddlProjectType">Report</label>
             <select id="ddlProjectType" class="form-control">
                 <option value="project-designBid">Design Bid</option>
