@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="DailyReports.aspx.cs" Inherits="NBDWebApp.DailyReports" %>
+﻿<%@ Page Title="Daily Report" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="DailyReports.aspx.cs" Inherits="NBDWebApp.DailyReports" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
@@ -24,8 +24,8 @@
             <div class="form-group col-md-6">
                 <label id="lblUserHours" for="txtUserHours">Hours</label>
                 <asp:RequiredFieldValidator ID="rfvUserHours" runat="server" ErrorMessage="Hours Required" ControlToValidate="txtUserHours" ForeColor="Red">*</asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="revHours" runat="server" ErrorMessage="Hours Must Be A Single or Double Digit" ControlToValidate="txtUserHours" Text="*" ValidationExpression="^^(\d{1}|\d{2})$$" ForeColor="Red"></asp:RegularExpressionValidator>
-                <asp:TextBox ID="txtUserHours" class="form-control" placeholder="Hours" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revHours" runat="server" ErrorMessage="Must Be Less than 10 hours" ControlToValidate="txtUserHours" Text="*" ValidationExpression="^^(\d{1}|\d{2})$$" ForeColor="Red"></asp:RegularExpressionValidator>
+                <asp:TextBox ID="txtUserHours" class="form-control" placeholder="8" runat="server"></asp:TextBox>
             </div>
 
             <div class="form-group col-md-6">
