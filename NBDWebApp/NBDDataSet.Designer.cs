@@ -2048,6 +2048,8 @@ namespace NBDWebApp {
             
             private global::System.Data.DataColumn columnmreqDeliver;
             
+            private global::System.Data.DataColumn columnID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ProductionMaterialDataTableDataTable() {
@@ -2147,6 +2149,14 @@ namespace NBDWebApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2192,10 +2202,18 @@ namespace NBDWebApp {
                         invSizeUnit,
                         invAvgNet,
                         mreqInstall,
-                        mreqDeliver};
+                        mreqDeliver,
+                        null};
                 rowProductionMaterialDataTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowProductionMaterialDataTableRow);
                 return rowProductionMaterialDataTableRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ProductionMaterialDataTableRow FindByID(int ID) {
+                return ((ProductionMaterialDataTableRow)(this.Rows.Find(new object[] {
+                            ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2223,6 +2241,7 @@ namespace NBDWebApp {
                 this.columninvAvgNet = base.Columns["invAvgNet"];
                 this.columnmreqInstall = base.Columns["mreqInstall"];
                 this.columnmreqDeliver = base.Columns["mreqDeliver"];
+                this.columnID = base.Columns["ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2244,11 +2263,21 @@ namespace NBDWebApp {
                 base.Columns.Add(this.columnmreqInstall);
                 this.columnmreqDeliver = new global::System.Data.DataColumn("mreqDeliver", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmreqDeliver);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID}, true));
                 this.columnmatDesc.AllowDBNull = false;
                 this.columnmatDesc.MaxLength = 50;
                 this.columnmatType.AllowDBNull = false;
                 this.columnmatType.MaxLength = 20;
                 this.columninvSizeUnit.MaxLength = 20;
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
+                this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
+                this.columnID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2390,6 +2419,8 @@ namespace NBDWebApp {
             
             private global::System.Data.DataColumn columnptDeliverFrom;
             
+            private global::System.Data.DataColumn columnID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ToolReqDataTableDataTable() {
@@ -2457,6 +2488,14 @@ namespace NBDWebApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2498,10 +2537,18 @@ namespace NBDWebApp {
                         ptQty,
                         toolDesc,
                         ptDeliverTo,
-                        ptDeliverFrom};
+                        ptDeliverFrom,
+                        null};
                 rowToolReqDataTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowToolReqDataTableRow);
                 return rowToolReqDataTableRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ToolReqDataTableRow FindByID(int ID) {
+                return ((ToolReqDataTableRow)(this.Rows.Find(new object[] {
+                            ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2525,6 +2572,7 @@ namespace NBDWebApp {
                 this.columntoolDesc = base.Columns["toolDesc"];
                 this.columnptDeliverTo = base.Columns["ptDeliverTo"];
                 this.columnptDeliverFrom = base.Columns["ptDeliverFrom"];
+                this.columnID = base.Columns["ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2538,9 +2586,19 @@ namespace NBDWebApp {
                 base.Columns.Add(this.columnptDeliverTo);
                 this.columnptDeliverFrom = new global::System.Data.DataColumn("ptDeliverFrom", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnptDeliverFrom);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID}, true));
                 this.columnptQty.AllowDBNull = false;
                 this.columntoolDesc.AllowDBNull = false;
                 this.columntoolDesc.MaxLength = 50;
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
+                this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
+                this.columnID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3498,6 +3556,17 @@ namespace NBDWebApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID {
+                get {
+                    return ((int)(this[this.tableProductionMaterialDataTable.IDColumn]));
+                }
+                set {
+                    this[this.tableProductionMaterialDataTable.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsmreqEstQtyNull() {
                 return this.IsNull(this.tableProductionMaterialDataTable.mreqEstQtyColumn);
             }
@@ -3634,6 +3703,17 @@ namespace NBDWebApp {
                 }
                 set {
                     this[this.tableToolReqDataTable.ptDeliverFromColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID {
+                get {
+                    return ((int)(this[this.tableToolReqDataTable.IDColumn]));
+                }
+                set {
+                    this[this.tableToolReqDataTable.IDColumn] = value;
                 }
             }
             
@@ -5192,6 +5272,7 @@ WHERE  (PROD_TEAM.projectID = @Param1)";
             tableMapping.ColumnMappings.Add("invAvgNet", "invAvgNet");
             tableMapping.ColumnMappings.Add("mreqInstall", "mreqInstall");
             tableMapping.ColumnMappings.Add("mreqDeliver", "mreqDeliver");
+            tableMapping.ColumnMappings.Add("ID", "ID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -5208,7 +5289,8 @@ WHERE  (PROD_TEAM.projectID = @Param1)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT MATERIAL.matDesc, MATERIAL.matType, MATERIAL_REQ.mreqEstQty, INVENTORY.invSizeAmnt, INVENTORY.invSizeUnit, INVENTORY.invAvgNet, MATERIAL_REQ.mreqInstall, MATERIAL_REQ.mreqDeliver
+            this._commandCollection[0].CommandText = @"SELECT MATERIAL.matDesc, MATERIAL.matType, MATERIAL_REQ.mreqEstQty, INVENTORY.invSizeAmnt, INVENTORY.invSizeUnit, INVENTORY.invAvgNet, MATERIAL_REQ.mreqInstall, MATERIAL_REQ.mreqDeliver, 
+                  MATERIAL_REQ.ID
 FROM     PROJECT INNER JOIN
                   MATERIAL_REQ ON PROJECT.ID = MATERIAL_REQ.projectID INNER JOIN
                   INVENTORY ON MATERIAL_REQ.inventoryID = INVENTORY.ID INNER JOIN
@@ -5370,6 +5452,7 @@ WHERE  (PROJECT.ID = @Param1)";
             tableMapping.ColumnMappings.Add("toolDesc", "toolDesc");
             tableMapping.ColumnMappings.Add("ptDeliverTo", "ptDeliverTo");
             tableMapping.ColumnMappings.Add("ptDeliverFrom", "ptDeliverFrom");
+            tableMapping.ColumnMappings.Add("ID", "ID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -5387,8 +5470,8 @@ WHERE  (PROJECT.ID = @Param1)";
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT PROD_TOOL.ptQty, TOOL.toolDesc, PROD_TOOL.ptDeliverTo, PROD_TOOL.ptDeliver" +
-                "From\r\nFROM     PROD_TOOL INNER JOIN\r\n                  TOOL ON PROD_TOOL.toolID " +
-                "= TOOL.ID\r\nWHERE  (PROD_TOOL.projectID = @Param1)";
+                "From, PROD_TOOL.ID\r\nFROM     PROD_TOOL INNER JOIN\r\n                  TOOL ON PRO" +
+                "D_TOOL.toolID = TOOL.ID\r\nWHERE  (PROD_TOOL.projectID = @Param1)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "projectID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

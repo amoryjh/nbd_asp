@@ -751,13 +751,13 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.Button btnSubProdWorker;
         
         /// <summary>
-        /// lblErrormsgProdudctionTeam control.
+        /// lblErrormsgProductionTeam control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrormsgProdudctionTeam;
+        protected global::System.Web.UI.WebControls.Label lblErrormsgProductionTeam;
         
         /// <summary>
         /// gvMaterialReqProduction control.
@@ -814,6 +814,33 @@ namespace NBDWebApp.Projects {
         protected global::System.Web.UI.WebControls.Button btnAddMaterialProduction;
         
         /// <summary>
+        /// txtSubProductionMaterials control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSubProductionMaterials;
+        
+        /// <summary>
+        /// btnSubProductionMaterials control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSubProductionMaterials;
+        
+        /// <summary>
+        /// lblErrormsgProductionMaterials control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrormsgProductionMaterials;
+        
+        /// <summary>
         /// gvToolRequirementProduction control.
         /// </summary>
         /// <remarks>
@@ -866,6 +893,33 @@ namespace NBDWebApp.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddToolProduction;
+        
+        /// <summary>
+        /// txtSubToolProduction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSubToolProduction;
+        
+        /// <summary>
+        /// btnSubToolProduction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSubToolProduction;
+        
+        /// <summary>
+        /// lblErrormsgToolProdcution control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrormsgToolProdcution;
         
         /// <summary>
         /// gvLabourReqProduction control.

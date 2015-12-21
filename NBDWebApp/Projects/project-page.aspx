@@ -641,7 +641,7 @@
         </div>
 
         <div class="form-group col-md-12">
-            <asp:Label ID="lblErrormsgProdudctionTeam" runat="server" ForeColor="Red"></asp:Label>
+            <asp:Label ID="lblErrormsgProductionTeam" runat="server" ForeColor="Red"></asp:Label>
         </div>
 
     </div>
@@ -652,18 +652,18 @@
         </div>
 
         <div class="form-group col-md-12" style="margin-top:1.5em;overflow-x:scroll">
-            <asp:GridView ID="gvMaterialReqProduction" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceProductionMaterials" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
+            <asp:GridView ID="gvMaterialReqProduction" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceProductionMaterials" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40" DataKeyNames="ID" OnSelectedIndexChanging="gvMaterialReqProduction_SelectedIndexChanging">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
-                    <asp:CommandField ShowDeleteButton="True" />
+                    <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
+                    <asp:BoundField DataField="matDesc" HeaderText="Desc" SortExpression="matDesc" />
                     <asp:BoundField DataField="matType" HeaderText="Type" SortExpression="matType" />
                     <asp:BoundField DataField="mreqEstQty" HeaderText="Qty" SortExpression="mreqEstQty" />
-                    <asp:BoundField DataField="matDesc" HeaderText="Desc" SortExpression="matDesc" />
-                    <asp:BoundField DataField="invSizeAmnt" HeaderText="Size" SortExpression="invSizeAmnt" />
+                    <asp:BoundField DataField="invSizeAmnt" HeaderText="Amnt" SortExpression="invSizeAmnt" />
                     <asp:BoundField DataField="invSizeUnit" HeaderText="Unit" SortExpression="invSizeUnit" />
-                    <asp:BoundField DataField="invAvgNet" HeaderText="Net/Unit" SortExpression="invAvgNet" />
-                    <asp:BoundField DataField="mreqDeliver" HeaderText="Deliver" SortExpression="mreqDeliver" />
+                    <asp:BoundField DataField="invAvgNet" HeaderText="AvgNet" SortExpression="invAvgNet" />
                     <asp:BoundField DataField="mreqInstall" HeaderText="Install" SortExpression="mreqInstall" />
+                    <asp:BoundField DataField="mreqDeliver" HeaderText="Deliver" SortExpression="mreqDeliver" />
                 </Columns>
                 <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
                 <RowStyle Height="40px" Width="30px"></RowStyle>
@@ -691,7 +691,19 @@
         </div>
 
         <div class="form-group col-md-2">
-            <asp:Button ID="btnAddMaterialProduction" runat="server" Text="+" CssClass="btn btn-new-row" CausesValidation="False" OnClick="btnAddMaterialProduction_Click"/>            
+            <asp:Button ID="btnAddMaterialProduction" runat="server" Text="+" CssClass="btn" CausesValidation="False" OnClick="btnAddMaterialProduction_Click"/>            
+        </div>
+
+        <div class="form-group col-md-5">
+            <asp:TextBox ID="txtSubProductionMaterials" class="form-control" placeholder="Enter Or Select A Row" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-2">
+           <asp:Button ID="btnSubProductionMaterials" CssClass="btn" runat="server" Text="-" CausesValidation="False" OnClick="btnSubProductionMaterials_Click"/>
+        </div>
+
+        <div class="form-group col-md-12">
+            <asp:Label ID="lblErrormsgProductionMaterials" runat="server" ForeColor="Red"></asp:Label>
         </div>
         
     </div>
@@ -701,14 +713,14 @@
         </div>
 
         <div class="form-group col-md-12">
-            <asp:GridView ID="gvToolRequirementProduction" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceToolRequirementProduction" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
+            <asp:GridView ID="gvToolRequirementProduction" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceToolRequirementProduction" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40" DataKeyNames="ID" OnSelectedIndexChanging="gvToolRequirementProduction_SelectedIndexChanging">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
-                    <asp:CommandField ShowDeleteButton="True" />
+                    <asp:BoundField DataField="ID" HeaderText="Row" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
                     <asp:BoundField DataField="ptQty" HeaderText="Qty" SortExpression="ptQty" />
                     <asp:BoundField DataField="toolDesc" HeaderText="Desc" SortExpression="toolDesc" />
-                    <asp:BoundField DataField="ptDeliverFrom" HeaderText="Deliver From" SortExpression="ptDeliverFrom" />
-                    <asp:BoundField DataField="ptDeliverTo" HeaderText="Deliver To" SortExpression="ptDeliverTo" />
+                    <asp:BoundField DataField="ptDeliverTo" HeaderText="DeliverTo" SortExpression="ptDeliverTo" />
+                    <asp:BoundField DataField="ptDeliverFrom" HeaderText="DeliverFrom" SortExpression="ptDeliverFrom" />
                 </Columns>
                 <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
                 <RowStyle Height="40px" Width="30px"></RowStyle>
@@ -736,7 +748,19 @@
         </div>
 
         <div class="form-group col-md-2">
-            <asp:Button ID="btnAddToolProduction" runat="server" Text="+" CssClass="btn btn-new-row" CausesValidation="False" OnClick="btnAddToolProduction_Click" />            
+            <asp:Button ID="btnAddToolProduction" runat="server" Text="+" CssClass="btn" CausesValidation="False" OnClick="btnAddToolProduction_Click" />            
+        </div>
+
+        <div class="form-group col-md-5">
+            <asp:TextBox ID="txtSubToolProduction" class="form-control" placeholder="Enter Or Select A Row" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-2">
+           <asp:Button ID="btnSubToolProduction" CssClass="btn" runat="server" Text="-" CausesValidation="False" OnClick="btnSubToolProduction_Click"/>
+        </div>
+
+        <div class="form-group col-md-12">
+            <asp:Label ID="lblErrormsgToolProdcution" runat="server" ForeColor="Red"></asp:Label>
         </div>
 
     </div>

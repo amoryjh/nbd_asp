@@ -426,7 +426,7 @@ namespace NBDWebApp.Projects
 
             catch
             {
-                lblErrormsgProdudctionTeam.Text = "Something went wrong!";
+                lblErrormsgProductionTeam.Text = "Something went wrong!";
             }
 
             //Set the dropdownlist and textbox back to default
@@ -439,7 +439,7 @@ namespace NBDWebApp.Projects
         {
             try
             {
-                //Create instance of labour summary with ID of textbox value
+                //Create instance of prodcionteam with ID of textbox value
                 var pt = new PROD_TEAM { ID = Convert.ToInt32(txtSubProdWorker.Text) };
                 //Attach records
                 db.PROD_TEAM.Attach(pt);
@@ -452,7 +452,7 @@ namespace NBDWebApp.Projects
             }
             catch
             {
-                lblErrormsgProdudctionTeam.Text = "Please select a valid row to delete!";
+                lblErrormsgProductionTeam.Text = "Please select a valid row to delete!";
             }
 
             //Set textbox back to default
@@ -466,42 +466,140 @@ namespace NBDWebApp.Projects
             this.txtSubProdWorker.Text = row.Cells[1].Text;
         }
 
-
-
-
-
+        //Add materials to the prodcution plan
         protected void btnAddMaterialProduction_Click(object sender, EventArgs e)
         {
-            //Add Material Req For DesignBid
-            MATERIAL_REQ mr = new MATERIAL_REQ();
+            try
+            {
+                //Create instance of material_req
+                MATERIAL_REQ mr = new MATERIAL_REQ();
 
-            mr.projectID = this.ddlProjectID.SelectedIndex + 1;
-            mr.inventoryID = this.ddlMaterialDescProduction.SelectedIndex + 1;
-            mr.mreqEstQty = Convert.ToInt16(this.txtQtyEstProduction.Text);
-            mr.mreqDeliver = Convert.ToDateTime(this.txtMaterialDeliverProduction.Text);
-            mr.mreqInstall = Convert.ToDateTime(this.txtMaterialInstallProduction.Text);
+                //Gather all information needed to create material_req
+                mr.projectID = Convert.ToInt32(this.ddlProjectID.SelectedValue);
+                mr.inventoryID = this.ddlMaterialDescProduction.SelectedIndex + 1;
+                mr.mreqEstQty = Convert.ToInt16(this.txtQtyEstProduction.Text);
+                mr.mreqDeliver = Convert.ToDateTime(this.txtMaterialDeliverProduction.Text);
+                mr.mreqInstall = Convert.ToDateTime(this.txtMaterialInstallProduction.Text);
 
-            db.MATERIAL_REQ.Add(mr);
-            db.SaveChanges();
+                //Save material_req to database
+                db.MATERIAL_REQ.Add(mr);
+                db.SaveChanges();
 
-            gvMaterialReqProduction.DataBind();
+                //Refresh Gridview
+                gvMaterialReqProduction.DataBind();
+            }
+            catch
+            {
+                lblErrormsgProductionMaterials.Text = "Something went wrong!";
+            }
+
+            //Set textboxes and dropdownlists back to default
+            this.ddlMaterialDescProduction.SelectedIndex = 0;
+            this.txtQtyEstProduction.Text = "";
+            this.txtMaterialDeliverProduction.Text = "";
+            this.txtMaterialInstallProduction.Text = "";
         }
 
+        protected void btnSubProductionMaterials_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Create instance of materal_req with ID of textbox value
+                var mr = new MATERIAL_REQ { ID = Convert.ToInt32(txtSubProductionMaterials) };
+                //Attach records
+                db.MATERIAL_REQ.Attach(mr);
+                //Remove record
+                db.MATERIAL_REQ.Remove(mr);
+                db.SaveChanges();
+                //Refresh gridview
+                gvMaterialReqProduction.DataBind();
+
+            }
+            catch
+            {
+                lblErrormsgProductionMaterials.Text = "Please select a valid row to delete!";
+            }
+
+            //Set textbox back to default
+            txtSubProductionMaterials.Text = "";
+        }
+
+        //Select the material_req row from the gridview
+        protected void gvMaterialReqProduction_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            GridViewRow row = gvMaterialReqProduction.Rows[e.NewSelectedIndex];
+            this.txtSubProductionMaterials.Text = row.Cells[1].Text;
+        }
+
+        //Add tools to the production plan
         protected void btnAddToolProduction_Click(object sender, EventArgs e)
         {
-            PROD_TOOL t = new PROD_TOOL();
+            try
+            {
+                //Create a tool instance
+                PROD_TOOL t = new PROD_TOOL();
 
-            t.projectID = this.ddlProjectID.SelectedIndex + 1;
-            t.ptQty = Convert.ToByte(this.txtToolQtyEstProduction.Text);
-            t.ptDeliverFrom = Convert.ToDateTime(this.txtToolDeliverFromProduction.Text);
-            t.ptDeliverTo = Convert.ToDateTime(this.txtToolDeliverToProduction.Text);
-            t.toolID = this.ddlToolDescProduction.SelectedIndex + 1;
+                //Gather information needed to make a tool
+                t.projectID = Convert.ToInt32(this.ddlProjectID.SelectedValue);
+                t.ptQty = Convert.ToByte(this.txtToolQtyEstProduction.Text);
+                t.ptDeliverFrom = Convert.ToDateTime(this.txtToolDeliverFromProduction.Text);
+                t.ptDeliverTo = Convert.ToDateTime(this.txtToolDeliverToProduction.Text);
+                t.toolID = this.ddlToolDescProduction.SelectedIndex + 1;
 
-            db.PROD_TOOL.Add(t);
-            db.SaveChanges();
+                //Sace tool to database
+                db.PROD_TOOL.Add(t);
+                db.SaveChanges();
 
-            gvToolRequirementProduction.DataBind();
+                //Refresh gridview
+                gvToolRequirementProduction.DataBind();
+            }
+            catch
+            {
+                lblErrormsgToolProdcution.Text = "Something went wrong!";
+            }
+
+            //Set textboxes the dropdowns back to defaults
+            this.txtToolQtyEstProduction.Text = "";
+            this.txtToolDeliverFromProduction.Text = "";
+            this.txtToolDeliverToProduction.Text = "";
+            this.ddlToolDescProduction.SelectedIndex = 0;
         }
+
+        //Delete tools from project
+        protected void btnSubToolProduction_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Create instance of tool with ID of textbox value
+                var t = new PROD_TOOL { ID = Convert.ToInt32(txtSubToolProduction.Text) };
+                //Attach records
+                db.PROD_TOOL.Attach(t);
+                //Remove record
+                db.PROD_TOOL.Remove(t);
+                db.SaveChanges();
+                //Refresh gridview
+                gvToolRequirementProduction.DataBind();
+
+            }
+            catch
+            {
+                this.lblErrormsgToolProdcution.Text = "Please select a valid row to delete!";
+            }
+
+            //Set textbox back to default
+            this.txtSubToolProduction.Text = "";
+        }
+
+        //Select the selected value from the tools gridview
+        protected void gvToolRequirementProduction_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            GridViewRow row = gvToolRequirementProduction.Rows[e.NewSelectedIndex];
+            this.txtSubToolProduction.Text = row.Cells[1].Text;
+        }
+
+       
+
+       
 
         
 
