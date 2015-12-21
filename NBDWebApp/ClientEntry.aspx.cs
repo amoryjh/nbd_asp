@@ -22,7 +22,6 @@ namespace NBDWebApp
             NBD_DatabaseEntities db = new NBD_DatabaseEntities();
             foreach (CITY c in db.CITies)
                 this.ddlCity.Items.Add(c.city1);
-
         }
 
         protected void btnInsert_Click(object sender, EventArgs e)
@@ -53,9 +52,8 @@ namespace NBDWebApp
 
             //Call click event for btnClear the clear the form
             btnClear_Click(sender, e);
-
         }
-
+        // Reset txtBoxes
         protected void btnClear_Click(object sender, EventArgs e)
         {
             this.txtBusiness.Text = "";

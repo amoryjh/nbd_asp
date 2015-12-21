@@ -24,7 +24,6 @@ namespace NBDWebApp.Projects
             foreach (WORKER d in db.WORKERs)
                 if (d.designerFName != null)
                     this.ddlDesignerFName.Items.Add(d.designerFName);
-
         }
 
         protected void btnInsert_Click(object sender, EventArgs e)
@@ -52,9 +51,8 @@ namespace NBDWebApp.Projects
 
             //Call click event for btnClear the clear the form
             btnClear_Click(sender, e);
-
         }
-
+        //Reset All txtboxes
         protected void btnClear_Click(object sender, EventArgs e)
         {
             this.txtProjName.Text = "";

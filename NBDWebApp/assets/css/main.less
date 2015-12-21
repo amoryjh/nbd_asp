@@ -5,24 +5,24 @@
 -----------------------Base HTML-----------------------
 ///////////////////////////////////////////////////////*/
 body {
-    font-family:'lato';
-    font-weight:400;
-    font-size:12px;
-    @media(min-width:768px){font-size:14px;}
-    @media(min-width:992px){font-size:17px;}
-    color:@black;
-    background:#fff;
+  font-family:'lato';
+  font-weight:400;
+  font-size:12px;
+  @media(min-width:768px){font-size:14px;}
+  @media(min-width:992px){font-size:17px;}
+  color:@black;
+  background:#fff;
 }
 /*Page Loader Animation*/
 #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: @brand-pri;
-    .gradient( right, lighten(@brand-pri,8%), lighten(@brand-blue,29%) );
-    z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: @brand-pri;
+  .gradient( right, lighten(@brand-pri,8%), lighten(@brand-blue,29%) );
+  z-index: 99;
 }
 h1,h2,h3,h4,h5,p,ul{margin:0;margin-bottom:0.5em;}
 h1{font-size:1.9em;}
@@ -31,8 +31,8 @@ h3{font-size:1.3em;}
 h4{font-size:1em;}
 input{margin-bottom: 0.75em;} 
 a{ 
-    text-decoration: none; color: inherit;
-    &:hover,&:active,&:focus{text-decoration:none;color:inherit;}
+  text-decoration: none; color: inherit;
+  &:hover,&:active,&:focus{text-decoration:none;color:inherit;}
 }
 hr{border-top-color:lighten(@brand-tri,20%);}
 .formthing{
@@ -91,30 +91,6 @@ tr td a,td th a{text-decoration:underline !important;color:@brand-blue}
   display:none;
   @media(min-width:992px){display:block;}
 }
-// Calendar Widget
-//Calendar Title
-.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all{
-	border: none !important;
-	background: @brand-pri;
-	font-weight: normal;
-	color: #fff;
-}
-.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all{
-  padding:0 !important;
-}
-.ui-state-default,.ui-widget-content.ui-state-default,.ui-widget-header.ui-state-default,
-.ui-state-hover,.ui-widget-content.ui-state-hover,.ui-widget-header.ui-state-hover,.ui-state-focus,.ui-widget-content.ui-state-focus,.ui-widget-header.ui-state-focus{border:none !important}
-.ui-state-highlight,.ui-widget-content .ui-state-highlight,.ui-widget-header.ui-state-highlight {
-    border: none;
-    background: #188EA8;
-    color: #fff;
-}
-.ui-datepicker th{padding: .7em .3em !important;}
-.ui-datepicker td {
-    border: 0;
-    padding: 1px !important;
-}
-
 /*
   ---Validation Summarys-----
 */
@@ -305,8 +281,6 @@ span.highlight-change{font-weight: 700;}
     background: #4B77BE;
     li{
       &:first-child, &:nth-child(2),&:nth-child(3){ &:before{border-color:@brand-pri}}
-    }
-    li{
       &:last-child{ &:before{border-color:@brand-blue}}
     }
   }
@@ -316,31 +290,31 @@ span.highlight-change{font-weight: 700;}
 -----------------------Login Page------------------------
 ///////////////////////////////////////////////////////*/
 .login{
-   nav{.nav{display:none} ul{li{display:none}}}
-   .user-info{display:none;}
-   .main-content{background:transparent;margin:0 auto; width:100%;}
-   .gradient( left, darken(#663333,7%), lighten(@brand-pri,10%) );
-   .login-wrapper{
-        h1{
-            margin-bottom:0.75em;font-size:2.2em; font-weight:400;
-            display:inline;
-        }
-        img{display:inline;width:1em;}
-        margin: 0 auto; margin-top: 4em; margin-bottom:4em;
-        box-shadow: 0 2px 18px @black;
-        max-width: 22em; width: 90%;
-        padding: 1.8em 1.75em 1em 1.75em; background-color: #fefefe;
-        font-size:17px;
-        input,#lblStatus{width: 100% !important;display:block;}
-        .btn{margin:0.5em 0;font-weight:700; font-size:1em;}
-        button{width:100%;margin:0.5em 0;}
-        .form-group{
-            p a{
-                color:lighten(@brand-tri,25%);
-                &:hover{color:lighten(@brand-tri,15%);}
-            }
-        }
+  nav{.nav{display:none} ul{li{display:none}}}
+  .user-info{display:none;}
+  .main-content{background:transparent;margin:0 auto; width:100%;}
+  .gradient( left, darken(#663333,7%), lighten(@brand-pri,10%) );
+  .login-wrapper{
+    h1{
+        margin-bottom:0.75em;font-size:2.2em; font-weight:400;
+        display:inline;
     }
+    img{display:inline;width:1em;}
+    margin: 0 auto; margin-top: 4em; margin-bottom:4em;
+    box-shadow: 0 2px 18px @black;
+    max-width: 22em; width: 90%;
+    padding: 1.8em 1.75em 1em 1.75em; background-color: #fefefe;
+    font-size:17px;
+    input,#lblStatus{width: 100% !important;display:block;}
+    .btn{margin:0.5em 0;font-weight:700; font-size:1em;}
+    button{width:100%;margin:0.5em 0;}
+    .form-group{
+      p a{
+          color:lighten(@brand-tri,25%);
+          &:hover{color:lighten(@brand-tri,15%);}
+      }
+    }
+  }
 }
 
 /*///////////////////////////////////////////////////////
@@ -352,7 +326,7 @@ span.highlight-change{font-weight: 700;}
 */
 
 //Parent panel of report / set margins between each
-.report-group{margin:2em 0}
+.report-group{margin:2em 0;}
 
 //Title of report ONLY
 .report-title{
@@ -364,7 +338,10 @@ span.highlight-change{font-weight: 700;}
 //Individual section of report - where the form elements go
 .client-wrapper, .report-wrapper{
     width:100%; margin:0 auto;
-    padding:3em; background:#fff; 
+    padding:2em 0.5em;
+    @media(min-width:460px){padding:2em;}
+    @media(min-width:572px){padding:3em;}
+    background:#fff; 
     border-bottom:2px dotted #999;
     &:last-child{border-bottom:none}
     .form-group{

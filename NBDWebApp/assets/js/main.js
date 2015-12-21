@@ -9,7 +9,6 @@ $(function () {
     $(".datepicker").datepicker();
 });
 
-
 //All other functions
 $('document').ready(function () {
 
@@ -51,7 +50,6 @@ $('document').ready(function () {
   //-------------------------------------------------
   //*************Project Instance Page****************
   //-------------------------------------------------
-    $('#project-productionPlan, #project-designBudget, #project-par').hide();
     //Reveal "Reports" drop down list
     $('.add-report .report-title').click(function () {
       $('.report-list-section').slideToggle(300);
@@ -65,7 +63,6 @@ $('document').ready(function () {
       $('.report-group').hide(); //hide all other reports
       $('#' + reveal).show(); // display matching report div
     });
-    
 
   //-------------------------------------------------
   //*****************Main Page***********************
@@ -74,7 +71,7 @@ $('document').ready(function () {
     //Home Page - Project Information Cards 
     //-- Display Message if database fields are empty
     $(".client-listings span.highlight-change").each(function () {
-      if ($(this).text() == "" || $(this).text().length <= 3) { $(this).text("This field appears to be empty! :O") }
+      if ($(this).text() == "" || $(this).text().length <= 1) { $(this).text("This field appears to be empty! :O") }
     });
    
     $('.view-all').click(function () {
@@ -137,5 +134,4 @@ $('document').ready(function () {
       return mm + '/' + dd + '/' + yyyy;
     }
     $('#ContentPlaceHolder2_txtBidDate').val(toDay()); // set the above functions value to textbox
-
 });

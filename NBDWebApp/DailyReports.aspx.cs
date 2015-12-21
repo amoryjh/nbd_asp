@@ -43,7 +43,7 @@ namespace NBDWebApp
             //Call click event for btnClear the clear the form
             btnClear_Click(sender, e);
         }
-
+        //Reset txtBoxes
         protected void btnClear_Click(object sender, EventArgs e)
         {
             this.txtUserFName.Text = "";

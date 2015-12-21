@@ -651,3 +651,24 @@
 .ui-datepicker td span, .ui-datepicker td a {
     text-decoration: none !important;
 }
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all{
+	border: none !important;
+	background: @brand-pri;
+	font-weight: normal;
+	color: #fff;
+}
+.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all{
+  padding:0 !important;
+}
+.ui-state-default,.ui-widget-content.ui-state-default,.ui-widget-header.ui-state-default,
+.ui-state-hover,.ui-widget-content.ui-state-hover,.ui-widget-header.ui-state-hover,.ui-state-focus,.ui-widget-content.ui-state-focus,.ui-widget-header.ui-state-focus{border:none !important}
+.ui-state-highlight,.ui-widget-content .ui-state-highlight,.ui-widget-header.ui-state-highlight {
+    border: none;
+    background: #188EA8;
+    color: #fff;
+}
+.ui-datepicker th{padding: .7em .3em !important;}
+.ui-datepicker td {
+    border: 0;
+    padding: 1px !important;
+}

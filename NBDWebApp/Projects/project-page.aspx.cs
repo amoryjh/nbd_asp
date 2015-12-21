@@ -163,7 +163,6 @@ namespace NBDWebApp.Projects
             //Set clientID to default value
             int ClientID = 0;
 
-
             //Query for project information
             var queryProject = from project in db.PROJECTs where project.ID == ProjectID select project;
 
@@ -262,7 +261,6 @@ namespace NBDWebApp.Projects
 
                 //refresh the gridview
                 gvMaterialReqDesign.DataBind();
-
             }
             catch
             {
@@ -272,7 +270,6 @@ namespace NBDWebApp.Projects
             //set the textboxes and dropdown back to defaults
             ddlMaterialDescDesign.SelectedIndex = 0;
             txtQtyEstDesign.Text = "";
-
         }
 
         //Deletes materials_req for design bid 
@@ -289,7 +286,6 @@ namespace NBDWebApp.Projects
                 db.SaveChanges();
                 //Refresh gridview
                 gvMaterialReqDesign.DataBind();
-
             }
             catch
             {
@@ -351,7 +347,6 @@ namespace NBDWebApp.Projects
                 db.SaveChanges();
                 //Refresh gridview
                 gvLabourSummaryDesign.DataBind();
-
             }
             catch
             {
@@ -448,7 +443,6 @@ namespace NBDWebApp.Projects
                 db.SaveChanges();
                 //Refresh gridview
                 gvProdTeamProduction.DataBind();
-
             }
             catch
             {
@@ -513,7 +507,6 @@ namespace NBDWebApp.Projects
                 db.SaveChanges();
                 //Refresh gridview
                 gvMaterialReqProduction.DataBind();
-
             }
             catch
             {
@@ -596,17 +589,5 @@ namespace NBDWebApp.Projects
             GridViewRow row = gvToolRequirementProduction.Rows[e.NewSelectedIndex];
             this.txtSubToolProduction.Text = row.Cells[1].Text;
         }
-
-       
-
-       
-
-        
-
-        
-
-        
-
-
     }
 }
