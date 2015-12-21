@@ -45,7 +45,7 @@
         </div>
         <div class="form-group col-md-12">
             <div class="report-wrapper report-list-section clearfix">
-                <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID"></asp:DropDownList> 
+                <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID" OnSelectedIndexChanged="ddlProjectID_SelectedIndexChanged"></asp:DropDownList> 
             </div>
         </div>
     </div>
@@ -81,10 +81,8 @@
       </div>
 
       <div class="form-group col-md-6">
-          <label id="lblExistingClientBusinessDesign" for="ddlExistingClientBusinessDesign">Existing Client</label>       
-          <asp:DropDownList CssClass="form-control" ID="DropDownList2" runat="server" DataSourceID="EntityDataSource2" DataTextField="cliName" DataValueField="ID" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged1" AutoPostBack="True">
-              <asp:ListItem Selected="True" Value="0">Select A Client</asp:ListItem>
-          </asp:DropDownList>
+          <label id="lblExistingClientBusinessDesign" for="txtClientNameDesign">Existing Client</label>       
+            <asp:TextBox ID="txtClientNameDesign" runat="server" class="form-control" placeholder="Client Name" ReadOnly="true"></asp:TextBox>
       </div>
 
       <!-- Hide the projects button and the add report button-->
