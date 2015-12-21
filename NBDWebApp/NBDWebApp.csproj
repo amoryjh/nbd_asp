@@ -134,13 +134,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Employee.aspx.cs">
-      <DependentUpon>Employee.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Employee.aspx.designer.cs">
-      <DependentUpon>Employee.aspx</DependentUpon>
-    </Compile>
     <Compile Include="INVENTORY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -206,13 +199,6 @@
     </Compile>
     <Compile Include="PROJECT.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Projects\carlisle-hotel-renovations.aspx.cs">
-      <DependentUpon>carlisle-hotel-renovations.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Projects\carlisle-hotel-renovations.aspx.designer.cs">
-      <DependentUpon>carlisle-hotel-renovations.aspx</DependentUpon>
     </Compile>
     <Compile Include="Projects\project-page.aspx.cs">
       <DependentUpon>project-page.aspx</DependentUpon>
@@ -403,7 +389,6 @@
     <Content Include="assets\js\main.js" />
     <Content Include="DailyReports.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="Employee.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="MainPage.aspx" />
     <Content Include="packages.config">
@@ -412,19 +397,10 @@
     <Content Include="Projects\project-page.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BidProcess.aspx" />
     <Content Include="ClientEntry.aspx" />
-    <Content Include="Projects\carlisle-hotel-renovations.aspx" />
     <Content Include="Projects\NewProject.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BidProcess.aspx.cs">
-      <DependentUpon>BidProcess.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BidProcess.aspx.designer.cs">
-      <DependentUpon>BidProcess.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ClientEntry.aspx.cs">
       <DependentUpon>ClientEntry.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
