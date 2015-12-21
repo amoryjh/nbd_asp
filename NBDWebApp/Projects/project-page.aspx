@@ -40,12 +40,12 @@
     
 
     <div class="row box-border add-report clearfix">
-        <div class="report-title">
-            <h1 class="project-title">Select A Project</h1>
-        </div>
-        <div class="report-wrapper report-list-section clearfix">
-            <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID"></asp:DropDownList> 
-        </div>
+      <div class="report-title">
+        <h1 class="project-title">Select A Project</h1>
+      </div>
+      <div class="report-wrapper report-list-section clearfix">
+        <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID"></asp:DropDownList> 
+      </div>
     </div>
 
 

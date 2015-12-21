@@ -5,17 +5,17 @@
     <form id="form1" runat="server">
     
     <h1 class="section-title">Recent Projects</h1>
-        <div class="col-md-1 client-search-aside clearfix">
-    <div class="btn-group-vertical">
-      <button type="button" class="btn btn-danger view-all">ALL</button>
-      <button type="button" class="btn btn-danger btn-sort" value="abcd">A-D</button>
-      <button type="button" class="btn btn-danger btn-sort" value="efgh">E-H</button>
-      <button type="button" class="btn btn-danger btn-sort" value="ijkl">I-L</button>
-      <button type="button" class="btn btn-danger btn-sort" value="mnop">M-P</button>
-      <button type="button" class="btn btn-danger btn-sort" value="qrst">Q-T</button>
-      <button type="button" class="btn btn-danger btn-sort" value="uvwxyz">U-Z</button>
-    </div>
-  </div>  
+    <div class="col-md-1 client-search-aside clearfix">
+      <div class="btn-group-vertical">
+        <button type="button" class="btn btn-danger view-all">ALL</button>
+        <button type="button" class="btn btn-danger btn-sort" value="abcd">A-D</button>
+        <button type="button" class="btn btn-danger btn-sort" value="efgh">E-H</button>
+        <button type="button" class="btn btn-danger btn-sort" value="ijkl">I-L</button>
+        <button type="button" class="btn btn-danger btn-sort" value="mnop">M-P</button>
+        <button type="button" class="btn btn-danger btn-sort" value="qrst">Q-T</button>
+        <button type="button" class="btn btn-danger btn-sort" value="uvwxyz">U-Z</button>
+      </div>
+    </div>  
   <div class="col-md-12 client-search-main clearfix">
     <h3 >Filter By:</h3>
     <div class="well clearfix">
@@ -34,6 +34,17 @@
             <asp:DropDownList ID="ddlCityProjectFilter" class="form-control" runat="server">
             </asp:DropDownList>
       </div>
+    </div>
+  </div>
+  <div class="col-md-12 clearfix text-center">
+    <div class="btn-group">
+      <button type="button" class="btn btn-danger view-all">ALL</button>
+      <button type="button" class="btn btn-danger btn-sort" value="abcd">A-D</button>
+      <button type="button" class="btn btn-danger btn-sort" value="efgh">E-H</button>
+      <button type="button" class="btn btn-danger btn-sort" value="ijkl">I-L</button>
+      <button type="button" class="btn btn-danger btn-sort" value="mnop">M-P</button>
+      <button type="button" class="btn btn-danger btn-sort" value="qrst">Q-T</button>
+      <button type="button" class="btn btn-danger btn-sort" value="uvwxyz">U-Z</button>
     </div>
   </div>
   <div class="col-md-12 clearfix client-listings">
@@ -69,7 +80,7 @@
               
           </div>
              <div class="updated-list well col-md-10 col-md-offset-1 text-center">   
-             <h2 class="project-title">View Rest of Design Bid</h2>
+             <h2 class="project-title">View Rest of Project Reports</h2>
                <br />
              <a style="color:#fff;padding:14px;font-weight:700;font-size:1.35em;background:#188ea8;" class="btn" href="Projects/project-page.aspx">Let's go!</a>
              </div>
