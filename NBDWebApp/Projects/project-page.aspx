@@ -471,7 +471,6 @@
                 <asp:GridView ID="gvHoursToDateDBudget" runat="server" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />
-                        <asp:CommandField ShowDeleteButton="True" />
                     </Columns>
                     <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
                     <RowStyle Height="40px" Width="30px"></RowStyle>
@@ -509,7 +508,6 @@
                 <asp:GridView ID="gvEstimatedHoursDBudget" runat="server" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />
-                        <asp:CommandField ShowDeleteButton="True" />
                     </Columns>
                     <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
                     <RowStyle Height="40px" Width="30px"></RowStyle>
@@ -544,7 +542,7 @@
             </div>
 
             <div class="form-group col-md-2">
-               <h3>12</h3>
+               <h3>...</h3>
             </div>
         </div>
         <div class="report-wrapper text-center clearfix">
@@ -552,7 +550,10 @@
                 <h1>Submit Form</h1>
             </div>
             <div class="form-group col-md-12">
-                <asp:Button ID="btnSubmitDesignBudget" CssClass="btn" runat="server" Text="Submit" />
+                <asp:Button ID="btnSubmitDesignBudget" CssClass="btn" runat="server" Text="Submit" OnClick="btnSubmitDesignBudget_Click" />
+            </div>
+            <div class="form-group col-md-12">
+                <asp:Label ID="lblErrormsgDesignBudget" runat="server" ForeColor="Red"></asp:Label>
             </div>
         </div>
     </div>
@@ -603,13 +604,13 @@
         </div>
 
         <div class="form-group col-md-12">
-            <asp:GridView ID="gvProdTeamProduction" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceProdTeam" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40">
+            <asp:GridView ID="gvProdTeamProduction" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceProdTeam" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40" OnSelectedIndexChanging="gvProdTeamProduction_SelectedIndexChanging" DataKeyNames="ID">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
-                    <asp:CommandField ShowDeleteButton="True" />
+                    <asp:BoundField DataField="ID" HeaderText="Row" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
                     <asp:BoundField DataField="wrkTypeDesc" HeaderText="Worker Type" SortExpression="wrkTypeDesc" />
-                    <asp:BoundField DataField="wrkFName" HeaderText="First Name" SortExpression="wrkFName" />
-                    <asp:BoundField DataField="wrkLName" HeaderText="Last Name" SortExpression="wrkLName" />
+                    <asp:BoundField DataField="wrkFName" HeaderText="First" SortExpression="wrkFName" />
+                    <asp:BoundField DataField="wrkLName" HeaderText="Last " SortExpression="wrkLName" />
                     <asp:BoundField DataField="teamPhaseIn" HeaderText="Phase In" SortExpression="teamPhaseIn" />
                 </Columns>
                 <HeaderStyle Height="40" Width="40" BackColor="#DB0A5B" CssClass="whitetxt"></HeaderStyle>
@@ -628,7 +629,19 @@
         </div>
 
         <div class="form-group col-md-2">
-           <asp:Button ID="btnAddProdWorker" CssClass="btn btn-new-row" runat="server" Text="+" OnClick="btnAddProdWorker_Click" CausesValidation="False"/>
+           <asp:Button ID="btnAddProdWorker" CssClass="btn" runat="server" Text="+" OnClick="btnAddProdWorker_Click" CausesValidation="False"/>
+        </div>
+
+        <div class="form-group col-md-5">
+            <asp:TextBox ID="txtSubProdWorker" class="form-control" placeholder="Enter Or Select A Row" runat="server"></asp:TextBox>
+        </div>
+
+        <div class="form-group col-md-2">
+           <asp:Button ID="btnSubProdWorker" CssClass="btn" runat="server" Text="-" CausesValidation="False" OnClick="btnSubProdWorker_Click"/>
+        </div>
+
+        <div class="form-group col-md-12">
+            <asp:Label ID="lblErrormsgProdudctionTeam" runat="server" ForeColor="Red"></asp:Label>
         </div>
 
     </div>

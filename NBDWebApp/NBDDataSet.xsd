@@ -123,7 +123,7 @@ WHERE  (PROJECT.ID = @Param1)</CommandText>
               <DbSource ConnectionRef="NBD_DatabaseConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT PROD_TEAM.projectID, PROD_TEAM.teamPhaseIn, WORKER.wrkLName, WORKER.wrkFName, WORKER_TYPE.wrkTypeDesc
+                    <CommandText>SELECT PROD_TEAM.projectID, PROD_TEAM.teamPhaseIn, WORKER.wrkLName, WORKER.wrkFName, WORKER_TYPE.wrkTypeDesc, PROD_TEAM.ID
 FROM     PROD_TEAM INNER JOIN
                   WORKER ON PROD_TEAM.workerID = WORKER.ID INNER JOIN
                   WORKER_TYPE ON WORKER.wrkTypeID = WORKER_TYPE.ID
@@ -141,6 +141,7 @@ WHERE  (PROD_TEAM.projectID = @Param1)</CommandText>
               <Mapping SourceColumn="wrkLName" DataSetColumn="wrkLName" />
               <Mapping SourceColumn="wrkFName" DataSetColumn="wrkFName" />
               <Mapping SourceColumn="wrkTypeDesc" DataSetColumn="wrkTypeDesc" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -341,6 +342,7 @@ WHERE  (PROD_TEAM.projectID = @Param2)</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -441,6 +443,10 @@ WHERE  (PROD_TEAM.projectID = @Param2)</CommandText>
     </xs:unique>
     <xs:unique name="LabourSummaryDataTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:LabourSummaryDataTable" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="ProdTeamDataTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProdTeamDataTable" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>

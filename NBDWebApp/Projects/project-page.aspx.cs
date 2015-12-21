@@ -397,18 +397,78 @@ namespace NBDWebApp.Projects
             }
         }
 
+        //Submit finished design budget
+        protected void btnSubmitDesignBudget_Click(object sender, EventArgs e)
+        {
+            lblErrormsgDesignBudget.Text = "Design Budget Submitted!";
+        }
+
+        //Add workers to project
         protected void btnAddProdWorker_Click(object sender, EventArgs e)
         {
-            PROD_TEAM pt = new PROD_TEAM();
-            pt.projectID = this.ddlProjectID.SelectedIndex + 1;
-            pt.workerID = this.ddlProductionWorkerNameProduction.SelectedIndex + 1;
-            pt.teamPhaseIn = this.txtProductionTeamPhaseProduction.Text;
+            try
+            {
+                //Create production team instance
+                PROD_TEAM pt = new PROD_TEAM();
 
-            db.PROD_TEAM.Add(pt);
-            db.SaveChanges();
+                //Gather information needed to form a new production team
+                pt.projectID = Convert.ToInt32(this.ddlProjectID.SelectedValue);
+                pt.workerID = this.ddlProductionWorkerNameProduction.SelectedIndex + 1;
+                pt.teamPhaseIn = this.txtProductionTeamPhaseProduction.Text;
 
-            gvProdTeamProduction.DataBind();
+                //Save changes to database
+                db.PROD_TEAM.Add(pt);
+                db.SaveChanges();
+
+                //Refresh the gridview
+                gvProdTeamProduction.DataBind();
+            }
+
+            catch
+            {
+                lblErrormsgProdudctionTeam.Text = "Something went wrong!";
+            }
+
+            //Set the dropdownlist and textbox back to default
+            this.ddlProductionWorkerNameProduction.SelectedIndex = 0;
+            this.txtProductionTeamPhaseProduction.Text = "";
         }
+
+        //Delete workers from production team
+        protected void btnSubProdWorker_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Create instance of labour summary with ID of textbox value
+                var pt = new PROD_TEAM { ID = Convert.ToInt32(txtSubProdWorker.Text) };
+                //Attach records
+                db.PROD_TEAM.Attach(pt);
+                //Remove record
+                db.PROD_TEAM.Remove(pt);
+                db.SaveChanges();
+                //Refresh gridview
+                gvProdTeamProduction.DataBind();
+
+            }
+            catch
+            {
+                lblErrormsgProdudctionTeam.Text = "Please select a valid row to delete!";
+            }
+
+            //Set textbox back to default
+            txtSubProdWorker.Text = "";
+        }
+
+        //Gets the selected row index for the production team
+        protected void gvProdTeamProduction_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            GridViewRow row = gvProdTeamProduction.Rows[e.NewSelectedIndex];
+            this.txtSubProdWorker.Text = row.Cells[1].Text;
+        }
+
+
+
+
 
         protected void btnAddMaterialProduction_Click(object sender, EventArgs e)
         {
@@ -442,6 +502,12 @@ namespace NBDWebApp.Projects
 
             gvToolRequirementProduction.DataBind();
         }
+
+        
+
+        
+
+        
 
 
     }

@@ -1701,6 +1701,8 @@ namespace NBDWebApp {
             
             private global::System.Data.DataColumn columnwrkTypeDesc;
             
+            private global::System.Data.DataColumn columnID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ProdTeamDataTableDataTable() {
@@ -1776,6 +1778,14 @@ namespace NBDWebApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1818,10 +1828,18 @@ namespace NBDWebApp {
                         teamPhaseIn,
                         wrkLName,
                         wrkFName,
-                        wrkTypeDesc};
+                        wrkTypeDesc,
+                        null};
                 rowProdTeamDataTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowProdTeamDataTableRow);
                 return rowProdTeamDataTableRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ProdTeamDataTableRow FindByID(int ID) {
+                return ((ProdTeamDataTableRow)(this.Rows.Find(new object[] {
+                            ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1846,6 +1864,7 @@ namespace NBDWebApp {
                 this.columnwrkLName = base.Columns["wrkLName"];
                 this.columnwrkFName = base.Columns["wrkFName"];
                 this.columnwrkTypeDesc = base.Columns["wrkTypeDesc"];
+                this.columnID = base.Columns["ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1861,6 +1880,10 @@ namespace NBDWebApp {
                 base.Columns.Add(this.columnwrkFName);
                 this.columnwrkTypeDesc = new global::System.Data.DataColumn("wrkTypeDesc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnwrkTypeDesc);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID}, true));
                 this.columnprojectID.AllowDBNull = false;
                 this.columnteamPhaseIn.AllowDBNull = false;
                 this.columnteamPhaseIn.MaxLength = 1;
@@ -1870,6 +1893,12 @@ namespace NBDWebApp {
                 this.columnwrkFName.MaxLength = 30;
                 this.columnwrkTypeDesc.AllowDBNull = false;
                 this.columnwrkTypeDesc.MaxLength = 50;
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
+                this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
+                this.columnID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3314,6 +3343,17 @@ namespace NBDWebApp {
                 }
                 set {
                     this[this.tableProdTeamDataTable.wrkTypeDescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID {
+                get {
+                    return ((int)(this[this.tableProdTeamDataTable.IDColumn]));
+                }
+                set {
+                    this[this.tableProdTeamDataTable.IDColumn] = value;
                 }
             }
         }
@@ -4970,6 +5010,7 @@ WHERE  (PROJECT.ID = @Param1)";
             tableMapping.ColumnMappings.Add("wrkLName", "wrkLName");
             tableMapping.ColumnMappings.Add("wrkFName", "wrkFName");
             tableMapping.ColumnMappings.Add("wrkTypeDesc", "wrkTypeDesc");
+            tableMapping.ColumnMappings.Add("ID", "ID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -4986,7 +5027,7 @@ WHERE  (PROJECT.ID = @Param1)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT PROD_TEAM.projectID, PROD_TEAM.teamPhaseIn, WORKER.wrkLName, WORKER.wrkFName, WORKER_TYPE.wrkTypeDesc
+            this._commandCollection[0].CommandText = @"SELECT PROD_TEAM.projectID, PROD_TEAM.teamPhaseIn, WORKER.wrkLName, WORKER.wrkFName, WORKER_TYPE.wrkTypeDesc, PROD_TEAM.ID
 FROM     PROD_TEAM INNER JOIN
                   WORKER ON PROD_TEAM.workerID = WORKER.ID INNER JOIN
                   WORKER_TYPE ON WORKER.wrkTypeID = WORKER_TYPE.ID
