@@ -1141,6 +1141,8 @@ namespace NBDWebApp {
             
             private global::System.Data.DataColumn columnwrkTypePrice;
             
+            private global::System.Data.DataColumn columnID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public LabourSummaryDataTableDataTable() {
@@ -1200,6 +1202,14 @@ namespace NBDWebApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1240,10 +1250,18 @@ namespace NBDWebApp {
                 object[] columnValuesArray = new object[] {
                         lsHours,
                         wrkTypeDesc,
-                        wrkTypePrice};
+                        wrkTypePrice,
+                        null};
                 rowLabourSummaryDataTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLabourSummaryDataTableRow);
                 return rowLabourSummaryDataTableRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LabourSummaryDataTableRow FindByID(int ID) {
+                return ((LabourSummaryDataTableRow)(this.Rows.Find(new object[] {
+                            ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1266,6 +1284,7 @@ namespace NBDWebApp {
                 this.columnlsHours = base.Columns["lsHours"];
                 this.columnwrkTypeDesc = base.Columns["wrkTypeDesc"];
                 this.columnwrkTypePrice = base.Columns["wrkTypePrice"];
+                this.columnID = base.Columns["ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1277,9 +1296,19 @@ namespace NBDWebApp {
                 base.Columns.Add(this.columnwrkTypeDesc);
                 this.columnwrkTypePrice = new global::System.Data.DataColumn("wrkTypePrice", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnwrkTypePrice);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID}, true));
                 this.columnlsHours.AllowDBNull = false;
                 this.columnwrkTypeDesc.AllowDBNull = false;
                 this.columnwrkTypeDesc.MaxLength = 50;
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
+                this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
+                this.columnID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3171,6 +3200,17 @@ namespace NBDWebApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID {
+                get {
+                    return ((int)(this[this.tableLabourSummaryDataTable.IDColumn]));
+                }
+                set {
+                    this[this.tableLabourSummaryDataTable.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IswrkTypePriceNull() {
                 return this.IsNull(this.tableLabourSummaryDataTable.wrkTypePriceColumn);
             }
@@ -4577,6 +4617,7 @@ WHERE  (PROJECT.ID = @Param1)";
             tableMapping.ColumnMappings.Add("lsHours", "lsHours");
             tableMapping.ColumnMappings.Add("wrkTypeDesc", "wrkTypeDesc");
             tableMapping.ColumnMappings.Add("wrkTypePrice", "wrkTypePrice");
+            tableMapping.ColumnMappings.Add("ID", "ID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -4593,9 +4634,10 @@ WHERE  (PROJECT.ID = @Param1)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT LABOUR_SUMMARY.lsHours, WORKER_TYPE.wrkTypeDesc, WORKER_TYPE.wrkTypePrice\r" +
-                "\nFROM     LABOUR_SUMMARY INNER JOIN\r\n                  WORKER_TYPE ON LABOUR_SUM" +
-                "MARY.workerTypeID = WORKER_TYPE.ID\r\nWHERE  (LABOUR_SUMMARY.projectID = @Param1)";
+            this._commandCollection[0].CommandText = @"SELECT LABOUR_SUMMARY.lsHours, WORKER_TYPE.wrkTypeDesc, WORKER_TYPE.wrkTypePrice, LABOUR_SUMMARY.ID
+FROM     LABOUR_SUMMARY INNER JOIN
+                  WORKER_TYPE ON LABOUR_SUMMARY.workerTypeID = WORKER_TYPE.ID
+WHERE  (LABOUR_SUMMARY.projectID = @Param1)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "projectID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
