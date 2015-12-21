@@ -5911,6 +5911,28 @@ td th a {
   border: 0;
   padding: 1px !important;
 }
+/*
+  ---Validation Summarys-----
+*/
+#ValidationSummary {
+  color: #4f7192 !important;
+  background-color: #f3f3f6;
+  padding: 10px;
+  box-shadow: 0 1px 2px #ccc;
+  border: 1px solid #efefef;
+}
+#ValidationSummary ul {
+  margin: 0 auto;
+  padding-left: 25px;
+}
+#ValidationSummary ul li {
+  font-weight: 700;
+  padding: 2px;
+}
+#ContentPlaceHolder2_LblMessage {
+  color: #4f7192 !important;
+  font-weight: 700;
+}
 /*///////////////////////////////////////////////////////
 ---------------------Reusable Classes--------------------
 ///////////////////////////////////////////////////////*/
@@ -6122,21 +6144,6 @@ span.highlight-change {
   background-image: -o-linear-gradient(left, #4e2727, #f52374);
   background-image: -ms-linear-gradient(left, #4e2727, #f52374);
   background-image: linear-gradient(left, #4e2727, #f52374);
-}
-.login #ValidationSummary {
-  color: #4f7192 !important;
-  background-color: #f3f3f6;
-  padding: 10px;
-  box-shadow: 0 1px 2px #ccc;
-  border: 1px solid #efefef;
-}
-.login #ValidationSummary ul {
-  margin: 0 auto;
-  padding-left: 25px;
-}
-.login #ValidationSummary ul li {
-  font-weight: 700;
-  padding: 2px;
 }
 .login nav .nav {
   display: none;

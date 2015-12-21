@@ -262,18 +262,6 @@
     <Content Include="assets\css\colors.rtl.min.css">
       <DependentUpon>colors.rtl.css</DependentUpon>
     </Content>
-    <Content Include="assets\css\main - Copy.css">
-      <DependentUpon>main - Copy.less</DependentUpon>
-    </Content>
-    <Content Include="assets\css\main - Copy.min.css">
-      <DependentUpon>main - Copy.css</DependentUpon>
-    </Content>
-    <Content Include="assets\css\main - Copy.rtl.css">
-      <DependentUpon>main - Copy.css</DependentUpon>
-    </Content>
-    <Content Include="assets\css\main - Copy.rtl.min.css">
-      <DependentUpon>main - Copy.rtl.css</DependentUpon>
-    </Content>
     <Content Include="assets\css\main.css">
       <DependentUpon>main.less</DependentUpon>
     </Content>
@@ -450,13 +438,6 @@
     </Content>
     <Content Include="assets\css\main.rtl.css.map">
       <DependentUpon>main.rtl.css</DependentUpon>
-    </Content>
-    <Content Include="assets\css\main - Copy.less" />
-    <Content Include="assets\css\main - Copy.css.map">
-      <DependentUpon>main - Copy.css</DependentUpon>
-    </Content>
-    <Content Include="assets\css\main - Copy.rtl.css.map">
-      <DependentUpon>main - Copy.rtl.css</DependentUpon>
     </Content>
     <Content Include="NBDDataSet.xsc">
       <DependentUpon>NBDDataSet.xsd</DependentUpon>

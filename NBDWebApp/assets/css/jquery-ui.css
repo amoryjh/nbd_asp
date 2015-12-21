@@ -648,3 +648,6 @@
 	filter: Alpha(Opacity=30); /* support: IE8 */
 	border-radius: 8px;
 }
+.ui-datepicker td span, .ui-datepicker td a {
+    text-decoration: none !important;
+}

@@ -55,7 +55,7 @@
             <h2 class="project-title"><%# Eval("projName") %></h2>
             <p class="project-update-date">Contact : <%# Eval("cliConFName") %> <%# Eval("cliConLName") %>, <%# Eval("cliConPosition") %></p>
           </div>
-          <div class="updated-list well col-md-10 col-md-offset-1">   
+          <div class="updated-list well col-xs-12 col-sm-10 col-sm-offset-1">   
             <h3>Contact Details</h3>
             <ul>
               <li>Client: <span class="highlight-change"><%#Eval("cliName")%></span></a></li>
@@ -64,7 +64,7 @@
               <li id="city-string">Client City: <span class="highlight-change"><%#Eval("cliCity")%></span></li>
             </ul>
           </div>
-          <div class="updated-list well col-md-10 col-md-offset-1">   
+          <div class="updated-list well col-xs-12 col-sm-10 col-sm-offset-1">   
             <h3>Project Details</h3>
             <ul>
                 <li>Name: <span class="highlight-change"><%#Eval("projName")%></span></a></li>
@@ -79,7 +79,7 @@
             </ul>
               
           </div>
-             <div class="updated-list well col-md-10 col-md-offset-1 text-center">   
+             <div class="updated-list well col-xs-12 col-sm-10 col-sm-offset-1 text-center">   
              <h2 class="project-title">View all reports for this project</h2>
                <br />
              <a style="color:#fff;padding:14px;font-weight:700;font-size:1.35em;background:#188ea8;" class="btn" href="Projects/project-page.aspx">Let's go!</a>
@@ -95,14 +95,14 @@
               <h2 class="project-title"><%#Eval("cliName") %></h2>
               <p class="project-update-date">Contact: <%#Eval("cliConFName")%> <%# Eval("cliConLName") %>, <%# Eval("cliConPosition") %></p>
           </div>
-          <div class="updated-list well col-md-10 col-md-offset-1">   
+          <div class="updated-list well col-xs-12 col-sm-10 col-sm-offset-1">   
             <h3>Contact Details</h3>
             <ul>
               <li>Phone: <span class="highlight-change"><%#Eval("cliPhone")%></span></li>
               <li id="city-string">Client City: <span class="highlight-change"><%#Eval("cliCity")%></span></li>
             </ul>
           </div>
-          <div class="updated-list well col-md-10 col-md-offset-1">   
+          <div class="updated-list well col-xs-12 col-sm-10 col-sm-offset-1">   
             <h3>Project Details</h3>
             <ul>
                 <li><span class="highlight-change">This project doesn't exist yet.</span></a></li>

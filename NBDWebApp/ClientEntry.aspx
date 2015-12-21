@@ -9,6 +9,10 @@
         <div class="form-group col-md-12">
             <h1>Enter new client</h1>
         </div>
+        <div class="form-group col-md-12 clearfix">
+            <asp:Label ID="LblMessage" runat="server" ForeColor="Red" EnableViewState="False"></asp:Label>
+            <asp:ValidationSummary CssClass="clearfix" ID="ValidationSummary" runat="server" EnableViewState="False" ForeColor="Red" ClientIDMode="Static" />
+        </div>
         <!-- Hide the projects button and the add report button-->
         <div class="form-group col-md-12">
           <label id="lblBusiness" for="txtBusiness">Business</label>
@@ -82,11 +86,6 @@
           <label id="lblClientPos" for="txtClientPos">Position</label>
             <asp:RequiredFieldValidator ID="rfvClientPos" runat="server" ErrorMessage="Primary Contact Position Required" ControlToValidate="txtClientPos" ForeColor="Red">*</asp:RequiredFieldValidator>
           <asp:TextBox ID="txtClientPos" runat="server" class="form-control" placeholder="Position"></asp:TextBox>
-        </div>
-
-        <div class="form-group col-md-12">
-            <asp:Label ID="LblMessage" runat="server" Text="" ViewStateMode="Disabled"></asp:Label>
-            <asp:ValidationSummary ID="ValidationSummary" runat="server" ForeColor="Red" />
         </div>
 
         <div class="form-group col-md-6">

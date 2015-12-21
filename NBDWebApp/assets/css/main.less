@@ -114,6 +114,21 @@ tr td a,td th a{text-decoration:underline !important;color:@brand-blue}
     border: 0;
     padding: 1px !important;
 }
+
+/*
+  ---Validation Summarys-----
+*/
+
+#ValidationSummary{
+    color: lighten(@brand-tri,25%) !important; background-color: lighten(#e2e1e9,6%);
+    padding:10px; box-shadow: 0 1px 2px #ccc;
+    border: 1px solid #efefef;
+    ul{
+        margin:0 auto; padding-left: 25px;
+        li{font-weight:700; padding:2px;}
+    }
+}
+#ContentPlaceHolder2_LblMessage{color:lighten(@brand-tri,25%) !important;font-weight:700;}
 /*///////////////////////////////////////////////////////
 ---------------------Reusable Classes--------------------
 ///////////////////////////////////////////////////////*/
@@ -301,15 +316,6 @@ span.highlight-change{font-weight: 700;}
 -----------------------Login Page------------------------
 ///////////////////////////////////////////////////////*/
 .login{
-    #ValidationSummary{
-        color: lighten(@brand-tri,25%) !important; background-color: lighten(#e2e1e9,6%);
-        padding:10px; box-shadow: 0 1px 2px #ccc;
-        border: 1px solid #efefef;
-        ul{
-            margin:0 auto; padding-left: 25px;
-            li{font-weight:700; padding:2px;}
-        }
-    }
    nav{.nav{display:none} ul{li{display:none}}}
    .user-info{display:none;}
    .main-content{background:transparent;margin:0 auto; width:100%;}
