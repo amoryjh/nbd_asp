@@ -40,12 +40,28 @@
     
 
     <div class="row box-border add-report clearfix">
+<<<<<<< HEAD
       <div class="report-title">
         <h1 class="project-title">Select A Project</h1>
       </div>
       <div class="report-wrapper report-list-section clearfix">
         <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID"></asp:DropDownList> 
       </div>
+=======
+        <div class="report-title">
+            <h1 class="project-title">Select A Project</h1>
+        </div>
+<<<<<<< HEAD
+        <div class="form-group col-md-12">
+            <div class="report-wrapper report-list-section clearfix">
+                <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID" OnSelectedIndexChanged="ddlProjectID_SelectedIndexChanged"></asp:DropDownList> 
+            </div>
+=======
+        <div class="report-wrapper report-list-section clearfix">
+            <asp:DropDownList ID="ddlProjectID" class="form-control" runat="server" DataSourceID="ObjectDataSourceProject" DataTextField="projName" DataValueField="ID"></asp:DropDownList> 
+>>>>>>> 092193c1f78e82b6b057f3ec44a7f89335145cf8
+        </div>
+>>>>>>> origin/master
     </div>
 
 
@@ -79,10 +95,8 @@
       </div>
 
       <div class="form-group col-md-6">
-          <label id="lblExistingClientBusinessDesign" for="ddlExistingClientBusinessDesign">Existing Client</label>       
-          <asp:DropDownList CssClass="form-control" ID="DropDownList2" runat="server" DataSourceID="EntityDataSource2" DataTextField="cliName" DataValueField="ID" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged1" AutoPostBack="True">
-              <asp:ListItem Selected="True" Value="0">Select A Client</asp:ListItem>
-          </asp:DropDownList>
+          <label id="lblExistingClientBusinessDesign" for="txtClientNameDesign">Existing Client</label>       
+            <asp:TextBox ID="txtClientNameDesign" runat="server" class="form-control" placeholder="Client Name" ReadOnly="true"></asp:TextBox>
       </div>
 
       <!-- Hide the projects button and the add report button-->
