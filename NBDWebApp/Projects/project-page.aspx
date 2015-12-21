@@ -248,7 +248,7 @@
         
         <div class="form-group col-md-2">
             <a id="btnSubMaterial" class="btn" runat="server" onServerClick="btnSubMaterial_Click">-</a>
-            <asp:Label ID="LblErrormsg" runat="server" ForeColor="Red"></asp:Label>
+            <asp:Label ID="lblErrormsgMaterialReqDesign" runat="server" ForeColor="Red"></asp:Label>
         </div>  
         
     </div>

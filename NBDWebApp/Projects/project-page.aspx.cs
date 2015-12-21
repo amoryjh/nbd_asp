@@ -178,14 +178,14 @@ namespace NBDWebApp.Projects
             this.txtProjSiteDesign.Text = project.projSite;
             this.txtBidEstCostDesign.Text = project.projEstCost; 
 
-            //project information for design budget
+            //Project information for design budget
             this.txtBudgetSubmittedDBudget.Text = Convert.ToString(project.projBidDate);
             this.txtBeginDatedBudget.Text = Convert.ToString(project.projEstStart);
             this.txtComDateDBudget.Text = Convert.ToString(project.projEstEnd);
             this.txtProjSiteDBudget.Text = project.projSite;
             this.txtBidCostDBudget.Text = project.projEstCost;
 
-            //project information for production plan
+            //Project information for production plan
             this.txtProjProducton.Text = project.projName;
             this.txtBeginDateProduction.Text = Convert.ToString(project.projEstStart);
             this.txtComDateProdcution.Text = Convert.ToString(project.projEstEnd);
@@ -198,6 +198,7 @@ namespace NBDWebApp.Projects
 
         foreach (var client in queryClient)
         {
+            //Client information for design bid
             this.txtClientBusinessDesign.Text = client.cliName;
             this.txtClientAddressDesign.Text = client.cliAddress;
             this.txtClientCityDesign.Text = client.CITY.city1;
@@ -208,11 +209,13 @@ namespace NBDWebApp.Projects
             this.txtClientLNameDesign.Text = client.cliConLName;
             this.txtClientPosDesign.Text = client.cliConPosition;
 
+            //NBD staff information for design bid
             this.txtSalesAssocFNameDesign.Text = "Bob";
             this.txtSalesAssocLNameDesign.Text = "Reinhardt";
             this.txtDesignerFNameDesign.Text = "Tamara";
             this.txtDesignerLNameDesign.Text = "Bakken";
 
+            //Client information for design budget
             this.txtClientBusinessdBudget.Text = client.cliName;
             this.txtClientCityDBudget.Text = client.CITY.city1;
             this.txtClientAddressDBudget.Text = client.cliAddress;
@@ -223,6 +226,7 @@ namespace NBDWebApp.Projects
             this.txtClientLNameDBudget.Text = client.cliConLName;
             this.txtClientPosDBudget.Text = client.cliConPosition;
 
+            //NBD staff information for design budget
             this.txtSalesAssocFNameDBudget.Text = "Bob";
             this.txtSalesAssocLNameDBudget.Text = "Reinhardt";
             this.txtDesignerFNameDBudget.Text = "Tamara";
@@ -239,17 +243,33 @@ namespace NBDWebApp.Projects
 
     protected void btnAddMaterial_Click(object sender, EventArgs e)
     {
-        //Add Material Req For DesignBid
-        MATERIAL_REQ mr = new MATERIAL_REQ();
+        try
+        {
+            //Add instance for material_req
+            MATERIAL_REQ mr = new MATERIAL_REQ();
+            
+            //gather information to insert a new material_req for specefic project
+            mr.projectID = Convert.ToInt32(this.ddlProjectID.SelectedValue);
+            mr.inventoryID = this.ddlMaterialDescDesign.SelectedIndex + 1;
+            mr.mreqEstQty = Convert.ToInt16(this.txtQtyEstDesign.Text);
 
-        mr.projectID = Convert.ToInt32(this.ddlProjectID.SelectedValue);
-        mr.inventoryID = this.ddlMaterialDescDesign.SelectedIndex + 1;
-        mr.mreqEstQty = Convert.ToInt16(this.txtQtyEstDesign.Text);
+            //add material_req to the database
+            db.MATERIAL_REQ.Add(mr);
+            db.SaveChanges();
 
-        db.MATERIAL_REQ.Add(mr);
-        db.SaveChanges();
+            //refresh the gridview
+            gvMaterialReqDesign.DataBind();
 
-        gvMaterialReqDesign.DataBind();        
+            //set the textboxes and dropdown back to defaults
+            ddlMaterialDescDesign.SelectedIndex = 0;
+            txtQtyEstDesign.Text = "";
+            txtSubMaterial.Text = "";
+        }
+        catch
+        {
+            lblErrormsgMaterialReqDesign.Text = "Something went wrong!";
+        }
+        
 
     }
 
@@ -265,7 +285,7 @@ namespace NBDWebApp.Projects
         }
         catch
         {
-            LblErrormsg.Text = "Please select a valid row to delete!"; 
+            lblErrormsgMaterialReqDesign.Text = "Please select a valid row to delete!"; 
         }
     }
 
