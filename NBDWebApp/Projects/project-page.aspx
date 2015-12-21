@@ -215,7 +215,7 @@
             <h1>Material Requirements</h1>
         </div>
 
-        <div class="form-group col-md-12" style="margin-top:1.5em">
+        <div class="form-group col-md-12" style="margin-top:1.5em;overflow-x:scroll;">
             <asp:GridView ID="gvMaterialReqDesign" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceMaterialDesign" ShowHeaderWhenEmpty="True" style="width:100% !important;" HeaderStyle-BackColor="#DB0A5B" BorderColor="Transparent" HeaderStyle-ForeColor="#ffffff" CellPadding="20" CellSpacing="25" RowStyle-Width="30" RowStyle-Height="40" OnSelectedIndexChanging="gvMaterialReqDesign_SelectedIndexChanging" DataKeyNames="ID" OnSelectedIndexChanged="gvMaterialReqDesign_SelectedIndexChanged">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />

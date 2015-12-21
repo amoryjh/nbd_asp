@@ -5791,10 +5791,6 @@ hr {
 .formthing {
   width: 100% !important;
 }
-table td,
-table th {
-  padding: 11px !important;
-}
 td,
 th {
   padding: 11px !important;
@@ -5802,6 +5798,11 @@ th {
 tr td,
 tr th {
   padding: 11px !important;
+}
+tr td a,
+td th a {
+  text-decoration: underline !important;
+  color: #188ea8;
 }
 /*///////////////////////////////////////////////////////
 -----------------------Base Elements---------------------
@@ -5902,6 +5903,13 @@ tr th {
   border: none;
   background: #188EA8;
   color: #fff;
+}
+.ui-datepicker th {
+  padding: .7em .3em !important;
+}
+.ui-datepicker td {
+  border: 0;
+  padding: 1px !important;
 }
 /*///////////////////////////////////////////////////////
 ---------------------Reusable Classes--------------------

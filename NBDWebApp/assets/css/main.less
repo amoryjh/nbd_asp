@@ -38,11 +38,10 @@ hr{border-top-color:lighten(@brand-tri,20%);}
 .formthing{
   width:100% !important;
 }
-table{
-  td,th{padding:11px !important;}
-}
 td,th{padding:11px !important;}
 tr{td,th{padding:11px !important;}}
+tr td a,td th a{text-decoration:underline !important;color:@brand-blue}
+
 /*///////////////////////////////////////////////////////
 -----------------------Base Elements---------------------
 ///////////////////////////////////////////////////////*/
@@ -109,6 +108,11 @@ tr{td,th{padding:11px !important;}}
     border: none;
     background: #188EA8;
     color: #fff;
+}
+.ui-datepicker th{padding: .7em .3em !important;}
+.ui-datepicker td {
+    border: 0;
+    padding: 1px !important;
 }
 /*///////////////////////////////////////////////////////
 ---------------------Reusable Classes--------------------
