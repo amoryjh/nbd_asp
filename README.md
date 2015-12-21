@@ -1,6 +1,6 @@
 # NBD.ASP
 
 ## Page Structure
-	*Home
-	*List
+*Home
+*List
 	
